@@ -71,19 +71,18 @@ and running inside the app's real sandbox process. Re-run that check any time wi
 ### Why Kissmanga is a draft
 
 `kissmanga.in` answers every plain HTTP request with Cloudflare's interactive
-"Just a moment…" challenge (HTTP 403, verified 2026-08-30). Its port here uses plain
-`fetch`, so every call fails.
+"Just a moment…" challenge (HTTP 403, verified 2026-08-30). The version bundled in the app
+gets around this with Puppeteer and a stealth plugin. A sandboxed extension has neither —
+it has no browser and no network of its own, only a proxied `fetch` — so the source would
+install and then fail every call.
 
-`__browserFetch` is the intended way out, but it is not a flag flip: the source has to be
-rewritten to call it for the challenged requests, and its manifest has to declare
-`requires_browser_fetch: true`. Until someone does that and verifies it against the live
-site, the source stays held out of `index.json` by `"draft": true`. The code is otherwise
-complete and still built and testable (`npm run smoke kissmanga`).
+The code is complete and correct, and it is still built and testable
+(`npm run smoke kissmanga`). It is simply held out of `index.json` by `"draft": true` in
+its manifest. Flip that to `false` and rebuild if the site stops challenging.
 
-The general rule, of which this is one case: **a site behind an active Cloudflare challenge
-cannot be read with plain `fetch`** — it needs `__browserFetch` and the manifest flag that
-unlocks it. Sites that merely check for browser-shaped headers need neither; every request
-here already sends what a browser sends.
+This is the general rule, not a Kissmanga quirk: **a site behind an active Cloudflare
+challenge cannot work as a sandboxed extension.** Sites that merely check for
+browser-shaped headers are fine — every request here sends what a browser sends.
 
 ---
 
@@ -120,7 +119,7 @@ reads it to generate `index.json`, and the source itself imports it for its own 
 ### The contract
 
 The bundle must be an **ES module with a default export** implementing `Source`
-(`src/lib/types.ts` — a copy of the app's `shared/types/extension.ts`). The sandbox
+(`src/lib/types.ts` — a copy of the app's `packages/types/src/extension.ts`). The sandbox
 validates it by checking that `fetchManga` is a function, so that method is effectively
 mandatory. It must be a **single self-contained file**: nothing is installed for it.
 
@@ -129,14 +128,7 @@ Only these methods are ever called — the runner allowlists them:
 ```
 fetchManga  searchManga  fetchMangaDetails  fetchMangaThumbnail
 fetchChapters  fetchChapterPages  getFilters  fetchMangaUpdates
-fetchChapterPagesForDownload  getRetryStrategy  getRateLimitInfo
 ```
-
-The three on the last line are optional and exist for the app's download worker:
-`fetchChapterPagesForDownload` is a `fetchChapterPages` that can report progress and be
-cancelled, and the other two return retry and shaping hints. Implement none of them and the
-app falls back to `fetchChapterPages` — they buy better downloads, they are not required to
-have a working source.
 
 ### What your code may and may not do
 
@@ -158,14 +150,6 @@ global `fetch` is replaced with a shim that proxies every call to the parent ove
 - **Redirects are followed by the parent** (5 hops max) and every hop is re-validated
   against your allowlist and the app's SSRF guard.
 - **Never persist anything.** Extensions report data; storing it is the server's job.
-- **`__browserFetch` is the one exception to "only `fetch`",** and only if your manifest sets
-  `requires_browser_fetch: true`. It hands a URL to the app, which loads it in a real browser
-  with its anti-detection stack (proxy rotation, fingerprinting, Cloudflare clearance) and
-  returns the rendered HTML. You still get no browser and no socket of your own — you are
-  asking the app to do it for you. It is much slower than `fetch`, it queues behind a small
-  browser pool shared by every source that requests it, `allowed_hosts` applies to it
-  unchanged, and the app warns the user before installing a source that declares it. Use it
-  for a site plain `fetch` genuinely cannot read, not to save yourself writing a parser.
 - **Never assume `pagination` is present.** The app passes through whatever the caller
   gave, `undefined` included — use `resolvePagination()`.
 - Pure-JS parsing libraries are fine. `cheerio/slim` is already used by three sources and
@@ -208,16 +192,9 @@ and the editor will fill them in for you:
   "description": "One line for the install listing.",
   "base_url": "https://mysource.example",
   "allowed_hosts": ["mysource.example"],
-  "content_rating": "mixed",
-  "rate_limit_ms": 250
+  "content_rating": "mixed"
 }
 ```
-
-`rate_limit_ms` is optional but worth setting: it is the throttle the *app* enforces, on its
-side of the sandbox, and it defaults to a deliberately slow 1000 ms. Set it to whatever your
-source already limits itself to internally — the internal limiter keeps you polite, this one
-is what still holds once your code is something the app didn't write. Two further optional
-fields are documented above: `requires_browser_fetch` and `referer`.
 
 Don't add `entry_url`, `version_code`, `isNSFW` or a hash — the build derives those, and
 rejects any field it doesn't know so a typo fails the build instead of quietly dropping out
@@ -316,12 +293,9 @@ or rename the key while you work.
 
 These are ports, not copies. What changed, and why:
 
-- **No anti-detection layer inside the source.** No proxy rotation, no user-agent rotation,
-  no Puppeteer or Playwright fallback, no circuit breaker — none of it can run in the
-  sandbox, which has neither a browser nor a socket. Requests send static browser-shaped
-  headers and that's it. The app still *has* that stack, on its own side of the boundary; a
-  source reaches it only by declaring `requires_browser_fetch` and calling `__browserFetch`,
-  and none of the sources here currently do.
+- **No anti-detection layer.** No proxy rotation, no user-agent rotation, no Puppeteer or
+  Playwright fallback, no circuit breaker — none of it can run in the sandbox. Requests
+  send static browser-shaped headers and that's it.
 - **`fetch` instead of axios**, with the retry/rate-limit/timeout behaviour reimplemented
   in `src/lib/http.ts`.
 - **No environment overrides.** The sandbox child is spawned with an empty environment, so

@@ -27,11 +27,9 @@
       ],
       "content_rating": "mixed",
       "isNSFW": false,
-      "rate_limit_ms": 250,
-      "requires_browser_fetch": false,
       "bundle": {
-        "sha256": "d40d0e47f093c68bdd6d5244b7def1a2c38d687b188edc12ba6eec5153795529",
-        "size": 75132
+        "sha256": "7b51f5cab6c5922a143fb0e0725deeccfe824e3da9e5b58b84afd444f980faea",
+        "size": 75114
       }
     },
     {
@@ -51,11 +49,9 @@
       ],
       "content_rating": "mixed",
       "isNSFW": false,
-      "rate_limit_ms": 240,
-      "requires_browser_fetch": false,
       "bundle": {
-        "sha256": "7ea1034ef8c54a73314cf9faa4321b551b461a9984f8c4f9dd04274f09f22c44",
-        "size": 216743
+        "sha256": "d5f3d58debc271b37c5a39d9de9bf5a248980993ec80fa1c4ac2d0834c7ab240",
+        "size": 216725
       }
     },
     {
@@ -75,11 +71,9 @@
       ],
       "content_rating": "mixed",
       "isNSFW": false,
-      "rate_limit_ms": 240,
-      "requires_browser_fetch": false,
       "bundle": {
-        "sha256": "ab7ef3c743fd091b8d0e253e5b6416ace2a8b4559fe7afbbf3a41b827968f892",
-        "size": 214277
+        "sha256": "8a9860a5a774198f519b0865bee71d3adc8cf9ce5f21567d8f7fdd190e172fa7",
+        "size": 214259
       }
     },
     {
@@ -99,11 +93,9 @@
       ],
       "content_rating": "nsfw",
       "isNSFW": true,
-      "rate_limit_ms": 220,
-      "requires_browser_fetch": false,
       "bundle": {
-        "sha256": "722a56781ed3bc26efc2dca5e1f60ae4e2e2b241e9e59394e292355b12e9161d",
-        "size": 9169
+        "sha256": "f669a09935c7001b03326c5b4ec1e22fa12dfdc63180cd3163cb34a5808e17f8",
+        "size": 9151
       }
     }
   ]

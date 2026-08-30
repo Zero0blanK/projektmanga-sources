@@ -99,22 +99,6 @@
           "type": "boolean",
           "description": "True only when content_rating is \"nsfw\". Present so a reader that predates content_rating still behaves; prefer content_rating."
         },
-        "rate_limit_ms": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 60000,
-          "description": "Minimum milliseconds between this source's requests, which the app enforces outside the sandbox. Always written by build.mjs, defaulting to 1000. Optional here so an index built before this field existed still validates — a reader that finds it absent should apply its own conservative default rather than leaving the source unthrottled."
-        },
-        "requires_browser_fetch": {
-          "type": "boolean",
-          "description": "The source asks to be able to have pages loaded in a real browser with anti-detection applied, an elevated capability the app should surface to the user before installing. Always written by build.mjs. Treat absent as false."
-        },
-        "referer": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^https://",
-          "description": "Optional. Referer to send when proxying this source's images; absent means fall back to homepage, then base_url."
-        },
         "bundle": {
           "type": "object",
           "required": ["sha256", "size"],

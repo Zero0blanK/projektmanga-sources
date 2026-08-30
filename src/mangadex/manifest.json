@@ -7,9 +7,6 @@
   "description": "Scanlation library with an official API, filters and per-chapter groups.",
   "base_url": "https://api.mangadex.org",
   "homepage": "https://mangadex.org",
-  "allowed_hosts": [
-    "api.mangadex.org"
-  ],
-  "content_rating": "mixed",
-  "rate_limit_ms": 250
+  "allowed_hosts": ["api.mangadex.org"],
+  "content_rating": "mixed"
 }

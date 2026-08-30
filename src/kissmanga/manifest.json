@@ -6,11 +6,8 @@
   "version": "1.0.0",
   "description": "General manga aggregator.",
   "base_url": "https://kissmanga.in",
-  "allowed_hosts": [
-    "kissmanga.in"
-  ],
+  "allowed_hosts": ["kissmanga.in"],
   "content_rating": "mixed",
-  "rate_limit_ms": 300,
   "draft": true,
-  "draft_reason": "kissmanga.in serves Cloudflare's interactive 'Just a moment...' challenge to every plain HTTP request (verified 2026-08-30: HTTP 403 on / and /mangalist). This port uses plain fetch, so every call fails. Publishing it needs the challenged requests rewritten to call __browserFetch and requires_browser_fetch set to true here, then verification against the live site — not just flipping draft. The scraping code is otherwise complete and still builds and smoke-tests."
+  "draft_reason": "kissmanga.in serves Cloudflare's interactive 'Just a moment...' challenge to every plain HTTP request (verified 2026-08-30: HTTP 403 on / and /mangalist). A sandboxed extension has no browser and no way to solve it, so the source would install and then fail every call. The code is complete and correct; set draft to false to publish it if the site stops challenging."
 }

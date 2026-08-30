@@ -6,9 +6,6 @@
   "version": "1.0.0",
   "description": "Doujinshi archive. Adult content only.",
   "base_url": "https://nhentai.net",
-  "allowed_hosts": [
-    "nhentai.net"
-  ],
-  "content_rating": "nsfw",
-  "rate_limit_ms": 220
+  "allowed_hosts": ["nhentai.net"],
+  "content_rating": "nsfw"
 }

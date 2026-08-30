@@ -62,22 +62,6 @@
       "enum": ["safe", "mixed", "nsfw"],
       "description": "safe = no adult content; mixed = general catalogue that also carries adult titles; nsfw = adult site. Only \"nsfw\" sets isNSFW in the index."
     },
-    "rate_limit_ms": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 60000,
-      "description": "Minimum milliseconds between this source's requests, enforced by the app outside the sandbox. Declare the same value the source limits itself to internally: the internal one keeps the source polite, this one is what actually holds. Defaults to 1000 when absent."
-    },
-    "requires_browser_fetch": {
-      "type": "boolean",
-      "description": "Request the elevated __browserFetch capability, which asks the app to load a URL in a real browser with its anti-detection stack. The runner injects that global only for sources that set this, and the app warns the user before installing one. Set it only for a site that plain fetch genuinely cannot read, such as one behind an active Cloudflare challenge."
-    },
-    "referer": {
-      "type": "string",
-      "format": "uri",
-      "pattern": "^https://",
-      "description": "Referer the app sends when proxying this source's images. Defaults to homepage, then base_url; set it only when a site rejects those."
-    },
     "draft": {
       "type": "boolean",
       "description": "Build the source but keep it out of index.json. Requires draft_reason."

@@ -1,15 +1,10 @@
 /**
  * The extension contract, vendored.
  *
- * This is a type-only mirror of `shared/types/extension.ts` in the ProjektManga
- * repository, which is the canonical definition. It lives here rather than being imported
- * so this repository builds with no dependency on the app — `npm install && npm run build`
- * is all a clone needs. Nothing here emits code, so the copy costs nothing at runtime.
- *
- * The one deliberate divergence: the app types `MangaDetails.status` as its Prisma
- * `MangaStatus` enum. Mirroring that would drag Prisma into this repository for a single
- * union, so `status` is a plain `string` here and the app validates it at the boundary
- * where an installed source's response is parsed.
+ * This is a type-only mirror of `packages/types/src/extension.ts` in the ProjektManga
+ * monorepo. It lives here rather than being imported so this repository builds with no
+ * dependency on the app's workspace packages — `npm install && npm run build` is all a
+ * clone needs. Nothing here emits code, so the copy costs nothing at runtime.
  *
  * Keep it in sync when the app's `Source` interface changes: a mismatch shows up as a
  * source that installs fine and then returns data the reader can't render.
@@ -39,32 +34,19 @@ export interface Chapters {
   url: string;
   chapter_number: number;
   scanlator?: string;
+  is_read?: boolean;
+  is_bookmark?: boolean;
+  last_page_read: number;
+  fetched_at?: string;
   release_date: string;
   page_count?: number;
   language?: string;
   pages: Page[];
-
-  /** App-side bookkeeping. A source never sets these — the app fills them in from its own
-   * database once the chapter has been stored, read, filtered or de-duplicated. They are
-   * listed here only so this type stays assignable to the app's. */
-  is_read?: boolean;
-  is_bookmark?: boolean;
-  is_filtered?: boolean;
-  is_duplicate?: boolean;
-  last_page_read: number;
-  fetched_at?: string;
 }
 
 export interface Page {
   index: number;
   image_url: string | undefined;
-
-  /** App-side bookkeeping, as on `Chapters`: the download worker fills these in after it
-   * has fetched the image. A source returns `index` and `image_url` and nothing else. */
-  local_path?: string;
-  retryable?: boolean;
-  hash?: string;
-  fileSize?: number;
 }
 
 export interface ChapterPagesResult<T> {
@@ -79,14 +61,10 @@ export type TriStateFilterValue = { include?: string[]; exclude?: string[] };
 export type FilterValue = string | number | boolean | string[] | TriStateFilterValue;
 export type Option = { label: string; value: string };
 
-/** Only these four render. The app's filter UI switches on exactly this union
- * (`src/features/discover/components/CustomInput.tsx`,
- * `src/components/common/Dropdown/Dropdown.tsx`); a source that returns anything else
- * produces a filter the reader silently drops. */
 export interface MangaFilter {
   label: string;
   value: string;
-  type: 'input' | 'select' | 'multi' | 'tri-state';
+  type: 'input' | 'select' | 'checkbox' | 'radio' | 'multi' | 'tri-state';
   options?: Option[];
 }
 
@@ -96,12 +74,6 @@ export interface Source {
   lang: string;
   base_url: string;
   isNSFW: boolean;
-
-  /** Optional origins, when a source splits its traffic across more than one. Declare every
-   * host any of these point at in `allowed_hosts`, exactly as for `base_url`. */
-  api_url?: string;
-  image_server?: string;
-  thumbnail_server?: string;
 
   fetchManga(
     category?: string,
@@ -132,57 +104,6 @@ export interface Source {
   /** Returns the source's current chapter list so the caller can diff it against what it
    * already stored. Extensions must never persist anything themselves. */
   fetchMangaUpdates(manga_slug: string): Promise<Chapters[]>;
-
-  /** Optional. A download-oriented variant of `fetchChapterPages` that can report progress
-   * and honour cancellation. The app falls back to `fetchChapterPages` when a source
-   * doesn't implement it, so this is purely an optimisation.
-   *
-   * `signal` is a real `AbortSignal` here — the app passes it in across the sandbox
-   * boundary rather than the source constructing one, which is why this works where
-   * `fetch(url, { signal })` does not. */
-  fetchChapterPagesForDownload?(
-    chapter_id: string,
-    options?: {
-      onProgress?: (current: number, total: number) => void;
-      signal?: AbortSignal;
-      maxRetries?: number;
-      fallbackUrls?: boolean;
-    },
-  ): Promise<Page[]>;
-
-  /** Optional. How the app's download worker should retry this source's images. */
-  getRetryStrategy?(): {
-    maxRetries: number;
-    delayMs: number;
-    backoffMultiplier: number;
-    pageRetryable: boolean;
-  };
-
-  /** Optional. Shaping hints for the download worker.
-   *
-   * `requestsPerSecond` is advisory only: the host enforces the manifest's `rate_limit_ms`
-   * regardless of what this returns, since an installed source cannot be trusted to
-   * throttle itself. `bytesPerSecond` and `concurrent` are the dimensions the manifest
-   * does not carry, and are the reason to implement this at all. */
-  getRateLimitInfo?(): {
-    requestsPerSecond: number;
-    bytesPerSecond?: number;
-    concurrent?: number;
-  };
-}
-
-/** The elevated capability, injected as a global by the sandbox runner — and *only* when
- * the source's manifest sets `requires_browser_fetch: true`. It asks the app to fetch a URL
- * in a real browser on the source's behalf, applying the app's anti-detection stack
- * (proxy rotation, fingerprinting, Cloudflare clearance) and returning the rendered HTML.
- *
- * Reach for it only when a site cannot be read any other way: it is far slower than
- * `fetch`, it is capped by a small global browser pool shared across every source that
- * requests it, and the app warns the user before installing a source that declares it.
- * `allowed_hosts` applies here exactly as it does to `fetch`. */
-declare global {
-  // eslint-disable-next-line no-var
-  var __browserFetch: undefined | ((url: string, opts?: { waitSelector?: string }) => Promise<string>);
 }
 
 export type SourceErrorCode =
@@ -232,24 +153,6 @@ export interface SourceManifest {
   content_rating: ContentRating;
   /** One line for the install listing. Optional, 200 characters max. */
   description?: string;
-
-  /** Minimum milliseconds between this source's requests, enforced by the app on the
-   * trusted side of the sandbox. A source that rate-limits itself internally should
-   * declare the same number here: the internal limiter keeps the source well-behaved, and
-   * this one is what actually holds once the source is code the app didn't write.
-   * Optional; the app applies a conservative default when absent. */
-  rate_limit_ms?: number;
-
-  /** Requests the elevated `__browserFetch` capability (see the `Source` interface). The
-   * runner injects that global only for sources that set this, and the app shows the user
-   * a warning before installing one. Set it only for a site that genuinely cannot be read
-   * with plain `fetch` — an active Cloudflare challenge, typically. */
-  requires_browser_fetch?: boolean;
-
-  /** `Referer` the app should send when it fetches this source's images through its proxy.
-   * Defaults to `homepage`, then `base_url`. Set it only when a site rejects those. */
-  referer?: string;
-
   /** Built but held out of `index.json`; `draft_reason` is then required. */
   draft?: boolean;
   draft_reason?: string;

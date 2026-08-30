@@ -69,19 +69,9 @@ const KNOWN_MANIFEST_KEYS = new Set([
   '$schema',
   'homepage',
   'description',
-  'rate_limit_ms',
-  'requires_browser_fetch',
-  'referer',
   'draft',
   'draft_reason',
 ]);
-
-/** Applied by the app when a manifest omits `rate_limit_ms`. Deliberately slower than any
- * source here sets for itself: a source that cares about throughput should say so. */
-const DEFAULT_RATE_LIMIT_MS = 1000;
-/** Above this a "rate limit" is more likely a typo (seconds mistaken for milliseconds)
- * than an intent to wait that long between requests. */
-const MAX_RATE_LIMIT_MS = 60_000;
 
 /** In preference order: the first one found is the source's icon. */
 const ICON_FILES = ['icon.svg', 'icon.png', 'icon.webp'];
@@ -237,24 +227,6 @@ function validateManifest(dir, manifest) {
   // the source's own base_url, so every request throws.
   if (!hostCoveredBy(baseUrl.hostname, manifest.allowed_hosts)) {
     fail(where, `base_url host "${baseUrl.hostname}" is not covered by allowed_hosts`);
-  }
-
-  if (manifest.rate_limit_ms !== undefined) {
-    const ms = manifest.rate_limit_ms;
-    if (!Number.isInteger(ms) || ms < 0 || ms > MAX_RATE_LIMIT_MS) {
-      fail(
-        where,
-        `rate_limit_ms must be a whole number of milliseconds between 0 and ${MAX_RATE_LIMIT_MS} — got ${ms}`,
-      );
-    }
-  }
-
-  if (manifest.requires_browser_fetch !== undefined && typeof manifest.requires_browser_fetch !== 'boolean') {
-    fail(where, 'requires_browser_fetch must be true or false');
-  }
-
-  if (manifest.referer !== undefined) {
-    requireHttpsUrl(where, 'referer', manifest.referer);
   }
 
   if (manifest.draft !== undefined && typeof manifest.draft !== 'boolean') {
@@ -419,11 +391,6 @@ async function main() {
       allowed_hosts: source.manifest.allowed_hosts,
       content_rating: source.manifest.content_rating,
       isNSFW: deriveIsNSFW(source.manifest.content_rating),
-      // Resolved here rather than left absent, so the app enforces one number it can read
-      // straight off the listing instead of reimplementing this default.
-      rate_limit_ms: source.manifest.rate_limit_ms ?? DEFAULT_RATE_LIMIT_MS,
-      requires_browser_fetch: source.manifest.requires_browser_fetch === true,
-      ...(source.manifest.referer ? { referer: source.manifest.referer } : {}),
       bundle: { sha256, size: bytes.byteLength },
     });
   }
