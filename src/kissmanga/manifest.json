@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "kissmanga",
+  "name": "Kissmanga",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "General manga aggregator.",
+  "base_url": "https://kissmanga.in",
+  "allowed_hosts": [
+    "kissmanga.in"
+  ],
+  "content_rating": "mixed",
+  "rate_limit_ms": 300,
+  "draft": true,
+  "draft_reason": "kissmanga.in serves Cloudflare's interactive 'Just a moment...' challenge to every plain HTTP request (verified 2026-08-30: HTTP 403 on / and /mangalist). This port uses plain fetch, so every call fails. Publishing it needs the challenged requests rewritten to call __browserFetch and requires_browser_fetch set to true here, then verification against the live site — not just flipping draft. The scraping code is otherwise complete and still builds and smoke-tests."
+}

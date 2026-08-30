@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "mangageko",
+  "name": "MangaGeko",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "English manga and manhwa aggregator with fast chapter updates.",
+  "base_url": "https://mgeko.cc",
+  "allowed_hosts": [
+    "mgeko.cc"
+  ],
+  "content_rating": "mixed",
+  "rate_limit_ms": 240
+}

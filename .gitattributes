@@ -1,0 +1,3 @@
+# The bundles in dist/ are published verbatim over raw URLs and their sha256 is what
+# the app diffs to detect an update — keep line endings stable across platforms.
+* text=auto eol=lf

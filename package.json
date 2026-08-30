@@ -1,0 +1,21 @@
+{
+  "name": "projektmanga-sources",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Installable manga sources for ProjektManga, served as a static extension repository.",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "check": "npm run typecheck && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "cheerio": "^1.2.0",
+    "domhandler": "^5.0.3",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "zod": "^3.25.76"
+  }
+}

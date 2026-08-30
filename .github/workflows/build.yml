@@ -1,0 +1,29 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      # The app downloads dist/ straight from this repo's raw URLs, so a commit whose
+      # sources and bundles disagree publishes stale code. Fail loudly instead.
+      - name: dist/ and index.json must match the sources
+        run: |
+          if [ -n "$(git status --porcelain dist index.json)" ]; then
+            echo "Committed bundles are out of date. Run 'npm run build' and commit the result:"
+            git status --porcelain dist index.json
+            git diff --stat dist index.json
+            exit 1
+          fi

@@ -1,0 +1,13 @@
+{
+  "$comment": "Repository-level settings. raw_base_url is where the built bundles and icons will be served from — build.mjs turns it into each source's entry_url and icon_url in index.json. Change it once here after you create the GitHub repo; override it for a tunnel with RAW_BASE_URL=... npm run build. Everything under \"repository\" is copied into index.json verbatim so the app can name and attribute this repo in its UI.",
+  "raw_base_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main",
+  "repository": {
+    "name": "ProjektManga sources",
+    "badge_label": "PM",
+    "description": "Sandboxed manga sources maintained alongside ProjektManga.",
+    "website": "https://github.com/Zero0blanK/projektmanga-sources",
+    "contact": {
+      "issues": "https://github.com/Zero0blanK/projektmanga-sources/issues"
+    }
+  }
+}

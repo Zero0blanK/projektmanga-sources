@@ -1,0 +1,110 @@
+{
+  "format_version": 1,
+  "repository": {
+    "name": "ProjektManga sources",
+    "badge_label": "PM",
+    "description": "Sandboxed manga sources maintained alongside ProjektManga.",
+    "website": "https://github.com/Zero0blanK/projektmanga-sources",
+    "contact": {
+      "issues": "https://github.com/Zero0blanK/projektmanga-sources/issues"
+    }
+  },
+  "sources": [
+    {
+      "source_key": "mangadex",
+      "name": "MangaDex",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Scanlation library with an official API, filters and per-chapter groups.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex.svg",
+      "base_url": "https://api.mangadex.org",
+      "homepage": "https://mangadex.org",
+      "allowed_hosts": [
+        "api.mangadex.org"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "rate_limit_ms": 250,
+      "requires_browser_fetch": false,
+      "bundle": {
+        "sha256": "d40d0e47f093c68bdd6d5244b7def1a2c38d687b188edc12ba6eec5153795529",
+        "size": 75132
+      }
+    },
+    {
+      "source_key": "mangageko",
+      "name": "MangaGeko",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "English manga and manhwa aggregator with fast chapter updates.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangageko.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangageko.svg",
+      "base_url": "https://mgeko.cc",
+      "homepage": "https://mgeko.cc",
+      "allowed_hosts": [
+        "mgeko.cc"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "rate_limit_ms": 240,
+      "requires_browser_fetch": false,
+      "bundle": {
+        "sha256": "7ea1034ef8c54a73314cf9faa4321b551b461a9984f8c4f9dd04274f09f22c44",
+        "size": 216743
+      }
+    },
+    {
+      "source_key": "mangatx",
+      "name": "MangaTX",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Madara-based manhwa and manga aggregator.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangatx.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangatx.svg",
+      "base_url": "https://mangatx.cc",
+      "homepage": "https://mangatx.cc",
+      "allowed_hosts": [
+        "mangatx.cc"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "rate_limit_ms": 240,
+      "requires_browser_fetch": false,
+      "bundle": {
+        "sha256": "ab7ef3c743fd091b8d0e253e5b6416ace2a8b4559fe7afbbf3a41b827968f892",
+        "size": 214277
+      }
+    },
+    {
+      "source_key": "nhentai",
+      "name": "Nhentai",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Doujinshi archive. Adult content only.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nhentai.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nhentai.svg",
+      "base_url": "https://nhentai.net",
+      "homepage": "https://nhentai.net",
+      "allowed_hosts": [
+        "nhentai.net"
+      ],
+      "content_rating": "nsfw",
+      "isNSFW": true,
+      "rate_limit_ms": 220,
+      "requires_browser_fetch": false,
+      "bundle": {
+        "sha256": "722a56781ed3bc26efc2dca5e1f60ae4e2e2b241e9e59394e292355b12e9161d",
+        "size": 9169
+      }
+    }
+  ]
+}

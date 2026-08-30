@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# dist/ is deliberately NOT ignored: the app downloads each bundle straight from this
+# repository's raw URLs, so the built files have to be committed.

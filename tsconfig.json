@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    // esbuild is the bundler, so "Bundler" resolution is the honest setting: it lets the
+    // sources keep explicit .js specifiers *and* import manifest.json without an import
+    // attribute. Nothing here is ever run by Node as TypeScript.
+    "target": "ES2023",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.json"]
+}

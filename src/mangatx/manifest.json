@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "mangatx",
+  "name": "MangaTX",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Madara-based manhwa and manga aggregator.",
+  "base_url": "https://mangatx.cc",
+  "allowed_hosts": [
+    "mangatx.cc"
+  ],
+  "content_rating": "mixed",
+  "rate_limit_ms": 240
+}
