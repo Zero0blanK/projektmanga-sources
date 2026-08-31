@@ -161,10 +161,14 @@ Throw `SourceError` with one of the documented codes rather than a bare `Error`,
 app can render "this source is blocking us" instead of an empty result. `src/lib/http.ts`
 already classifies HTTP statuses and transport failures for you.
 
-One caveat: the sandbox IPC boundary currently forwards only `error.message` back to the
-server, so `code`, `reason` and `detail` are dropped in transit and a repo-installed
-source's failure reaches the UI as a generic error. Every message here is therefore
-written to stand on its own as end-user text.
+`code`, `reason`, `detail`, `statusCode` and `url` all survive the sandbox boundary, so a
+repo-installed source is classified exactly like one bundled with the app: the server maps
+the code onto an HTTP status and a user-facing message. The runner validates `code` against
+the known set before forwarding it, since it arrives from extension code — an unrecognised
+value is dropped rather than passed through to pick a status code.
+
+Write each message to stand on its own as end-user text anyway. It is what the user actually
+reads when a code doesn't map to something more specific.
 
 ### Adding one
 
@@ -211,7 +215,6 @@ compares.
 
 A rebuild published without a bump still gets picked up — `bundle.sha256` in the listing
 changes with the bytes — but nothing in the UI can tell the user what they got, so bump it.
-
 Two other version numbers exist and are bumped for different reasons:
 `api_version` when the extension contract in `src/lib/types.ts` changes incompatibly, and
 `format_version` when `index.json` itself changes shape. Both live at the top of
