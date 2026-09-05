@@ -3,9 +3,11 @@
   "source_key": "nhentai",
   "name": "Nhentai",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Doujinshi archive. Adult content only.",
   "base_url": "https://nhentai.net",
-  "allowed_hosts": ["nhentai.net"],
+  "allowed_hosts": [
+    "nhentai.net"
+  ],
   "content_rating": "nsfw"
 }

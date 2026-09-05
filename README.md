@@ -215,6 +215,21 @@ compares.
 
 A rebuild published without a bump still gets picked up — `bundle.sha256` in the listing
 changes with the bytes — but nothing in the UI can tell the user what they got, so bump it.
+
+Three things the app does with what you publish here, worth knowing before you push:
+
+- **`bundle.sha256` is verified** against the downloaded file at install and at update. A
+  listing that disagrees with the bytes at `entry_url` is refused, not installed — which is
+  exactly the state `npm run build` without committing `dist/` leaves you in, and why CI
+  fails that commit.
+- **A lower version is ignored.** Publishing a version older than the one a user has
+  installed is treated as no update rather than a downgrade, so a rollback needs a *higher*
+  version carrying the reverted code, not a re-published older one.
+- **A bad publish rolls itself back.** On update the new bundle is staged beside the live
+  one and loaded in a real sandbox first; if it fails to load or answer `getFilters()`, it
+  is discarded and the working version keeps serving. You will see the failure in the app's
+  update log rather than in a broken source.
+
 Two other version numbers exist and are bumped for different reasons:
 `api_version` when the extension contract in `src/lib/types.ts` changes incompatibly, and
 `format_version` when `index.json` itself changes shape. Both live at the top of

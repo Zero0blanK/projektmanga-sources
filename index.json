@@ -36,8 +36,8 @@
       "source_key": "mangageko",
       "name": "MangaGeko",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.1.0",
+      "version_code": 1001000,
       "api_version": 1,
       "description": "English manga and manhwa aggregator with fast chapter updates.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangageko.js",
@@ -50,16 +50,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d5f3d58debc271b37c5a39d9de9bf5a248980993ec80fa1c4ac2d0834c7ab240",
-        "size": 216725
+        "sha256": "e43bd6a374373f276dce3968d7547cc6730a8c5935561bf65121607a53913c6c",
+        "size": 219432
       }
     },
     {
       "source_key": "mangatx",
       "name": "MangaTX",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.1.0",
+      "version_code": 1001000,
       "api_version": 1,
       "description": "Madara-based manhwa and manga aggregator.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangatx.js",
@@ -72,16 +72,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "8a9860a5a774198f519b0865bee71d3adc8cf9ce5f21567d8f7fdd190e172fa7",
-        "size": 214259
+        "sha256": "ff7b08b7035045eecd24d6f7a8dd5f207b1293b74262fc1ee86e5395cd4886a6",
+        "size": 214606
       }
     },
     {
       "source_key": "nhentai",
       "name": "Nhentai",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.1.0",
+      "version_code": 1001000,
       "api_version": 1,
       "description": "Doujinshi archive. Adult content only.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nhentai.js",
@@ -94,8 +94,8 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "f669a09935c7001b03326c5b4ec1e22fa12dfdc63180cd3163cb34a5808e17f8",
-        "size": 9151
+        "sha256": "3e140c7ec51f7ce328286b008670af25c4c786f5c3e8fde6fd93adc4b2f34c9c",
+        "size": 10734
       }
     }
   ]

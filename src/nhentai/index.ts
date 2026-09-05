@@ -5,6 +5,8 @@ import type {
   MangaFilter,
   Page,
   MangaDetails,
+  FilterValue,
+  Option,
   ChapterPagesResult,
   SourceManifest,
 } from '../lib/types.js';
@@ -55,6 +57,97 @@ function tagNames(tags: GalleryTag[] | undefined, type: string): string[] {
   return (tags ?? []).filter((tag) => tag.type === type).map((tag) => tag.name);
 }
 
+/**
+ * The search fields, as free text rather than pick-lists.
+ *
+ * nhentai has tens of thousands of tags, artists and groups and no endpoint that
+ * enumerates them, so any static list would be both enormous and immediately out of date.
+ * Its search language already solves this: every field below is a documented `field:value`
+ * operator on the same query string, so typing is the interface — the same approach
+ * Mihon/Tachiyomi's extension takes.
+ *
+ * Each accepts a comma-separated list, and a leading `-` excludes:
+ *
+ *     big breasts, full color, -yaoi   ->   tag:"big breasts" tag:"full color" -tag:yaoi
+ *
+ * Verified against the API: `tag:"full color"` returns 82,911 results and
+ * `tag:"full color" -tag:"yaoi"` returns 79,628, so exclusion genuinely narrows rather
+ * than being accepted and ignored.
+ */
+const QUERY_FIELDS: Array<{ label: string; value: string; operator: string; hint: string }> = [
+  { label: 'Tags', value: 'tags', operator: 'tag', hint: 'big breasts, full color, -yaoi' },
+  { label: 'Categories', value: 'categories', operator: 'category', hint: 'doujinshi, -manga' },
+  { label: 'Artists', value: 'artists', operator: 'artist', hint: 'shindol' },
+  { label: 'Groups', value: 'groups', operator: 'group', hint: 'da hootch' },
+  { label: 'Parodies', value: 'parodies', operator: 'parody', hint: 'blue archive' },
+  { label: 'Characters', value: 'characters', operator: 'character', hint: 'asuna' },
+  { label: 'Languages', value: 'languages', operator: 'language', hint: 'english, -chinese' },
+];
+
+const SORT_OPTIONS: Option[] = [
+  { label: 'Recent', value: 'date' },
+  { label: 'Popular (all time)', value: 'popular' },
+  { label: 'Popular (this month)', value: 'popular-month' },
+  { label: 'Popular (this week)', value: 'popular-week' },
+  { label: 'Popular (today)', value: 'popular-today' },
+];
+
+/** Multi-word values have to be quoted or the site reads only the first word as the value
+ * and the rest as separate free-text terms. */
+function quoteTerm(term: string): string {
+  return /\s/.test(term) ? `"${term}"` : term;
+}
+
+/** Turns one comma-separated field into its `operator:value` terms, honouring a leading
+ * `-` on any entry as an exclusion. */
+function fieldToTerms(operator: string, raw: string): string[] {
+  return raw
+    .split(',')
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => {
+      const negated = part.startsWith('-');
+      const value = (negated ? part.slice(1) : part).trim();
+      return value ? `${negated ? '-' : ''}${operator}:${quoteTerm(value)}` : '';
+    })
+    .filter(Boolean);
+}
+
+/**
+ * Assembles the whole search query: the reader's own words plus every filled-in field.
+ *
+ * `fallback` is used when that produces nothing, because /search needs *some* query — it is
+ * a search endpoint, not a listing one, and an empty query returns nothing rather than
+ * everything.
+ */
+function buildQuery(
+  freeText: string | undefined,
+  filters: Record<string, FilterValue> | undefined,
+  fallback: string,
+): string {
+  const active = filters ?? {};
+  const parts: string[] = [];
+
+  const text = typeof freeText === 'string' ? freeText.trim() : '';
+  if (text) parts.push(text);
+
+  for (const field of QUERY_FIELDS) {
+    const raw = active[field.value];
+    if (typeof raw === 'string' && raw.trim()) {
+      parts.push(...fieldToTerms(field.operator, raw));
+    }
+  }
+
+  // Free-form because the site's own syntax here is an operator, not a value: ">50",
+  // "<20", "20-30" are all valid and none of them is a list.
+  const pages = active.pages;
+  if (typeof pages === 'string' && pages.trim()) {
+    parts.push(`pages:${pages.trim()}`);
+  }
+
+  return parts.join(' ').trim() || fallback;
+}
+
 /** One gallery response backs details, thumbnail, chapters and pages — four calls that
  * would otherwise each hit the API for the same document. */
 async function getGallery(galleryId: string): Promise<Gallery> {
@@ -76,14 +169,24 @@ const nhentai: Source = {
   base_url: manifest.base_url,
   isNSFW: deriveIsNSFW(manifest.content_rating),
 
-  async fetchManga(category, pagination): Promise<Mangas[]> {
+  async fetchManga(category, pagination, filters): Promise<Mangas[]> {
     try {
       const { limit, offset } = resolvePagination(pagination, { limit: 25 });
       const page = Math.floor(offset / Math.max(1, limit)) + 1;
-      const sort = category === 'popular' ? 'popular' : 'date';
+      const active = filters as Record<string, FilterValue> | undefined;
+      const chosenSort = active?.sort;
+      const sort =
+        typeof chosenSort === 'string' && chosenSort
+          ? chosenSort
+          : category === 'popular'
+            ? 'popular'
+            : 'date';
 
+      // "english" is a browse-shaped stand-in for "no query", not a language preference the
+      // reader asked for — /search has no way to say "everything", so browsing needs some
+      // term. Any filter the reader sets replaces it.
       const json = await http.getJson<{ result?: SearchResult[] }>('/search', {
-        params: { query: 'english', sort, page },
+        params: { query: buildQuery(undefined, active, 'english'), sort, page },
       });
 
       return (json.result ?? []).map((item) => ({
@@ -98,13 +201,18 @@ const nhentai: Source = {
     }
   },
 
-  async searchManga(query, pagination): Promise<Mangas[]> {
+  async searchManga(query, pagination, filters): Promise<Mangas[]> {
     try {
       const { limit, offset } = resolvePagination(pagination, { limit: 25 });
       const page = Math.floor(offset / Math.max(1, limit)) + 1;
+      const active = filters as Record<string, FilterValue> | undefined;
+      const chosenSort = active?.sort;
+      const sort = typeof chosenSort === 'string' && chosenSort ? chosenSort : 'date';
 
+      // The typed words and the filter fields go into one query string, so searching
+      // "school" with Tags = "full color" narrows rather than discarding one of them.
       const json = await http.getJson<{ result?: SearchResult[] }>('/search', {
-        params: { query: query || 'english', sort: 'date', page },
+        params: { query: buildQuery(query, active, 'english'), sort, page },
       });
 
       return (json.result ?? []).map((item) => ({
@@ -207,7 +315,19 @@ const nhentai: Source = {
   },
 
   async getFilters(): Promise<MangaFilter[]> {
-    return [];
+    // Text fields rather than option lists — see QUERY_FIELDS for why. `input` is the app's
+    // fallback filter control, which renders exactly the free-text box these need.
+    return [
+      { label: 'Sort by', value: 'sort', type: 'select', options: SORT_OPTIONS },
+      ...QUERY_FIELDS.map(
+        (field): MangaFilter => ({
+          label: `${field.label} (comma-separated, - to exclude)`,
+          value: field.value,
+          type: 'input',
+        }),
+      ),
+      { label: 'Pages (e.g. >50, <20, 20-30)', value: 'pages', type: 'input' },
+    ];
   },
 
   async fetchMangaUpdates(manga_slug: string): Promise<Chapters[]> {

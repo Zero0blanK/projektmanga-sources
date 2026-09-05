@@ -9,6 +9,8 @@ import type {
   Page,
   MangaDetails,
   Pagination,
+  FilterValue,
+  Option,
   ChapterPagesResult,
   SourceManifest,
 } from '../lib/types.js';
@@ -45,7 +47,11 @@ async function fetchHtml(path: string): Promise<string> {
 
 /** The browse grid and the search results use the same card markup. */
 function parseCards($: CheerioAPI): Mangas[] {
-  return $('#content .bs')
+  // `.bs` rather than `#content .bs`: the site injects PHP warnings into the markup on some
+  // filtered pages, which breaks the nesting and leaves the result cards *outside*
+  // `#content` — the scoped selector then matched nothing and the page read as empty. On a
+  // well-formed page the two are identical (30 and 30), so nothing is lost by not scoping.
+  return $('.bs')
     .map((_, el) => {
       const link = $(el).find('a').first();
       const href = link.attr('href') || '';
@@ -114,6 +120,50 @@ function parseChapters($: CheerioAPI): Chapters[] {
     .filter((chapter): chapter is Chapters => chapter !== null);
 }
 
+/**
+ * What /manga-list actually honours — which is far less than its filter form offers.
+ *
+ * The page renders dropdowns for genre, status and type, and the site accepts all of them
+ * without complaint, but only the ordering changes the result set. Checked by comparing the
+ * returned ids against an unfiltered request:
+ *
+ *   - `order`   — works (each value returns a different set).
+ *   - `status`  — ignored; `status=completed` returns the unfiltered list.
+ *   - `type`    — ignored; `type=manhwa` returns the unfiltered list.
+ *   - `genre[]` — broken server-side. The response carries a PHP warning
+ *     ("in_array() expects parameter 2 to be array, null given ... views/filter2.php") and
+ *     falls back to the unfiltered list: Romance, Yaoi and Sports each returned exactly the
+ *     same 30 titles as no filter at all.
+ *
+ * So only ordering is offered. A dropdown that silently does nothing is worse than an
+ * absent one — the reader cannot tell the difference between "no matches" and "ignored",
+ * and would reasonably conclude the app is broken. If the site fixes filter2.php, the
+ * genre/status/type options can be added back here and in `buildListPath`.
+ */
+const ORDER_OPTIONS: Option[] = [
+  { label: 'A–Z', value: 'title' },
+  { label: 'Z–A', value: 'titlereverse' },
+  { label: 'Recently updated', value: 'update' },
+  { label: 'Recently added', value: 'latest' },
+  { label: 'Popular', value: 'popular' },
+];
+
+/** `category` supplies the default ordering; an explicit `order` filter overrides it. */
+function buildListPath(
+  category: string | undefined,
+  filters: Record<string, FilterValue> | undefined,
+  page: number,
+): string {
+  const chosen = filters?.order;
+  const order =
+    typeof chosen === 'string' && chosen.length > 0
+      ? chosen
+      : category === 'popular'
+        ? 'popular'
+        : '';
+  return `/manga-list?page=${page}${order ? `&order=${encodeURIComponent(order)}` : ''}`;
+}
+
 async function browse(
   buildPath: (page: number) => string,
   pagination: Pagination | undefined,
@@ -132,10 +182,9 @@ const mangatx: Source = {
   base_url: BASE_URL,
   isNSFW: deriveIsNSFW(manifest.content_rating),
 
-  async fetchManga(category, pagination): Promise<Mangas[]> {
-    const order = category === 'popular' ? 'popular' : '';
+  async fetchManga(category, pagination, filters): Promise<Mangas[]> {
     return browse(
-      (page) => `/manga-list?page=${page}${order ? `&order=${order}` : ''}`,
+      (page) => buildListPath(category, filters as Record<string, FilterValue> | undefined, page),
       pagination,
     );
   },
@@ -144,6 +193,8 @@ const mangatx: Source = {
     if (!query) {
       return [];
     }
+    // Search is WordPress's own `?s=`, which takes none of the list page's parameters —
+    // ordering included. Passing them would look like they applied when they did not.
     return browse((page) => `/page/${page}/?s=${encodeURIComponent(query)}`, pagination);
   },
 
@@ -245,7 +296,8 @@ const mangatx: Source = {
   },
 
   async getFilters(): Promise<MangaFilter[]> {
-    return [];
+    // Only what the site honours — see ORDER_OPTIONS for what was tested and dropped.
+    return [{ label: 'Order by', value: 'order', type: 'select', options: ORDER_OPTIONS }];
   },
 
   async fetchMangaUpdates(manga_slug: string): Promise<Chapters[]> {
