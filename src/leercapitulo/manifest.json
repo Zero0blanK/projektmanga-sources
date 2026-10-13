@@ -3,7 +3,7 @@
   "source_key": "leercapitulo",
   "name": "LeerCapitulo",
   "lang": "es",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://www.leercapitulo.co",
   "homepage": "https://www.leercapitulo.co",
   "allowed_hosts": ["www.leercapitulo.co"],

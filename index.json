@@ -13,8 +13,8 @@
       "source_key": "asurascans",
       "name": "Asura Scans",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/asurascans.js",
       "base_url": "https://asurascans.com",
@@ -26,16 +26,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "096757d74f5d0bb2158ff6182d00c91d7486858b5b0660255005a3812747a519",
-        "size": 214392
+        "sha256": "55fc337bb39e2a6824fd7ec705be950a01fc8e24de8cbb9f9a126983652721f4",
+        "size": 217441
       }
     },
     {
       "source_key": "hentaifox",
       "name": "HentaiFox",
       "lang": "all",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/hentaifox.js",
       "base_url": "https://hentaifox.com",
@@ -46,16 +46,16 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "c438da14673b11716c0f8f33fc14e5f08a889ffea37f6dfadaba1252a0fe8612",
-        "size": 214199
+        "sha256": "8453b14e41d4ec83ae924f28095cc91ce2a8cc5de54dab5cdc9c556316e6c8d8",
+        "size": 214604
       }
     },
     {
       "source_key": "leercapitulo",
       "name": "LeerCapitulo",
       "lang": "es",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/leercapitulo.js",
       "base_url": "https://www.leercapitulo.co",
@@ -66,8 +66,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "f72e703de78775fcefb2077908c541ad97c085daef28f0457250f9f78a193f7f",
-        "size": 215389
+        "sha256": "13686ed6982167ac2ac690d971f0b58f833040333f8d5dd246bbcfe41e95f52e",
+        "size": 220348
       }
     },
     {
@@ -258,8 +258,8 @@
       "source_key": "weebcentral",
       "name": "Weeb Central",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/weebcentral.js",
       "base_url": "https://weebcentral.com",
@@ -273,8 +273,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "5dd72c7b35a13805564f1459b413f972f95c28fcf0b58e835a4ede883cadb338",
-        "size": 214628
+        "sha256": "14e01c94a722eeb6b4d9aac8bfcaa56da46b4451bfd2a68e9cffe33eba61375c",
+        "size": 216563
       }
     }
   ]

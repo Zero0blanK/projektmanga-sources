@@ -20,11 +20,12 @@ import {
 import { SourceError } from "../lib/sourceError.js";
 import { deriveIsNSFW } from "../lib/manifest.js";
 import manifest from "./manifest.json";
+import { filters, searchParams } from "./filters.js";
 
 const SOURCE_ID = manifest.source_key;
 const SOURCE_NAME = manifest.name;
 const BASE_URL = manifest.base_url;
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 32;
 const http = new HttpClient({
   sourceId: SOURCE_ID,
   sourceName: SOURCE_NAME,
@@ -34,13 +35,13 @@ const http = new HttpClient({
 
 function parseCards(html: string): Mangas[] {
   const $ = load(html);
-  return $('a[href*="/series/"]')
+  const cards = $('a[href*="/series/"]')
     .map((_, el) => {
       const link = $(el);
       const href = link.attr("href") || "";
       const match = href.match(/\/series\/([0-9A-HJKMNP-TV-Z]{26})(?:\/|$)/i);
       if (!match) return null;
-      const id = match[1];
+      const id = match[1].toUpperCase();
       const image = link.find("img").first();
       const title = normalizeText(
         image.attr("alt")?.replace(/\s+cover$/i, "") || link.text(),
@@ -58,6 +59,21 @@ function parseCards(html: string): Mangas[] {
     })
     .get()
     .filter((item): item is Mangas => item !== null);
+  const unique = new Map<string, Mangas>();
+  for (const card of cards) {
+    const previous = unique.get(card.id);
+    unique.set(
+      card.id,
+      previous
+        ? {
+            ...previous,
+            title: previous.title === "No Title" ? card.title : previous.title,
+            thumbnail_url: previous.thumbnail_url || card.thumbnail_url,
+          }
+        : card,
+    );
+  }
+  return [...unique.values()];
 }
 
 function parseChapters(html: string): Chapters[] {
@@ -103,32 +119,33 @@ const source: Source = {
   lang: manifest.lang,
   base_url: BASE_URL,
   isNSFW: deriveIsNSFW(manifest.content_rating),
-  async fetchManga(category, pagination) {
+  async fetchManga(category, pagination, active) {
     const { limit, offset } = resolvePagination(pagination, {
       limit: PAGE_SIZE,
     });
-    const sort = category === "latest" ? "Latest Updates" : "Popularity";
+    const params = searchParams("", category, active);
     return collectPaged(
       { limit, offset, sitePageSize: PAGE_SIZE },
       async (page) =>
         parseCards(
           await fetchText(
-            `/search/data?sort=${encodeURIComponent(sort)}&order=Descending&limit=${PAGE_SIZE}&offset=${(page - 1) * PAGE_SIZE}`,
+            `/search/data?${params}&limit=${PAGE_SIZE}&offset=${(page - 1) * PAGE_SIZE}`,
           ),
         ),
     );
   },
-  async searchManga(query, pagination) {
+  async searchManga(query, pagination, active) {
     if (!query?.trim()) return [];
     const { limit, offset } = resolvePagination(pagination, {
       limit: PAGE_SIZE,
     });
+    const params = searchParams(query?.trim() || "", undefined, active);
     return collectPaged(
       { limit, offset, sitePageSize: PAGE_SIZE },
       async (page) =>
         parseCards(
           await fetchText(
-            `/search/data?text=${encodeURIComponent(query.trim())}&sort=Best%20Match&order=Descending&limit=${PAGE_SIZE}&offset=${(page - 1) * PAGE_SIZE}`,
+            `/search/data?${params}&limit=${PAGE_SIZE}&offset=${(page - 1) * PAGE_SIZE}`,
           ),
         ),
     );
@@ -230,7 +247,7 @@ const source: Source = {
     };
   },
   async getFilters(): Promise<MangaFilter[]> {
-    return [];
+    return structuredClone(filters);
   },
   async fetchMangaUpdates(id) {
     return source.fetchChapters(id);

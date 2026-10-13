@@ -254,11 +254,11 @@ test("every source adapter maps an offline search fixture and publishes valid fi
 
       const filters = await source.getFilters();
       if (sourceKey === "weebcentral") {
-        await source.fetchManga("latest", { limit: 1, offset: 20 });
+        await source.fetchManga("latest", { limit: 1, offset: 32 });
         const nextPage = calls.at(-1);
         assert.equal(nextPage.searchParams.get("sort"), "Latest Updates");
-        assert.equal(nextPage.searchParams.get("limit"), "20");
-        assert.equal(nextPage.searchParams.get("offset"), "20");
+        assert.equal(nextPage.searchParams.get("limit"), "32");
+        assert.equal(nextPage.searchParams.get("offset"), "32");
         assert.equal(nextPage.searchParams.has("page"), false);
         await source.fetchManga("popular", { limit: 1, offset: 0 });
         assert.equal(calls.at(-1).searchParams.get("sort"), "Popularity");

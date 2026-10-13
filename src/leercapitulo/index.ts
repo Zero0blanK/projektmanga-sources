@@ -20,6 +20,7 @@ import { SourceError } from "../lib/sourceError.js";
 import { deriveIsNSFW } from "../lib/manifest.js";
 import type { SourceManifest } from "../lib/types.js";
 import manifest from "./manifest.json";
+import staticFilters from "./filters.json";
 
 const http = new HttpClient({
   sourceId: manifest.source_key,
@@ -79,9 +80,20 @@ async function browse(
   const { limit, offset } = resolvePagination(pagination, { limit: 30 });
   return collectPaged({ limit, offset, sitePageSize: 30 }, async (page) => {
     const params = new URLSearchParams({ q: query, page: String(page) });
-    for (const key of filterKeys)
-      if (typeof filters[key] === "string" && filters[key])
-        params.set(key, filters[key] as string);
+    for (const key of filterKeys) {
+      const raw = filters[key];
+      if (typeof raw !== "string" || !raw) continue;
+      const value = raw.startsWith("/manga/?")
+        ? new URL(raw, manifest.base_url).searchParams.get(key)
+        : raw;
+      if (
+        value &&
+        staticFilters
+          .find((filter) => filter.value === key)
+          ?.options.some((option) => option.value === value)
+      )
+        params.set(key, value);
+    }
     const $ = load(await html(`/manga/?${params}`));
     return $(".lc-card")
       .map((_, el) => {
@@ -188,25 +200,7 @@ const source: Source = {
     };
   },
   async getFilters(): Promise<MangaFilter[]> {
-    const $ = load(await html("/manga/"));
-    const labels: Record<string, string> = {
-      genre: "Genre",
-      theme: "Theme",
-      type: "Type",
-      status: "Status",
-      sort: "Title order",
-    };
-    return filterKeys.flatMap((key) => {
-      const options = $(`select[name="${key}"] option`)
-        .map((_, el) => ({
-          value: $(el).attr("value") || "",
-          label: normalizeText($(el).text()),
-        }))
-        .get();
-      return options.length
-        ? [{ label: labels[key], value: key, type: "select" as const, options }]
-        : [];
-    });
+    return structuredClone(staticFilters) as MangaFilter[];
   },
   fetchMangaUpdates: (id) => source.fetchChapters(id),
 };

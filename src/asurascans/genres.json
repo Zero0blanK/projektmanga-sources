@@ -1,0 +1,142 @@
+[
+  {
+    "label": "Action",
+    "value": "action"
+  },
+  {
+    "label": "Adventure",
+    "value": "adventure"
+  },
+  {
+    "label": "Comedy",
+    "value": "comedy"
+  },
+  {
+    "label": "Crazy MC",
+    "value": "crazy-mc"
+  },
+  {
+    "label": "Dark Fantasy",
+    "value": "dark-fantasy"
+  },
+  {
+    "label": "Demon",
+    "value": "demon"
+  },
+  {
+    "label": "Drama",
+    "value": "drama"
+  },
+  {
+    "label": "Dungeons",
+    "value": "dungeons"
+  },
+  {
+    "label": "Fantasy",
+    "value": "fantasy"
+  },
+  {
+    "label": "Game",
+    "value": "game"
+  },
+  {
+    "label": "Genius MC",
+    "value": "genius-mc"
+  },
+  {
+    "label": "Isekai",
+    "value": "isekai"
+  },
+  {
+    "label": "Kuchikuchi",
+    "value": "kuchikuchi"
+  },
+  {
+    "label": "Magic",
+    "value": "magic"
+  },
+  {
+    "label": "Martial Arts",
+    "value": "martial-arts"
+  },
+  {
+    "label": "Murim",
+    "value": "murim"
+  },
+  {
+    "label": "Mystery",
+    "value": "mystery"
+  },
+  {
+    "label": "Necromancer",
+    "value": "necromancer"
+  },
+  {
+    "label": "Overpowered",
+    "value": "overpowered"
+  },
+  {
+    "label": "Psychological",
+    "value": "psychological"
+  },
+  {
+    "label": "Regression",
+    "value": "regression"
+  },
+  {
+    "label": "Reincarnation",
+    "value": "reincarnation"
+  },
+  {
+    "label": "Revenge",
+    "value": "revenge"
+  },
+  {
+    "label": "Romance",
+    "value": "romance"
+  },
+  {
+    "label": "School Life",
+    "value": "school-life"
+  },
+  {
+    "label": "Sci-fi",
+    "value": "sci-fi"
+  },
+  {
+    "label": "Shoujo",
+    "value": "shoujo"
+  },
+  {
+    "label": "Shounen",
+    "value": "shounen"
+  },
+  {
+    "label": "Supernatural",
+    "value": "supernatural"
+  },
+  {
+    "label": "System",
+    "value": "system"
+  },
+  {
+    "label": "Tower",
+    "value": "tower"
+  },
+  {
+    "label": "Tragedy",
+    "value": "tragedy"
+  },
+  {
+    "label": "Transmigration",
+    "value": "transmigration"
+  },
+  {
+    "label": "Villain",
+    "value": "villain"
+  },
+  {
+    "label": "Violence",
+    "value": "violence"
+  }
+]

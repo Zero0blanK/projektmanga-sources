@@ -2,7 +2,7 @@ import { load } from "cheerio/slim";
 import type { Source, Chapters, Mangas } from "../lib/types.js";
 import { HttpClient, NAV_HEADERS } from "../lib/http.js";
 import { TTLCache } from "../lib/cache.js";
-import { collectPaged } from "../lib/paginate.js";
+import { collectSequentialPages } from "../lib/sequentialPagination.js";
 import {
   normalizeText,
   resolvePagination,
@@ -89,15 +89,35 @@ async function browse(
   query: string | null,
   pagination: Parameters<Source["fetchManga"]>[1],
 ): Promise<Mangas[]> {
-  const { limit, offset } = resolvePagination(pagination, { limit: 30 });
-  return collectPaged({ limit, offset, sitePageSize: 30 }, async (page) => {
-    const path =
-      query === null
-        ? page === 1
-          ? "/"
-          : `/page/${page}/`
-        : `/search/?q=${encodeURIComponent(query)}&page=${page}`;
+  const window = resolvePagination(pagination, { limit: 30 });
+  // The homepage has 30 cards, subsequent pages have 20, and use /pag/.
+  const paths = new Map<number, string>([
+    [
+      1,
+      query === null ? "/" : `/search/?q=${encodeURIComponent(query)}&page=1`,
+    ],
+  ]);
+  return collectSequentialPages(window, manifest.source_key, async (page) => {
+    const path = paths.get(page);
+    if (!path) return [];
     const $ = load(await html(path));
+    const next = $(".pagination a")
+      .filter((_, el) => normalizeText($(el).text()).toLowerCase() === "next")
+      .first()
+      .attr("href");
+    if (next) {
+      const url = new URL(next, manifest.base_url);
+      if (
+        url.origin !== manifest.base_url ||
+        !/^\/(?:page\/\d+\/|pag\/\d+\/|search\/)$/.test(url.pathname)
+      )
+        throw new SourceError(
+          "PARSE_ERROR",
+          "Invalid catalogue next page",
+          manifest.source_key,
+        );
+      paths.set(page + 1, `${url.pathname}${url.search}`);
+    }
     return $(".thumb")
       .map((_, el) => {
         const node = $(el),

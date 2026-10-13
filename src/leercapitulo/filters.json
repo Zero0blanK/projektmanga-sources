@@ -1,0 +1,565 @@
+[
+  {
+    "label": "Genre",
+    "value": "genre",
+    "type": "select",
+    "options": [
+      {
+        "label": "Todos",
+        "value": ""
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Boys' Love",
+        "value": "boys-love"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Crime",
+        "value": "crime"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Girls' Love",
+        "value": "girls-love"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Magical Girls",
+        "value": "magical-girls"
+      },
+      {
+        "label": "Mecha",
+        "value": "mecha"
+      },
+      {
+        "label": "Medical",
+        "value": "medical"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "Philosophical",
+        "value": "philosophical"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "Sci-Fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Sports",
+        "value": "sports"
+      },
+      {
+        "label": "Superhero",
+        "value": "superhero"
+      },
+      {
+        "label": "Thriller",
+        "value": "thriller"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Wuxia",
+        "value": "wuxia"
+      },
+      {
+        "label": "Seinen",
+        "value": "seinen"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Shounen Ai",
+        "value": "shounen-ai"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "Shotacon",
+        "value": "shotacon"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Ciberpunk",
+        "value": "ciberpunk"
+      },
+      {
+        "label": "Vida Escolar",
+        "value": "vida-escolar"
+      },
+      {
+        "label": "Realidad Virtual",
+        "value": "realidad-virtual"
+      },
+      {
+        "label": "Fantasia",
+        "value": "fantasia"
+      },
+      {
+        "label": "Comedia",
+        "value": "comedia"
+      },
+      {
+        "label": "Recuentos de la vida",
+        "value": "recuentos-de-la-vida"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      },
+      {
+        "label": "Sobrenatural",
+        "value": "sobrenatural"
+      },
+      {
+        "label": "Magia",
+        "value": "magia"
+      },
+      {
+        "label": "Tragedia",
+        "value": "tragedia"
+      },
+      {
+        "label": "Historia",
+        "value": "historia"
+      },
+      {
+        "label": "Guerra",
+        "value": "guerra"
+      },
+      {
+        "label": "Misterio",
+        "value": "misterio"
+      },
+      {
+        "label": "Policiaco",
+        "value": "policiaco"
+      },
+      {
+        "label": "Artes Marciales",
+        "value": "artes-marciales"
+      },
+      {
+        "label": "Gore",
+        "value": "gore"
+      },
+      {
+        "label": "Superpoderes",
+        "value": "superpoderes"
+      },
+      {
+        "label": "Familia",
+        "value": "familia"
+      },
+      {
+        "label": "Aventura",
+        "value": "aventura"
+      },
+      {
+        "label": "Supervivencia",
+        "value": "supervivencia"
+      },
+      {
+        "label": "Demonios",
+        "value": "demonios"
+      },
+      {
+        "label": "Realidad",
+        "value": "realidad"
+      },
+      {
+        "label": "Telenovela",
+        "value": "telenovela"
+      },
+      {
+        "label": "Crimen",
+        "value": "crimen"
+      },
+      {
+        "label": "Parodia",
+        "value": "parodia"
+      },
+      {
+        "label": "Deporte",
+        "value": "deporte"
+      },
+      {
+        "label": "Traps",
+        "value": "traps"
+      },
+      {
+        "label": "Militar",
+        "value": "militar"
+      },
+      {
+        "label": "Musica",
+        "value": "musica"
+      },
+      {
+        "label": "Vampiros",
+        "value": "vampiros"
+      },
+      {
+        "label": "Extranjero",
+        "value": "extranjero"
+      },
+      {
+        "label": "Oeste",
+        "value": "oeste"
+      },
+      {
+        "label": "Shoujo Ai",
+        "value": "shoujo-ai"
+      },
+      {
+        "label": "Doujinshi",
+        "value": "doujinshi"
+      },
+      {
+        "label": "Psicológico",
+        "value": "psicologico"
+      },
+      {
+        "label": "Acción",
+        "value": "accion"
+      },
+      {
+        "label": "Ciencia Ficción",
+        "value": "ciencia-ficcion"
+      },
+      {
+        "label": "Género Bender",
+        "value": "genero-bender"
+      },
+      {
+        "label": "Apocalíptico",
+        "value": "apocaliptico"
+      },
+      {
+        "label": "Reencarnación",
+        "value": "reencarnacion"
+      },
+      {
+        "label": "Niños",
+        "value": "ninos"
+      },
+      {
+        "label": "Lolicon",
+        "value": "lolicon"
+      },
+      {
+        "label": "Hentai",
+        "value": "hentai"
+      },
+      {
+        "label": "Animación",
+        "value": "animacion"
+      }
+    ]
+  },
+  {
+    "label": "Theme",
+    "value": "theme",
+    "type": "select",
+    "options": [
+      {
+        "label": "Todas",
+        "value": ""
+      },
+      {
+        "label": "Aliens",
+        "value": "aliens"
+      },
+      {
+        "label": "Animals",
+        "value": "animals"
+      },
+      {
+        "label": "Cooking",
+        "value": "cooking"
+      },
+      {
+        "label": "Cross-dressing",
+        "value": "cross-dressing"
+      },
+      {
+        "label": "Delinquents",
+        "value": "delinquents"
+      },
+      {
+        "label": "Demons",
+        "value": "demons"
+      },
+      {
+        "label": "Genderswap",
+        "value": "genderswap"
+      },
+      {
+        "label": "Ghosts",
+        "value": "ghosts"
+      },
+      {
+        "label": "Gyaru",
+        "value": "gyaru"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Incest",
+        "value": "incest"
+      },
+      {
+        "label": "Loli",
+        "value": "loli"
+      },
+      {
+        "label": "Mafia",
+        "value": "mafia"
+      },
+      {
+        "label": "Magic",
+        "value": "magic"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Military",
+        "value": "military"
+      },
+      {
+        "label": "Monster Girls",
+        "value": "monster-girls"
+      },
+      {
+        "label": "Monsters",
+        "value": "monsters"
+      },
+      {
+        "label": "Music",
+        "value": "music"
+      },
+      {
+        "label": "Ninja",
+        "value": "ninja"
+      },
+      {
+        "label": "Office Workers",
+        "value": "office-workers"
+      },
+      {
+        "label": "Police",
+        "value": "police"
+      },
+      {
+        "label": "Post-Apocalyptic",
+        "value": "post-apocalyptic"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "reincarnation"
+      },
+      {
+        "label": "Reverse Harem",
+        "value": "reverse-harem"
+      },
+      {
+        "label": "Samurai",
+        "value": "samurai"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Shota",
+        "value": "shota"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Survival",
+        "value": "survival"
+      },
+      {
+        "label": "Time Travel",
+        "value": "time-travel"
+      },
+      {
+        "label": "Traditional Games",
+        "value": "traditional-games"
+      },
+      {
+        "label": "Vampires",
+        "value": "vampires"
+      },
+      {
+        "label": "Video Games",
+        "value": "video-games"
+      },
+      {
+        "label": "Villainess",
+        "value": "villainess"
+      },
+      {
+        "label": "Virtual Reality",
+        "value": "virtual-reality"
+      },
+      {
+        "label": "Zombies",
+        "value": "zombies"
+      }
+    ]
+  },
+  {
+    "label": "Type",
+    "value": "type",
+    "type": "select",
+    "options": [
+      {
+        "label": "Todos",
+        "value": ""
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Todos",
+        "value": ""
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Ongoing",
+        "value": "ongoing"
+      },
+      {
+        "label": "Paused",
+        "value": "paused"
+      },
+      {
+        "label": "Cancelled",
+        "value": "cancelled"
+      }
+    ]
+  },
+  {
+    "label": "Title order",
+    "value": "sort",
+    "type": "select",
+    "options": [
+      {
+        "label": "A - Z",
+        "value": "az"
+      },
+      {
+        "label": "Z - A",
+        "value": "za"
+      }
+    ]
+  }
+]
