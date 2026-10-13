@@ -16,6 +16,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck
+      - run: npm test
       - run: npm run build
       # The app downloads dist/ straight from this repo's raw URLs, so a commit whose
       # sources and bundles disagree publishes stale code. Fail loudly instead.

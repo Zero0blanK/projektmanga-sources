@@ -4,7 +4,6 @@
   "repository": {
     "name": "ProjektManga sources",
     "badge_label": "PM",
-    "description": "Sandboxed manga sources maintained alongside ProjektManga.",
     "website": "https://github.com/Zero0blanK/projektmanga-sources",
     "contact": {
       "issues": "https://github.com/Zero0blanK/projektmanga-sources/issues"

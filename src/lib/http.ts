@@ -10,12 +10,9 @@ import { classifyHttpStatus, classifyRequestError, SourceError } from './sourceE
  * `apps/extensions/config/axios.config.ts` becomes once that constraint is applied:
  * rate limiting, retries, timeouts and error classification, all on top of plain `fetch`.
  *
- * Two shim behaviours shape the implementation:
- * - `init.signal` is not forwarded, so a timeout cannot actually abort the parent's
- *   request. `withTimeout` therefore *races* rather than aborts: the caller stops waiting,
- *   and the orphaned response is discarded when it eventually arrives.
- * - Only string request bodies survive the trip. Nothing here sends a body, but keep it in
- *   mind before adding a POST.
+ * The sandbox fetch shim forwards aborts over IPC, so request timeouts cancel the parent's
+ * network operation as well as rejecting the source call. Only string request bodies
+ * survive the trip; this client sends GET requests only.
  */
 
 const DEFAULT_TIMEOUT_MS = 15_000;
@@ -77,15 +74,22 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-/** Races the request against a timer. See the note at the top of the file on why this
- * cannot be a real abort. */
-async function withTimeout<T>(promise: Promise<T>, timeoutMs: number, label: string): Promise<T> {
+/** Rejects the caller at the deadline and aborts the parent-owned network request. */
+async function withTimeout<T>(
+  promise: Promise<T>,
+  timeoutMs: number,
+  label: string,
+  abort: () => void,
+): Promise<T> {
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
     return await Promise.race([
       promise,
       new Promise<never>((_, reject) => {
-        timer = setTimeout(() => reject(new Error(`timeout of ${timeoutMs}ms exceeded${label}`)), timeoutMs);
+        timer = setTimeout(() => {
+          reject(new Error(`timeout of ${timeoutMs}ms exceeded${label}`));
+          abort();
+        }, timeoutMs);
       }),
     ]);
   } finally {
@@ -187,9 +191,15 @@ export class HttpClient {
       }
 
       try {
-        const response = await this.schedule(() =>
-          withTimeout(fetch(url, { method: 'GET', headers }), timeoutMs, ` fetching ${path}`),
-        );
+        const response = await this.schedule(() => {
+          const controller = new AbortController();
+          return withTimeout(
+            fetch(url, { method: 'GET', headers, signal: controller.signal }),
+            timeoutMs,
+            ` fetching ${path}`,
+            () => controller.abort(),
+          );
+        });
 
         if (response.ok) {
           return response;
@@ -211,7 +221,6 @@ export class HttpClient {
 
       const retryable =
         lastError.code === 'NETWORK_ERROR' ||
-        lastError.code === 'TIMEOUT' ||
         lastError.code === 'RATE_LIMITED' ||
         (lastError.code === 'UPSTREAM_ERROR' && (lastError.statusCode ?? 0) >= 500);
 

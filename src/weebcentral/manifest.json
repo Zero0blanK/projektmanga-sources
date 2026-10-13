@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "weebcentral",
+  "name": "Weeb Central",
+  "lang": "en",
+  "version": "1.0.2",
+  "base_url": "https://weebcentral.com",
+  "allowed_hosts": [
+    "weebcentral.com",
+    "compsci88.com",
+    "lowee.us",
+    "lastation.us"
+  ],
+  "content_rating": "mixed"
+}

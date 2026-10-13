@@ -3,7 +3,6 @@
   "repository": {
     "name": "ProjektManga sources",
     "badge_label": "PM",
-    "description": "Sandboxed manga sources maintained alongside ProjektManga.",
     "website": "https://github.com/Zero0blanK/projektmanga-sources",
     "contact": {
       "issues": "https://github.com/Zero0blanK/projektmanga-sources/issues"
@@ -11,13 +10,73 @@
   },
   "sources": [
     {
+      "source_key": "asurascans",
+      "name": "Asura Scans",
+      "lang": "en",
+      "version": "1.0.1",
+      "version_code": 1000001,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/asurascans.js",
+      "base_url": "https://asurascans.com",
+      "homepage": "https://asurascans.com",
+      "allowed_hosts": [
+        "asurascans.com",
+        "cdn.asurascans.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "096757d74f5d0bb2158ff6182d00c91d7486858b5b0660255005a3812747a519",
+        "size": 214392
+      }
+    },
+    {
+      "source_key": "hentaifox",
+      "name": "HentaiFox",
+      "lang": "all",
+      "version": "1.0.1",
+      "version_code": 1000001,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/hentaifox.js",
+      "base_url": "https://hentaifox.com",
+      "homepage": "https://hentaifox.com",
+      "allowed_hosts": [
+        "hentaifox.com"
+      ],
+      "content_rating": "nsfw",
+      "isNSFW": true,
+      "bundle": {
+        "sha256": "c438da14673b11716c0f8f33fc14e5f08a889ffea37f6dfadaba1252a0fe8612",
+        "size": 214199
+      }
+    },
+    {
+      "source_key": "leercapitulo",
+      "name": "LeerCapitulo",
+      "lang": "es",
+      "version": "1.0.1",
+      "version_code": 1000001,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/leercapitulo.js",
+      "base_url": "https://www.leercapitulo.co",
+      "homepage": "https://www.leercapitulo.co",
+      "allowed_hosts": [
+        "www.leercapitulo.co"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "f72e703de78775fcefb2077908c541ad97c085daef28f0457250f9f78a193f7f",
+        "size": 215389
+      }
+    },
+    {
       "source_key": "mangadex",
       "name": "MangaDex",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.1.2",
+      "version_code": 1001002,
       "api_version": 1,
-      "description": "Scanlation library with an official API, filters and per-chapter groups.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex.svg",
       "base_url": "https://api.mangadex.org",
@@ -28,18 +87,117 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "7b51f5cab6c5922a143fb0e0725deeccfe824e3da9e5b58b84afd444f980faea",
-        "size": 75114
+        "sha256": "3e5d6f30b82dfe9139e9517640ea69f5d55cefb161885a4ead81f38c7d073d0d",
+        "size": 75561
+      }
+    },
+    {
+      "source_key": "mangadex-es",
+      "name": "MangaDex — Spanish",
+      "lang": "es",
+      "version": "1.0.2",
+      "version_code": 1000002,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-es.js",
+      "base_url": "https://api.mangadex.org",
+      "homepage": "https://mangadex.org",
+      "allowed_hosts": [
+        "api.mangadex.org"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "977758869eb4f4fffe9b98b0ba44a0dbbb0b7640d4f1176c3f9ae2f250300c07",
+        "size": 75579
+      }
+    },
+    {
+      "source_key": "mangadex-fr",
+      "name": "MangaDex — French",
+      "lang": "fr",
+      "version": "1.0.2",
+      "version_code": 1000002,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-fr.js",
+      "base_url": "https://api.mangadex.org",
+      "homepage": "https://mangadex.org",
+      "allowed_hosts": [
+        "api.mangadex.org"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "930be1ec90f3287819412c19e6f24a9e465267deda5f28abf4a5ebe12e230b8d",
+        "size": 75578
+      }
+    },
+    {
+      "source_key": "mangadex-id",
+      "name": "MangaDex — Indonesian",
+      "lang": "id",
+      "version": "1.0.2",
+      "version_code": 1000002,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-id.js",
+      "base_url": "https://api.mangadex.org",
+      "homepage": "https://mangadex.org",
+      "allowed_hosts": [
+        "api.mangadex.org"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "e367f108986b17cd3d8ecd43fc528ee816008de7d982872e70c422e6e2e2c063",
+        "size": 75582
+      }
+    },
+    {
+      "source_key": "mangadex-pt-br",
+      "name": "MangaDex — Brazilian Portuguese",
+      "lang": "pt-br",
+      "version": "1.0.2",
+      "version_code": 1000002,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-pt-br.js",
+      "base_url": "https://api.mangadex.org",
+      "homepage": "https://mangadex.org",
+      "allowed_hosts": [
+        "api.mangadex.org"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "cb50b7ee39dca14ac70ae39146ad2ac6b289c13ba90a314297fd5d1cd8013da8",
+        "size": 75598
+      }
+    },
+    {
+      "source_key": "mangadex-ru",
+      "name": "MangaDex — Russian",
+      "lang": "ru",
+      "version": "1.0.2",
+      "version_code": 1000002,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-ru.js",
+      "base_url": "https://api.mangadex.org",
+      "homepage": "https://mangadex.org",
+      "allowed_hosts": [
+        "api.mangadex.org"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "a27e2154d5580fd1092188ead2260b120f2b0073fe393d845374ecebcf6f94be",
+        "size": 75579
       }
     },
     {
       "source_key": "mangageko",
       "name": "MangaGeko",
       "lang": "en",
-      "version": "1.1.0",
-      "version_code": 1001000,
+      "version": "1.1.1",
+      "version_code": 1001001,
       "api_version": 1,
-      "description": "English manga and manhwa aggregator with fast chapter updates.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangageko.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangageko.svg",
       "base_url": "https://mgeko.cc",
@@ -50,18 +208,17 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "e43bd6a374373f276dce3968d7547cc6730a8c5935561bf65121607a53913c6c",
-        "size": 219432
+        "sha256": "0b2b37b8931ec0e896b9a2260856561d39e515ddbb4346cb1bc2914dd33fde18",
+        "size": 219408
       }
     },
     {
       "source_key": "mangatx",
       "name": "MangaTX",
       "lang": "en",
-      "version": "1.1.0",
-      "version_code": 1001000,
+      "version": "1.1.1",
+      "version_code": 1001001,
       "api_version": 1,
-      "description": "Madara-based manhwa and manga aggregator.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangatx.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangatx.svg",
       "base_url": "https://mangatx.cc",
@@ -72,18 +229,17 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "ff7b08b7035045eecd24d6f7a8dd5f207b1293b74262fc1ee86e5395cd4886a6",
-        "size": 214606
+        "sha256": "4a71d5b088ad0f5e59011a887ff1230daf1e497b803815a8d19dfff69c474b10",
+        "size": 214625
       }
     },
     {
       "source_key": "nhentai",
       "name": "Nhentai",
       "lang": "en",
-      "version": "1.1.0",
-      "version_code": 1001000,
+      "version": "1.1.1",
+      "version_code": 1001001,
       "api_version": 1,
-      "description": "Doujinshi archive. Adult content only.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nhentai.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nhentai.svg",
       "base_url": "https://nhentai.net",
@@ -94,8 +250,31 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "3e140c7ec51f7ce328286b008670af25c4c786f5c3e8fde6fd93adc4b2f34c9c",
+        "sha256": "857d1a89c273fce140181036c95300d24d422c0879f8d16cdaf5c65faf423d06",
         "size": 10734
+      }
+    },
+    {
+      "source_key": "weebcentral",
+      "name": "Weeb Central",
+      "lang": "en",
+      "version": "1.0.2",
+      "version_code": 1000002,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/weebcentral.js",
+      "base_url": "https://weebcentral.com",
+      "homepage": "https://weebcentral.com",
+      "allowed_hosts": [
+        "weebcentral.com",
+        "compsci88.com",
+        "lowee.us",
+        "lastation.us"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "5dd72c7b35a13805564f1459b413f972f95c28fcf0b58e835a4ede883cadb338",
+        "size": 214628
       }
     }
   ]

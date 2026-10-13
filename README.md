@@ -58,15 +58,22 @@ unbuilt commit publishes stale code. CI fails the build if the two disagree.
 | MangaGeko | `mangageko` | mixed | published — browse, search, details, chapters, pages |
 | MangaTX | `mangatx` | mixed | published — browse, search, details, chapters, pages |
 | Nhentai | `nhentai` | nsfw | published — browse, search, details, pages |
+| Asura Scans | `asurascans` | mixed | published — browse, search, details, chapters, pages |
 | Kissmanga | `kissmanga` | mixed | **draft, not listed** — see below |
+| Weeb Central | `weebcentral` | mixed | published — browse, search, details, full chapter lists, pages |
+
+See [v2 acceptance and candidate feasibility](docs/source-feasibility-v2.md) for the dated sandbox evidence and deferred sites.
 
 `mixed` means a general catalogue that also carries adult titles: badged, not hidden. Only
 `nsfw` sets `isNSFW` in the listing. See
 [Content rating](docs/repository-format.md#content-rating).
 
-All four published sources were verified end to end against the live sites, both directly
-and running inside the app's real sandbox process. Re-run that check any time with
-`npm run smoke`.
+`npm test` runs deterministic offline checks, including search, detail, chapter-order, page-image,
+and filter fixtures for every adapter directory (published and draft), generated index and bundle
+parity, pagination boundaries, timeout cancellation, and redirect allowlisting. `npm run smoke`
+makes live upstream requests and remains a manual
+observation; it is not a CI gate. Run it when you want to verify current site markup and
+availability.
 
 ### Why Kissmanga is a draft
 

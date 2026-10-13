@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "hentaifox",
+  "name": "HentaiFox",
+  "lang": "all",
+  "version": "1.0.1",
+  "base_url": "https://hentaifox.com",
+  "homepage": "https://hentaifox.com",
+  "allowed_hosts": ["hentaifox.com"],
+  "content_rating": "nsfw"
+}

@@ -27,17 +27,10 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const only = process.argv.slice(2);
 
 const realFetch = globalThis.fetch;
+const { allowlistedFetch } = await import('./allowlisted-fetch.mjs');
 
 function installAllowlist(allowedHosts) {
-  globalThis.fetch = async (input, init) => {
-    const href = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url;
-    const { hostname } = new URL(href);
-    const allowed = allowedHosts.some((host) => hostname === host || hostname.endsWith(`.${host}`));
-    if (!allowed) {
-      throw new TypeError(`Host "${hostname}" is not in this source's allowlist`);
-    }
-    return realFetch(input, init);
-  };
+  globalThis.fetch = (input, init) => allowlistedFetch(input, init, allowedHosts, realFetch);
 }
 
 function preview(value) {

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "mangadex-ru",
+  "name": "MangaDex — Russian",
+  "lang": "ru",
+  "version": "1.0.2",
+  "base_url": "https://api.mangadex.org",
+  "homepage": "https://mangadex.org",
+  "allowed_hosts": ["api.mangadex.org"],
+  "content_rating": "mixed"
+}

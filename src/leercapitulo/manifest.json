@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "leercapitulo",
+  "name": "LeerCapitulo",
+  "lang": "es",
+  "version": "1.0.1",
+  "base_url": "https://www.leercapitulo.co",
+  "homepage": "https://www.leercapitulo.co",
+  "allowed_hosts": ["www.leercapitulo.co"],
+  "content_rating": "mixed"
+}

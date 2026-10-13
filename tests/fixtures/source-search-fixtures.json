@@ -1,0 +1,687 @@
+{
+  "asurascans": {
+    "html": "<a href=\"/comics/fixture-series\"><img alt=\"Fixture Series\" src=\"/asura-images/covers/fixture.jpg\"></a>",
+    "detailsHtml": "<h1>Fixture Series</h1><img src=\"/asura-images/covers/fixture.jpg\"><div id=\"description-text\">Fixture description</div><a href=\"/comics/fixture-series/chapter/2\">Chapter 2</a><a href=\"/comics/fixture-series/chapter/1\">Chapter 1</a>",
+    "pagesHtml": "<img src=\"/asura-images/chapters/page-1.jpg\"><img src=\"/asura-images/chapters/page-2.jpg\">"
+  },
+  "kissmanga": {
+    "html": "<div class=\"page-content-listing\"><div class=\"page-item-listing\"><div class=\"item-summary\"><h3><a href=\"/kissmanga/fixture-series/\">Fixture Series</a></h3><img src=\"/covers/fixture.jpg\"></div></div></div>",
+    "detailsHtml": "<div class=\"post-title\"><h1>Fixture Series</h1></div><div class=\"summary_image\"><img src=\"/covers/fixture.jpg\"></div><div class=\"description-summary\">Fixture description</div><div class=\"genres-content\"><a>Action</a></div><ul class=\"listing-chapters_wrap\"><li class=\"wp-manga-chapter\"><a href=\"/kissmanga/fixture-series/chapter-2/\">Chapter 2</a></li><li class=\"wp-manga-chapter\"><a href=\"/kissmanga/fixture-series/chapter-1/\">Chapter 1</a></li></ul>",
+    "pagesHtml": "<div class=\"reading-content\"><img src=\"/pages/page-1.jpg\"><img src=\"/pages/page-2.jpg\"></div>"
+  },
+  "mangadex": {
+    "search": {
+      "data": [
+        {
+          "id": "fixture-series",
+          "attributes": {
+            "title": {
+              "en": "Fixture Series"
+            },
+            "tags": []
+          },
+          "relationships": [
+            {
+              "id": "cover-id",
+              "type": "cover_art",
+              "attributes": {
+                "fileName": "fixture"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "data": [
+        {
+          "id": "fixture-tag",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "group": "genre"
+          }
+        }
+      ]
+    },
+    "details": {
+      "data": {
+        "id": "fixture-series",
+        "attributes": {
+          "title": {
+            "en": "Fixture Series"
+          },
+          "description": {
+            "en": "Fixture description"
+          },
+          "status": "ongoing",
+          "tags": []
+        },
+        "relationships": [
+          {
+            "id": "cover-id",
+            "type": "cover_art",
+            "attributes": {
+              "fileName": "fixture"
+            }
+          },
+          {
+            "id": "author-id",
+            "type": "author",
+            "attributes": {
+              "name": "Fixture Author"
+            }
+          }
+        ]
+      }
+    },
+    "chapters": {
+      "data": [
+        {
+          "id": "chapter-2",
+          "attributes": {
+            "chapter": "2",
+            "translatedLanguage": "en",
+            "pages": 2
+          },
+          "relationships": []
+        },
+        {
+          "id": "chapter-1",
+          "attributes": {
+            "chapter": "1",
+            "translatedLanguage": "en",
+            "pages": 2
+          },
+          "relationships": []
+        }
+      ],
+      "limit": 100,
+      "offset": 0,
+      "total": 2
+    },
+    "pages": {
+      "baseUrl": "https://mangadex.example",
+      "chapter": {
+        "hash": "fixture-hash",
+        "data": ["page-1.jpg", "page-2.jpg"]
+      }
+    }
+  },
+  "mangageko": {
+    "json": {
+      "results_html": "<article class=\"comic-card\"><div class=\"comic-card__title\"><a href=\"/manga/fixture-series/\">Fixture Series</a></div><div class=\"comic-card__cover\"><img src=\"/covers/fixture.jpg\"></div></article>",
+      "page": 1,
+      "num_pages": 1,
+      "total_results": 1
+    },
+    "detailsHtml": "<header class=\"novel-header\"><div class=\"cover\"><img src=\"/covers/fixture.jpg\"></div></header><h1 class=\"novel-title\">Fixture Series</h1><p class=\"description\">Fixture description</p><span itemprop=\"author\">Fixture Author</span>",
+    "chaptersHtml": "<ul class=\"chapter-list\"><li><a href=\"/reader/en/chapter-2/\"><span class=\"chapter-title\">Chapter 2</span></a></li><li><a href=\"/reader/en/chapter-1/\"><span class=\"chapter-title\">Chapter 1</span></a></li></ul>",
+    "pagesHtml": "<img id=\"image-1\" src=\"/pages/page-1.jpg\"><img id=\"image-2\" src=\"/pages/page-2.jpg\">"
+  },
+  "mangatx": {
+    "html": "<div class=\"bs\"><a href=\"/manga/fixture-series/\" title=\"Fixture Series\"><img src=\"/covers/fixture.jpg\"><div class=\"tt\">Fixture Series</div></a></div>",
+    "detailsHtml": "<h1 class=\"entry-title\">Fixture Series</h1><div class=\"thumb\"><img src=\"/covers/fixture.jpg\"></div><div id=\"chapterlist\"><ul><li><div class=\"eph-num\"><a href=\"/manga/fixture-series/chapter-2\"><span class=\"chapternum\">Chapter 2</span></a></div></li><li><div class=\"eph-num\"><a href=\"/manga/fixture-series/chapter-1\"><span class=\"chapternum\">Chapter 1</span></a></div></li></ul></div>",
+    "pagesHtml": "<div class=\"chapterbody\"><div id=\"readerarea\"><img src=\"/pages/page-1.jpg\"><img src=\"/pages/page-2.jpg\"></div></div>"
+  },
+  "nhentai": {
+    "json": {
+      "result": [
+        {
+          "id": 12345,
+          "english_title": "Fixture Series",
+          "thumbnail": "g/fixture.jpg"
+        }
+      ]
+    },
+    "gallery": {
+      "title": {
+        "english": "Fixture Series",
+        "japanese": "Fixture JP"
+      },
+      "cover": {
+        "path": "g/cover.jpg"
+      },
+      "tags": [
+        {
+          "type": "category",
+          "name": "doujinshi"
+        }
+      ],
+      "pages": [
+        {
+          "number": 1,
+          "path": "1.jpg"
+        },
+        {
+          "number": 2,
+          "path": "2.jpg"
+        }
+      ],
+      "num_pages": 2,
+      "num_favorites": 1,
+      "upload_date": 1700000000
+    }
+  },
+  "weebcentral": {
+    "html": "<a href=\"/series/01ARZ3NDEKTSV4RRFFQ69G5FAV\"><img alt=\"Fixture Series\" src=\"/covers/fixture.jpg\"></a>",
+    "detailsHtml": "<h1>Fixture Series</h1><img src=\"/cover/fixture.jpg\"><div class=\"description\">Fixture description</div><ul id=\"chapter-list\"><li><a href=\"/chapters/chapter-2\"><span>Chapter 2</span><time datetime=\"2026-01-02\"></time></a></li><li><a href=\"/chapters/chapter-1\"><span>Chapter 1</span><time datetime=\"2026-01-01\"></time></a></li></ul>",
+    "pagesHtml": "<img src=\"/pages/page-1.jpg\"><img src=\"/pages/page-2.jpg\">"
+  },
+  "mangadex-es": {
+    "search": {
+      "data": [
+        {
+          "id": "fixture-series",
+          "attributes": {
+            "title": {
+              "en": "Fixture Series"
+            },
+            "tags": []
+          },
+          "relationships": [
+            {
+              "id": "cover-id",
+              "type": "cover_art",
+              "attributes": {
+                "fileName": "fixture"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "data": [
+        {
+          "id": "fixture-tag",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "group": "genre"
+          }
+        }
+      ]
+    },
+    "details": {
+      "data": {
+        "id": "fixture-series",
+        "attributes": {
+          "title": {
+            "en": "Fixture Series"
+          },
+          "description": {
+            "en": "Fixture description"
+          },
+          "status": "ongoing",
+          "tags": []
+        },
+        "relationships": [
+          {
+            "id": "cover-id",
+            "type": "cover_art",
+            "attributes": {
+              "fileName": "fixture"
+            }
+          },
+          {
+            "id": "author-id",
+            "type": "author",
+            "attributes": {
+              "name": "Fixture Author"
+            }
+          }
+        ]
+      }
+    },
+    "chapters": {
+      "data": [
+        {
+          "id": "chapter-2",
+          "attributes": {
+            "chapter": "2",
+            "translatedLanguage": "es",
+            "pages": 2
+          },
+          "relationships": []
+        },
+        {
+          "id": "chapter-1",
+          "attributes": {
+            "chapter": "1",
+            "translatedLanguage": "es",
+            "pages": 2
+          },
+          "relationships": []
+        }
+      ],
+      "limit": 100,
+      "offset": 0,
+      "total": 2
+    },
+    "pages": {
+      "baseUrl": "https://mangadex.example",
+      "chapter": {
+        "hash": "fixture-hash",
+        "data": ["page-1.jpg", "page-2.jpg"]
+      }
+    }
+  },
+  "mangadex-pt-br": {
+    "search": {
+      "data": [
+        {
+          "id": "fixture-series",
+          "attributes": {
+            "title": {
+              "en": "Fixture Series"
+            },
+            "tags": []
+          },
+          "relationships": [
+            {
+              "id": "cover-id",
+              "type": "cover_art",
+              "attributes": {
+                "fileName": "fixture"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "data": [
+        {
+          "id": "fixture-tag",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "group": "genre"
+          }
+        }
+      ]
+    },
+    "details": {
+      "data": {
+        "id": "fixture-series",
+        "attributes": {
+          "title": {
+            "en": "Fixture Series"
+          },
+          "description": {
+            "en": "Fixture description"
+          },
+          "status": "ongoing",
+          "tags": []
+        },
+        "relationships": [
+          {
+            "id": "cover-id",
+            "type": "cover_art",
+            "attributes": {
+              "fileName": "fixture"
+            }
+          },
+          {
+            "id": "author-id",
+            "type": "author",
+            "attributes": {
+              "name": "Fixture Author"
+            }
+          }
+        ]
+      }
+    },
+    "chapters": {
+      "data": [
+        {
+          "id": "chapter-2",
+          "attributes": {
+            "chapter": "2",
+            "translatedLanguage": "pt-br",
+            "pages": 2
+          },
+          "relationships": []
+        },
+        {
+          "id": "chapter-1",
+          "attributes": {
+            "chapter": "1",
+            "translatedLanguage": "pt-br",
+            "pages": 2
+          },
+          "relationships": []
+        }
+      ],
+      "limit": 100,
+      "offset": 0,
+      "total": 2
+    },
+    "pages": {
+      "baseUrl": "https://mangadex.example",
+      "chapter": {
+        "hash": "fixture-hash",
+        "data": ["page-1.jpg", "page-2.jpg"]
+      }
+    }
+  },
+  "mangadex-fr": {
+    "search": {
+      "data": [
+        {
+          "id": "fixture-series",
+          "attributes": {
+            "title": {
+              "en": "Fixture Series"
+            },
+            "tags": []
+          },
+          "relationships": [
+            {
+              "id": "cover-id",
+              "type": "cover_art",
+              "attributes": {
+                "fileName": "fixture"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "data": [
+        {
+          "id": "fixture-tag",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "group": "genre"
+          }
+        }
+      ]
+    },
+    "details": {
+      "data": {
+        "id": "fixture-series",
+        "attributes": {
+          "title": {
+            "en": "Fixture Series"
+          },
+          "description": {
+            "en": "Fixture description"
+          },
+          "status": "ongoing",
+          "tags": []
+        },
+        "relationships": [
+          {
+            "id": "cover-id",
+            "type": "cover_art",
+            "attributes": {
+              "fileName": "fixture"
+            }
+          },
+          {
+            "id": "author-id",
+            "type": "author",
+            "attributes": {
+              "name": "Fixture Author"
+            }
+          }
+        ]
+      }
+    },
+    "chapters": {
+      "data": [
+        {
+          "id": "chapter-2",
+          "attributes": {
+            "chapter": "2",
+            "translatedLanguage": "fr",
+            "pages": 2
+          },
+          "relationships": []
+        },
+        {
+          "id": "chapter-1",
+          "attributes": {
+            "chapter": "1",
+            "translatedLanguage": "fr",
+            "pages": 2
+          },
+          "relationships": []
+        }
+      ],
+      "limit": 100,
+      "offset": 0,
+      "total": 2
+    },
+    "pages": {
+      "baseUrl": "https://mangadex.example",
+      "chapter": {
+        "hash": "fixture-hash",
+        "data": ["page-1.jpg", "page-2.jpg"]
+      }
+    }
+  },
+  "mangadex-id": {
+    "search": {
+      "data": [
+        {
+          "id": "fixture-series",
+          "attributes": {
+            "title": {
+              "en": "Fixture Series"
+            },
+            "tags": []
+          },
+          "relationships": [
+            {
+              "id": "cover-id",
+              "type": "cover_art",
+              "attributes": {
+                "fileName": "fixture"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "data": [
+        {
+          "id": "fixture-tag",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "group": "genre"
+          }
+        }
+      ]
+    },
+    "details": {
+      "data": {
+        "id": "fixture-series",
+        "attributes": {
+          "title": {
+            "en": "Fixture Series"
+          },
+          "description": {
+            "en": "Fixture description"
+          },
+          "status": "ongoing",
+          "tags": []
+        },
+        "relationships": [
+          {
+            "id": "cover-id",
+            "type": "cover_art",
+            "attributes": {
+              "fileName": "fixture"
+            }
+          },
+          {
+            "id": "author-id",
+            "type": "author",
+            "attributes": {
+              "name": "Fixture Author"
+            }
+          }
+        ]
+      }
+    },
+    "chapters": {
+      "data": [
+        {
+          "id": "chapter-2",
+          "attributes": {
+            "chapter": "2",
+            "translatedLanguage": "id",
+            "pages": 2
+          },
+          "relationships": []
+        },
+        {
+          "id": "chapter-1",
+          "attributes": {
+            "chapter": "1",
+            "translatedLanguage": "id",
+            "pages": 2
+          },
+          "relationships": []
+        }
+      ],
+      "limit": 100,
+      "offset": 0,
+      "total": 2
+    },
+    "pages": {
+      "baseUrl": "https://mangadex.example",
+      "chapter": {
+        "hash": "fixture-hash",
+        "data": ["page-1.jpg", "page-2.jpg"]
+      }
+    }
+  },
+  "mangadex-ru": {
+    "search": {
+      "data": [
+        {
+          "id": "fixture-series",
+          "attributes": {
+            "title": {
+              "en": "Fixture Series"
+            },
+            "tags": []
+          },
+          "relationships": [
+            {
+              "id": "cover-id",
+              "type": "cover_art",
+              "attributes": {
+                "fileName": "fixture"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "data": [
+        {
+          "id": "fixture-tag",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "group": "genre"
+          }
+        }
+      ]
+    },
+    "details": {
+      "data": {
+        "id": "fixture-series",
+        "attributes": {
+          "title": {
+            "en": "Fixture Series"
+          },
+          "description": {
+            "en": "Fixture description"
+          },
+          "status": "ongoing",
+          "tags": []
+        },
+        "relationships": [
+          {
+            "id": "cover-id",
+            "type": "cover_art",
+            "attributes": {
+              "fileName": "fixture"
+            }
+          },
+          {
+            "id": "author-id",
+            "type": "author",
+            "attributes": {
+              "name": "Fixture Author"
+            }
+          }
+        ]
+      }
+    },
+    "chapters": {
+      "data": [
+        {
+          "id": "chapter-2",
+          "attributes": {
+            "chapter": "2",
+            "translatedLanguage": "ru",
+            "pages": 2
+          },
+          "relationships": []
+        },
+        {
+          "id": "chapter-1",
+          "attributes": {
+            "chapter": "1",
+            "translatedLanguage": "ru",
+            "pages": 2
+          },
+          "relationships": []
+        }
+      ],
+      "limit": 100,
+      "offset": 0,
+      "total": 2
+    },
+    "pages": {
+      "baseUrl": "https://mangadex.example",
+      "chapter": {
+        "hash": "fixture-hash",
+        "data": ["page-1.jpg", "page-2.jpg"]
+      }
+    }
+  },
+  "leercapitulo": {
+    "html": "<article class=\"lc-card\"><a class=\"lc-card-name\" href=\"/manga/fixture/fixture-series/\">Fixture Series</a><img src=\"/covers/f.jpg\"></article>",
+    "detailsHtml": "<h1>Fixture Series</h1><img src=\"/covers/f.jpg\"><div class=\"lc-synopsis\">Description</div><a class=\"lc-chapter-row\" href=\"/leer/fixture/fixture-series/2/\"><span class=\"n\">Capitulo 2</span><span class=\"d\">2026-10-11</span></a><a class=\"lc-chapter-row\" href=\"/leer/fixture/fixture-series/1/\"><span class=\"n\">Capitulo 1</span></a>",
+    "pagesHtml": "<img data-index=\"0\" data-src=\"https://pages.example/1.jpg\"><img data-index=\"1\" data-src=\"https://pages.example/2.jpg\">"
+  },
+  "hentaifox": {
+    "html": "<div class=\"thumb\"><h2 class=\"g_title\"><a href=\"/gallery/12345/\">Fixture Series</a></h2><img data-src=\"https://i3.hentaifox.com/001/fixture/thumb.jpg\"></div>",
+    "detailsHtml": "<h1>Fixture Series</h1><div class=\"cover\"><img src=\"https://i3.hentaifox.com/001/fixture/cover.jpg\"></div><a href=\"/language/english/\">English <span>10</span></a><script>var g_th = $.parseJSON('{\"1\":\"w,100,200\",\"2\":\"j,100,200\"}');</script>"
+  }
+}
