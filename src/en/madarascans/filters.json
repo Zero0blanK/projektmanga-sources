@@ -1,0 +1,278 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Default",
+        "value": ""
+      },
+      {
+        "label": "A-Z",
+        "value": "title"
+      },
+      {
+        "label": "Z-A",
+        "value": "titlereverse"
+      },
+      {
+        "label": "Update",
+        "value": "update"
+      },
+      {
+        "label": "Added",
+        "value": "latest"
+      },
+      {
+        "label": "Popular",
+        "value": "popular"
+      }
+    ]
+  },
+  {
+    "label": "Type",
+    "value": "type",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      },
+      {
+        "label": "Novel",
+        "value": "novel"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "ongoing"
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Hiatus",
+        "value": "hiatus"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Academy",
+        "value": "296"
+      },
+      {
+        "label": "Action",
+        "value": "2"
+      },
+      {
+        "label": "Adult",
+        "value": "25"
+      },
+      {
+        "label": "Adventure",
+        "value": "3"
+      },
+      {
+        "label": "Bloody",
+        "value": "111"
+      },
+      {
+        "label": "Comedy",
+        "value": "66"
+      },
+      {
+        "label": "crime",
+        "value": "144"
+      },
+      {
+        "label": "Death Game",
+        "value": "108"
+      },
+      {
+        "label": "Demon",
+        "value": "32"
+      },
+      {
+        "label": "demons",
+        "value": "152"
+      },
+      {
+        "label": "Doujinshi",
+        "value": "55"
+      },
+      {
+        "label": "Drama",
+        "value": "4"
+      },
+      {
+        "label": "Ecchi",
+        "value": "13"
+      },
+      {
+        "label": "Fantasy",
+        "value": "5"
+      },
+      {
+        "label": "Harem",
+        "value": "14"
+      },
+      {
+        "label": "Hentai",
+        "value": "56"
+      },
+      {
+        "label": "Historical",
+        "value": "9"
+      },
+      {
+        "label": "Horror",
+        "value": "63"
+      },
+      {
+        "label": "idols",
+        "value": "278"
+      },
+      {
+        "label": "Josei",
+        "value": "68"
+      },
+      {
+        "label": "Magic",
+        "value": "33"
+      },
+      {
+        "label": "Manga",
+        "value": "34"
+      },
+      {
+        "label": "Manhwa",
+        "value": "36"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "10"
+      },
+      {
+        "label": "Mature",
+        "value": "28"
+      },
+      {
+        "label": "Murim",
+        "value": "37"
+      },
+      {
+        "label": "Mystery",
+        "value": "85"
+      },
+      {
+        "label": "Plot",
+        "value": "143"
+      },
+      {
+        "label": "Psychological",
+        "value": "174"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "39"
+      },
+      {
+        "label": "Romance",
+        "value": "69"
+      },
+      {
+        "label": "School",
+        "value": "107"
+      },
+      {
+        "label": "School Life",
+        "value": "86"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "71"
+      },
+      {
+        "label": "Seinen",
+        "value": "11"
+      },
+      {
+        "label": "Sexual Violence",
+        "value": "172"
+      },
+      {
+        "label": "Shoujo",
+        "value": "77"
+      },
+      {
+        "label": "Shounen",
+        "value": "15"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "105"
+      },
+      {
+        "label": "Sports",
+        "value": "217"
+      },
+      {
+        "label": "Supernatural",
+        "value": "18"
+      },
+      {
+        "label": "Survival",
+        "value": "110"
+      },
+      {
+        "label": "System",
+        "value": "38"
+      },
+      {
+        "label": "Tragedy",
+        "value": "242"
+      },
+      {
+        "label": "Vampire",
+        "value": "301"
+      },
+      {
+        "label": "Webtoon",
+        "value": "100"
+      }
+    ]
+  }
+]

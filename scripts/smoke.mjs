@@ -1,3 +1,4 @@
+import { discoverSourceDirectories } from './source-layout.mjs';
 /**
  * Exercises built bundles against the live sites, the way the app would.
  *
@@ -19,7 +20,6 @@
  *   node scripts/smoke.mjs                 # every source
  *   node scripts/smoke.mjs mangadex        # just one
  */
-import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -43,15 +43,29 @@ function preview(value) {
   return String(value);
 }
 
+// The app gives up long before this; a step that takes longer is a failure, not a pass.
+const STEP_TIMEOUT_MS = 30_000;
+
 async function step(label, fn) {
   const startedAt = Date.now();
+  let timer;
   try {
-    const result = await fn();
+    const result = await Promise.race([
+      fn(),
+      new Promise((_, reject) => {
+        timer = setTimeout(
+          () => reject(new Error(`timed out after ${STEP_TIMEOUT_MS / 1000}s`)),
+          STEP_TIMEOUT_MS,
+        );
+      }),
+    ]);
     console.log(`  ok   ${label.padEnd(22)} ${preview(result)} (${Date.now() - startedAt}ms)`);
     return { ok: true, result };
   } catch (error) {
     console.log(`  FAIL ${label.padEnd(22)} ${error?.message ?? error}`);
     return { ok: false, error };
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -84,7 +98,9 @@ async function smokeOne(entry) {
   }
 
   results.push((await step('getFilters()', () => source.getFilters())).ok);
-  results.push((await step('searchManga()', () => source.searchManga('a', { limit: 5, offset: 0 }, {}))).ok);
+  results.push(
+    (await step('searchManga()', () => source.searchManga('a', { limit: 5, offset: 0 }, {}))).ok,
+  );
 
   if (!first) {
     return results.every(Boolean);
@@ -123,12 +139,38 @@ async function smokeOne(entry) {
       `       chapter: id=${chapter.id} number=${chapter.chapter_number} date=${chapter.release_date || 'none'}`,
     );
     const pages = await step('fetchChapterPages()', () =>
-      source.fetchChapterPages(chapter.id, chapterManga.slug, { limit: 3, offset: 0 }),
+      source.fetchChapterPages(chapter.id, chapterManga.slug, {
+        limit: 3,
+        offset: 0,
+      }),
     );
     if (pages.ok) {
       console.log(`       total=${pages.result.total} first=${pages.result.items?.[0]?.image_url}`);
     }
     results.push(pages.ok && pages.result?.items?.length > 0);
+
+    // A page URL that 404s or serves HTML is still a broken reader. The app fetches images
+    // itself, so this uses the real network with the site as Referer, not the allowlist.
+    const imageUrl = pages.ok ? pages.result.items?.[0]?.image_url : undefined;
+    if (imageUrl) {
+      const image = await step('first page image', async () => {
+        const response = await realFetch(imageUrl, {
+          headers: { Referer: `${entry.base_url}/` },
+          signal: AbortSignal.timeout(STEP_TIMEOUT_MS),
+        });
+        const type = response.headers.get('content-type') ?? '';
+        await response.body?.cancel();
+        if (!response.ok || !type.startsWith('image/')) {
+          throw new Error(`HTTP ${response.status} ${type || 'no content-type'}`);
+        }
+        return `${response.status} ${type}`;
+      });
+      results.push(image.ok);
+      const host = new URL(imageUrl).hostname;
+      if (!entry.allowed_hosts.some((h) => host === h || host.endsWith(`.${h}`))) {
+        console.log(`  note image host ${host} is outside allowed_hosts`);
+      }
+    }
   }
 
   return results.every(Boolean);
@@ -137,21 +179,11 @@ async function smokeOne(entry) {
 async function main() {
   // Read the manifests rather than index.json, so a draft source (built but deliberately
   // unlisted) can still be tested by name.
-  const dirs = await readdir(path.join(ROOT, 'src'), { withFileTypes: true });
-  const entries = [];
-  for (const dir of dirs) {
-    if (!dir.isDirectory()) {
-      continue;
-    }
-    const manifestPath = path.join(ROOT, 'src', dir.name, 'manifest.json');
-    const manifest = await readFile(manifestPath, 'utf8').then(JSON.parse, () => null);
-    if (!manifest) {
-      continue;
-    }
-    if (only.length === 0 ? !manifest.draft : only.includes(manifest.source_key)) {
-      entries.push(manifest);
-    }
-  }
+  const entries = (await discoverSourceDirectories(ROOT))
+    .map((source) => source.manifest)
+    .filter((manifest) =>
+      only.length === 0 ? !manifest.draft : only.includes(manifest.source_key),
+    );
 
   const failed = [];
   for (const entry of entries) {

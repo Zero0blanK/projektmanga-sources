@@ -106,7 +106,10 @@
       "baseUrl": "https://mangadex.example",
       "chapter": {
         "hash": "fixture-hash",
-        "data": ["page-1.jpg", "page-2.jpg"]
+        "data": [
+          "page-1.jpg",
+          "page-2.jpg"
+        ]
       }
     }
   },
@@ -267,7 +270,10 @@
       "baseUrl": "https://mangadex.example",
       "chapter": {
         "hash": "fixture-hash",
-        "data": ["page-1.jpg", "page-2.jpg"]
+        "data": [
+          "page-1.jpg",
+          "page-2.jpg"
+        ]
       }
     }
   },
@@ -368,7 +374,10 @@
       "baseUrl": "https://mangadex.example",
       "chapter": {
         "hash": "fixture-hash",
-        "data": ["page-1.jpg", "page-2.jpg"]
+        "data": [
+          "page-1.jpg",
+          "page-2.jpg"
+        ]
       }
     }
   },
@@ -469,7 +478,10 @@
       "baseUrl": "https://mangadex.example",
       "chapter": {
         "hash": "fixture-hash",
-        "data": ["page-1.jpg", "page-2.jpg"]
+        "data": [
+          "page-1.jpg",
+          "page-2.jpg"
+        ]
       }
     }
   },
@@ -570,7 +582,10 @@
       "baseUrl": "https://mangadex.example",
       "chapter": {
         "hash": "fixture-hash",
-        "data": ["page-1.jpg", "page-2.jpg"]
+        "data": [
+          "page-1.jpg",
+          "page-2.jpg"
+        ]
       }
     }
   },
@@ -671,7 +686,10 @@
       "baseUrl": "https://mangadex.example",
       "chapter": {
         "hash": "fixture-hash",
-        "data": ["page-1.jpg", "page-2.jpg"]
+        "data": [
+          "page-1.jpg",
+          "page-2.jpg"
+        ]
       }
     }
   },
@@ -683,5 +701,109 @@
   "hentaifox": {
     "html": "<div class=\"thumb\"><h2 class=\"g_title\"><a href=\"/gallery/12345/\">Fixture Series</a></h2><img data-src=\"https://i3.hentaifox.com/001/fixture/thumb.jpg\"></div>",
     "detailsHtml": "<h1>Fixture Series</h1><div class=\"cover\"><img src=\"https://i3.hentaifox.com/001/fixture/cover.jpg\"></div><a href=\"/language/english/\">English <span>10</span></a><script>var g_th = $.parseJSON('{\"1\":\"w,100,200\",\"2\":\"j,100,200\"}');</script>"
+  },
+  "mangadex-ja": {
+    "search": {
+      "data": [
+        {
+          "id": "fixture-series",
+          "attributes": {
+            "title": {
+              "en": "Fixture Series"
+            },
+            "tags": []
+          },
+          "relationships": [
+            {
+              "id": "cover-id",
+              "type": "cover_art",
+              "attributes": {
+                "fileName": "fixture"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "data": [
+        {
+          "id": "fixture-tag",
+          "type": "tag",
+          "attributes": {
+            "name": {
+              "en": "Action"
+            },
+            "group": "genre"
+          }
+        }
+      ]
+    },
+    "details": {
+      "data": {
+        "id": "fixture-series",
+        "attributes": {
+          "title": {
+            "en": "Fixture Series"
+          },
+          "description": {
+            "en": "Fixture description"
+          },
+          "status": "ongoing",
+          "tags": []
+        },
+        "relationships": [
+          {
+            "id": "cover-id",
+            "type": "cover_art",
+            "attributes": {
+              "fileName": "fixture"
+            }
+          },
+          {
+            "id": "author-id",
+            "type": "author",
+            "attributes": {
+              "name": "Fixture Author"
+            }
+          }
+        ]
+      }
+    },
+    "chapters": {
+      "data": [
+        {
+          "id": "chapter-2",
+          "attributes": {
+            "chapter": "2",
+            "translatedLanguage": "ja",
+            "pages": 2
+          },
+          "relationships": []
+        },
+        {
+          "id": "chapter-1",
+          "attributes": {
+            "chapter": "1",
+            "translatedLanguage": "ja",
+            "pages": 2
+          },
+          "relationships": []
+        }
+      ],
+      "limit": 100,
+      "offset": 0,
+      "total": 2
+    },
+    "pages": {
+      "baseUrl": "https://mangadex.example",
+      "chapter": {
+        "hash": "fixture-hash",
+        "data": [
+          "page-1.jpg",
+          "page-2.jpg"
+        ]
+      }
+    }
   }
 }

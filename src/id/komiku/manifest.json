@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "komiku",
+  "name": "Komiku",
+  "lang": "id",
+  "version": "1.0.2",
+  "base_url": "https://komiku.org",
+  "homepage": "https://komiku.org",
+  "allowed_hosts": [
+    "komiku.org"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "Both komiku.org and api.komiku.org return HTTP 403 in this environment (2026-10-12). Parser contracts are covered by offline fixtures; catalogue, detail and reader live acceptance must pass before listing. No challenge bypass is used."
+}

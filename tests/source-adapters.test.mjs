@@ -1,6 +1,10 @@
+import {
+  resolveSource,
+  discoverSourceDirectories,
+} from "../scripts/source-layout.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile, readdir } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { build } from "esbuild";
@@ -25,7 +29,7 @@ const fixtures = JSON.parse(
 
 async function loadSource(sourceKey) {
   const bundle = await build({
-    entryPoints: [path.join(SOURCE_ROOT, "src", sourceKey, "index.ts")],
+    entryPoints: [(await resolveSource(sourceKey, SOURCE_ROOT)).entryPoint],
     bundle: true,
     write: false,
     format: "esm",
@@ -317,22 +321,10 @@ test("generated index lists the published sources and matches every committed bu
   const config = JSON.parse(
     await readFile(path.join(SOURCE_ROOT, "repo.config.json"), "utf8"),
   );
-  const sourceDirs = await readdir(path.join(SOURCE_ROOT, "src"), {
-    withFileTypes: true,
-  });
-  const published = [];
-
-  for (const dir of sourceDirs.filter(
-    (entry) => entry.isDirectory() && entry.name !== "lib",
-  )) {
-    const manifest = JSON.parse(
-      await readFile(
-        path.join(SOURCE_ROOT, "src", dir.name, "manifest.json"),
-        "utf8",
-      ),
-    );
-    if (!manifest.draft) published.push([dir.name, manifest]);
-  }
+  const sourceDirs = await discoverSourceDirectories(SOURCE_ROOT);
+  const published = sourceDirs
+    .filter((source) => !source.manifest.draft)
+    .map((source) => [source.key, source.manifest]);
 
   assert.deepEqual(
     index.sources.map((source) => source.source_key).sort(),

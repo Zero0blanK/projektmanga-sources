@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "scythescans",
+  "name": "Scythe Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "base_url": "https://scythescans.com",
+  "allowed_hosts": [
+    "scythescans.com",
+    "i0.wp.com",
+    "i3.wp.com",
+    "i1.wp.com",
+    "i2.wp.com"
+  ],
+  "content_rating": "safe"
+}

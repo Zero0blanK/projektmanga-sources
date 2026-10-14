@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangatrend",
+  "name": "Manga Trend",
+  "lang": "en",
+  "version": "1.0.0",
+  "base_url": "https://mangatrend.org",
+  "allowed_hosts": [
+    "mangatrend.org",
+    "i1.wp.com",
+    "i2.wp.com",
+    "i3.wp.com",
+    "i0.wp.com"
+  ],
+  "content_rating": "safe"
+}

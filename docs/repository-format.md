@@ -95,13 +95,13 @@ the reader. So there are three ratings, matching Mihon's `CONTENT_WARNING_*`:
 
 ## The manifest
 
-`src/<source_key>/manifest.json` — the only file you edit for metadata. It is also
+`src/<lang>/<source_key>/manifest.json` — the only file you edit for metadata. It is also
 imported by the source's own `index.ts`, which is why the running source and the listing
 can never disagree about `id`, `name`, `lang`, `base_url` or NSFW status.
 
 ```json
 {
-  "$schema": "../../schema/manifest.schema.json",
+  "$schema": "../../../schema/manifest.schema.json",
   "source_key": "mangadex",
   "name": "MangaDex",
   "lang": "en",
@@ -115,7 +115,11 @@ can never disagree about `id`, `name`, `lang`, `base_url` or NSFW status.
 ```
 
 Required: `source_key`, `name`, `lang`, `version`, `base_url`, `allowed_hosts`,
-`content_rating`. Optional: `$schema`, `description`, `homepage`, `draft`, `draft_reason`.
+`content_rating`. Optional: `$schema`, `family_key`, `description`, `homepage`, `draft`, `draft_reason`.
+
+`family_key` groups language editions of the same source within a repository (for example,
+`mangadex`). It must be a stable lowercase source-style key. Omit it for standalone
+sources; consumers use `source_key` as their family identity when it is absent.
 
 ### What the build rejects
 

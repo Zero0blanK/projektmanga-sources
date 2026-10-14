@@ -172,6 +172,7 @@ export type ContentRating = "safe" | "mixed" | "nsfw";
  * `api_version`, `icon_url`, `isNSFW` and the bundle hash are all derived. See
  * `docs/repository-format.md`. */
 export interface SourceManifest {
+  family_key?: string;
   /** Must equal the source's directory name: the bundle is published as `dist/<key>.js`. */
   source_key: string;
   name: string;

@@ -1,5 +1,5 @@
+import { resolveSource } from "./source-layout.mjs";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -22,9 +22,7 @@ if (!keys.length)
 let failures = 0;
 for (const key of keys) {
   if (!/^[a-z0-9][a-z0-9-]*$/.test(key)) throw new Error("Invalid source key");
-  const manifest = JSON.parse(
-    await readFile(path.join(root, "src", key, "manifest.json"), "utf8"),
-  );
+  const manifest = (await resolveSource(key, root)).manifest;
   const source = spawnSandboxedSource(
     {
       id: key,

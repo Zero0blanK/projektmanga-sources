@@ -1,0 +1,210 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Default",
+        "value": ""
+      },
+      {
+        "label": "A-Z",
+        "value": "title"
+      },
+      {
+        "label": "Z-A",
+        "value": "titlereverse"
+      },
+      {
+        "label": "Update",
+        "value": "update"
+      },
+      {
+        "label": "Added",
+        "value": "latest"
+      },
+      {
+        "label": "Popular",
+        "value": "popular"
+      }
+    ]
+  },
+  {
+    "label": "Type",
+    "value": "type",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      },
+      {
+        "label": "Novel",
+        "value": "novel"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "ongoing"
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Hiatus",
+        "value": "hiatus"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Academy",
+        "value": "199"
+      },
+      {
+        "label": "action",
+        "value": "3"
+      },
+      {
+        "label": "Adventure",
+        "value": "13"
+      },
+      {
+        "label": "Comedy",
+        "value": "17"
+      },
+      {
+        "label": "Drama",
+        "value": "5"
+      },
+      {
+        "label": "Fantasy",
+        "value": "6"
+      },
+      {
+        "label": "Harem",
+        "value": "7"
+      },
+      {
+        "label": "Historical",
+        "value": "8"
+      },
+      {
+        "label": "Horror",
+        "value": "35"
+      },
+      {
+        "label": "Magic",
+        "value": "224"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "9"
+      },
+      {
+        "label": "Mature",
+        "value": "36"
+      },
+      {
+        "label": "murim",
+        "value": "195"
+      },
+      {
+        "label": "Mystery",
+        "value": "44"
+      },
+      {
+        "label": "Necromancer",
+        "value": "149"
+      },
+      {
+        "label": "Psychological",
+        "value": "59"
+      },
+      {
+        "label": "Rebirth",
+        "value": "78"
+      },
+      {
+        "label": "Regression",
+        "value": "222"
+      },
+      {
+        "label": "Revenge",
+        "value": "45"
+      },
+      {
+        "label": "Romance",
+        "value": "10"
+      },
+      {
+        "label": "School Life",
+        "value": "19"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "37"
+      },
+      {
+        "label": "Seinen",
+        "value": "11"
+      },
+      {
+        "label": "Shounen",
+        "value": "14"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "60"
+      },
+      {
+        "label": "Supernatural",
+        "value": "15"
+      },
+      {
+        "label": "Survival",
+        "value": "49"
+      },
+      {
+        "label": "system",
+        "value": "71"
+      },
+      {
+        "label": "Tragedy",
+        "value": "43"
+      }
+    ]
+  }
+]

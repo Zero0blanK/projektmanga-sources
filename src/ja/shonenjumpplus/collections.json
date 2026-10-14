@@ -1,0 +1,24 @@
+{
+  "groups": [],
+  "collections": [
+    {
+      "label": "ジャンプ＋連載一覧",
+      "ids": [
+        ""
+      ]
+    },
+    {
+      "label": "ジャンプ＋読切シリーズ",
+      "ids": [
+        "/oneshot"
+      ]
+    },
+    {
+      "label": "連載終了作品",
+      "ids": [
+        "/finished"
+      ]
+    }
+  ],
+  "seriesHtml": true
+}

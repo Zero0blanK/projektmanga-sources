@@ -1,3 +1,7 @@
+import {
+  resolveSource,
+  discoverSourceDirectories,
+} from "../scripts/source-layout.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { build } from "esbuild";
@@ -10,7 +14,7 @@ const sharedSchemas = process.env.PROJEKT_MANGA_SCHEMAS_ENTRY
 
 async function loadSource(key) {
   const bundle = await build({
-    entryPoints: [path.resolve(`src/${key}/index.ts`)],
+    entryPoints: [path.resolve((await resolveSource(key)).entryPoint)],
     bundle: true,
     write: false,
     format: "esm",

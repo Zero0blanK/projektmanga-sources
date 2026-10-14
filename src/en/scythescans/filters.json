@@ -1,0 +1,262 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Default",
+        "value": ""
+      },
+      {
+        "label": "A-Z",
+        "value": "title"
+      },
+      {
+        "label": "Z-A",
+        "value": "titlereverse"
+      },
+      {
+        "label": "Update",
+        "value": "update"
+      },
+      {
+        "label": "Added",
+        "value": "latest"
+      },
+      {
+        "label": "Popular",
+        "value": "popular"
+      }
+    ]
+  },
+  {
+    "label": "Type",
+    "value": "type",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "MangaToon",
+        "value": "comic"
+      },
+      {
+        "label": "Novel",
+        "value": "novel"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "ongoing"
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Hiatus",
+        "value": "hiatus"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "4"
+      },
+      {
+        "label": "Adventure",
+        "value": "16"
+      },
+      {
+        "label": "Comedy",
+        "value": "5"
+      },
+      {
+        "label": "Cooking",
+        "value": "38"
+      },
+      {
+        "label": "Crime",
+        "value": "46"
+      },
+      {
+        "label": "Demons",
+        "value": "13"
+      },
+      {
+        "label": "Drama",
+        "value": "6"
+      },
+      {
+        "label": "Ecchi",
+        "value": "17"
+      },
+      {
+        "label": "Fantasy",
+        "value": "7"
+      },
+      {
+        "label": "Ghosts",
+        "value": "20"
+      },
+      {
+        "label": "Gore",
+        "value": "102"
+      },
+      {
+        "label": "Harem",
+        "value": "12"
+      },
+      {
+        "label": "Historical",
+        "value": "28"
+      },
+      {
+        "label": "Horror",
+        "value": "18"
+      },
+      {
+        "label": "Isekai",
+        "value": "11"
+      },
+      {
+        "label": "Mafia",
+        "value": "70"
+      },
+      {
+        "label": "Magic",
+        "value": "31"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "9"
+      },
+      {
+        "label": "Mecha",
+        "value": "55"
+      },
+      {
+        "label": "Monsters",
+        "value": "49"
+      },
+      {
+        "label": "Mystery",
+        "value": "29"
+      },
+      {
+        "label": "Post-Apocalyptic",
+        "value": "100"
+      },
+      {
+        "label": "Reborn",
+        "value": "76"
+      },
+      {
+        "label": "Regression",
+        "value": "81"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "14"
+      },
+      {
+        "label": "Return",
+        "value": "33"
+      },
+      {
+        "label": "Romance",
+        "value": "26"
+      },
+      {
+        "label": "School Life",
+        "value": "24"
+      },
+      {
+        "label": "Sci-Fi",
+        "value": "23"
+      },
+      {
+        "label": "Shounen",
+        "value": "34"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "37"
+      },
+      {
+        "label": "Superhero",
+        "value": "47"
+      },
+      {
+        "label": "Supernatural",
+        "value": "19"
+      },
+      {
+        "label": "Survival",
+        "value": "21"
+      },
+      {
+        "label": "Thriller",
+        "value": "69"
+      },
+      {
+        "label": "Time Travel",
+        "value": "60"
+      },
+      {
+        "label": "Tragedy",
+        "value": "109"
+      },
+      {
+        "label": "Video Games",
+        "value": "93"
+      },
+      {
+        "label": "Villainess",
+        "value": "71"
+      },
+      {
+        "label": "Virtual Reality",
+        "value": "94"
+      },
+      {
+        "label": "Wuxia",
+        "value": "8"
+      },
+      {
+        "label": "Zombies",
+        "value": "103"
+      }
+    ]
+  }
+]

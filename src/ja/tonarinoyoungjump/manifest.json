@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "tonarinoyoungjump",
+  "name": "Tonari no Young Jump",
+  "lang": "ja",
+  "version": "1.0.0",
+  "base_url": "https://tonarinoyj.jp",
+  "allowed_hosts": [
+    "tonarinoyj.jp",
+    "cdn-scissors.gigaviewer.com",
+    "cdn.tonarinoyj.jp",
+    "cdn-img.tonarinoyj.jp",
+    "cdn.pool.st-hatena.com",
+    "dosbg3xlm0x1t.cloudfront.net"
+  ],
+  "content_rating": "safe",
+  "draft": true,
+  "draft_reason": "Every sampled free episode (30/30 across six GigaViewer sites, 2026-10-14) uses the \"baku\" scrambled page format, which this source cannot unscramble yet, so no chapter can be read. Browse, search, details and chapter lists work; publish once page descrambling is supported."
+}

@@ -1,3 +1,7 @@
+import {
+  resolveSource,
+  discoverSourceDirectories,
+} from "../scripts/source-layout.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { build } from "esbuild";
@@ -5,7 +9,7 @@ import path from "node:path";
 
 test("Komiku draft maps documented catalogue, chapters, dates and reader contracts offline", async () => {
   const bundle = await build({
-    entryPoints: [path.resolve("src/komiku/index.ts")],
+    entryPoints: [(await resolveSource("komiku")).entryPoint],
     bundle: true,
     write: false,
     format: "esm",

@@ -1,5 +1,5 @@
+import { resolveSource } from "./source-layout.mjs";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -24,9 +24,7 @@ const schemas = await import(
 const { assertPublicHttpUrl } = await import(
   pathToFileURL(path.join(appRoot, "apps/server/dist/utils/ssrfGuard.js")).href
 );
-const manifest = JSON.parse(
-  await readFile(path.join(sourceRoot, "src/akazascans/manifest.json"), "utf8"),
-);
+const manifest = (await resolveSource("akazascans", sourceRoot)).manifest;
 const allowed = (url) =>
   url.protocol === "https:" &&
   !url.username &&

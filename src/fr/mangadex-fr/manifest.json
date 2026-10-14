@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangadex-fr",
+  "name": "MangaDex — French",
+  "lang": "fr",
+  "version": "1.0.4",
+  "base_url": "https://api.mangadex.org",
+  "homepage": "https://mangadex.org",
+  "allowed_hosts": [
+    "api.mangadex.org"
+  ],
+  "content_rating": "mixed",
+  "family_key": "mangadex"
+}

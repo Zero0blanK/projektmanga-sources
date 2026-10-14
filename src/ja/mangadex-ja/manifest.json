@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangadex-ja",
+  "name": "MangaDex — Japanese",
+  "lang": "ja",
+  "version": "1.0.0",
+  "base_url": "https://api.mangadex.org",
+  "homepage": "https://mangadex.org",
+  "allowed_hosts": [
+    "api.mangadex.org"
+  ],
+  "content_rating": "mixed",
+  "family_key": "mangadex",
+  "draft": true,
+  "draft_reason": "MangaDex hosts almost no readable Japanese chapters: popular titles tagged as having Japanese chapters only link out to external sites (checked 2026-10-14 with hasAvailableChapters and includeExternalUrl=0: 0 readable chapters on the top 5). Publish once the catalogue can be limited to titles with hosted Japanese chapters."
+}

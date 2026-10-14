@@ -1,0 +1,192 @@
+[
+  {
+    "key": "arenascans",
+    "upstream": "arenascans",
+    "name": "Arena Scans",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://arenascan.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/arenascans"
+  },
+  {
+    "key": "asterscans",
+    "upstream": "asterscans",
+    "name": "Aster Scans",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://asterscans.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/asterscans"
+  },
+  {
+    "key": "athreascans",
+    "upstream": "athreascans",
+    "name": "Athrea Scans",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://athreascans.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/athreascans"
+  },
+  {
+    "key": "scythescans",
+    "upstream": "erosscans",
+    "name": "Scythe Scans",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://scythescans.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/erosscans"
+  },
+  {
+    "key": "kingofshojo",
+    "upstream": "kingofshojo",
+    "name": "King of Shojo",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://kingofshojo.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/kingofshojo"
+  },
+  {
+    "key": "lagoonscans",
+    "upstream": "lagoonscans",
+    "name": "Lagoon Scans",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://lagoonscans.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/lagoonscans"
+  },
+  {
+    "key": "madarascans",
+    "upstream": "madarascans",
+    "name": "Madara Scans",
+    "engine": "themesia",
+    "cataloguePath": "/series/",
+    "base_url": "https://madarascans.net",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/madarascans"
+  },
+  {
+    "key": "mangatrend",
+    "upstream": "mangatrend",
+    "name": "Manga Trend",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://mangatrend.org",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/mangatrend"
+  },
+  {
+    "key": "rackus",
+    "upstream": "rackus",
+    "name": "Rackus",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://rackusreads.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/rackus"
+  },
+  {
+    "key": "ravenscans",
+    "upstream": "ravenscans",
+    "name": "Raven Scans",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "base_url": "https://ravenscans.org",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/ravenscans"
+  },
+  {
+    "key": "violetscans",
+    "upstream": "violetscans",
+    "name": "Violet Scans",
+    "engine": "themesia",
+    "cataloguePath": "/comics/",
+    "base_url": "https://violetmanga.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/violetscans"
+  },
+  {
+    "key": "manhuaplus",
+    "upstream": "manhuaplus",
+    "name": "Manhua Plus",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://manhuaplus.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/manhuaplus"
+  },
+  {
+    "key": "mangareadorg",
+    "upstream": "mangareadorg",
+    "name": "MangaRead.org",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://www.mangaread.org",
+    "ajaxChapters": true,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/mangareadorg"
+  },
+  {
+    "key": "lhtranslation",
+    "upstream": "lhtranslation",
+    "name": "LHTranslation",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://lhtranslation.net",
+    "ajaxChapters": true,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/lhtranslation"
+  },
+  {
+    "key": "zinmanga",
+    "upstream": "zinmanga",
+    "name": "Zinmanga",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://mangazin.org",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/zinmanga"
+  },
+  {
+    "key": "galaxydegenscans",
+    "upstream": "galaxydegenscans",
+    "name": "GalaxyDegenScans",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://gdscans.com",
+    "ajaxChapters": true,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/galaxydegenscans"
+  },
+  {
+    "key": "s2manga",
+    "upstream": "s2manga",
+    "name": "S2Manga",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://s2read.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/s2manga"
+  },
+  {
+    "key": "mangadistrict",
+    "upstream": "mangadistrict",
+    "name": "Manga District",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://mangadistrict.com",
+    "ajaxChapters": false,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/mangadistrict"
+  },
+  {
+    "key": "mangafree",
+    "upstream": "mangafree",
+    "name": "Mangafree",
+    "engine": "madara",
+    "cataloguePath": "/",
+    "base_url": "https://mangafree.info",
+    "ajaxChapters": true,
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/780153a29642a57364e894bc0850c4e76619c7de/src/en/mangafree"
+  }
+]

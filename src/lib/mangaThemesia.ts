@@ -19,6 +19,13 @@ export interface MangaThemesiaConfig {
   cataloguePath?: string;
   parseDate?: (value: string) => string;
   filters?: MangaFilter[];
+  buildCatalogueUrl?: (
+    category: string,
+    query: string,
+    filters: Record<string, FilterValue>,
+    page: number,
+  ) => URL;
+  catalogueRoute?: RegExp;
   selectors?: Partial<{
     cards: string;
     chapterRows: string;
@@ -183,6 +190,8 @@ export function createMangaThemesiaSource(config: MangaThemesiaConfig): Source {
     filters: Record<string, FilterValue>,
     page: number,
   ): URL {
+    if (config.buildCatalogueUrl)
+      return config.buildCatalogueUrl(category, query, filters, page);
     const url = new URL(
       query ? `/page/${page}/` : (config.cataloguePath ?? "/manga/"),
       manifest.base_url,
@@ -295,16 +304,24 @@ export function createMangaThemesiaSource(config: MangaThemesiaConfig): Source {
         .map((el) => image(imgValue($(el).attr() ?? {})))
         .filter(Boolean);
       if (!urls.length) {
-        const script = $("script[src^='data:text/javascript;base64,']")
-          .first()
-          .attr("src");
-        const body = script
-          ? Buffer.from(
-              script.split(",").slice(1).join(","),
+        // Optimisers move inline scripts into base64 data URIs, and ts_reader.run can
+        // be in any of them, not just the first. Search all of them plus the page.
+        const decoded = $("script[src^='data:text/javascript;base64,']")
+          .toArray()
+          .map((el) =>
+            Buffer.from(
+              ($(el).attr("src") ?? "").split(",").slice(1).join(","),
               "base64",
-            ).toString("utf8")
-          : text;
-        urls = scriptedImages(body).map(image).filter(Boolean);
+            ).toString("utf8"),
+          );
+        const bodies = [...decoded, text].sort(
+          (a, b) =>
+            Number(b.includes("ts_reader")) - Number(a.includes("ts_reader")),
+        );
+        for (const body of bodies) {
+          urls = scriptedImages(body).map(image).filter(Boolean);
+          if (urls.length) break;
+        }
       }
       urls = [...new Set(urls)];
       if (!urls.length)
@@ -377,9 +394,11 @@ export function createMangaThemesiaSource(config: MangaThemesiaConfig): Source {
     parse: parseCards,
     path: ({ category, query, filters }) =>
       catalogueUrl(category || "latest", query || "", filters, 1).href,
-    route: new RegExp(
-      `^(?:${(config.cataloguePath ?? "/manga/").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}|/page/\\d+/)$`,
-    ),
+    route:
+      config.catalogueRoute ??
+      new RegExp(
+        `^(?:${(config.cataloguePath ?? "/manga/").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}|/page/\\d+/)$`,
+      ),
     capabilities: { filters: true, languageFilter: false },
   });
 }

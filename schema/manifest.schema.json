@@ -2,10 +2,18 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/schema/manifest.schema.json",
   "title": "ProjektManga source manifest",
-  "description": "src/<source_key>/manifest.json — everything a source declares by hand. Fields the build can derive (entry_url, icon_url, version_code, api_version, isNSFW, bundle hash) are deliberately absent. build.mjs enforces this schema and a few rules JSON Schema cannot express; see docs/repository-format.md.",
+  "description": "src/<lang>/<source_key>/manifest.json — everything a source declares by hand. Fields the build can derive (entry_url, icon_url, version_code, api_version, isNSFW, bundle hash) are deliberately absent. build.mjs enforces this schema and a few rules JSON Schema cannot express; see docs/repository-format.md.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["source_key", "name", "lang", "version", "base_url", "allowed_hosts", "content_rating"],
+  "required": [
+    "source_key",
+    "name",
+    "lang",
+    "version",
+    "base_url",
+    "allowed_hosts",
+    "content_rating"
+  ],
   "properties": {
     "$schema": {
       "type": "string"
@@ -70,6 +78,11 @@
       "type": "string",
       "minLength": 1,
       "description": "Why this source is held back, and what would have to change to publish it."
+    },
+    "family_key": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Stable identity shared by language editions of a source."
     }
   },
   "dependencies": {

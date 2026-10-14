@@ -1,0 +1,698 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Default",
+        "value": ""
+      },
+      {
+        "label": "A-Z",
+        "value": "title"
+      },
+      {
+        "label": "Z-A",
+        "value": "titlereverse"
+      },
+      {
+        "label": "Update",
+        "value": "update"
+      },
+      {
+        "label": "Added",
+        "value": "latest"
+      },
+      {
+        "label": "Popular",
+        "value": "popular"
+      }
+    ]
+  },
+  {
+    "label": "Type",
+    "value": "type",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      },
+      {
+        "label": "Novel",
+        "value": "novel"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "ongoing"
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Hiatus",
+        "value": "hiatus"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Academy",
+        "value": "5148"
+      },
+      {
+        "label": "Action",
+        "value": "74"
+      },
+      {
+        "label": "Action",
+        "value": "31"
+      },
+      {
+        "label": "Adaptation",
+        "value": "236"
+      },
+      {
+        "label": "Adult",
+        "value": "125"
+      },
+      {
+        "label": "Adventure",
+        "value": "78"
+      },
+      {
+        "label": "Adventure",
+        "value": "32"
+      },
+      {
+        "label": "Animal",
+        "value": "761"
+      },
+      {
+        "label": "Apocalypse",
+        "value": "5105"
+      },
+      {
+        "label": "Aristocracy",
+        "value": "5115"
+      },
+      {
+        "label": "Artifact",
+        "value": "5149"
+      },
+      {
+        "label": "Battle Romance",
+        "value": "5269"
+      },
+      {
+        "label": "BL",
+        "value": "5314"
+      },
+      {
+        "label": "Blood",
+        "value": "5167"
+      },
+      {
+        "label": "Bloody",
+        "value": "689"
+      },
+      {
+        "label": "Boys Love",
+        "value": "5060"
+      },
+      {
+        "label": "childcare",
+        "value": "5216"
+      },
+      {
+        "label": "Childhood Friends",
+        "value": "382"
+      },
+      {
+        "label": "Chinese",
+        "value": "3789"
+      },
+      {
+        "label": "College life",
+        "value": "339"
+      },
+      {
+        "label": "Comedy",
+        "value": "90"
+      },
+      {
+        "label": "Comedy",
+        "value": "34"
+      },
+      {
+        "label": "Comic",
+        "value": "343"
+      },
+      {
+        "label": "Cooking",
+        "value": "939"
+      },
+      {
+        "label": "Crime",
+        "value": "3132"
+      },
+      {
+        "label": "Crossdressin",
+        "value": "982"
+      },
+      {
+        "label": "Dark Fantasy",
+        "value": "5210"
+      },
+      {
+        "label": "Demon",
+        "value": "1508"
+      },
+      {
+        "label": "Demons",
+        "value": "396"
+      },
+      {
+        "label": "Doujinshi",
+        "value": "1113"
+      },
+      {
+        "label": "Drama",
+        "value": "84"
+      },
+      {
+        "label": "Drama",
+        "value": "35"
+      },
+      {
+        "label": "Dungeons",
+        "value": "79"
+      },
+      {
+        "label": "Ecchi",
+        "value": "192"
+      },
+      {
+        "label": "Ecchi",
+        "value": "36"
+      },
+      {
+        "label": "Family",
+        "value": "5215"
+      },
+      {
+        "label": "Family Drama",
+        "value": "5402"
+      },
+      {
+        "label": "Fantasy",
+        "value": "80"
+      },
+      {
+        "label": "Fantasy",
+        "value": "38"
+      },
+      {
+        "label": "Fighting",
+        "value": "5367"
+      },
+      {
+        "label": "Full color",
+        "value": "479"
+      },
+      {
+        "label": "Game",
+        "value": "4117"
+      },
+      {
+        "label": "Gender bender",
+        "value": "1714"
+      },
+      {
+        "label": "Gore",
+        "value": "2389"
+      },
+      {
+        "label": "Gyaru",
+        "value": "3999"
+      },
+      {
+        "label": "Harem",
+        "value": "328"
+      },
+      {
+        "label": "Historical",
+        "value": "101"
+      },
+      {
+        "label": "Historical",
+        "value": "39"
+      },
+      {
+        "label": "Horror",
+        "value": "490"
+      },
+      {
+        "label": "Horror",
+        "value": "40"
+      },
+      {
+        "label": "hunters",
+        "value": "5130"
+      },
+      {
+        "label": "Isekai",
+        "value": "316"
+      },
+      {
+        "label": "jos",
+        "value": "122"
+      },
+      {
+        "label": "Josei",
+        "value": "93"
+      },
+      {
+        "label": "kids",
+        "value": "432"
+      },
+      {
+        "label": "Korean",
+        "value": "3571"
+      },
+      {
+        "label": "Liexing",
+        "value": "2692"
+      },
+      {
+        "label": "Loli",
+        "value": "1189"
+      },
+      {
+        "label": "Long strip",
+        "value": "483"
+      },
+      {
+        "label": "Magic",
+        "value": "98"
+      },
+      {
+        "label": "Magic",
+        "value": "44"
+      },
+      {
+        "label": "Magical",
+        "value": "2992"
+      },
+      {
+        "label": "Manga",
+        "value": "209"
+      },
+      {
+        "label": "MANGATOON",
+        "value": "5257"
+      },
+      {
+        "label": "Manhua",
+        "value": "199"
+      },
+      {
+        "label": "Manhwa",
+        "value": "185"
+      },
+      {
+        "label": "Manhwa",
+        "value": "45"
+      },
+      {
+        "label": "Manhwa Hot",
+        "value": "190"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "532"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "46"
+      },
+      {
+        "label": "Mature",
+        "value": "126"
+      },
+      {
+        "label": "Medical",
+        "value": "480"
+      },
+      {
+        "label": "Mercenary",
+        "value": "5270"
+      },
+      {
+        "label": "Military",
+        "value": "1916"
+      },
+      {
+        "label": "Moder",
+        "value": "4156"
+      },
+      {
+        "label": "Modern Fantasy",
+        "value": "5170"
+      },
+      {
+        "label": "modern Romance",
+        "value": "5188"
+      },
+      {
+        "label": "Monster",
+        "value": "1204"
+      },
+      {
+        "label": "Monsters",
+        "value": "1205"
+      },
+      {
+        "label": "Murim",
+        "value": "565"
+      },
+      {
+        "label": "Music",
+        "value": "1241"
+      },
+      {
+        "label": "Mystery",
+        "value": "129"
+      },
+      {
+        "label": "Mystery",
+        "value": "47"
+      },
+      {
+        "label": "Necromancer",
+        "value": "5106"
+      },
+      {
+        "label": "Nobility",
+        "value": "5246"
+      },
+      {
+        "label": "Office workers",
+        "value": "217"
+      },
+      {
+        "label": "One shot",
+        "value": "496"
+      },
+      {
+        "label": "overpower",
+        "value": "3836"
+      },
+      {
+        "label": "Philosophical",
+        "value": "667"
+      },
+      {
+        "label": "Ping Ping Jun",
+        "value": "2693"
+      },
+      {
+        "label": "Police",
+        "value": "1975"
+      },
+      {
+        "label": "Political",
+        "value": "5209"
+      },
+      {
+        "label": "Post apocalyptic",
+        "value": "3549"
+      },
+      {
+        "label": "Psychological",
+        "value": "82"
+      },
+      {
+        "label": "Psychological",
+        "value": "49"
+      },
+      {
+        "label": "Psychology",
+        "value": "5087"
+      },
+      {
+        "label": "Regression",
+        "value": "5278"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "113"
+      },
+      {
+        "label": "REINCARNATION",
+        "value": "69"
+      },
+      {
+        "label": "Reunion",
+        "value": "5217"
+      },
+      {
+        "label": "revenge",
+        "value": "112"
+      },
+      {
+        "label": "Reverse",
+        "value": "2166"
+      },
+      {
+        "label": "Reverse harem",
+        "value": "953"
+      },
+      {
+        "label": "Romance",
+        "value": "91"
+      },
+      {
+        "label": "Romance",
+        "value": "50"
+      },
+      {
+        "label": "Royal family",
+        "value": "115"
+      },
+      {
+        "label": "Royalty",
+        "value": "5008"
+      },
+      {
+        "label": "School Life",
+        "value": "182"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "531"
+      },
+      {
+        "label": "Sci-Fi",
+        "value": "53"
+      },
+      {
+        "label": "Seinen",
+        "value": "86"
+      },
+      {
+        "label": "Seinen",
+        "value": "54"
+      },
+      {
+        "label": "Shoujo",
+        "value": "92"
+      },
+      {
+        "label": "Shoujo ai",
+        "value": "604"
+      },
+      {
+        "label": "Shounen",
+        "value": "81"
+      },
+      {
+        "label": "Shounen",
+        "value": "55"
+      },
+      {
+        "label": "Shounen ai",
+        "value": "381"
+      },
+      {
+        "label": "Showbiz",
+        "value": "1641"
+      },
+      {
+        "label": "Si-fi",
+        "value": "2421"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "128"
+      },
+      {
+        "label": "Smut",
+        "value": "127"
+      },
+      {
+        "label": "Sports",
+        "value": "481"
+      },
+      {
+        "label": "Strategy",
+        "value": "5007"
+      },
+      {
+        "label": "Super power",
+        "value": "863"
+      },
+      {
+        "label": "Superhero",
+        "value": "523"
+      },
+      {
+        "label": "Supernatural",
+        "value": "83"
+      },
+      {
+        "label": "Supernatural",
+        "value": "60"
+      },
+      {
+        "label": "superpower",
+        "value": "5129"
+      },
+      {
+        "label": "Survival",
+        "value": "917"
+      },
+      {
+        "label": "System",
+        "value": "5028"
+      },
+      {
+        "label": "Thriller",
+        "value": "661"
+      },
+      {
+        "label": "Time Travel",
+        "value": "114"
+      },
+      {
+        "label": "Tragedy",
+        "value": "137"
+      },
+      {
+        "label": "Transmigration",
+        "value": "240"
+      },
+      {
+        "label": "Unknown",
+        "value": "598"
+      },
+      {
+        "label": "Urban",
+        "value": "5231"
+      },
+      {
+        "label": "Vampire",
+        "value": "1237"
+      },
+      {
+        "label": "Villainess",
+        "value": "116"
+      },
+      {
+        "label": "VILLAINESS",
+        "value": "67"
+      },
+      {
+        "label": "Violence",
+        "value": "317"
+      },
+      {
+        "label": "Virtual Reality",
+        "value": "3313"
+      },
+      {
+        "label": "Web comic",
+        "value": "484"
+      },
+      {
+        "label": "Webtoon",
+        "value": "482"
+      },
+      {
+        "label": "Webtoons",
+        "value": "191"
+      },
+      {
+        "label": "Yaoi",
+        "value": "418"
+      },
+      {
+        "label": "Yaoi(BL)",
+        "value": "419"
+      },
+      {
+        "label": "Yaoi(BL)",
+        "value": "4807"
+      },
+      {
+        "label": "Yuri",
+        "value": "2056"
+      },
+      {
+        "label": "Yuri (GL)",
+        "value": "2151"
+      },
+      {
+        "label": "Yuri(GL)",
+        "value": "2427"
+      },
+      {
+        "label": "Zombies",
+        "value": "3896"
+      }
+    ]
+  }
+]

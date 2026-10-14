@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "comicseasons",
+  "name": "Comic Seasons",
+  "lang": "ja",
+  "version": "1.0.0",
+  "base_url": "https://comic-seasons.com",
+  "allowed_hosts": [
+    "comic-seasons.com",
+    "cdn-scissors.gigaviewer.com",
+    "cdn-img.comic-seasons.com"
+  ],
+  "content_rating": "safe",
+  "draft": true,
+  "draft_reason": "Every sampled free episode (30/30 across six GigaViewer sites, 2026-10-14) uses the \"baku\" scrambled page format, which this source cannot unscramble yet, so no chapter can be read. Browse, search, details and chapter lists work; publish once page descrambling is supported."
+}

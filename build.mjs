@@ -21,6 +21,7 @@
  * Schema for editors and for the app's own validation.
  */
 import { build } from 'esbuild';
+import { discoverSourceDirectories } from './scripts/source-layout.mjs';
 import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, rm, writeFile, stat } from 'node:fs/promises';
 import path from 'node:path';
@@ -67,6 +68,7 @@ const REQUIRED_MANIFEST_FIELDS = [
 const KNOWN_MANIFEST_KEYS = new Set([
   ...REQUIRED_MANIFEST_FIELDS,
   '$schema',
+  'family_key',
   'homepage',
   'description',
   'draft',
@@ -147,7 +149,10 @@ async function readRepoConfig() {
 
   const repository = config.repository ?? {};
   if (!repository.name || typeof repository.name !== 'string') {
-    fail('repo.config.json', 'repository.name is required — the app labels installed sources with it');
+    fail(
+      'repo.config.json',
+      'repository.name is required — the app labels installed sources with it',
+    );
   }
   for (const [field, value] of Object.entries({
     website: repository.website,
@@ -158,14 +163,17 @@ async function readRepoConfig() {
     }
   }
   if (repository.badge_label !== undefined && String(repository.badge_label).length > 6) {
-    fail('repo.config.json', 'repository.badge_label is a chip in the UI — keep it to 6 characters');
+    fail(
+      'repo.config.json',
+      'repository.badge_label is a chip in the UI — keep it to 6 characters',
+    );
   }
 
   return { rawBaseUrl, repository, usingEnvBase: Boolean(fromEnv) };
 }
 
-function validateManifest(dir, manifest) {
-  const where = `src/${dir}/manifest.json`;
+function validateManifest(dir, manifest, manifestPath) {
+  const where = path.relative(ROOT, manifestPath).replaceAll('\\', '/');
 
   // Unknown keys first: a misspelled required field should be reported as the typo it is,
   // not as the absence of the field it was meant to be.
@@ -180,6 +188,11 @@ function validateManifest(dir, manifest) {
     }
   }
 
+  if (
+    manifest.family_key !== undefined &&
+    (typeof manifest.family_key !== 'string' || !SOURCE_KEY.test(manifest.family_key))
+  )
+    fail(where, 'family_key must be a stable lowercase source family key');
   if (manifest.source_key !== dir) {
     fail(
       where,
@@ -213,11 +226,17 @@ function validateManifest(dir, manifest) {
     fail(where, 'needs at least one allowed_hosts entry');
   }
   if (manifest.allowed_hosts.length > 20) {
-    fail(where, `allowed_hosts has ${manifest.allowed_hosts.length} entries — the app allows at most 20`);
+    fail(
+      where,
+      `allowed_hosts has ${manifest.allowed_hosts.length} entries — the app allows at most 20`,
+    );
   }
   for (const host of manifest.allowed_hosts) {
     if (typeof host !== 'string' || !HOSTNAME.test(host)) {
-      fail(where, `allowed_hosts entry "${host}" must be a bare lowercase hostname — no scheme, port, path or wildcard`);
+      fail(
+        where,
+        `allowed_hosts entry "${host}" must be a bare lowercase hostname — no scheme, port, path or wildcard`,
+      );
     }
   }
   if (new Set(manifest.allowed_hosts).size !== manifest.allowed_hosts.length) {
@@ -233,36 +252,23 @@ function validateManifest(dir, manifest) {
     fail(where, 'draft must be true or false');
   }
   if (manifest.draft && !manifest.draft_reason) {
-    fail(where, 'draft sources need a draft_reason — it is the only record of why this is held back');
+    fail(
+      where,
+      'draft sources need a draft_reason — it is the only record of why this is held back',
+    );
   }
 
   return versionCodeOf(where, manifest.version);
 }
 
-/** Every directory under src/ that holds an index.ts — src/lib is shared code, not a
- * source, and has none. */
+/** Language/source directories are discovered centrally; src/lib remains shared code. */
 async function discoverSources() {
-  const entries = await readdir(SRC_DIR, { withFileTypes: true });
+  const entries = await discoverSourceDirectories(ROOT);
   const sources = [];
-
-  for (const entry of entries) {
-    if (!entry.isDirectory()) {
-      continue;
-    }
-    const dir = path.join(SRC_DIR, entry.name);
-    const entryPoint = path.join(dir, 'index.ts');
-    const manifestPath = path.join(dir, 'manifest.json');
-
-    const hasEntry = await stat(entryPoint).then(
-      () => true,
-      () => false,
-    );
-    if (!hasEntry) {
-      continue;
-    }
-
-    const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
-    const versionCode = validateManifest(entry.name, manifest);
+  for (const source of entries) {
+    const { dir, entryPoint, manifest } = source;
+    const entry = { name: source.key };
+    const versionCode = validateManifest(entry.name, manifest, source.manifestPath);
 
     let icon = null;
     for (const candidate of ICON_FILES) {
@@ -270,7 +276,10 @@ async function discoverSources() {
       const info = await stat(iconPath).catch(() => null);
       if (info) {
         if (info.size > MAX_ICON_BYTES) {
-          fail(`src/${entry.name}/${candidate}`, `is ${(info.size / 1024).toFixed(0)} KB — icons are capped at 512 KB`);
+          fail(
+            path.relative(ROOT, iconPath).replaceAll('\\', '/'),
+            `is ${(info.size / 1024).toFixed(0)} KB — icons are capped at 512 KB`,
+          );
         }
         icon = { path: iconPath, ext: path.extname(candidate) };
         break;
@@ -317,6 +326,17 @@ async function pruneDist(expected) {
   return removed;
 }
 
+/** Sources whose own code or shared engine adapts Keiyoushi contracts (Apache-2.0). */
+const KEIYOUSHI_SOURCES = new Set(['akazascans', 'sushiscan', 'imhentai', 'komiku', 'weebcentral']);
+// The engines are ours, but parts were informed by Keiyoushi's Apache-2.0 code, so bundles
+// built on them keep a short notice. A source can opt in by naming Keiyoushi in its header.
+const KEIYOUSHI_ENGINES = /\b(?:madaraSite|themesiaSite|mangaThemesia|gigaViewer)\.js\b|Keiyoushi/;
+
+async function isKeiyoushiDerived(source) {
+  if (KEIYOUSHI_SOURCES.has(source.dir)) return true;
+  return KEIYOUSHI_ENGINES.test(await readFile(source.entryPoint, 'utf8'));
+}
+
 async function main() {
   const { rawBaseUrl, repository, usingEnvBase } = await readRepoConfig();
   const sources = await discoverSources();
@@ -345,8 +365,10 @@ async function main() {
       minify: true,
       legalComments: 'none',
       // Installed bundles must retain attribution even without the repository docs.
-      banner: ['akazascans', 'sushiscan', 'imhentai', 'komiku', 'weebcentral'].includes(source.dir)
-        ? { js: '/*! Source contracts adapted from Keiyoushi extensions-source contributors (https://github.com/keiyoushi/extensions-source), Apache-2.0. Modified for ProjektManga TypeScript/brokered HTTP/cursor pagination. License: https://www.apache.org/licenses/LICENSE-2.0 ; repository notices: THIRD_PARTY_NOTICES.md */' }
+      banner: (await isKeiyoushiDerived(source))
+        ? {
+            js: '/*! ProjektManga source. Portions informed by Keiyoushi extensions-source contributors (https://github.com/keiyoushi/extensions-source), Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0 ; repository notices: THIRD_PARTY_NOTICES.md */',
+          }
         : undefined,
       logLevel: 'warning',
     });
@@ -384,6 +406,7 @@ async function main() {
       source_key: source.manifest.source_key,
       name: source.manifest.name,
       lang: source.manifest.lang,
+      ...(source.manifest.family_key ? { family_key: source.manifest.family_key } : {}),
       version: source.manifest.version,
       version_code: source.versionCode,
       api_version: EXTENSION_API_VERSION,
@@ -413,14 +436,20 @@ async function main() {
 
   const withoutIcons = listing.filter((entry) => !entry.icon_url).map((entry) => entry.source_key);
 
-  console.log(`\nindex.json written: format ${INDEX_FORMAT_VERSION}, api ${EXTENSION_API_VERSION}, ${listing.length} source(s) at ${rawBaseUrl}/`);
+  console.log(
+    `\nindex.json written: format ${INDEX_FORMAT_VERSION}, api ${EXTENSION_API_VERSION}, ${listing.length} source(s) at ${rawBaseUrl}/`,
+  );
   if (usingEnvBase) {
     console.log('Built against RAW_BASE_URL from the environment — do not commit this index.json.');
   }
   if (withoutIcons.length > 0) {
-    console.log(`No icon for: ${withoutIcons.join(', ')} — drop an icon.svg/png/webp in the source directory.`);
+    console.log(
+      `No icon for: ${withoutIcons.join(', ')} — drop an icon.svg/png/webp in the source directory.`,
+    );
   }
-  console.log("Remember: bump a source's manifest version when you change its code, or the app has nothing to detect an update by.");
+  console.log(
+    "Remember: bump a source's manifest version when you change its code, or the app has nothing to detect an update by.",
+  );
 }
 
 main().catch((error) => {

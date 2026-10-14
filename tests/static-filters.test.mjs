@@ -1,10 +1,14 @@
+import {
+  resolveSource,
+  discoverSourceDirectories,
+} from "../scripts/source-layout.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { build } from "esbuild";
 
 async function source(key) {
   const result = await build({
-    entryPoints: [`src/${key}/index.ts`],
+    entryPoints: [(await resolveSource(key)).entryPoint],
     bundle: true,
     write: false,
     format: "esm",

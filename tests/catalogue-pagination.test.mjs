@@ -1,3 +1,7 @@
+import {
+  resolveSource,
+  discoverSourceDirectories,
+} from "../scripts/source-layout.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { build } from "esbuild";
@@ -11,6 +15,7 @@ test("MangaDex language editions forward browse/search offsets and retain their 
   try {
     for (const [key, language] of [
       ["mangadex-es", "es"],
+      ["mangadex-ja", "ja"],
       ["mangadex-fr", "fr"],
       ["mangadex-id", "id"],
       ["mangadex-pt-br", "pt-br"],
@@ -106,7 +111,7 @@ for (const key of ["imhentai", "sushiscan", "komiku"]) {
 
 async function adapter(key) {
   const bundle = await build({
-    entryPoints: [`src/${key}/index.ts`],
+    entryPoints: [(await resolveSource(key)).entryPoint],
     bundle: true,
     write: false,
     format: "esm",

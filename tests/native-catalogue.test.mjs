@@ -1,3 +1,7 @@
+import {
+  resolveSource,
+  discoverSourceDirectories,
+} from "../scripts/source-layout.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { build } from "esbuild";
@@ -121,7 +125,8 @@ for (const key of [
   "akazascans",
 ]) {
   test(`${key} implements native browse/search continuation and explicit terminal metadata`, async () => {
-    const source = (await moduleAt(`src/${key}/index.ts`)).default;
+    const source = (await moduleAt((await resolveSource(key)).entryPoint))
+      .default;
     const original = globalThis.fetch;
     const card = (n) =>
       key === "hentaifox"
@@ -222,7 +227,9 @@ test("HTML source refuses foreign origins and query changes in native next links
     "https://hentaifox.com/search/?q=other&page=2",
     "https://user:pass@hentaifox.com/pag/2/",
   ]) {
-    const source = (await moduleAt("src/hentaifox/index.ts")).default;
+    const source = (
+      await moduleAt((await resolveSource("hentaifox")).entryPoint)
+    ).default;
     const original = globalThis.fetch;
     try {
       let calls = 0;
@@ -252,12 +259,14 @@ test("MangaDex editions use native totals, compact context and direct deep offse
     for (const [key, lang] of [
       ["mangadex", undefined],
       ["mangadex-es", "es"],
+      ["mangadex-ja", "ja"],
       ["mangadex-fr", "fr"],
       ["mangadex-pt-br", "pt-br"],
       ["mangadex-id", "id"],
       ["mangadex-ru", "ru"],
     ]) {
-      const source = (await moduleAt(`src/${key}/index.ts`)).default;
+      const source = (await moduleAt((await resolveSource(key)).entryPoint))
+        .default;
       globalThis.fetch = async (input) => {
         const url = new URL(input);
         assert.equal(
@@ -289,7 +298,9 @@ test("MangaDex editions use native totals, compact context and direct deep offse
 });
 
 test("Akaza Scans concrete shared theme port preserves details, chapter identities and ordered reader metadata", async () => {
-  const source = (await moduleAt("src/akazascans/index.ts")).default,
+  const source = (
+      await moduleAt((await resolveSource("akazascans")).entryPoint)
+    ).default,
     original = globalThis.fetch;
   try {
     globalThis.fetch = async (input) =>
@@ -322,7 +333,8 @@ test("Akaza Scans concrete shared theme port preserves details, chapter identiti
 
 test("Komiku verifies a full terminal page without HTMX using bounded lookahead", async () => {
   for (const ending of ["empty", "repeat", "404"]) {
-    const source = (await moduleAt("src/komiku/index.ts")).default;
+    const source = (await moduleAt((await resolveSource("komiku")).entryPoint))
+      .default;
     const original = globalThis.fetch;
     let calls = 0;
     const cards = Array.from(
@@ -350,7 +362,9 @@ test("Komiku verifies a full terminal page without HTMX using bounded lookahead"
 });
 
 test("multiple filters survive native links that omit repeated nonpagination values", async () => {
-  const source = (await moduleAt("src/akazascans/index.ts")).default,
+  const source = (
+      await moduleAt((await resolveSource("akazascans")).entryPoint)
+    ).default,
     original = globalThis.fetch;
   try {
     globalThis.fetch = async (input) => {

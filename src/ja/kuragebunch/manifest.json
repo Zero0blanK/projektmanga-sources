@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "kuragebunch",
+  "name": "Kurage Bunch",
+  "lang": "ja",
+  "version": "1.0.0",
+  "base_url": "https://kuragebunch.com",
+  "allowed_hosts": [
+    "kuragebunch.com",
+    "cdn-scissors.gigaviewer.com",
+    "cdn.kuragebunch.com",
+    "cdn-img.kuragebunch.com"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "Every sampled free episode (30/30 across six GigaViewer sites, 2026-10-14) uses the \"baku\" scrambled page format, which this source cannot unscramble yet, so no chapter can be read. Browse, search, details and chapter lists work; publish once page descrambling is supported."
+}

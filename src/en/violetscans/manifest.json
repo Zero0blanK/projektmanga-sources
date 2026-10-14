@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "violetscans",
+  "name": "Violet Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "base_url": "https://violetmanga.com",
+  "allowed_hosts": [
+    "violetmanga.com"
+  ],
+  "content_rating": "safe"
+}

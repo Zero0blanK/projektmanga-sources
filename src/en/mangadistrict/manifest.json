@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangadistrict",
+  "name": "Manga District",
+  "lang": "en",
+  "version": "1.0.0",
+  "base_url": "https://mangadistrict.com",
+  "allowed_hosts": [
+    "mangadistrict.com",
+    "cdn.mangadistrict.com"
+  ],
+  "content_rating": "mixed"
+}

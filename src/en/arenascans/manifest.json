@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "arenascans",
+  "name": "Arena Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "base_url": "https://arenascan.com",
+  "allowed_hosts": [
+    "arenascan.com",
+    "cdn.arenascan.com"
+  ],
+  "content_rating": "mixed"
+}

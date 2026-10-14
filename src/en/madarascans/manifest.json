@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "madarascans",
+  "name": "Madara Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "base_url": "https://madarascans.net",
+  "allowed_hosts": [
+    "madarascans.net",
+    "i3.wp.com",
+    "i1.wp.com",
+    "i0.wp.com",
+    "i2.wp.com"
+  ],
+  "content_rating": "safe"
+}

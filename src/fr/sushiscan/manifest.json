@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "sushiscan",
+  "name": "Sushi-Scan",
+  "lang": "fr",
+  "version": "1.0.3",
+  "base_url": "https://sushiscan.net",
+  "homepage": "https://sushiscan.net",
+  "allowed_hosts": [
+    "sushiscan.net"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "HTTP 403 challenge observed 2026-10-12. The source is built on our MangaThemesia engine (not Madara). Live browse/search/details/chapters/pages and image-host acceptance remain required before listing."
+}

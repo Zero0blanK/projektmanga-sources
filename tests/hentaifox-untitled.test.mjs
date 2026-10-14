@@ -1,10 +1,14 @@
+import {
+  resolveSource,
+  discoverSourceDirectories,
+} from "../scripts/source-layout.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { build } from "esbuild";
 
 test("unnamed HentaiFox galleries retain identity and pagination without invalid empty titles", async () => {
   const bundle = await build({
-    entryPoints: ["src/hentaifox/index.ts"],
+    entryPoints: [(await resolveSource("hentaifox")).entryPoint],
     bundle: true,
     write: false,
     format: "esm",
