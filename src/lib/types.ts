@@ -56,15 +56,36 @@ export interface ChapterPagesResult<T> {
 
 export type Pagination = { limit: number; offset: number };
 
+export interface SourcePageRequest {
+  cursor?: string;
+  limit?: number;
+}
+
+export interface SourceCataloguePage {
+  items: Mangas[];
+  hasMore: boolean;
+  nextCursor?: string;
+}
+
+export interface SourceCapabilities {
+  latest: boolean;
+  search: boolean;
+  filters: boolean;
+  languageFilter: boolean;
+  urlSearch: boolean;
+  nativePagination: boolean;
+}
+
 /** A tri-state filter's selections — "include this genre" vs "exclude it". */
 export type TriStateFilterValue = { include?: string[]; exclude?: string[] };
-export type FilterValue = string | number | boolean | string[] | TriStateFilterValue;
+export type FilterValue =
+  string | number | boolean | string[] | TriStateFilterValue;
 export type Option = { label: string; value: string };
 
 export interface MangaFilter {
   label: string;
   value: string;
-  type: 'input' | 'select' | 'checkbox' | 'radio' | 'multi' | 'tri-state';
+  type: "input" | "select" | "checkbox" | "radio" | "multi" | "tri-state";
   options?: Option[];
 }
 
@@ -74,6 +95,19 @@ export interface Source {
   lang: string;
   base_url: string;
   isNSFW: boolean;
+
+  getCapabilities?(): Promise<SourceCapabilities>;
+  fetchMangaPage?(
+    category?: string,
+    pagination?: SourcePageRequest,
+    filters?: Record<string, FilterValue>,
+  ): Promise<SourceCataloguePage>;
+  searchMangaPage?(
+    query?: string,
+    pagination?: SourcePageRequest,
+    filters?: Record<string, FilterValue>,
+  ): Promise<SourceCataloguePage>;
+  resolveMangaUrl?(url: string): Promise<Mangas | null>;
 
   fetchManga(
     category?: string,
@@ -107,13 +141,13 @@ export interface Source {
 }
 
 export type SourceErrorCode =
-  | 'NETWORK_ERROR'
-  | 'TIMEOUT'
-  | 'NOT_FOUND'
-  | 'BLOCKED'
-  | 'RATE_LIMITED'
-  | 'PARSE_ERROR'
-  | 'UPSTREAM_ERROR';
+  | "NETWORK_ERROR"
+  | "TIMEOUT"
+  | "NOT_FOUND"
+  | "BLOCKED"
+  | "RATE_LIMITED"
+  | "PARSE_ERROR"
+  | "UPSTREAM_ERROR";
 
 /** How much adult content a source carries.
  *
@@ -126,7 +160,7 @@ export type SourceErrorCode =
  * Mirrors Mihon's `CONTENT_WARNING_SAFE / _MIXED / _NSFW`, which exists for the same
  * reason: one boolean cannot say "an aggregator with an adult corner" without either
  * hiding half the catalogue or under-warning the user. */
-export type ContentRating = 'safe' | 'mixed' | 'nsfw';
+export type ContentRating = "safe" | "mixed" | "nsfw";
 
 /** The metadata half of an `index.json` entry. Each source declares one of these in its
  * own `manifest.json`; `build.mjs` reads them to generate the index, and the source

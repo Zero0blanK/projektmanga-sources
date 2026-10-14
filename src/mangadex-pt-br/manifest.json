@@ -1,11 +1,13 @@
 {
   "$schema": "../../schema/manifest.schema.json",
   "source_key": "mangadex-pt-br",
-  "name": "MangaDex — Brazilian Portuguese",
+  "name": "MangaDex \u00e2\u20ac\u201d Brazilian Portuguese",
   "lang": "pt-br",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "base_url": "https://api.mangadex.org",
   "homepage": "https://mangadex.org",
-  "allowed_hosts": ["api.mangadex.org"],
+  "allowed_hosts": [
+    "api.mangadex.org"
+  ],
   "content_rating": "mixed"
 }

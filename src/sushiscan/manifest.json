@@ -3,10 +3,12 @@
   "source_key": "sushiscan",
   "name": "Sushi-Scan",
   "lang": "fr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://sushiscan.net",
   "homepage": "https://sushiscan.net",
-  "allowed_hosts": ["sushiscan.net"],
+  "allowed_hosts": [
+    "sushiscan.net"
+  ],
   "content_rating": "mixed",
   "draft": true,
   "draft_reason": "HTTP 403 challenge observed 2026-10-12. This full draft follows the current Keiyoushi SushiScan/MangaThemesia contract, not Madara. Live browse/search/details/chapters/pages and image-host acceptance remain required before listing."

@@ -3,8 +3,11 @@
   "source_key": "asurascans",
   "name": "Asura Scans",
   "lang": "en",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "base_url": "https://asurascans.com",
-  "allowed_hosts": ["asurascans.com", "cdn.asurascans.com"],
+  "allowed_hosts": [
+    "asurascans.com",
+    "cdn.asurascans.com"
+  ],
   "content_rating": "mixed"
 }

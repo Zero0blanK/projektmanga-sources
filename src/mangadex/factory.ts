@@ -27,6 +27,7 @@ import {
 } from "./schema.js";
 import { buildMangaDexFilters } from "./filters.js";
 import { deriveIsNSFW } from "../lib/manifest.js";
+import { createNativePager } from "../lib/nativeCatalogue.js";
 
 export function createMangaDexSource(manifest: SourceManifest): Source {
   const {
@@ -493,5 +494,62 @@ export function createMangaDexSource(manifest: SourceManifest): Source {
     },
   };
 
+  const nativePage = (
+    category: string | undefined,
+    query: string | undefined,
+    pagination: Parameters<NonNullable<Source["fetchMangaPage"]>>[1],
+    filters: Record<string, FilterValue>,
+  ) => {
+    return createNativePager(
+      SOURCE_ID,
+      "0",
+      (position) => /^(0|[1-9]\d{0,8})$/.test(position),
+      async (position) => {
+        const offset = Number(position);
+        const limit = 100;
+        const params = buildListParams({ limit, offset }, filters);
+        if (query !== undefined) params.title = query;
+        else if (category === "latest")
+          params.order = { latestUploadedChapter: "desc" };
+        else if (category === "popular")
+          params.order = { followedCount: "desc" };
+        if (filters.sortBy) {
+          const [field, direction] = String(filters.sortBy).split(".");
+          params.order = { [field]: direction };
+        }
+        const response = await request(
+          "/manga",
+          MangaDexMangaListResponseSchema,
+          params,
+        );
+        if (response.total === undefined)
+          throw new SourceError(
+            "PARSE_ERROR",
+            "MangaDex catalogue total is missing",
+            SOURCE_ID,
+          );
+        return {
+          items: response.data.map(toManga),
+          ...(response.data.length &&
+          offset + response.data.length < response.total
+            ? { next: String(offset + response.data.length) }
+            : {}),
+        };
+      },
+      { category, query, filters },
+    )(pagination);
+  };
+  mangadex.fetchMangaPage = (category = "latest", pagination, filters = {}) =>
+    nativePage(category, undefined, pagination, filters);
+  mangadex.searchMangaPage = (query = "", pagination, filters = {}) =>
+    nativePage(undefined, query.trim(), pagination, filters);
+  mangadex.getCapabilities = async () => ({
+    latest: true,
+    search: true,
+    filters: true,
+    languageFilter: false,
+    urlSearch: false,
+    nativePagination: true,
+  });
   return mangadex;
 }

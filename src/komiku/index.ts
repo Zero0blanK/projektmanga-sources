@@ -1,3 +1,4 @@
+import { attachHtmlCatalogue } from "../lib/nativeCatalogue.js";
 import { load } from "cheerio/slim";
 import type {
   Chapters,
@@ -136,6 +137,47 @@ function chapterRows(text: string): Chapters[] {
     });
 }
 
+function catalogueUrl(
+  category: string,
+  query: string,
+  filters: Record<string, FilterValue>,
+  page: number,
+) {
+  const popular =
+    category === "popular" && !query && !Object.values(filters).some(Boolean);
+  const url = new URL(
+    popular
+      ? `${api}/other/hot/${page > 1 ? `page/${page}/` : ""}`
+      : `${api}/manga/${page > 1 ? `page/${page}/` : ""}`,
+  );
+  url.searchParams.set("orderby", popular ? "meta_value_num" : "modified");
+  if (query.trim()) url.searchParams.set("s", query.trim());
+  for (const key of ["tipe", "orderby", "genre", "genre2", "statusmanga"])
+    if (typeof filters[key] === "string" && filters[key])
+      url.searchParams.set(key, String(filters[key]));
+  return url;
+}
+function parseCards(text: string): Mangas[] {
+  const $ = load(text);
+  return $("div.bge")
+    .toArray()
+    .map((element) => {
+      const card = $(element),
+        anchor = card.find("a:has(h3)").first(),
+        title = normalizeText(card.find("h3").first().text());
+      if (!title || !anchor.attr("href"))
+        return fail("Komiku catalogue markup changed");
+      const id = localPath(anchor.attr("href")!, true).split("/")[2],
+        img = card.find("img").first();
+      return {
+        id,
+        slug: id,
+        title,
+        source: manifest.source_key,
+        thumbnail_url: imageUrl(img.attr("data-src") || img.attr("src") || ""),
+      };
+    });
+}
 async function browse(
   category: string,
   query: string,
@@ -147,18 +189,7 @@ async function browse(
   const rows: Mangas[] = [],
     seen = new Set<string>();
   for (let page = 1; page <= 50; page++) {
-    const popular =
-      category === "popular" && !query && !Object.values(filters).some(Boolean);
-    const url = new URL(
-      popular
-        ? `${api}/other/hot/${page > 1 ? `page/${page}/` : ""}`
-        : `${api}/manga/${page > 1 ? `page/${page}/` : ""}`,
-    );
-    url.searchParams.set("orderby", popular ? "meta_value_num" : "modified");
-    if (query.trim()) url.searchParams.set("s", query.trim());
-    for (const key of ["tipe", "orderby", "genre", "genre2", "statusmanga"])
-      if (typeof filters[key] === "string" && filters[key])
-        url.searchParams.set(key, String(filters[key]));
+    const url = catalogueUrl(category, query, filters, page);
     let text: string;
     try {
       text = await html(url.href);
@@ -324,4 +355,36 @@ const source: Source = {
     ];
   },
 };
-export default source;
+export default attachHtmlCatalogue(source, {
+  requestBaseUrl: api,
+  getText: html,
+  parse: parseCards,
+  path: ({ category, query, filters }) =>
+    catalogueUrl(category || "latest", query || "", filters, 1).href,
+  route: /^\/(?:manga|other\/hot)\/(?:page\/\d+\/)?$/,
+  next: async (text, current, context) => {
+    const href = load(text)("span[hx-get]").first().attr("hx-get");
+    if (href) return href;
+    const cards = parseCards(text);
+    if (cards.length < 10) return undefined;
+    const page = Number(current.pathname.match(/\/page\/(\d+)\//)?.[1] || 1);
+    const next = catalogueUrl(
+      context.category || "latest",
+      context.query || "",
+      context.filters,
+      page + 1,
+    ).href;
+    // The upstream theme sometimes omits HTMX metadata. Verify one page ahead,
+    // including a repeated final page, instead of guessing from a full result.
+    try {
+      const rows = parseCards(await html(next));
+      return rows.some((row) => !cards.some((card) => card.id === row.id))
+        ? next
+        : undefined;
+    } catch (error) {
+      if (error instanceof SourceError && error.code === "NOT_FOUND")
+        return undefined;
+      throw error;
+    }
+  },
+});

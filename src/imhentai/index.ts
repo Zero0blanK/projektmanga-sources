@@ -1,3 +1,4 @@
+import { attachHtmlCatalogue } from "../lib/nativeCatalogue.js";
 import { load } from "cheerio/slim";
 import type {
   Chapters,
@@ -155,6 +156,65 @@ function metadataPages(text: string, id: string): Map<number, string> {
   }
   return pages;
 }
+function catalogueUrl(
+  category: string,
+  query: string,
+  filters: Record<string, FilterValue>,
+  page: number,
+) {
+  const selected =
+    typeof filters.language === "string" ? filters.language : "all";
+  if (selected !== "all" && !languages[selected])
+    return fail("Unsupported IMHentai language filter");
+  let url: URL;
+  if (query.trim()) {
+    url = new URL("/search/", manifest.base_url);
+    url.searchParams.set("key", query.trim());
+    url.searchParams.set("pp", category === "popular" ? "1" : "0");
+    url.searchParams.set("lt", category === "popular" ? "0" : "1");
+    for (const [code, entry] of Object.entries(languages))
+      url.searchParams.set(
+        entry.parameter,
+        selected === "all" || selected === code ? "1" : "0",
+      );
+  } else
+    url = new URL(
+      `${selected === "all" ? "/" : `/language/${languages[selected].name}/`}${category === "popular" ? "popular/" : ""}`,
+      manifest.base_url,
+    );
+  url.searchParams.set("page", String(page));
+  return url;
+}
+function parseCards(text: string): Mangas[] {
+  if (text.includes("Overload... Please use the advanced search"))
+    throw new SourceError(
+      "RATE_LIMITED",
+      "IMHentai search is overloaded; retry later",
+      manifest.source_key,
+    );
+  const $ = load(text);
+  return $("div.thumb")
+    .toArray()
+    .map((el) => {
+      const card = $(el),
+        href = card.find(".inner_thumb a").first().attr("href") || "",
+        url = new URL(href, manifest.base_url),
+        match = /^\/gallery\/(\d+)\/?$/.exec(url.pathname),
+        title = normalizeText(card.find(".caption").text());
+      if (url.origin !== manifest.base_url || !match || !title)
+        return fail("IMHentai catalogue markup changed");
+      const id = galleryId(match[1]);
+      return {
+        id,
+        slug: id,
+        title,
+        source: manifest.source_key,
+        thumbnail_url: image(
+          imgValue(card.find(".inner_thumb img").first().attr() ?? {}),
+        ),
+      };
+    });
+}
 async function browse(
   category: string,
   query: string,
@@ -169,52 +229,8 @@ async function browse(
     resolvePagination(pagination, { limit: 20 }),
     manifest.source_key,
     async (page) => {
-      let url: URL;
-      if (query.trim()) {
-        url = new URL("/search/", manifest.base_url);
-        url.searchParams.set("key", query.trim());
-        url.searchParams.set("pp", category === "popular" ? "1" : "0");
-        url.searchParams.set("lt", category === "popular" ? "0" : "1");
-        for (const [code, entry] of Object.entries(languages))
-          url.searchParams.set(
-            entry.parameter,
-            selected === "all" || selected === code ? "1" : "0",
-          );
-      } else
-        url = new URL(
-          `${selected === "all" ? "/" : `/language/${languages[selected].name}/`}${category === "popular" ? "popular/" : ""}`,
-          manifest.base_url,
-        );
-      url.searchParams.set("page", String(page));
-      const text = await html(url.href);
-      if (text.includes("Overload... Please use the advanced search"))
-        throw new SourceError(
-          "RATE_LIMITED",
-          "IMHentai search is overloaded; retry later",
-          manifest.source_key,
-        );
-      const $ = load(text);
-      return $("div.thumb")
-        .toArray()
-        .map((el) => {
-          const card = $(el),
-            href = card.find(".inner_thumb a").first().attr("href") || "",
-            url = new URL(href, manifest.base_url),
-            match = /^\/gallery\/(\d+)\/?$/.exec(url.pathname),
-            title = normalizeText(card.find(".caption").text());
-          if (url.origin !== manifest.base_url || !match || !title)
-            return fail("IMHentai catalogue markup changed");
-          const id = galleryId(match[1]);
-          return {
-            id,
-            slug: id,
-            title,
-            source: manifest.source_key,
-            thumbnail_url: image(
-              imgValue(card.find(".inner_thumb img").first().attr() ?? {}),
-            ),
-          };
-        });
+      const url = catalogueUrl(category, query, filters, page);
+      return parseCards(await html(url.href));
     },
   );
 }
@@ -306,4 +322,12 @@ const source: Source = {
   },
   fetchMangaUpdates: (id) => source.fetchChapters(id),
 };
-export default source;
+export default attachHtmlCatalogue(source, {
+  getText: html,
+  parse: parseCards,
+  path: ({ category, query, filters }) =>
+    catalogueUrl(category || "latest", query || "", filters, 1).href,
+  route:
+    /^\/(?:|popular\/|search\/|language\/(?:english|japanese|spanish|french|korean|german|russian)\/(?:popular\/)?)$/,
+  capabilities: { languageFilter: true },
+});

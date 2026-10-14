@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 /**
  * Local shapes for the parts of the MangaDex API this source actually reads. Not
@@ -45,6 +45,7 @@ export type MangaDexManga = z.infer<typeof MangaDexMangaSchema>;
 
 export const MangaDexMangaListResponseSchema = z.object({
   data: z.array(MangaDexMangaSchema),
+  total: z.number().int().nonnegative().optional(),
 });
 
 export const MangaDexMangaDetailsResponseSchema = z.object({

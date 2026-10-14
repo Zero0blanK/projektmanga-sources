@@ -1,3 +1,4 @@
+import { attachHtmlCatalogue } from "../lib/nativeCatalogue.js";
 import { load } from "cheerio/slim";
 import type { Source, Chapters, Mangas } from "../lib/types.js";
 import { HttpClient, NAV_HEADERS } from "../lib/http.js";
@@ -85,6 +86,29 @@ function gallery(text: string) {
     );
   return { $, cover, urls };
 }
+function parseCards(text: string): Mangas[] {
+  const $ = load(text);
+  return $(".thumb")
+    .map((_, el) => {
+      const node = $(el),
+        link = node.find(".g_title a").first(),
+        id = (link.attr("href") || "").match(/^\/gallery\/(\d+)\/$/)?.[1];
+      if (!id) return null;
+      const img = node.find("img").first();
+      return {
+        id,
+        slug: id,
+        source: manifest.source_key,
+        title: normalizeText(link.text()) || `Untitled gallery ${id}`,
+        thumbnail_url: toAbsoluteUrl(
+          img.attr("data-src") || img.attr("src") || "",
+          manifest.base_url,
+        ),
+      } satisfies Mangas;
+    })
+    .get()
+    .filter((item): item is Mangas => item !== null);
+}
 async function browse(
   query: string | null,
   pagination: Parameters<Source["fetchManga"]>[1],
@@ -118,26 +142,7 @@ async function browse(
         );
       paths.set(page + 1, `${url.pathname}${url.search}`);
     }
-    return $(".thumb")
-      .map((_, el) => {
-        const node = $(el),
-          link = node.find(".g_title a").first(),
-          id = (link.attr("href") || "").match(/^\/gallery\/(\d+)\/$/)?.[1];
-        if (!id) return null;
-        const img = node.find("img").first();
-        return {
-          id,
-          slug: id,
-          source: manifest.source_key,
-          title: normalizeText(link.text()) || `Untitled gallery ${id}`,
-          thumbnail_url: toAbsoluteUrl(
-            img.attr("data-src") || img.attr("src") || "",
-            manifest.base_url,
-          ),
-        } satisfies Mangas;
-      })
-      .get()
-      .filter((item): item is Mangas => item !== null);
+    return parseCards($.html());
   });
 }
 const source: Source = {
@@ -227,4 +232,12 @@ const source: Source = {
   },
   fetchMangaUpdates: (id) => source.fetchChapters(id),
 };
-export default source;
+export default attachHtmlCatalogue(source, {
+  getText: html,
+  parse: parseCards,
+  path: ({ query }) =>
+    query === undefined
+      ? "/"
+      : `/search/?q=${encodeURIComponent(query)}&page=1`,
+  route: /^\/(?:|page\/\d+\/|pag\/\d+\/|search\/)$/,
+});

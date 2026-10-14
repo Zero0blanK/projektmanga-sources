@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "source_key": "akazascans",
+  "name": "Akaza Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "base_url": "https://akazascans.org",
+  "allowed_hosts": ["akazascans.org"],
+  "content_rating": "safe"
+}

@@ -3,9 +3,11 @@
   "source_key": "hentaifox",
   "name": "HentaiFox",
   "lang": "all",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "base_url": "https://hentaifox.com",
   "homepage": "https://hentaifox.com",
-  "allowed_hosts": ["hentaifox.com"],
+  "allowed_hosts": [
+    "hentaifox.com"
+  ],
   "content_rating": "nsfw"
 }

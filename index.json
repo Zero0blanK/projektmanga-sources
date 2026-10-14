@@ -10,11 +10,31 @@
   },
   "sources": [
     {
+      "source_key": "akazascans",
+      "name": "Akaza Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/akazascans.js",
+      "base_url": "https://akazascans.org",
+      "homepage": "https://akazascans.org",
+      "allowed_hosts": [
+        "akazascans.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "d3d35fcf2dd5a4be456e31e4c7ee7285dc466ab11427a894f201f0d9f03f7ab8",
+        "size": 224003
+      }
+    },
+    {
       "source_key": "asurascans",
       "name": "Asura Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/asurascans.js",
       "base_url": "https://asurascans.com",
@@ -26,16 +46,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "55fc337bb39e2a6824fd7ec705be950a01fc8e24de8cbb9f9a126983652721f4",
-        "size": 217441
+        "sha256": "fe18c2de3b7417f75431771b51dc1aca949341313a9ba7dbb74513e3f8ebbc14",
+        "size": 221088
       }
     },
     {
       "source_key": "hentaifox",
       "name": "HentaiFox",
       "lang": "all",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/hentaifox.js",
       "base_url": "https://hentaifox.com",
@@ -46,16 +66,16 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "8453b14e41d4ec83ae924f28095cc91ce2a8cc5de54dab5cdc9c556316e6c8d8",
-        "size": 214604
+        "sha256": "4a5424252768f37df5235cc6d000f09ff0051e8f35e9ea3473086ab589fd2899",
+        "size": 218307
       }
     },
     {
       "source_key": "leercapitulo",
       "name": "LeerCapitulo",
       "lang": "es",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/leercapitulo.js",
       "base_url": "https://www.leercapitulo.co",
@@ -66,16 +86,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "13686ed6982167ac2ac690d971f0b58f833040333f8d5dd246bbcfe41e95f52e",
-        "size": 220348
+        "sha256": "65a6024a0e858230d0191efa859e765871c51f24ded87ebb399b78fa5790dee4",
+        "size": 224244
       }
     },
     {
       "source_key": "mangadex",
       "name": "MangaDex",
       "lang": "en",
-      "version": "1.1.2",
-      "version_code": 1001002,
+      "version": "1.1.3",
+      "version_code": 1001003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex.svg",
@@ -87,16 +107,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "3e5d6f30b82dfe9139e9517640ea69f5d55cefb161885a4ead81f38c7d073d0d",
-        "size": 75561
+        "sha256": "a4599e1dbe77700af444cdda15c731c7c46635a31ca53a8f2609d0b5ec4fb085",
+        "size": 281258
       }
     },
     {
       "source_key": "mangadex-es",
-      "name": "MangaDex — Spanish",
+      "name": "MangaDex â€” Spanish",
       "lang": "es",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-es.js",
       "base_url": "https://api.mangadex.org",
@@ -107,16 +127,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "977758869eb4f4fffe9b98b0ba44a0dbbb0b7640d4f1176c3f9ae2f250300c07",
-        "size": 75579
+        "sha256": "f38177660692eebac41141605d85827a90321f9e13723670337e4933f4dc8b7e",
+        "size": 281286
       }
     },
     {
       "source_key": "mangadex-fr",
-      "name": "MangaDex — French",
+      "name": "MangaDex â€” French",
       "lang": "fr",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-fr.js",
       "base_url": "https://api.mangadex.org",
@@ -127,16 +147,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "930be1ec90f3287819412c19e6f24a9e465267deda5f28abf4a5ebe12e230b8d",
-        "size": 75578
+        "sha256": "5ec75536568904dcdeae2be689e13428a17214495c8b723a30f565d0e51fb8ea",
+        "size": 281285
       }
     },
     {
       "source_key": "mangadex-id",
-      "name": "MangaDex — Indonesian",
+      "name": "MangaDex â€” Indonesian",
       "lang": "id",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-id.js",
       "base_url": "https://api.mangadex.org",
@@ -147,16 +167,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "e367f108986b17cd3d8ecd43fc528ee816008de7d982872e70c422e6e2e2c063",
-        "size": 75582
+        "sha256": "d86bd43a48f39123fa80bc17853e5a2259677855153229667e4018a6c51b4299",
+        "size": 281289
       }
     },
     {
       "source_key": "mangadex-pt-br",
-      "name": "MangaDex — Brazilian Portuguese",
+      "name": "MangaDex â€” Brazilian Portuguese",
       "lang": "pt-br",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-pt-br.js",
       "base_url": "https://api.mangadex.org",
@@ -167,16 +187,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "cb50b7ee39dca14ac70ae39146ad2ac6b289c13ba90a314297fd5d1cd8013da8",
-        "size": 75598
+        "sha256": "5898f8728507799a7c10b743ade969231dc401e5db0bc7e5b12e815d437b05a5",
+        "size": 281305
       }
     },
     {
       "source_key": "mangadex-ru",
-      "name": "MangaDex — Russian",
+      "name": "MangaDex â€” Russian",
       "lang": "ru",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-ru.js",
       "base_url": "https://api.mangadex.org",
@@ -187,8 +207,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "a27e2154d5580fd1092188ead2260b120f2b0073fe393d845374ecebcf6f94be",
-        "size": 75579
+        "sha256": "1ab8e208a6152fd95558c7757aa1dcddd367fa5c7008ef2b6e1e1252302c3b30",
+        "size": 281286
       }
     },
     {
@@ -258,8 +278,8 @@
       "source_key": "weebcentral",
       "name": "Weeb Central",
       "lang": "en",
-      "version": "1.0.4",
-      "version_code": 1000004,
+      "version": "1.0.5",
+      "version_code": 1000005,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/weebcentral.js",
       "base_url": "https://weebcentral.com",
@@ -273,8 +293,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "14e01c94a722eeb6b4d9aac8bfcaa56da46b4451bfd2a68e9cffe33eba61375c",
-        "size": 216563
+        "sha256": "860a8d97cc6be49f9aad69e178f61c7fbc48f37623756cd8281f880127b19f06",
+        "size": 220655
       }
     }
   ]

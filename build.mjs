@@ -344,6 +344,10 @@ async function main() {
       target: 'node20',
       minify: true,
       legalComments: 'none',
+      // Installed bundles must retain attribution even without the repository docs.
+      banner: ['akazascans', 'sushiscan', 'imhentai', 'komiku', 'weebcentral'].includes(source.dir)
+        ? { js: '/*! Source contracts adapted from Keiyoushi extensions-source contributors (https://github.com/keiyoushi/extensions-source), Apache-2.0. Modified for ProjektManga TypeScript/brokered HTTP/cursor pagination. License: https://www.apache.org/licenses/LICENSE-2.0 ; repository notices: THIRD_PARTY_NOTICES.md */' }
+        : undefined,
       logLevel: 'warning',
     });
 

@@ -1,3 +1,4 @@
+import { attachHtmlCatalogue } from "../lib/nativeCatalogue.js";
 import { load } from "cheerio/slim";
 import type {
   Source,
@@ -253,4 +254,20 @@ const source: Source = {
     return source.fetchChapters(id);
   },
 };
-export default source;
+export default attachHtmlCatalogue(source, {
+  getText: fetchText,
+  parse: parseCards,
+  path: ({ query, category, filters }) =>
+    `/search/data?${searchParams(query || "", category, filters)}&limit=32&offset=0`,
+  route: /^\/search\/data$/,
+  next: (text) => {
+    const $ = load(text);
+    return $("[hx-get]")
+      .toArray()
+      .map((el) => $(el).attr("hx-get"))
+      .find(
+        (value) =>
+          value?.startsWith("/search/data?") && value.includes("offset="),
+      );
+  },
+});

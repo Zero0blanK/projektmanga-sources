@@ -1,3 +1,4 @@
+import { attachHtmlCatalogue } from "../lib/nativeCatalogue.js";
 import { load } from "cheerio/slim";
 import type {
   Source,
@@ -72,6 +73,30 @@ function chapters(text: string): Chapters[] {
     .filter((item): item is Chapters => item !== null);
 }
 const filterKeys = ["genre", "theme", "type", "status", "sort"];
+function parseCards(text: string): Mangas[] {
+  const $ = load(text);
+  return $(".lc-card")
+    .map((_, el) => {
+      const card = $(el),
+        link = card.find(".lc-card-name").first();
+      const id = (link.attr("href") || "").match(
+        /^\/manga\/([a-z0-9]+\/[a-z0-9-]+)\/$/,
+      )?.[1];
+      if (!id) return null;
+      return {
+        id,
+        slug: id,
+        source: manifest.source_key,
+        title: normalizeText(link.text()),
+        thumbnail_url: toAbsoluteUrl(
+          card.find("img").attr("src") || "",
+          manifest.base_url,
+        ),
+      } satisfies Mangas;
+    })
+    .get()
+    .filter((item): item is Mangas => item !== null);
+}
 async function browse(
   query: string,
   pagination: Parameters<Source["fetchManga"]>[1],
@@ -95,27 +120,7 @@ async function browse(
         params.set(key, value);
     }
     const $ = load(await html(`/manga/?${params}`));
-    return $(".lc-card")
-      .map((_, el) => {
-        const card = $(el),
-          link = card.find(".lc-card-name").first();
-        const id = (link.attr("href") || "").match(
-          /^\/manga\/([a-z0-9]+\/[a-z0-9-]+)\/$/,
-        )?.[1];
-        if (!id) return null;
-        return {
-          id,
-          slug: id,
-          source: manifest.source_key,
-          title: normalizeText(link.text()),
-          thumbnail_url: toAbsoluteUrl(
-            card.find("img").attr("src") || "",
-            manifest.base_url,
-          ),
-        } satisfies Mangas;
-      })
-      .get()
-      .filter((item): item is Mangas => item !== null);
+    return parseCards($.html());
   });
 }
 const source: Source = {
@@ -204,4 +209,26 @@ const source: Source = {
   },
   fetchMangaUpdates: (id) => source.fetchChapters(id),
 };
-export default source;
+export default attachHtmlCatalogue(source, {
+  getText: html,
+  parse: parseCards,
+  path: ({ query, filters }) => {
+    const params = new URLSearchParams({ q: query || "", page: "1" });
+    for (const key of filterKeys) {
+      const raw = filters[key];
+      if (typeof raw !== "string") continue;
+      const value = raw.startsWith("/manga/?")
+        ? new URL(raw, manifest.base_url).searchParams.get(key)
+        : raw;
+      if (
+        value &&
+        staticFilters
+          .find((filter) => filter.value === key)
+          ?.options.some((option) => option.value === value)
+      )
+        params.set(key, value);
+    }
+    return `/manga/?${params}`;
+  },
+  route: /^\/manga\/$/,
+});

@@ -1,3 +1,4 @@
+import { attachHtmlCatalogue } from "../lib/nativeCatalogue.js";
 import { load } from "cheerio/slim";
 import type {
   Source,
@@ -233,4 +234,10 @@ const source: Source = {
     return source.fetchChapters(id);
   },
 };
-export default source;
+export default attachHtmlCatalogue(source, {
+  getText: (path) => http.getText(path),
+  parse: parseCards,
+  path: ({ query, category, filters }) =>
+    `/browse/comics?${browseParams(query || "", category, filters)}&page=1`,
+  route: /^\/browse\/comics$/,
+});
