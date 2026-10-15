@@ -192,3 +192,35 @@ test("GigaViewer accepts subdomain cover hosts, drops foreign covers and reads i
     },
   );
 });
+
+test("Weeb Central numbers 'Episode. N' chapters by their number and reads series facts", async () => {
+  const source = await load("weebcentral");
+  const series = `<h1>The Eminence in Shadow</h1>
+    <img src="https://temp.compsci88.com/cover/normal/x.webp">
+    <ul>
+      <li><strong>Author(s): </strong><a href="#">AIZAWA Daisuke</a>, <a href="#">SAKANO Anri</a></li>
+      <li><strong>Tags(s): </strong><a href="#">Action</a>, <a href="#">Isekai</a></li>
+      <li><strong>Status: </strong><a href="#">Ongoing</a></li>
+      <li><strong>Description</strong><p class="whitespace-pre-wrap">Cid Kagenou has a dream.</p></li>
+    </ul>`;
+  const list = `<a href="/chapters/b"><span>Episode. 85</span></a>
+    <a href="/chapters/a"><span>Episode. 84.5</span></a>
+    <a href="/chapters/z"><span>Bonus</span></a>`;
+  await withFetch(
+    (url) => {
+      if (url.pathname.endsWith("/full-chapter-list")) return new Response(list);
+      if (url.pathname.startsWith("/series/")) return new Response(series);
+      throw new Error(`Unexpected route ${url.pathname}`);
+    },
+    async () => {
+      const detail = await source.fetchMangaDetails("series-id");
+      assert.deepEqual(
+        detail.chapters.map((chapter) => chapter.chapter_number),
+        [85, 84.5, 1],
+      );
+      assert.deepEqual(detail.author, ["AIZAWA Daisuke", "SAKANO Anri"]);
+      assert.deepEqual(detail.genres, ["Action", "Isekai"]);
+      assert.equal(detail.description, "Cid Kagenou has a dream.");
+    },
+  );
+});

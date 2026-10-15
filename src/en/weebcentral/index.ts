@@ -79,7 +79,11 @@ function parseCards(html: string): Mangas[] {
 
 function parseChapters(html: string): Chapters[] {
   const $ = load(html);
-  return $('a[href^="/chapters/"]')
+  const links = $('a[href^="/chapters/"]');
+  // The list is newest first, so an unnumbered chapter's position counts down from the
+  // total rather than up from 1.
+  const total = links.length;
+  return links
     .map((index, el) => {
       const link = $(el);
       const href = link.attr("href") || "";
@@ -93,12 +97,14 @@ function parseChapters(html: string): Chapters[] {
         .find(Boolean);
       const name = label || normalizeText(link.text());
       const date = link.find("time").attr("datetime") || "";
-      const number = Number.parseFloat(name.match(/[\d.]+/)?.[0] || "");
+      // A digit must come first: "[\d.]+" matched the "." in "Episode. 85", which parsed
+      // as NaN and fell back to list position, numbering every chapter backwards.
+      const number = Number.parseFloat(name.match(/\d+(?:\.\d+)?/)?.[0] || "");
       return {
         id,
         name,
         url: toAbsoluteUrl(href, BASE_URL),
-        chapter_number: Number.isFinite(number) ? number : index + 1,
+        chapter_number: Number.isFinite(number) ? number : total - index,
         scanlator: "Unknown",
         language: manifest.lang,
         last_page_read: 0,
@@ -164,8 +170,27 @@ const source: Source = {
           .text()
           .replace(new RegExp(`^.*${name}:`), ""),
       );
+    // Series facts are `<li><strong>Label:</strong> …</li>` rows. Lists are links when the
+    // site links them (tags, authors) and plain comma-separated text otherwise.
+    const row = (...names: string[]) =>
+      $("li").filter((_, el) => {
+        const strong = normalizeText($(el).find("strong").first().text()).replace(/:$/, "");
+        return names.includes(strong);
+      });
+    const list = (...names: string[]) => {
+      const item = row(...names).first();
+      const links = item
+        .find("a")
+        .map((_, el) => normalizeText($(el).text()))
+        .get()
+        .filter(Boolean);
+      if (links.length) return [...new Set(links)];
+      const text = normalizeText(item.text()).replace(/^[^:]*:/, "");
+      return [...new Set(text.split(",").map((part) => normalizeText(part)).filter(Boolean))];
+    };
     const description = normalizeText(
-      $('[class*="description"], [id*="description"]').first().text(),
+      row("Description").find("p").first().text() ||
+        $('[class*="description"], [id*="description"]').first().text(),
     );
     if (!title)
       throw new SourceError(
@@ -183,13 +208,10 @@ const source: Source = {
         BASE_URL,
       ),
       description,
-      author: [],
-      artist: [],
-      genres: $("li")
-        .filter((_, el) => $(el).find("strong").text().includes("Genres:"))
-        .find("a")
-        .map((_, el) => normalizeText($(el).text()))
-        .get(),
+      // Weeb Central lists writers and artists together as "Author(s)".
+      author: list("Author(s)", "Author", "Authors"),
+      artist: list("Artist(s)", "Artist", "Artists"),
+      genres: list("Tags(s)", "Tags", "Genres", "Genre(s)"),
       status: mapMangaStatus(label("Status")),
       chapters,
     };

@@ -23,6 +23,7 @@
 import { build } from 'esbuild';
 import { discoverSourceDirectories } from './scripts/source-layout.mjs';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { mkdir, readFile, readdir, rm, writeFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -427,6 +428,8 @@ async function main() {
     console.log(`removed stale ${file}`);
   }
 
+  const unbumped = sourcesChangedWithoutBump(listing);
+
   const index = {
     format_version: INDEX_FORMAT_VERSION,
     repository,
@@ -447,9 +450,52 @@ async function main() {
       `No icon for: ${withoutIcons.join(', ')} — drop an icon.svg/png/webp in the source directory.`,
     );
   }
-  console.log(
-    "Remember: bump a source's manifest version when you change its code, or the app has nothing to detect an update by.",
-  );
+  if (unbumped.length > 0) {
+    console.error(
+      `
+Changed without a version bump: ${unbumped.join(', ')}.
+` +
+        'Their bundles differ from the committed index.json but the version did not change, so ' +
+        'installed apps would never be offered the new code. Bump "version" in each manifest.json ' +
+        '(set ALLOW_UNBUMPED=1 to build anyway, e.g. for a local experiment).',
+    );
+    if (process.env.ALLOW_UNBUMPED !== '1') process.exitCode = 1;
+  } else {
+    console.log(
+      "Remember: bump a source's manifest version when you change its code, or the app has nothing to detect an update by.",
+    );
+  }
+}
+
+/**
+ * Sources whose bundle hash changed against the committed index.json while their version
+ * code stayed the same. The app only offers an update when the version moves, so such a
+ * change would never reach anyone who already installed the source.
+ */
+function sourcesChangedWithoutBump(listing) {
+  let committed;
+  try {
+    committed = JSON.parse(
+      execFileSync('git', ['show', 'HEAD:index.json'], {
+        cwd: ROOT,
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+      }),
+    );
+  } catch {
+    return []; // No git, or no committed index yet: nothing to compare against.
+  }
+  const before = new Map((committed.sources ?? []).map((entry) => [entry.source_key, entry]));
+  return listing
+    .filter((entry) => {
+      const previous = before.get(entry.source_key);
+      return (
+        previous?.bundle?.sha256 &&
+        previous.bundle.sha256 !== entry.bundle.sha256 &&
+        previous.version_code === entry.version_code
+      );
+    })
+    .map((entry) => entry.source_key);
 }
 
 main().catch((error) => {
