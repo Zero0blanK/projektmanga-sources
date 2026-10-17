@@ -49,9 +49,19 @@ export function createMangaThemesiaSource(config: MangaThemesiaConfig): Source {
     detailsRoot: "div.bigcontent, div.animefull, div.main-info, div.postbody",
     title: ".entry-title, .ts-breadcrumb li:last-child span",
     cover: ".infomanga > div[itemprop=image] img, .thumb img",
-    author: ".infotable tr:contains(Author) td:last-child",
-    artist: ".infotable tr:contains(Artist) td:last-child",
-    status: ".infotable tr:contains(Status) td:last-child",
+    // MangaThemesia ships two details layouts and sites pick either one. The
+    // `.infotable` table is the older; the `.tsinfo`/`.imptdt` list is what current
+    // builds of the theme emit — `<div class="imptdt"><h1>Status</h1><i>Ongoing</i></div>`.
+    // Only the table was matched here, so on a site using the list form every one of
+    // these came back empty: status fell through to UNKNOWN even where the page plainly
+    // showed "Ongoing", and author/artist were simply missing. Madara Scans is one such
+    // site; its pages carry no `.infotable` at all.
+    author:
+      ".infotable tr:contains(Author) td:last-child, .tsinfo .imptdt:contains(Author) i",
+    artist:
+      ".infotable tr:contains(Artist) td:last-child, .tsinfo .imptdt:contains(Artist) i",
+    status:
+      ".infotable tr:contains(Status) td:last-child, .tsinfo .imptdt:contains(Status) i",
     description: ".desc, .entry-content[itemprop=description]",
     genres: "div.gnr a, .mgen a, .seriestugenre a",
     readerImages: "div#readerarea img",
