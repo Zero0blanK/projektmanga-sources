@@ -3,7 +3,7 @@
   "source_key": "flamecomics",
   "name": "Flame Comics",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://flamecomics.xyz",
   "allowed_hosts": ["flamecomics.xyz"],
   "content_rating": "safe"

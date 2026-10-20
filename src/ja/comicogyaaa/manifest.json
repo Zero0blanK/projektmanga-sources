@@ -3,7 +3,7 @@
   "source_key": "comicogyaaa",
   "name": "Comic Ogyaaa",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://comic-ogyaaa.com",
   "allowed_hosts": [
     "comic-ogyaaa.com",

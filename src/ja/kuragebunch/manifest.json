@@ -3,7 +3,7 @@
   "source_key": "kuragebunch",
   "name": "Kurage Bunch",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://kuragebunch.com",
   "allowed_hosts": [
     "kuragebunch.com",

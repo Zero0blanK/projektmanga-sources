@@ -322,6 +322,7 @@ export function createMangaDexSource(manifest: SourceManifest): Source {
           source: SOURCE_ID,
           title: getTitle(manga.attributes.title),
           slug: manga.id,
+          url: `https://mangadex.org/title/${manga.id}`,
           author: authors.length > 0 ? authors : ["Unknown"],
           artist: artists.length > 0 ? artists : ["Unknown"],
           thumbnail_url: coverUrl(manga.id, manga.relationships),

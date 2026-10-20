@@ -3,7 +3,7 @@
   "source_key": "mangareadorg",
   "name": "MangaRead.org",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://www.mangaread.org",
   "allowed_hosts": [
     "www.mangaread.org"

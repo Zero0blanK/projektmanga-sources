@@ -146,6 +146,7 @@ const source: Source = {
     return {
       id,
       slug: id,
+      url: toAbsoluteUrl(seriesPath(id), manifest.base_url),
       source: manifest.source_key,
       title,
       thumbnail_url: toAbsoluteUrl(

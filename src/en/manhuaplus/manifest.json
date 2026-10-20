@@ -3,7 +3,7 @@
   "source_key": "manhuaplus",
   "name": "Manhua Plus",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://manhuaplus.com",
   "allowed_hosts": [
     "manhuaplus.com"

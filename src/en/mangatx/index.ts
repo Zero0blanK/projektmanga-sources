@@ -229,6 +229,7 @@ const mangatx: Source = {
       source: SOURCE_ID,
       id: mangaId,
       slug: mangaId,
+      url: toAbsoluteUrl(`/manga/${mangaId}/`, BASE_URL),
       title: normalizeText($('h1.entry-title').text()) || 'No title',
       thumbnail_url: toAbsoluteUrl(($('div.thumb img').attr('src') || '').trim(), BASE_URL),
       description,

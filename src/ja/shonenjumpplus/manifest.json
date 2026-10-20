@@ -3,7 +3,7 @@
   "source_key": "shonenjumpplus",
   "name": "Shonen Jump+",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://shonenjumpplus.com",
   "allowed_hosts": [
     "shonenjumpplus.com",

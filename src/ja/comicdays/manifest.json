@@ -3,7 +3,7 @@
   "source_key": "comicdays",
   "name": "Comic Days",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://comic-days.com",
   "allowed_hosts": [
     "comic-days.com",

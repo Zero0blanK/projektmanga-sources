@@ -251,6 +251,7 @@ const source: Source = {
     return {
       id,
       slug: id,
+      url: `${manifest.base_url}/gallery/${id}/`,
       title: data.title,
       source: manifest.source_key,
       thumbnail_url: data.cover,

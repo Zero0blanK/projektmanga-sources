@@ -158,6 +158,7 @@ const source: Source = {
     return {
       id,
       slug: id,
+      url: toAbsoluteUrl(galleryPath(id), manifest.base_url),
       source: manifest.source_key,
       title: normalizeText($("h1").text()) || `Untitled gallery ${id}`,
       thumbnail_url: cover,

@@ -279,6 +279,7 @@ export function createMangaThemesiaSource(config: MangaThemesiaConfig): Source {
       return {
         id: path(id),
         slug: path(id),
+        url: new URL(path(id), manifest.base_url).href,
         title,
         source: manifest.source_key,
         thumbnail_url: image(

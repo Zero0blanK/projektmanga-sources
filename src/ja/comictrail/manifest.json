@@ -3,7 +3,7 @@
   "source_key": "comictrail",
   "name": "Comic Trail",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://comic-trail.com",
   "allowed_hosts": [
     "comic-trail.com",

@@ -302,6 +302,7 @@ const source: Source = {
       .trim();
     return {
       ...row,
+      url: `${manifest.base_url}/series/${id}`,
       description,
       author: result.series.author ?? [],
       artist: result.series.artist ?? [],

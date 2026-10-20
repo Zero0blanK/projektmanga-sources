@@ -3,7 +3,7 @@
   "source_key": "scythescans",
   "name": "Scythe Scans",
   "lang": "en",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://scythescans.com",
   "allowed_hosts": [
     "scythescans.com",

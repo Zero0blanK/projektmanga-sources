@@ -3,7 +3,7 @@
   "source_key": "comicseasons",
   "name": "Comic Seasons",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://comic-seasons.com",
   "allowed_hosts": [
     "comic-seasons.com",

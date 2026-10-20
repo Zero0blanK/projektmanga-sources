@@ -3,7 +3,7 @@
   "source_key": "zinmanga",
   "name": "Zinmanga",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://mangazin.org",
   "allowed_hosts": [
     "mangazin.org"

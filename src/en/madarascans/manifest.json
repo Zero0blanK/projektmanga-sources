@@ -3,7 +3,7 @@
   "source_key": "madarascans",
   "name": "Madara Scans",
   "lang": "en",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://madarascans.net",
   "allowed_hosts": [
     "madarascans.net",

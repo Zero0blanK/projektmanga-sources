@@ -252,6 +252,7 @@ const nhentai: Source = {
         source: SOURCE_ID,
         id: mangaId,
         slug: mangaId,
+        url: `${manifest.base_url}/g/${mangaId}/`,
         title: gallery.title.english || gallery.title.japanese || gallery.title.pretty || 'Unknown Title',
         thumbnail_url: gallery.cover?.path ? `${THUMBNAIL_SERVER}/${gallery.cover.path}` : '',
         description,

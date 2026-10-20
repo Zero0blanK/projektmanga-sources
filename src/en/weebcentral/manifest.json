@@ -3,7 +3,7 @@
   "source_key": "weebcentral",
   "name": "Weeb Central",
   "lang": "en",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "base_url": "https://weebcentral.com",
   "allowed_hosts": [
     "weebcentral.com",

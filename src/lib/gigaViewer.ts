@@ -486,12 +486,23 @@ export function createGigaViewer(
     },
     async fetchMangaDetails(id) {
       const series = await details(id);
+      const firstPermalink = (item: Series): string | undefined => {
+        const link = item.firstEpisode?.permalink ?? item.firstVolume?.permalink;
+        try {
+          const href = new URL(link ?? "", manifest.base_url).href;
+          return link && /^https?:/.test(href) ? href : undefined;
+        } catch {
+          return undefined;
+        }
+      };
       return {
         ...toManga(series),
         author: series.author?.name ? [series.author.name] : [],
         description: normalizeText(load(series.description || "").text()),
         genres: [],
         status: "UNKNOWN",
+        /* GigaViewer has no series page; the first episode is the publisher's own entry point. */
+        url: firstPermalink(series),
         chapters: await chapters(id, series),
       };
     },

@@ -3,7 +3,7 @@
   "source_key": "mangadex-ja",
   "name": "MangaDex — Japanese",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://api.mangadex.org",
   "homepage": "https://mangadex.org",
   "allowed_hosts": [

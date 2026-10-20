@@ -3,7 +3,7 @@
   "source_key": "tonarinoyoungjump",
   "name": "Tonari no Young Jump",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://tonarinoyj.jp",
   "allowed_hosts": [
     "tonarinoyj.jp",

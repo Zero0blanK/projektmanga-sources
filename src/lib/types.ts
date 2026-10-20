@@ -19,6 +19,9 @@ export interface Mangas {
 }
 
 export interface MangaDetails extends Mangas {
+  /** The title's page on the source site (absolute, or relative to the source's `base_url`).
+   * Optional: the app can't derive it, since series URL layouts differ per source. */
+  url?: string;
   author?: string[];
   artist?: string[];
   groups?: string[];

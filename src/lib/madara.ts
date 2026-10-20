@@ -281,6 +281,7 @@ export function createMadaraSource(config: MadaraSourceConfig): Source {
         source: config.id,
         id: mangaId,
         slug: mangaId,
+        url: toAbsoluteUrl(buildMangaPath(mangaId), config.baseUrl),
         title: normalizeText($(selectors.detailsTitle).first().text()) || 'No Title',
         thumbnail_url: toAbsoluteUrl(thumbnailRaw.trim(), config.baseUrl),
         description: normalizeText($(selectors.detailsDescription).first().text()),

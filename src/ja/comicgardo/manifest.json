@@ -3,7 +3,7 @@
   "source_key": "comicgardo",
   "name": "Comic Gardo",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://comic-gardo.com",
   "allowed_hosts": [
     "comic-gardo.com",

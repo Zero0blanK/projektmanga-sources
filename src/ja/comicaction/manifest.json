@@ -3,7 +3,7 @@
   "source_key": "comicaction",
   "name": "Comic Action",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "base_url": "https://comic-action.com",
   "allowed_hosts": [
     "comic-action.com",

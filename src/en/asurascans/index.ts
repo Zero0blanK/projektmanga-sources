@@ -157,6 +157,7 @@ const source: Source = {
       source: SOURCE_ID,
       id,
       slug: id,
+      url: toAbsoluteUrl(seriesPath(id), BASE_URL),
       title,
       thumbnail_url: toAbsoluteUrl(image.attr("src") || "", BASE_URL),
       description,

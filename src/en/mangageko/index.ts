@@ -405,6 +405,7 @@ const mangageko: Source = {
       source: SOURCE_ID,
       id: manga_id,
       slug: manga_id,
+      url: toAbsoluteUrl(`/manga/${manga_id}/`, BASE_URL),
       title: normalizeText($('h1.novel-title').first().text()) || 'No Title',
       author: $('span[itemprop="author"]')
         .map((_, el) => normalizeText($(el).text()))

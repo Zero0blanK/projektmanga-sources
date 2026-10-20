@@ -3,7 +3,7 @@
   "source_key": "ravenscans",
   "name": "Raven Scans",
   "lang": "en",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://ravenscans.org",
   "allowed_hosts": [
     "ravenscans.org"

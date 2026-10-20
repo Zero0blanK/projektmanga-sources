@@ -264,6 +264,7 @@ const source: Source = {
     return {
       id,
       slug: id,
+      url: manifest.base_url + seriesPath(id),
       title,
       source: manifest.source_key,
       thumbnail_url: imageUrl(img.attr("data-src") || img.attr("src") || ""),
