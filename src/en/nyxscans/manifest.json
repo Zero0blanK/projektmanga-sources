@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "nyxscans",
+  "name": "Nyx Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Nyx Scans: an English scanlation group on the Iken platform.",
+  "base_url": "https://nyxscans.com",
+  "allowed_hosts": ["nyxscans.com"],
+  "content_rating": "safe"
+}

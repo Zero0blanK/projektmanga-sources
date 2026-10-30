@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "evascans",
+  "name": "Eva Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Eva Scans: a MangaThemesia-theme manga site.",
+  "base_url": "https://evascans.net",
+  "allowed_hosts": [
+    "evascans.net"
+  ],
+  "content_rating": "safe"
+}

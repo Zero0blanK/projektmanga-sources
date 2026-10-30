@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "demonicscans",
+  "name": "Demonic Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Demonic Scans: manhwa and manhua with fast releases.",
+  "base_url": "https://demonicscans.org",
+  "allowed_hosts": ["demonicscans.org", "demoniclibs.com", "readermc.org"],
+  "content_rating": "mixed"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhwareads",
+  "name": "ManhwaReads",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "ManhwaReads: a Madara-theme manga site.",
+  "base_url": "https://manhwareads.com",
+  "allowed_hosts": [
+    "manhwareads.com"
+  ],
+  "content_rating": "mixed"
+}

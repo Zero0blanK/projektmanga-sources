@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangakuro",
+  "name": "MangaKuro",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "MangaKuro: Japanese raw manga.",
+  "base_url": "https://mangakuro.net",
+  "allowed_hosts": [
+    "mangakuro.net",
+    "cdnkk.top"
+  ],
+  "content_rating": "mixed"
+}

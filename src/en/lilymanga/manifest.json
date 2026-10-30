@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "lilymanga",
+  "name": "Lily Manga",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Lily Manga: a Madara-theme manga site.",
+  "base_url": "https://lilymanga.net",
+  "allowed_hosts": [
+    "lilymanga.net"
+  ],
+  "content_rating": "mixed"
+}

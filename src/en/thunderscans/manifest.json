@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "thunderscans",
+  "name": "Thunder Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Thunder Scans: a MangaThemesia-theme manga site.",
+  "base_url": "https://en-thunderscans.com",
+  "allowed_hosts": [
+    "en-thunderscans.com"
+  ],
+  "content_rating": "safe"
+}

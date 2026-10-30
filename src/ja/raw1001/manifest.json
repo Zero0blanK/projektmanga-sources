@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "raw1001",
+  "name": "Raw1001",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "Raw1001: Japanese raw manga.",
+  "base_url": "https://raw1001.net",
+  "allowed_hosts": [
+    "raw1001.net",
+    "cdnkk.top"
+  ],
+  "content_rating": "mixed"
+}

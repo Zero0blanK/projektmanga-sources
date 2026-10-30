@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangahere",
+  "name": "MangaHere",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MangaHere: a long-running manga catalogue with genre, type and status filters. Licensed titles have had their chapters removed.",
+  "base_url": "https://www.mangahere.cc",
+  "allowed_hosts": ["mangahere.cc", "mangahere.org", "mangahere.com"],
+  "content_rating": "mixed"
+}

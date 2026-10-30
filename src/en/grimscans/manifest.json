@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "grimscans",
+  "name": "Grim Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Grim Scans: an English scanlation group on the Keyoapp platform.",
+  "base_url": "https://grimscans.com",
+  "allowed_hosts": [
+    "grimscans.com",
+    "meowing.org"
+  ],
+  "content_rating": "safe"
+}

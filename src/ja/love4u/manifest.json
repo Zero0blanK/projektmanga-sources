@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "love4u",
+  "name": "Love4u",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "Love4u (WeLoveManga): Japanese raw manga.",
+  "base_url": "https://love4u.net",
+  "allowed_hosts": [
+    "love4u.net",
+    "ihlv1.xyz"
+  ],
+  "content_rating": "mixed"
+}

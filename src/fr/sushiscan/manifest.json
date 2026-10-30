@@ -3,7 +3,7 @@
   "source_key": "sushiscan",
   "name": "Sushi-Scan",
   "lang": "fr",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "base_url": "https://sushiscan.net",
   "homepage": "https://sushiscan.net",
   "allowed_hosts": [

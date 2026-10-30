@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangaeclipse",
+  "name": "Manga Eclipse",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Manga Eclipse: a Madara-theme manga site.",
+  "base_url": "https://mangaeclipse.com",
+  "allowed_hosts": [
+    "mangaeclipse.com"
+  ],
+  "content_rating": "safe"
+}

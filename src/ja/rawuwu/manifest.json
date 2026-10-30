@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "rawuwu",
+  "name": "RawUwU",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "RawUwU: Japanese raw manga.",
+  "base_url": "https://rawuwu.net",
+  "allowed_hosts": [
+    "rawuwu.net"
+  ],
+  "content_rating": "mixed"
+}

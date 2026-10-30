@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "nihonkuni",
+  "name": "NihonKuni",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "NihonKuni (MangaGun): Japanese raw manga.",
+  "base_url": "https://nihonkuni.com",
+  "allowed_hosts": [
+    "nihonkuni.com",
+    "ihlv1.xyz"
+  ],
+  "content_rating": "mixed"
+}

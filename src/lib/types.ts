@@ -130,6 +130,10 @@ export interface Source {
 
   fetchChapters(manga_id: string): Promise<Chapters[]>;
 
+  /** `chapter_id` is a `Chapters.id` this source returned. The app stores it as the
+   * chapter's source key, unique only within its title, and keeps its own row id apart,
+   * so it never needs a prefix to be unique across titles — only to stay stable (see
+   * "Chapter identity" in docs/source-framework.md). */
   fetchChapterPages(
     chapter_id: string,
     manga_slug?: string,

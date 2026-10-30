@@ -1,0 +1,127 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Adult",
+        "value": "adult-1"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure-1"
+      },
+      {
+        "label": "BL",
+        "value": "bl"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy-1"
+      },
+      {
+        "label": "Drama",
+        "value": "drama-1"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy-1"
+      },
+      {
+        "label": "Historical",
+        "value": "historical-1"
+      },
+      {
+        "label": "Manga",
+        "value": "mangas"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhuas"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwas"
+      },
+      {
+        "label": "Romance",
+        "value": "romances"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life-s"
+      },
+      {
+        "label": "Shounen Ai",
+        "value": "shounen-ai-s"
+      },
+      {
+        "label": "Soft Yaoi",
+        "value": "soft-yaoi-s"
+      },
+      {
+        "label": "Webtoon",
+        "value": "webtoon-s"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi-s"
+      }
+    ]
+  }
+]

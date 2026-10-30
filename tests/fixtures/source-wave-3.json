@@ -1,0 +1,113 @@
+[
+  {
+    "key": "mangahere",
+    "lang": "en",
+    "engine": "mangahere",
+    "upstream": "mangahere",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangahere"
+  },
+  {
+    "key": "mangatown",
+    "lang": "en",
+    "engine": "mangatown",
+    "upstream": "mangatown",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangatown"
+  },
+  {
+    "key": "toonily",
+    "lang": "en",
+    "engine": "madara",
+    "directory": "serie",
+    "ajaxChapters": true,
+    "upstream": "toonily",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/toonily"
+  },
+  {
+    "key": "manhwatop",
+    "lang": "en",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "manhwatop",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/manhwatop"
+  },
+  {
+    "key": "manhuaus",
+    "lang": "en",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "manhuaus",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/manhuaus"
+  },
+  {
+    "key": "mangarw",
+    "lang": "ja",
+    "engine": "mangarw",
+    "upstream": "mangarw",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/mangarw"
+  },
+  {
+    "key": "miuraw",
+    "lang": "ja",
+    "engine": "miuraw",
+    "upstream": "miuraw",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/miuraw"
+  },
+  {
+    "key": "mangakuro",
+    "lang": "ja",
+    "engine": "mangakuro",
+    "upstream": "mangakuro",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/mangakuro"
+  },
+  {
+    "key": "rawkuma",
+    "lang": "ja",
+    "engine": "rawkuma",
+    "upstream": "rawkuma",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/rawkuma"
+  },
+  {
+    "key": "raw1001",
+    "lang": "ja",
+    "engine": "liliana",
+    "upstream": "raw1001",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/raw1001"
+  },
+  {
+    "key": "rawotaku",
+    "lang": "ja",
+    "engine": "mangareader",
+    "upstream": "rawotaku",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/rawotaku"
+  },
+  {
+    "key": "rawdevart",
+    "lang": "ja",
+    "engine": "spaRaw",
+    "upstream": "rawdevartart",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/rawdevartart"
+  },
+  {
+    "key": "rawuwu",
+    "lang": "ja",
+    "engine": "spaRaw",
+    "upstream": "rawuwu",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/rawuwu"
+  },
+  {
+    "key": "love4u",
+    "lang": "ja",
+    "engine": "love4u",
+    "upstream": "welovemangaone",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/welovemangaone"
+  },
+  {
+    "key": "nihonkuni",
+    "lang": "ja",
+    "engine": "nihonkuni",
+    "upstream": "mangagun",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/ja/mangagun"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "kencomics",
+  "name": "Ken Comics",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Ken Comics: an English scanlation group on the Iken platform.",
+  "base_url": "https://kencomics.com",
+  "allowed_hosts": ["kencomics.com"],
+  "content_rating": "safe"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "sanascans",
+  "name": "Sana Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Sana Scans: an English scanlation group on the Iken platform.",
+  "base_url": "https://sanascans.com",
+  "allowed_hosts": ["sanascans.com"],
+  "content_rating": "safe"
+}

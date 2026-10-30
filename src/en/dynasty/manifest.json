@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "dynasty",
+  "name": "Dynasty Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Dynasty Scans: yuri manga series from many scanlation groups.",
+  "base_url": "https://dynasty-scans.com",
+  "allowed_hosts": ["dynasty-scans.com"],
+  "content_rating": "mixed"
+}

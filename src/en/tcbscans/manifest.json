@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "tcbscans",
+  "name": "TCB Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "TCB Scans: fast English releases of One Piece, Jujutsu Kaisen and other weekly series.",
+  "base_url": "https://tcbonepiecechapters.com",
+  "allowed_hosts": ["tcbonepiecechapters.com", "onepiecechapters.com"],
+  "content_rating": "safe"
+}

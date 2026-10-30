@@ -16,7 +16,14 @@ import type {
 import { HttpClient } from './http.js';
 import { TTLCache } from './cache.js';
 import { collectPaged } from './paginate.js';
-import { mapMangaStatus, normalizeText, parseDateToIso, resolvePagination, toAbsoluteUrl } from './parse.js';
+import {
+  chapterNumberFromName,
+  mapMangaStatus,
+  normalizeText,
+  parseDateToIso,
+  resolvePagination,
+  toAbsoluteUrl,
+} from './parse.js';
 import { SourceError, classifyRequestError } from './sourceError.js';
 
 /**
@@ -128,8 +135,7 @@ function extractChapterKey(url: string): string {
 }
 
 function parseChapterNumber(rawName: string, fallback: number): number {
-  const parsed = Number.parseFloat(rawName.match(/[\d.]+/)?.[0] || '');
-  return Number.isFinite(parsed) ? parsed : fallback;
+  return chapterNumberFromName(rawName, fallback);
 }
 
 export function createMadaraSource(config: MadaraSourceConfig): Source {

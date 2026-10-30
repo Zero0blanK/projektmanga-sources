@@ -3,7 +3,7 @@
   "source_key": "kissmanga",
   "name": "Kissmanga",
   "lang": "en",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "base_url": "https://kissmanga.in",
   "allowed_hosts": [
     "kissmanga.in"

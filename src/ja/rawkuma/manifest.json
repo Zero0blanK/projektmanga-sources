@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "rawkuma",
+  "name": "Rawkuma",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "Rawkuma: one of the largest Japanese raw manga sites.",
+  "base_url": "https://rawkuma.net",
+  "allowed_hosts": [
+    "rawkuma.net",
+    "rawkuma.com"
+  ],
+  "content_rating": "mixed"
+}

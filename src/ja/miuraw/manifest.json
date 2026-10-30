@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "miuraw",
+  "name": "MiuRaw",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "MiuRaw: Japanese raw manga.",
+  "base_url": "https://miuraw.net",
+  "allowed_hosts": [
+    "miuraw.net"
+  ],
+  "content_rating": "mixed"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "writerscans",
+  "name": "Writer Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Writer Scans: an English scanlation group on the Keyoapp platform.",
+  "base_url": "https://writerscans.com",
+  "allowed_hosts": [
+    "writerscans.com",
+    "meowing.org"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,239 @@
+[
+  {
+    "key": "mangaowl",
+    "engine": "madara",
+    "directory": "read-1",
+    "ajaxChapters": true,
+    "upstream": "mangaowl",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangaowl"
+  },
+  {
+    "key": "mangasushi",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "mangasushi",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangasushi"
+  },
+  {
+    "key": "manhuahot",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": false,
+    "upstream": "manhuahot",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/manhuahot"
+  },
+  {
+    "key": "manhwareads",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "manhwareads",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/manhwareads"
+  },
+  {
+    "key": "lilymanga",
+    "engine": "madara",
+    "directory": "gl",
+    "ajaxChapters": true,
+    "upstream": "lilymanga",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/lilymanga"
+  },
+  {
+    "key": "manhuanext",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "manhuanext",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/manhuanext"
+  },
+  {
+    "key": "manhwanex",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "manhwanex",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/manhwanex"
+  },
+  {
+    "key": "mangaeclipse",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": false,
+    "upstream": "mangaeclipse",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangaeclipse"
+  },
+  {
+    "key": "sleepytranslations",
+    "engine": "madara",
+    "directory": "series",
+    "ajaxChapters": true,
+    "upstream": "sleepytranslations",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/sleepytranslations"
+  },
+  {
+    "key": "tritiniascans",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "tritiniascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/tritiniascans"
+  },
+  {
+    "key": "cocomic",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "cocomic",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/cocomic"
+  },
+  {
+    "key": "yakshacomics",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "yakshacomics",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/yakshacomics"
+  },
+  {
+    "key": "evascans",
+    "engine": "themesia",
+    "cataloguePath": "/series/",
+    "upstream": "evascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/evascans"
+  },
+  {
+    "key": "rokaricomics",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "upstream": "rokaricomics",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/rokaricomics"
+  },
+  {
+    "key": "thunderscans",
+    "engine": "themesia",
+    "cataloguePath": "/comics/",
+    "upstream": "thunderscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/thunderscans"
+  },
+  {
+    "key": "mangapill",
+    "engine": "mangapill",
+    "upstream": "mangapill",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangapill"
+  },
+  {
+    "key": "mangakatana",
+    "engine": "mangakatana",
+    "upstream": "mangakatana",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangakatana"
+  },
+  {
+    "key": "tcbscans",
+    "engine": "tcbscans",
+    "upstream": "tcbscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/tcbscans"
+  },
+  {
+    "key": "dynasty",
+    "engine": "dynasty",
+    "upstream": "dynasty",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/dynasty"
+  },
+  {
+    "key": "demonicscans",
+    "engine": "demonicscans",
+    "upstream": "mangademon",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangademon"
+  },
+  {
+    "key": "mangabat",
+    "engine": "mangabox",
+    "upstream": "mangabat",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangabat"
+  },
+  {
+    "key": "mangakakalot",
+    "engine": "mangabox",
+    "upstream": "mangakakalot",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mangakakalot"
+  },
+  {
+    "key": "manganato",
+    "engine": "mangabox",
+    "upstream": "manganelo",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/manganelo"
+  },
+  {
+    "key": "grimscans",
+    "engine": "keyoapp",
+    "upstream": "grimscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/grimscans"
+  },
+  {
+    "key": "mistscans",
+    "engine": "keyoapp",
+    "upstream": "mistscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/mistscans"
+  },
+  {
+    "key": "kewnscans",
+    "engine": "keyoapp",
+    "upstream": "kewnscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/kewnscans"
+  },
+  {
+    "key": "writerscans",
+    "engine": "keyoapp",
+    "upstream": "writerscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/writerscans"
+  },
+  {
+    "key": "timelesstoons",
+    "engine": "keyoapp",
+    "upstream": "timelesstoons",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/timelesstoons"
+  },
+  {
+    "key": "vortexscans",
+    "engine": "iken",
+    "upstream": "vortexscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/vortexscans"
+  },
+  {
+    "key": "hivetoons",
+    "engine": "iken",
+    "upstream": "hivescans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/hivescans"
+  },
+  {
+    "key": "nyxscans",
+    "engine": "iken",
+    "upstream": "nyxscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/nyxscans"
+  },
+  {
+    "key": "kencomics",
+    "engine": "iken",
+    "upstream": "kenscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/kenscans"
+  },
+  {
+    "key": "orionscans",
+    "engine": "iken",
+    "upstream": "orionscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/orionscans"
+  },
+  {
+    "key": "sanascans",
+    "engine": "iken",
+    "upstream": "sanascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/sanascans"
+  },
+  {
+    "key": "hijalascans",
+    "engine": "iken",
+    "upstream": "hijalascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d/src/en/hijalascans"
+  }
+]

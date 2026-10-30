@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangapill",
+  "name": "MangaPill",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MangaPill: a large manga catalogue with fast chapter releases.",
+  "base_url": "https://mangapill.com",
+  "allowed_hosts": ["mangapill.com", "readdetectiveconan.com"],
+  "content_rating": "mixed"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangakakalot",
+  "name": "Mangakakalot",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Mangakakalot: one of the largest manga catalogues, with genre, status and order filters.",
+  "base_url": "https://www.kakamanga.com",
+  "allowed_hosts": [
+    "kakamanga.com",
+    "2xstorage.com"
+  ],
+  "content_rating": "mixed"
+}

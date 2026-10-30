@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "vortexscans",
+  "name": "Vortex Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Vortex Scans: an English scanlation group on the Iken platform.",
+  "base_url": "https://vortexscans.org",
+  "allowed_hosts": ["vortexscans.org"],
+  "content_rating": "safe"
+}

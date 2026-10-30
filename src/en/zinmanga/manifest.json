@@ -3,10 +3,12 @@
   "source_key": "zinmanga",
   "name": "Zinmanga",
   "lang": "en",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://mangazin.org",
   "allowed_hosts": [
     "mangazin.org"
   ],
-  "content_rating": "mixed"
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "mangazin.org's image CDN (cdn-1.mangazin.org) answers 404 for every chapter page, old and new, with or without a Referer (checked 2026-10-30), so no chapter can be read. Browse, search, details and chapter lists still work; publish again once its images load."
 }

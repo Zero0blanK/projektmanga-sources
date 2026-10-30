@@ -3,7 +3,7 @@
   "source_key": "violetscans",
   "name": "Violet Scans",
   "lang": "en",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "base_url": "https://violetmanga.com",
   "allowed_hosts": [
     "violetmanga.com"

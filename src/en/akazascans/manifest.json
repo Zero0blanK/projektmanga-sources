@@ -3,7 +3,7 @@
   "source_key": "akazascans",
   "name": "Akaza Scans",
   "lang": "en",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "base_url": "https://akazascans.org",
   "allowed_hosts": [
     "akazascans.org"

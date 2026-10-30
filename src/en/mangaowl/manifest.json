@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangaowl",
+  "name": "MangaOwl.io",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MangaOwl.io: a Madara-theme manga site.",
+  "base_url": "https://mangaowl.io",
+  "allowed_hosts": [
+    "mangaowl.io"
+  ],
+  "content_rating": "mixed"
+}

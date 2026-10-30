@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manganato",
+  "name": "Manganato",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Manganato: one of the largest manga catalogues, with genre, status and order filters.",
+  "base_url": "https://www.manganato.gg",
+  "allowed_hosts": [
+    "manganato.gg",
+    "2xstorage.com"
+  ],
+  "content_rating": "mixed"
+}

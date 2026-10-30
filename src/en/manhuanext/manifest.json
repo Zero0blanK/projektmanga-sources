@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhuanext",
+  "name": "ManhuaNext",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "ManhuaNext: a Madara-theme manga site.",
+  "base_url": "https://manhuanext.com",
+  "allowed_hosts": [
+    "manhuanext.com"
+  ],
+  "content_rating": "safe"
+}

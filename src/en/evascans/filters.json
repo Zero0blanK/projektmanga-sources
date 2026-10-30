@@ -1,0 +1,294 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Default",
+        "value": ""
+      },
+      {
+        "label": "A-Z",
+        "value": "title"
+      },
+      {
+        "label": "Z-A",
+        "value": "titlereverse"
+      },
+      {
+        "label": "Update",
+        "value": "update"
+      },
+      {
+        "label": "Added",
+        "value": "latest"
+      },
+      {
+        "label": "Popular",
+        "value": "popular"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "ongoing"
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Hiatus",
+        "value": "hiatus"
+      }
+    ]
+  },
+  {
+    "label": "Type",
+    "value": "type",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      },
+      {
+        "label": "Novel",
+        "value": "novel"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "20"
+      },
+      {
+        "label": "Adaptation",
+        "value": "4"
+      },
+      {
+        "label": "Adult",
+        "value": "21"
+      },
+      {
+        "label": "Adventure",
+        "value": "84"
+      },
+      {
+        "label": "Bloody",
+        "value": "261"
+      },
+      {
+        "label": "Comedy",
+        "value": "11"
+      },
+      {
+        "label": "Comic",
+        "value": "274"
+      },
+      {
+        "label": "Cooking",
+        "value": "32"
+      },
+      {
+        "label": "Drama",
+        "value": "5"
+      },
+      {
+        "label": "Ecchi",
+        "value": "154"
+      },
+      {
+        "label": "Fantasy",
+        "value": "6"
+      },
+      {
+        "label": "Full Color",
+        "value": "226"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "157"
+      },
+      {
+        "label": "Harem",
+        "value": "68"
+      },
+      {
+        "label": "Historical",
+        "value": "33"
+      },
+      {
+        "label": "Horror",
+        "value": "117"
+      },
+      {
+        "label": "Isekai",
+        "value": "202"
+      },
+      {
+        "label": "Josei",
+        "value": "15"
+      },
+      {
+        "label": "kids",
+        "value": "254"
+      },
+      {
+        "label": "ladies",
+        "value": "182"
+      },
+      {
+        "label": "Magic",
+        "value": "189"
+      },
+      {
+        "label": "Manga",
+        "value": "227"
+      },
+      {
+        "label": "Manhua",
+        "value": "31"
+      },
+      {
+        "label": "Manhwa",
+        "value": "7"
+      },
+      {
+        "label": "Manhwa Hot",
+        "value": "191"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "135"
+      },
+      {
+        "label": "Mature",
+        "value": "16"
+      },
+      {
+        "label": "Mystery",
+        "value": "48"
+      },
+      {
+        "label": "Office Life",
+        "value": "299"
+      },
+      {
+        "label": "One shot",
+        "value": "195"
+      },
+      {
+        "label": "Psychological",
+        "value": "54"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "51"
+      },
+      {
+        "label": "Romance",
+        "value": "8"
+      },
+      {
+        "label": "Royal family",
+        "value": "9"
+      },
+      {
+        "label": "Royalty",
+        "value": "305"
+      },
+      {
+        "label": "Satisfying Revenge",
+        "value": "301"
+      },
+      {
+        "label": "School Life",
+        "value": "12"
+      },
+      {
+        "label": "Sci fi",
+        "value": "221"
+      },
+      {
+        "label": "Seinen",
+        "value": "164"
+      },
+      {
+        "label": "Shoujo",
+        "value": "24"
+      },
+      {
+        "label": "Shounen",
+        "value": "36"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "13"
+      },
+      {
+        "label": "Smut",
+        "value": "22"
+      },
+      {
+        "label": "Super power",
+        "value": "17"
+      },
+      {
+        "label": "Supernatural",
+        "value": "18"
+      },
+      {
+        "label": "Time travel",
+        "value": "220"
+      },
+      {
+        "label": "Tragedy",
+        "value": "55"
+      },
+      {
+        "label": "Villainess",
+        "value": "52"
+      },
+      {
+        "label": "Webtoons",
+        "value": "45"
+      },
+      {
+        "label": "Workplace Drama",
+        "value": "300"
+      }
+    ]
+  }
+]

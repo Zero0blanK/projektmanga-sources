@@ -1,0 +1,275 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "29h 44m to finish",
+        "value": "29h-44m-to-finish"
+      },
+      {
+        "label": "Accion",
+        "value": "accion"
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Aging",
+        "value": "aging"
+      },
+      {
+        "label": "Aliens",
+        "value": "aliens"
+      },
+      {
+        "label": "Animals",
+        "value": "animals"
+      },
+      {
+        "label": "Aventura",
+        "value": "aventura"
+      },
+      {
+        "label": "Beasts",
+        "value": "beasts"
+      },
+      {
+        "label": "Blood",
+        "value": "blood"
+      },
+      {
+        "label": "Boys",
+        "value": "boys"
+      },
+      {
+        "label": "chinese",
+        "value": "chinese"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Cultivation",
+        "value": "cultivation"
+      },
+      {
+        "label": "demons",
+        "value": "demons"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Fighting",
+        "value": "fighting"
+      },
+      {
+        "label": "fun",
+        "value": "fun"
+      },
+      {
+        "label": "Future",
+        "value": "future"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "girl",
+        "value": "girl"
+      },
+      {
+        "label": "Girls",
+        "value": "girls"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "horrow",
+        "value": "horrow"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Love",
+        "value": "love"
+      },
+      {
+        "label": "manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Martial arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Monsters",
+        "value": "monsters"
+      },
+      {
+        "label": "Murim",
+        "value": "murim"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "OP Protagonist",
+        "value": "op-protagonist"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "Ruthless Protagonist",
+        "value": "ruthless-protagonist"
+      },
+      {
+        "label": "Sci-Fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Seinen",
+        "value": "seinen"
+      },
+      {
+        "label": "Sexual Violence",
+        "value": "sexual-violence"
+      },
+      {
+        "label": "shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Smart MC",
+        "value": "smart-mc"
+      },
+      {
+        "label": "Superhero",
+        "value": "superhero"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "System",
+        "value": "system"
+      },
+      {
+        "label": "Thriller",
+        "value": "thriller"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Webtoons",
+        "value": "webtoons"
+      },
+      {
+        "label": "Wuxia",
+        "value": "wuxia"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hijalascans",
+  "name": "Hijala Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Hijala Scans: an English scanlation group on the Iken platform.",
+  "base_url": "https://en-hijala.com",
+  "allowed_hosts": ["en-hijala.com"],
+  "content_rating": "safe"
+}

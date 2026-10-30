@@ -52,17 +52,31 @@ unbuilt commit publishes stale code. CI fails the build if the two disagree.
 
 ## What's here
 
+The table below lists the original sources. Three ported waves add 59 more English sources on
+shared engines (Madara, MangaThemesia, MangaBox, Keyoapp, Iken) and single-site ports such
+as MangaPill, MangaKatana, TCB Scans, Dynasty Scans, MangaHere and MangaTown, plus ten
+Japanese raw-manga sites: see [English source ports](docs/english-source-ports.md) and
+[Japanese source ports](docs/japanese-source-ports.md) for the full lists, what was checked
+and which sites were left out.
+
 | Source | Key | Rating | Status |
 | --- | --- | --- | --- |
 | MangaDex | `mangadex` | mixed | published — browse, search, details, chapters, pages, filters |
 | MangaGeko | `mangageko` | mixed | published — browse, search, details, chapters, pages |
-| MangaTX | `mangatx` | mixed | published — browse, search, details, chapters, pages |
+| MangaTX | `mangatx` | mixed | **draft, not listed** — mangatx.cc stopped resolving (2026-10-14) |
 | Nhentai | `nhentai` | nsfw | published — browse, search, details, pages |
 | Asura Scans | `asurascans` | mixed | published — browse, search, details, chapters, pages |
 | Kissmanga | `kissmanga` | mixed | **draft, not listed** — see below |
 | Weeb Central | `weebcentral` | mixed | published — browse, search, details, full chapter lists, pages |
+| Akaza Scans | `akazascans` | safe | accepted — shared MangaThemesia engine, native catalogue, search, filters, details, chapters, pages |
 
 See [v2 acceptance and candidate feasibility](docs/source-feasibility-v2.md) for the dated sandbox evidence and deferred sites.
+
+See [the source framework](docs/source-framework.md) for native cursor pagination,
+capability metadata and the shared MangaThemesia engine. Akaza Scans is a new concrete
+theme adapter accepted through the restricted sandbox and public-host validation,
+including a bounded reader-image MIME/signature check. Its bundle is included in the
+local repository index; remote publication remains a separate operation.
 
 `mixed` means a general catalogue that also carries adult titles: badged, not hidden. Only
 `nsfw` sets `isNSFW` in the listing. See
@@ -103,10 +117,11 @@ docs/                   the repository format, field by field
 schema/                 JSON Schema for index.json and manifest.json
 src/
   lib/                  shared code: fetch client, cache, error classes, Madara factory
-  <source>/
-    manifest.json       the source's metadata — see docs/repository-format.md
-    icon.svg            optional, published as dist/icons/<source>.svg
-    index.ts            the Source implementation
+  <lang>/
+    <source>/
+      manifest.json     the source's metadata — see docs/repository-format.md
+      icon.svg|png      optional, published as dist/icons/<source>.svg|png
+      index.ts          the Source implementation
 dist/<source>.js        built bundles (committed)
 dist/icons/             built icons (committed)
 scripts/smoke.mjs       live end-to-end check
@@ -136,6 +151,10 @@ Only these methods are ever called — the runner allowlists them:
 fetchManga  searchManga  fetchMangaDetails  fetchMangaThumbnail
 fetchChapters  fetchChapterPages  getFilters  fetchMangaUpdates
 ```
+
+`fetchMangaDetails` should set `url` to the title's page on the site (absolute, or relative
+to `base_url`). The app can't derive it, and it's what "Share" on a title links to; without
+it the app has no link to offer for that source.
 
 ### What your code may and may not do
 
@@ -180,22 +199,22 @@ reads when a code doesn't map to something more specific.
 ### Adding one
 
 ```bash
-mkdir src/mysource
-# write src/mysource/manifest.json and src/mysource/index.ts
+mkdir -p src/en/mysource
+# write src/en/mysource/manifest.json and src/en/mysource/index.ts
 npm run typecheck
 npm run build
 npm run smoke mysource
 ```
 
-`build.mjs` picks up any `src/<dir>/index.ts` automatically. `source_key` must equal the
+`build.mjs` picks up any `src/<lang>/<source_key>/index.ts` automatically. `source_key` must equal the
 directory name — the bundle is published as `dist/<dir>.js`.
 
-The manifest is seven required fields; point `$schema` at `../../schema/manifest.schema.json`
+The manifest is seven required fields; point `$schema` at `../../../schema/manifest.schema.json`
 and the editor will fill them in for you:
 
 ```json
 {
-  "$schema": "../../schema/manifest.schema.json",
+  "$schema": "../../../schema/manifest.schema.json",
   "source_key": "mysource",
   "name": "My Source",
   "lang": "en",
@@ -341,3 +360,25 @@ These are ports, not copies. What changed, and why:
   hides three general catalogues. Here they are `content_rating: "mixed"` — badged, still
   listed — and only Nhentai is `nsfw`. Each source's `isNSFW` is derived from its rating by
   `src/lib/manifest.ts`, so the listing and the running source always agree.
+
+### Source languages
+
+Sources live in `src/<lang>/<source_key>/`. Language folders use canonical metadata codes (`en`, `ja`, `pt-br`, `es`, `fr`, `id`, `ru`, `all`); Japanese is `ja`, while `en` remains generic English. Shared engines live in `src/lib/`, including `src/lib/mangadex/`. The build and fixture tools discover sources with `scripts/source-layout.mjs`; bundle URLs and source keys do not change. Language editions declare the optional `family_key` so the app can offer related editions from the same repository.
+
+### English and Japanese additions
+
+The local catalogue includes 30 additional sources: 20 English (listed) and 10 Japanese
+(built and tested, but held as drafts; see below).
+English ports include Flame Comics, Manhua Plus, MangaRead.org, LHTranslation,
+GalaxyDegenScans, Zinmanga, S2Manga and the theme adapters listed in
+[English source ports](docs/english-source-ports.md). Japanese additions include
+Shonen Jump+, Comic Days, Comic Gardo, Kurage Bunch and six other publishers listed in
+[Japanese source ports](docs/japanese-source-ports.md).
+
+Each addition has a language directory, icon, filters, bundle and deterministic contract
+coverage. Japanese publisher readers support free, unscrambled pages; paid products
+are omitted, and unsupported image scrambling reports an error. Every free episode
+sampled live on 2026-10-14 (30/30 across six publishers) used the scrambled `baku`
+format, so all ten Japanese sources are drafts until descrambling is supported. Full live reader
+acceptance for all additions has not been established. Adding these bundles to this
+repository does not install them into the app or publish them remotely.

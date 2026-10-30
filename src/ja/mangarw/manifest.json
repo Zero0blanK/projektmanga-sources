@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangarw",
+  "name": "MangaRW",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "MangaRW: Japanese raw manga.",
+  "base_url": "https://mangarw.com",
+  "allowed_hosts": [
+    "mangarw.com",
+    "mangabuzz.org",
+    "mangaraw123.com"
+  ],
+  "content_rating": "mixed"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "timelesstoons",
+  "name": "Timeless Toons",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Timeless Toons: an English scanlation group on the Keyoapp platform.",
+  "base_url": "https://timelesstoons.org",
+  "allowed_hosts": [
+    "timelesstoons.org",
+    "meowing.org"
+  ],
+  "content_rating": "safe"
+}

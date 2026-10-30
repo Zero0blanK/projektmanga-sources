@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mistscans",
+  "name": "Mist Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Mist Scans: an English scanlation group on the Keyoapp platform.",
+  "base_url": "https://mistscans.com",
+  "allowed_hosts": [
+    "mistscans.com",
+    "meowing.org"
+  ],
+  "content_rating": "safe"
+}

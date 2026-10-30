@@ -1,0 +1,310 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Default",
+        "value": ""
+      },
+      {
+        "label": "A-Z",
+        "value": "title"
+      },
+      {
+        "label": "Z-A",
+        "value": "titlereverse"
+      },
+      {
+        "label": "Update",
+        "value": "update"
+      },
+      {
+        "label": "Added",
+        "value": "latest"
+      },
+      {
+        "label": "Popular",
+        "value": "popular"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "ongoing"
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Hiatus",
+        "value": "hiatus"
+      }
+    ]
+  },
+  {
+    "label": "Type",
+    "value": "type",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      },
+      {
+        "label": "Novel",
+        "value": "novel"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Academy",
+        "value": "academy"
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "actionapocalypse",
+        "value": "actionapocalypse"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "amnesia",
+        "value": "amnesia"
+      },
+      {
+        "label": "cats",
+        "value": "cats"
+      },
+      {
+        "label": "Childcare",
+        "value": "childcare"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Crime",
+        "value": "crime"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "family",
+        "value": "family"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "game",
+        "value": "game"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "living",
+        "value": "living"
+      },
+      {
+        "label": "love triangle",
+        "value": "love-triangle"
+      },
+      {
+        "label": "Magic",
+        "value": "magic"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "middle age",
+        "value": "middle-age"
+      },
+      {
+        "label": "Misunderstanding",
+        "value": "misunderstanding"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "Neighbors to Lovers",
+        "value": "neighbors-to-lovers"
+      },
+      {
+        "label": "Office",
+        "value": "office"
+      },
+      {
+        "label": "Opposites Attract",
+        "value": "opposites-attract"
+      },
+      {
+        "label": "Politics",
+        "value": "politics"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "rats",
+        "value": "rats"
+      },
+      {
+        "label": "regression",
+        "value": "regression"
+      },
+      {
+        "label": "regret",
+        "value": "regret"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "reincarnation"
+      },
+      {
+        "label": "return",
+        "value": "return"
+      },
+      {
+        "label": "Revenge",
+        "value": "revenge"
+      },
+      {
+        "label": "reverse harem",
+        "value": "reverse-harem"
+      },
+      {
+        "label": "rival/enemy",
+        "value": "rival-enemy"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Slice of life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "sport",
+        "value": "sport"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Survival",
+        "value": "survival"
+      },
+      {
+        "label": "thriller",
+        "value": "thriller"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Transmigration",
+        "value": "transmigration"
+      },
+      {
+        "label": "Webtoon",
+        "value": "webtoon"
+      },
+      {
+        "label": "wuxi",
+        "value": "wuxi"
+      },
+      {
+        "label": "Youth",
+        "value": "youth"
+      },
+      {
+        "label": "zombi",
+        "value": "zombi"
+      }
+    ]
+  }
+]

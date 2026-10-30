@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hivetoons",
+  "name": "Hive Toons",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Hive Toons: an English scanlation group on the Iken platform.",
+  "base_url": "https://hivetoons.org",
+  "allowed_hosts": [
+    "hivetoons.org",
+    "hivetoon.com"
+  ],
+  "content_rating": "safe"
+}

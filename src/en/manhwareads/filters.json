@@ -1,0 +1,299 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Animal Characteristics",
+        "value": "animal-characteristics"
+      },
+      {
+        "label": "Arts",
+        "value": "arts"
+      },
+      {
+        "label": "Borderline H",
+        "value": "borderline-h"
+      },
+      {
+        "label": "boys",
+        "value": "boys"
+      },
+      {
+        "label": "chinese",
+        "value": "chinese"
+      },
+      {
+        "label": "Cohabitation",
+        "value": "cohabitation"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Coworkers",
+        "value": "coworkers"
+      },
+      {
+        "label": "Crime",
+        "value": "crime"
+      },
+      {
+        "label": "Crossdressing",
+        "value": "crossdressing"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Explicit Sex",
+        "value": "explicit-sex"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Fetish",
+        "value": "fetish"
+      },
+      {
+        "label": "fighting",
+        "value": "fighting"
+      },
+      {
+        "label": "Full Color",
+        "value": "full-color"
+      },
+      {
+        "label": "fun",
+        "value": "fun"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "girl",
+        "value": "girl"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "horrow",
+        "value": "horrow"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Life",
+        "value": "life"
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Martial",
+        "value": "martial"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "Nudity",
+        "value": "nudity"
+      },
+      {
+        "label": "OEL",
+        "value": "oel"
+      },
+      {
+        "label": "of",
+        "value": "of"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "School",
+        "value": "school"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Seinen",
+        "value": "seinen"
+      },
+      {
+        "label": "Sexual Abuse",
+        "value": "sexual-abuse"
+      },
+      {
+        "label": "Sexual Content",
+        "value": "sexual-content"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Slice",
+        "value": "slice"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Uncensored",
+        "value": "uncensored"
+      },
+      {
+        "label": "Webtoons",
+        "value": "webtoons"
+      },
+      {
+        "label": "Work Life",
+        "value": "work-life"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      }
+    ]
+  }
+]

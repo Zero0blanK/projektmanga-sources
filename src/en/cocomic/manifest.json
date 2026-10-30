@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "cocomic",
+  "name": "Cocomic",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Cocomic: a Madara-theme manga site.",
+  "base_url": "https://cocomic.co",
+  "allowed_hosts": [
+    "cocomic.co"
+  ],
+  "content_rating": "mixed"
+}

@@ -133,3 +133,49 @@ export function resolvePagination(
   const offset = Number.isFinite(pagination?.offset) ? Number(pagination?.offset) : (defaults.offset ?? 0);
   return { limit: Math.max(0, limit), offset: Math.max(0, offset) };
 }
+
+/**
+ * A chapter's number from its name. The number after "Chapter"/"Ch."/"Episode"/"Ep." (in
+ * the languages these sources cover) wins, so "Vol. 2 Chapter 15" is 15, not 2; without
+ * one, the last number in the name ("Season 2 - 10" is 10); without any, `fallback`.
+ * A chapter whose name has no number (a prologue, an extra) gets the fallback rather than
+ * failing the whole chapter list.
+ */
+export function chapterNumberFromName(name: string, fallback = 0): number {
+  const keyword = name.match(
+    /(?:chapitre|cap[ií]tulo|cap\.|chapter|chap\.?|ch\.?|episode|ep\.?|bab|#)\s*(\d+(?:[.,]\d+)?)/i,
+  );
+  const numbers = name.match(/\d+(?:[.,]\d+)?/g);
+  const raw = keyword?.[1] ?? numbers?.[numbers.length - 1];
+  if (!raw) return fallback;
+  const value = Number(raw.replace(',', '.'));
+  return Number.isFinite(value) ? value : fallback;
+}
+
+/** A Japanese relative date ("3日前", "5時間前", "2週間前") as an ISO string, or "". */
+export function jaRelativeDateToIso(raw: string | undefined): string {
+  const match = raw?.match(/(\d+)\s*(秒|分|時間|日|週間|ヶ月|か月|年)前/);
+  if (!match) return "";
+  const amount = Number(match[1]);
+  const date = new Date();
+  switch (match[2]) {
+    case "秒": date.setSeconds(date.getSeconds() - amount); break;
+    case "分": date.setMinutes(date.getMinutes() - amount); break;
+    case "時間": date.setHours(date.getHours() - amount); break;
+    case "日": date.setDate(date.getDate() - amount); break;
+    case "週間": date.setDate(date.getDate() - amount * 7); break;
+    case "ヶ月":
+    case "か月": date.setMonth(date.getMonth() - amount); break;
+    case "年": date.setFullYear(date.getFullYear() - amount); break;
+  }
+  return date.toISOString();
+}
+
+/** A Japanese series status: 連載中 is ongoing, 完結 completed. */
+export function jaStatus(raw: string | undefined): string {
+  if (!raw) return MANGA_STATUS.UNKNOWN;
+  if (raw.includes("連載中")) return MANGA_STATUS.ONGOING;
+  if (raw.includes("完結")) return MANGA_STATUS.COMPLETED;
+  if (raw.includes("休載")) return MANGA_STATUS.HIATUS;
+  return mapMangaStatus(raw);
+}

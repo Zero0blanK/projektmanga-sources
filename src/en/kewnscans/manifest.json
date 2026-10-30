@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "kewnscans",
+  "name": "Kewn Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Kewn Scans: an English scanlation group on the Keyoapp platform.",
+  "base_url": "https://kewnscans.org",
+  "allowed_hosts": [
+    "kewnscans.org",
+    "meowing.org"
+  ],
+  "content_rating": "safe"
+}

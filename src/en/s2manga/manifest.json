@@ -3,7 +3,7 @@
   "source_key": "s2manga",
   "name": "S2Manga",
   "lang": "en",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://s2read.com",
   "allowed_hosts": [
     "s2read.com",

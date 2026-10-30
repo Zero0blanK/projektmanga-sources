@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "rokaricomics",
+  "name": "Rokari Comics",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Rokari Comics: a MangaThemesia-theme manga site.",
+  "base_url": "https://rokaricomics.com",
+  "allowed_hosts": [
+    "rokaricomics.com"
+  ],
+  "content_rating": "safe"
+}

@@ -159,11 +159,14 @@ async function smokeOne(entry) {
           signal: AbortSignal.timeout(STEP_TIMEOUT_MS),
         });
         const type = response.headers.get('content-type') ?? '';
-        await response.body?.cancel();
-        if (!response.ok || !type.startsWith('image/')) {
+        // The app's image proxy goes by the file's own signature, not the header (some
+        // CDNs send images as application/octet-stream), so this does the same.
+        const head = Buffer.from(await response.arrayBuffer()).subarray(0, 32);
+        const sniffed = imageSignature(head);
+        if (!response.ok || (!type.startsWith('image/') && !sniffed)) {
           throw new Error(`HTTP ${response.status} ${type || 'no content-type'}`);
         }
-        return `${response.status} ${type}`;
+        return `${response.status} ${type}${sniffed && !type.startsWith('image/') ? ` (bytes: ${sniffed})` : ''}`;
       });
       results.push(image.ok);
       const host = new URL(imageUrl).hostname;
@@ -174,6 +177,16 @@ async function smokeOne(entry) {
   }
 
   return results.every(Boolean);
+}
+
+/** The raster format a file's first bytes declare, as the app's image proxy checks it. */
+function imageSignature(bytes) {
+  if (bytes.length >= 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return 'image/jpeg';
+  if (bytes.subarray(0, 8).equals(Buffer.from('89504e470d0a1a0a', 'hex'))) return 'image/png';
+  if (['GIF87a', 'GIF89a'].includes(bytes.toString('ascii', 0, 6))) return 'image/gif';
+  if (bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP') return 'image/webp';
+  if (bytes.toString('ascii', 4, 8) === 'ftyp' && /avif|avis/.test(bytes.toString('ascii', 8, 32))) return 'image/avif';
+  return null;
 }
 
 async function main() {

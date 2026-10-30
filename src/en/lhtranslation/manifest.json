@@ -3,7 +3,7 @@
   "source_key": "lhtranslation",
   "name": "LHTranslation",
   "lang": "en",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://lhtranslation.net",
   "allowed_hosts": [
     "lhtranslation.net"

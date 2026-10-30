@@ -3,7 +3,7 @@
   "source_key": "lagoonscans",
   "name": "Lagoon Scans",
   "lang": "en",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "base_url": "https://lagoonscans.com",
   "allowed_hosts": [
     "lagoonscans.com",

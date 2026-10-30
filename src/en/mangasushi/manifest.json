@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangasushi",
+  "name": "Mangasushi",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Mangasushi: a Madara-theme manga site.",
+  "base_url": "https://mangasushi.org",
+  "allowed_hosts": [
+    "mangasushi.org"
+  ],
+  "content_rating": "safe"
+}

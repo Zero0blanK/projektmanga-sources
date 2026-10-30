@@ -3,7 +3,7 @@
   "source_key": "galaxydegenscans",
   "name": "GalaxyDegenScans",
   "lang": "en",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "base_url": "https://gdscans.com",
   "allowed_hosts": [
     "gdscans.com"

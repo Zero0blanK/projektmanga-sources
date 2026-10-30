@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangatown",
+  "name": "MangaTown",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MangaTown: a large manga and manhwa catalogue. Licensed titles have had their chapters removed.",
+  "base_url": "https://www.mangatown.com",
+  "allowed_hosts": ["mangatown.com", "mangahere.org", "mangahere.com"],
+  "content_rating": "mixed"
+}

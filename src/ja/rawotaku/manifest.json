@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "rawotaku",
+  "name": "RawOtaku",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "RawOtaku: Japanese raw manga.",
+  "base_url": "https://rawotaku.com",
+  "allowed_hosts": [
+    "rawotaku.com",
+    "view47.com",
+    "freeimgmg.online"
+  ],
+  "content_rating": "mixed"
+}

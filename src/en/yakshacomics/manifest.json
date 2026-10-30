@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "yakshacomics",
+  "name": "Yaksha Comics",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Yaksha Comics: a Madara-theme manga site.",
+  "base_url": "https://yakshacomics.com",
+  "allowed_hosts": [
+    "yakshacomics.com"
+  ],
+  "content_rating": "safe"
+}

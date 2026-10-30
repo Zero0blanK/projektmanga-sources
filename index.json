@@ -13,10 +13,11 @@
       "source_key": "akazascans",
       "name": "Akaza Scans",
       "lang": "en",
-      "version": "1.0.4",
-      "version_code": 1000004,
+      "version": "1.0.5",
+      "version_code": 1000005,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/akazascans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/akazascans.png",
       "base_url": "https://akazascans.org",
       "homepage": "https://akazascans.org",
       "allowed_hosts": [
@@ -25,19 +26,19 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "87af9b72e08808d1b7c20106377d789b0b98b3e233e281a1c6efc88cceaae6e6",
-        "size": 224296
+        "sha256": "7fc7d32648590dd9e1cf5d5e9fbb23bdec0f5403cf45d2da9125ce870edf2ef1",
+        "size": 224513
       }
     },
     {
       "source_key": "arenascans",
       "name": "Arena Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/arenascans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/arenascans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/arenascans.png",
       "base_url": "https://arenascan.com",
       "homepage": "https://arenascan.com",
       "allowed_hosts": [
@@ -47,19 +48,19 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "6fffada7d8f1c963bd6bee70e2e3d0255fa0fe235c3c5d8bf2e152a31a2768fa",
-        "size": 228265
+        "sha256": "09d3d3b1db923a5618658e0f8c59fbc6e97d9724ee595d4940ff4582d6d9ae32",
+        "size": 228482
       }
     },
     {
       "source_key": "asterscans",
       "name": "Aster Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/asterscans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/asterscans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/asterscans.png",
       "base_url": "https://asterscans.com",
       "homepage": "https://asterscans.com",
       "allowed_hosts": [
@@ -72,8 +73,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d6b4c27a4b0f684f87019fe8e89662a1189fcc76c4025e65ab472e568c5866d0",
-        "size": 225001
+        "sha256": "2148097890974fccc348f56b52dbb35e829720babbbc37d5bd95b8c2758a6b73",
+        "size": 225218
       }
     },
     {
@@ -84,6 +85,7 @@
       "version_code": 1000005,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/asurascans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/asurascans.png",
       "base_url": "https://asurascans.com",
       "homepage": "https://asurascans.com",
       "allowed_hosts": [
@@ -101,11 +103,11 @@
       "source_key": "athreascans",
       "name": "Athrea Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/athreascans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/athreascans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/athreascans.png",
       "base_url": "https://athreascans.com",
       "homepage": "https://athreascans.com",
       "allowed_hosts": [
@@ -114,19 +116,109 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "9f14b368912bff1c9d47ff58269dc63acdb5bdde8fe07a1cacecf9025ee947be",
-        "size": 224804
+        "sha256": "d2c72f131278a808561ba900dd1a8af97f9450d6fe81925e48b25d6f2ac00aad",
+        "size": 225021
+      }
+    },
+    {
+      "source_key": "cocomic",
+      "name": "Cocomic",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Cocomic: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/cocomic.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/cocomic.svg",
+      "base_url": "https://cocomic.co",
+      "homepage": "https://cocomic.co",
+      "allowed_hosts": [
+        "cocomic.co"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "10792f9f1dc83c121b616a61b15825e3215978512c9ac6a82106938370b05c59",
+        "size": 226680
+      }
+    },
+    {
+      "source_key": "demonicscans",
+      "name": "Demonic Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Demonic Scans: manhwa and manhua with fast releases.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/demonicscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/demonicscans.png",
+      "base_url": "https://demonicscans.org",
+      "homepage": "https://demonicscans.org",
+      "allowed_hosts": [
+        "demonicscans.org",
+        "demoniclibs.com",
+        "readermc.org"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "6145754ae5c65ce45ef04c3e7f9cd11ae48065541d97ce1f543b26e6f20c4961",
+        "size": 219086
+      }
+    },
+    {
+      "source_key": "dynasty",
+      "name": "Dynasty Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Dynasty Scans: yuri manga series from many scanlation groups.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/dynasty.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/dynasty.png",
+      "base_url": "https://dynasty-scans.com",
+      "homepage": "https://dynasty-scans.com",
+      "allowed_hosts": [
+        "dynasty-scans.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "485aedf5148274aa2a2453695ba1830417b4f38b92c7ccb2636269434c29ad58",
+        "size": 215039
+      }
+    },
+    {
+      "source_key": "evascans",
+      "name": "Eva Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Eva Scans: a MangaThemesia-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/evascans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/evascans.png",
+      "base_url": "https://evascans.net",
+      "homepage": "https://evascans.net",
+      "allowed_hosts": [
+        "evascans.net"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "d33c3a638d669df762350eaa17875c4bf1c79ab0a79e74012dc75ba434a6d126",
+        "size": 225316
       }
     },
     {
       "source_key": "flamecomics",
       "name": "Flame Comics",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/flamecomics.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/flamecomics.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/flamecomics.png",
       "base_url": "https://flamecomics.xyz",
       "homepage": "https://flamecomics.xyz",
       "allowed_hosts": [
@@ -135,7 +227,7 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "e7805a9953f3ef7ffd5612140848a551d9a82a637ba523bd4b769a7ce227f500",
+        "sha256": "e5483de638dde8198048254fa386ad1fc85c743a6248265715897c53354c9c99",
         "size": 278602
       }
     },
@@ -143,11 +235,11 @@
       "source_key": "galaxydegenscans",
       "name": "GalaxyDegenScans",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/galaxydegenscans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/galaxydegenscans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/galaxydegenscans.png",
       "base_url": "https://gdscans.com",
       "homepage": "https://gdscans.com",
       "allowed_hosts": [
@@ -156,18 +248,42 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "2fb800d2e42a83551a832d4075fa185f45e50d15a86099cb39283eabdee93400",
-        "size": 227644
+        "sha256": "13d030d5b4a9916adf57b8c895a8ceb8b499a454a5498845de54b0e3380a69bc",
+        "size": 228203
+      }
+    },
+    {
+      "source_key": "grimscans",
+      "name": "Grim Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Grim Scans: an English scanlation group on the Keyoapp platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/grimscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/grimscans.png",
+      "base_url": "https://grimscans.com",
+      "homepage": "https://grimscans.com",
+      "allowed_hosts": [
+        "grimscans.com",
+        "meowing.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "36929bf6b918bb0834727b2d1b067e440fd5f76f7369a71150dbeb9f21e02866",
+        "size": 219862
       }
     },
     {
       "source_key": "hentaifox",
       "name": "HentaiFox",
       "lang": "all",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/hentaifox.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/hentaifox.png",
       "base_url": "https://hentaifox.com",
       "homepage": "https://hentaifox.com",
       "allowed_hosts": [
@@ -176,19 +292,109 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "df442da4e3d4e3d9008435eaa5c0e0f5c4d7d61b4a5cee6121dec6a610024fc2",
+        "sha256": "02bc2bca173a2eaffaf9e3dca545a6e91473e2313794dc9ea83ac7d3b80a0dce",
         "size": 218335
+      }
+    },
+    {
+      "source_key": "hijalascans",
+      "name": "Hijala Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Hijala Scans: an English scanlation group on the Iken platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/hijalascans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/hijalascans.png",
+      "base_url": "https://en-hijala.com",
+      "homepage": "https://en-hijala.com",
+      "allowed_hosts": [
+        "en-hijala.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "2a7af789650fec9fbb0567d19886cf8b657c99522362227224e33101592eedf8",
+        "size": 216027
+      }
+    },
+    {
+      "source_key": "hivetoons",
+      "name": "Hive Toons",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Hive Toons: an English scanlation group on the Iken platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/hivetoons.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/hivetoons.png",
+      "base_url": "https://hivetoons.org",
+      "homepage": "https://hivetoons.org",
+      "allowed_hosts": [
+        "hivetoons.org",
+        "hivetoon.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "afe7370ce0070b00d92306ac649c0d9946b00476eb8c0994e47f6680fb5a49f6",
+        "size": 216036
+      }
+    },
+    {
+      "source_key": "kencomics",
+      "name": "Ken Comics",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Ken Comics: an English scanlation group on the Iken platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/kencomics.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/kencomics.png",
+      "base_url": "https://kencomics.com",
+      "homepage": "https://kencomics.com",
+      "allowed_hosts": [
+        "kencomics.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "bf673c99f546e24e267303afb6a126308930f62d2c5f9f816d0af916bb3d47b8",
+        "size": 216021
+      }
+    },
+    {
+      "source_key": "kewnscans",
+      "name": "Kewn Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Kewn Scans: an English scanlation group on the Keyoapp platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/kewnscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/kewnscans.png",
+      "base_url": "https://kewnscans.org",
+      "homepage": "https://kewnscans.org",
+      "allowed_hosts": [
+        "kewnscans.org",
+        "meowing.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "84d1e952f76dea77d65aa0478520f301806833c550d60c14bb0e5973f331ccba",
+        "size": 219862
       }
     },
     {
       "source_key": "kingofshojo",
       "name": "King of Shojo",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/kingofshojo.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/kingofshojo.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/kingofshojo.png",
       "base_url": "https://kingofshojo.com",
       "homepage": "https://kingofshojo.com",
       "allowed_hosts": [
@@ -202,19 +408,19 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "c7e5bb8769e031ddf79f30fd6887cf8ff2cd3b4675b328d9fc6afc43f8e438e9",
-        "size": 228498
+        "sha256": "6b21ca51456fc04d3a401381f6d597226b623afd1f1274eaf5e4b1fd6896086d",
+        "size": 228715
       }
     },
     {
       "source_key": "lagoonscans",
       "name": "Lagoon Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/lagoonscans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/lagoonscans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/lagoonscans.png",
       "base_url": "https://lagoonscans.com",
       "homepage": "https://lagoonscans.com",
       "allowed_hosts": [
@@ -227,8 +433,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "72909a6b7ab8a8fdbadc9437771663faef17d19a522ebd02933d988a1e8ec746",
-        "size": 224439
+        "sha256": "fc0e05fa5143c8a4ef0fb2247f208f12b34866fd140161017b1340b2b4d50637",
+        "size": 224656
       }
     },
     {
@@ -239,6 +445,7 @@
       "version_code": 1000005,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/leercapitulo.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/leercapitulo.svg",
       "base_url": "https://www.leercapitulo.co",
       "homepage": "https://www.leercapitulo.co",
       "allowed_hosts": [
@@ -255,11 +462,11 @@
       "source_key": "lhtranslation",
       "name": "LHTranslation",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/lhtranslation.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/lhtranslation.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/lhtranslation.png",
       "base_url": "https://lhtranslation.net",
       "homepage": "https://lhtranslation.net",
       "allowed_hosts": [
@@ -268,19 +475,64 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "807a899c2c92862fafe65885aac95de838f29d24cb1e577589f676f287bd7342",
-        "size": 226039
+        "sha256": "8fd5b637bf8b262cb34367a2c61cdc1b1cd50007899110b5bcb70bc3cedbbd98",
+        "size": 226598
+      }
+    },
+    {
+      "source_key": "lilymanga",
+      "name": "Lily Manga",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Lily Manga: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/lilymanga.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/lilymanga.png",
+      "base_url": "https://lilymanga.net",
+      "homepage": "https://lilymanga.net",
+      "allowed_hosts": [
+        "lilymanga.net"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "2e03be1a2a439fe83a5746ca6d78df28db3cfa83defe0514c8de1b2ee88e4075",
+        "size": 228182
+      }
+    },
+    {
+      "source_key": "love4u",
+      "name": "Love4u",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Love4u (WeLoveManga): Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/love4u.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/love4u.svg",
+      "base_url": "https://love4u.net",
+      "homepage": "https://love4u.net",
+      "allowed_hosts": [
+        "love4u.net",
+        "ihlv1.xyz"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "85b3c876cbcf21ef6cbf2bbd0fcd5902b41654d9adbc60201b831040ddfa9da7",
+        "size": 218256
       }
     },
     {
       "source_key": "madarascans",
       "name": "Madara Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/madarascans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/madarascans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/madarascans.png",
       "base_url": "https://madarascans.net",
       "homepage": "https://madarascans.net",
       "allowed_hosts": [
@@ -293,8 +545,31 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "ecc5db8a5948fb2864b6073bd2113525a7efb649b67dae9adbf5e14a9ca4f4df",
-        "size": 224933
+        "sha256": "8108fb82ce267aa07b519f1bf4c3bbf154e95867c03da0e472f1f55b73fe66e8",
+        "size": 225150
+      }
+    },
+    {
+      "source_key": "mangabat",
+      "name": "MangaBat",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaBat: one of the largest manga catalogues, with genre, status and order filters.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangabat.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangabat.png",
+      "base_url": "https://www.mangabats.com",
+      "homepage": "https://www.mangabats.com",
+      "allowed_hosts": [
+        "mangabats.com",
+        "2xstorage.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "cbb17eb9180a2632643634986b088ce14d0b89b74b31a411782c2ebbb816b005",
+        "size": 224856
       }
     },
     {
@@ -302,11 +577,11 @@
       "name": "MangaDex",
       "lang": "en",
       "family_key": "mangadex",
-      "version": "1.1.5",
-      "version_code": 1001005,
+      "version": "1.1.6",
+      "version_code": 1001006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex.png",
       "base_url": "https://api.mangadex.org",
       "homepage": "https://mangadex.org",
       "allowed_hosts": [
@@ -315,7 +590,7 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d06fceb87b3c3df13530ca93f8037efd909d0bcb7893621d71c8811f80bc337c",
+        "sha256": "c246c92386ef317de7b665b131e21dc39f72e2b22b28381b16ef672cdab36ef9",
         "size": 281324
       }
     },
@@ -324,10 +599,11 @@
       "name": "MangaDex — Spanish",
       "lang": "es",
       "family_key": "mangadex",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-es.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex-es.png",
       "base_url": "https://api.mangadex.org",
       "homepage": "https://mangadex.org",
       "allowed_hosts": [
@@ -336,7 +612,7 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "82e6699a487eecf6c041f04e648c56025ba1ba8b049384c75dbce9e7bba92f4e",
+        "sha256": "0f573de31dde94294214cd92ca5cb53f802241fa14ce1d78c0f157f68f312050",
         "size": 281342
       }
     },
@@ -345,10 +621,11 @@
       "name": "MangaDex — French",
       "lang": "fr",
       "family_key": "mangadex",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-fr.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex-fr.png",
       "base_url": "https://api.mangadex.org",
       "homepage": "https://mangadex.org",
       "allowed_hosts": [
@@ -357,7 +634,7 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "fd6755cebc20f4061eeee45f9f98822786fa4690c702184a0c1ab1d8354133e0",
+        "sha256": "53af99f885d591b14dad3311ff51a5cd824d967d853e4fc97c194bb84a0494e9",
         "size": 281341
       }
     },
@@ -366,10 +643,11 @@
       "name": "MangaDex — Indonesian",
       "lang": "id",
       "family_key": "mangadex",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-id.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex-id.png",
       "base_url": "https://api.mangadex.org",
       "homepage": "https://mangadex.org",
       "allowed_hosts": [
@@ -378,7 +656,7 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "b5f585bd48fc9c51396c7b3b77d69da37235ec721601f63e3a852c070eb74da0",
+        "sha256": "f505f976bee9204bbcde46f3a8354abeb36520abab226fb7220cb2594701ba7a",
         "size": 281345
       }
     },
@@ -387,10 +665,11 @@
       "name": "MangaDex — Portuguese (Brazil)",
       "lang": "pt-br",
       "family_key": "mangadex",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-pt-br.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex-pt-br.png",
       "base_url": "https://api.mangadex.org",
       "homepage": "https://mangadex.org",
       "allowed_hosts": [
@@ -399,7 +678,7 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "e87fdc447e2096d4ae6272488e901a5bc8fd958ba764c122f1475264d8fc43eb",
+        "sha256": "c7c1eeace290fcf0520711751e69045f930cf2254b4437b3adaa4c852fa85ada",
         "size": 281360
       }
     },
@@ -408,10 +687,11 @@
       "name": "MangaDex — Russian",
       "lang": "ru",
       "family_key": "mangadex",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadex-ru.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadex-ru.png",
       "base_url": "https://api.mangadex.org",
       "homepage": "https://mangadex.org",
       "allowed_hosts": [
@@ -420,7 +700,7 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "677a701ca10a9ec39ebc2f0657494db4e902f59d2b4900c70d8bfbbe243507d9",
+        "sha256": "0f5b7679639308b918d5233063d89172f4b85386ed0d47cb2bd1380dc02e9d56",
         "size": 281342
       }
     },
@@ -428,11 +708,11 @@
       "source_key": "mangadistrict",
       "name": "Manga District",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadistrict.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadistrict.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadistrict.png",
       "base_url": "https://mangadistrict.com",
       "homepage": "https://mangadistrict.com",
       "allowed_hosts": [
@@ -442,19 +722,41 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "42ab8fb536b3fa13338046b6f37fc240db9615f313c2872452d72c09191040b6",
-        "size": 225907
+        "sha256": "bac0b29ecabf73815eb1ab92de65bf281ff1ae267aa77b281feeb83756897e58",
+        "size": 226466
+      }
+    },
+    {
+      "source_key": "mangaeclipse",
+      "name": "Manga Eclipse",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Manga Eclipse: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangaeclipse.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangaeclipse.png",
+      "base_url": "https://mangaeclipse.com",
+      "homepage": "https://mangaeclipse.com",
+      "allowed_hosts": [
+        "mangaeclipse.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "09ee62811848cfe87d3a619201d1f6407b42d8b71adb83d726cf3a48f1d573c1",
+        "size": 227388
       }
     },
     {
       "source_key": "mangafree",
       "name": "Mangafree",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangafree.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangafree.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangafree.png",
       "base_url": "https://mangafree.info",
       "homepage": "https://mangafree.info",
       "allowed_hosts": [
@@ -463,19 +765,19 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "aaf2d3bd8a2a2e1539dadb14a8eb2e8d1886971b00bb2d003683e62ddff57f8d",
-        "size": 225835
+        "sha256": "1259304732f806d0ead8fdb8234cb383a29a2dd3df61e04a69527d1f352ae028",
+        "size": 226394
       }
     },
     {
       "source_key": "mangageko",
       "name": "MangaGeko",
       "lang": "en",
-      "version": "1.1.3",
-      "version_code": 1001003,
+      "version": "1.1.4",
+      "version_code": 1001004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangageko.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangageko.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangageko.png",
       "base_url": "https://mgeko.cc",
       "homepage": "https://mgeko.cc",
       "allowed_hosts": [
@@ -484,19 +786,179 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d5aa3192ce35f78cc7f43483e58785c87fe7ebaf147e17ebf4870b1ce0c918ea",
+        "sha256": "1921b1fe635821b82f5344607d9436aa640bddb54005f4db871676db84849044",
         "size": 219437
+      }
+    },
+    {
+      "source_key": "mangahere",
+      "name": "MangaHere",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaHere: a long-running manga catalogue with genre, type and status filters. Licensed titles have had their chapters removed.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangahere.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangahere.png",
+      "base_url": "https://www.mangahere.cc",
+      "homepage": "https://www.mangahere.cc",
+      "allowed_hosts": [
+        "mangahere.cc",
+        "mangahere.org",
+        "mangahere.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "e00cdc10fdddd7ee194084a3101d7c1932558ff12910fb7cd5b70115de28ef0f",
+        "size": 221128
+      }
+    },
+    {
+      "source_key": "mangakakalot",
+      "name": "Mangakakalot",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Mangakakalot: one of the largest manga catalogues, with genre, status and order filters.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangakakalot.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangakakalot.png",
+      "base_url": "https://www.kakamanga.com",
+      "homepage": "https://www.kakamanga.com",
+      "allowed_hosts": [
+        "kakamanga.com",
+        "2xstorage.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "6dfd5bf3b9087c8a4baa710a173269573ce80cc14d0707ee058f35e2f030091f",
+        "size": 224868
+      }
+    },
+    {
+      "source_key": "mangakatana",
+      "name": "MangaKatana",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaKatana: a large manga catalogue with genre, status and sort filters.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangakatana.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangakatana.png",
+      "base_url": "https://mangakatana.com",
+      "homepage": "https://mangakatana.com",
+      "allowed_hosts": [
+        "mangakatana.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "99c25954c0bb73d1328cb8ccb8b45f918f8787e49d44c1bae531cfee6c5d011a",
+        "size": 220500
+      }
+    },
+    {
+      "source_key": "mangakuro",
+      "name": "MangaKuro",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaKuro: Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangakuro.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangakuro.png",
+      "base_url": "https://mangakuro.net",
+      "homepage": "https://mangakuro.net",
+      "allowed_hosts": [
+        "mangakuro.net",
+        "cdnkk.top"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "7487da5894297068d00a9b8bbc3e7c282d41c118c836468018ad3795c2b46457",
+        "size": 217801
+      }
+    },
+    {
+      "source_key": "manganato",
+      "name": "Manganato",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Manganato: one of the largest manga catalogues, with genre, status and order filters.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manganato.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manganato.png",
+      "base_url": "https://www.manganato.gg",
+      "homepage": "https://www.manganato.gg",
+      "allowed_hosts": [
+        "manganato.gg",
+        "2xstorage.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "ec07e0bad06e57637751734ec5699cd958587aed349afbfb890557baa2290143",
+        "size": 224857
+      }
+    },
+    {
+      "source_key": "mangaowl",
+      "name": "MangaOwl.io",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaOwl.io: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangaowl.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangaowl.png",
+      "base_url": "https://mangaowl.io",
+      "homepage": "https://mangaowl.io",
+      "allowed_hosts": [
+        "mangaowl.io"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "6390e75dd9e1f5e79f14c75175252750c694247aaf824ab295624a7f0c079947",
+        "size": 231790
+      }
+    },
+    {
+      "source_key": "mangapill",
+      "name": "MangaPill",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaPill: a large manga catalogue with fast chapter releases.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangapill.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangapill.png",
+      "base_url": "https://mangapill.com",
+      "homepage": "https://mangapill.com",
+      "allowed_hosts": [
+        "mangapill.com",
+        "readdetectiveconan.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "c5372c69bc4931325959e70bd9230f7b436fdc84f25687b0116949fb19d5838b",
+        "size": 218033
       }
     },
     {
       "source_key": "mangareadorg",
       "name": "MangaRead.org",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangareadorg.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangareadorg.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangareadorg.png",
       "base_url": "https://www.mangaread.org",
       "homepage": "https://www.mangaread.org",
       "allowed_hosts": [
@@ -505,19 +967,89 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "cda4029a31dbd92765c1acfab63a5100c0c54d1f3144e0a35d176cc9a71a3f55",
-        "size": 225849
+        "sha256": "9ac079a3176740ff5d5b86feee3db88286b944c1396c01d3fd014be4f305739f",
+        "size": 226408
+      }
+    },
+    {
+      "source_key": "mangarw",
+      "name": "MangaRW",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaRW: Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangarw.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangarw.svg",
+      "base_url": "https://mangarw.com",
+      "homepage": "https://mangarw.com",
+      "allowed_hosts": [
+        "mangarw.com",
+        "mangabuzz.org",
+        "mangaraw123.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "6cdd374b5faa3157e5b59c3a8326edab3a24e9e84816c3ceea4da47a1f069046",
+        "size": 216468
+      }
+    },
+    {
+      "source_key": "mangasushi",
+      "name": "Mangasushi",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Mangasushi: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangasushi.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangasushi.png",
+      "base_url": "https://mangasushi.org",
+      "homepage": "https://mangasushi.org",
+      "allowed_hosts": [
+        "mangasushi.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "3c8e89fdc03b9ce8adf55c1894e7f221aacb8fad9508d311131d2335b93ff24b",
+        "size": 228382
+      }
+    },
+    {
+      "source_key": "mangatown",
+      "name": "MangaTown",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MangaTown: a large manga and manhwa catalogue. Licensed titles have had their chapters removed.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangatown.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangatown.png",
+      "base_url": "https://www.mangatown.com",
+      "homepage": "https://www.mangatown.com",
+      "allowed_hosts": [
+        "mangatown.com",
+        "mangahere.org",
+        "mangahere.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "604894409d74780da92243268c8b5d3b2a4ea571f799d562e88ff95617e4798b",
+        "size": 218594
       }
     },
     {
       "source_key": "mangatrend",
       "name": "Manga Trend",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangatrend.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangatrend.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangatrend.png",
       "base_url": "https://mangatrend.org",
       "homepage": "https://mangatrend.org",
       "allowed_hosts": [
@@ -530,19 +1062,63 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d9a672ae684609d92ac7019b625462fb2701bdc915ad802417d7e08dc5a8f1c5",
-        "size": 223601
+        "sha256": "7b4d2c89323fe706c186be5ba87d69a2450a2845ab93779a83c0678d652a2a5f",
+        "size": 223818
+      }
+    },
+    {
+      "source_key": "manhuahot",
+      "name": "ManhuaHot",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "ManhuaHot: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuahot.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuahot.png",
+      "base_url": "https://manhuahot.com",
+      "homepage": "https://manhuahot.com",
+      "allowed_hosts": [
+        "manhuahot.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "f9f7f9bb58a63505d1a309444b95bc5e936cc9d32520543c5743096c3ba715ff",
+        "size": 227309
+      }
+    },
+    {
+      "source_key": "manhuanext",
+      "name": "ManhuaNext",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "ManhuaNext: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuanext.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuanext.png",
+      "base_url": "https://manhuanext.com",
+      "homepage": "https://manhuanext.com",
+      "allowed_hosts": [
+        "manhuanext.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "20d33e1b439a6644cb0293c38f973d76bfbf58f412372b9e50761b4a48c2003e",
+        "size": 228614
       }
     },
     {
       "source_key": "manhuaplus",
       "name": "Manhua Plus",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuaplus.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuaplus.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuaplus.png",
       "base_url": "https://manhuaplus.com",
       "homepage": "https://manhuaplus.com",
       "allowed_hosts": [
@@ -551,16 +1127,149 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "71d96a0ec7f19c9ec87e5c5b014a4c2071548d9a0a3518d974fbf5e8750dd850",
-        "size": 227350
+        "sha256": "07f00975e5115f936dbd4a1d0736571fc39ba4cff481754c70c9ffdfe0a4b315",
+        "size": 227909
+      }
+    },
+    {
+      "source_key": "manhuaus",
+      "name": "ManhuaUS",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "ManhuaUS: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuaus.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuaus.svg",
+      "base_url": "https://manhuaus.com",
+      "homepage": "https://manhuaus.com",
+      "allowed_hosts": [
+        "manhuaus.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "92007ec0c4742dc7893a9f3fa04411130153eff4ce0fd1d13b681b25a84d8bf3",
+        "size": 226796
+      }
+    },
+    {
+      "source_key": "manhwanex",
+      "name": "ManhwaNex",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "ManhwaNex: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhwanex.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhwanex.png",
+      "base_url": "https://manhwanex.com",
+      "homepage": "https://manhwanex.com",
+      "allowed_hosts": [
+        "manhwanex.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "f503f09e35be6099d2b53b1d82c5ac801e5e44e6a04f67cf24541b6bb5139742",
+        "size": 227052
+      }
+    },
+    {
+      "source_key": "manhwareads",
+      "name": "ManhwaReads",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "ManhwaReads: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhwareads.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhwareads.png",
+      "base_url": "https://manhwareads.com",
+      "homepage": "https://manhwareads.com",
+      "allowed_hosts": [
+        "manhwareads.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "41af613047c4a6940f08f5c1c9dcad7fa18c026f2aa7f0ee7abc01e24828bc2e",
+        "size": 228834
+      }
+    },
+    {
+      "source_key": "manhwatop",
+      "name": "Manhwatop",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Manhwatop: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhwatop.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhwatop.svg",
+      "base_url": "https://manhwatop.com",
+      "homepage": "https://manhwatop.com",
+      "allowed_hosts": [
+        "manhwatop.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "f10cca2c56a86520a393f2d4eea54992957cb182db8a969cd6a28d7a39675f8f",
+        "size": 226802
+      }
+    },
+    {
+      "source_key": "mistscans",
+      "name": "Mist Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Mist Scans: an English scanlation group on the Keyoapp platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mistscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mistscans.png",
+      "base_url": "https://mistscans.com",
+      "homepage": "https://mistscans.com",
+      "allowed_hosts": [
+        "mistscans.com",
+        "meowing.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "285c54a4bafcee8db1aa35a4ffb4f79ac95a204675a4e81b36329c06e5203146",
+        "size": 219909
+      }
+    },
+    {
+      "source_key": "miuraw",
+      "name": "MiuRaw",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "MiuRaw: Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/miuraw.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/miuraw.png",
+      "base_url": "https://miuraw.net",
+      "homepage": "https://miuraw.net",
+      "allowed_hosts": [
+        "miuraw.net"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "11a59b725433fbfd0c1aa70f8483739b1e5009154393fa312fb9214471b377e6",
+        "size": 217765
       }
     },
     {
       "source_key": "nhentai",
       "name": "Nhentai",
       "lang": "en",
-      "version": "1.1.3",
-      "version_code": 1001003,
+      "version": "1.1.4",
+      "version_code": 1001004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nhentai.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nhentai.svg",
@@ -572,19 +1281,86 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "f318dcd7cb81698a5c831c4fb726a23001f2c13682bbe18dceb21d883c8f6216",
+        "sha256": "19f5baf0defeec684f9020612b04926688638206530548fb0dc2d04bbe0b3b1b",
         "size": 10765
+      }
+    },
+    {
+      "source_key": "nihonkuni",
+      "name": "NihonKuni",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "NihonKuni (MangaGun): Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nihonkuni.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nihonkuni.png",
+      "base_url": "https://nihonkuni.com",
+      "homepage": "https://nihonkuni.com",
+      "allowed_hosts": [
+        "nihonkuni.com",
+        "ihlv1.xyz"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "d27e7c4df171d3413a13c61c0897e1f3d991d2733f6764957502fc7c20368945",
+        "size": 218462
+      }
+    },
+    {
+      "source_key": "nyxscans",
+      "name": "Nyx Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Nyx Scans: an English scanlation group on the Iken platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nyxscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nyxscans.png",
+      "base_url": "https://nyxscans.com",
+      "homepage": "https://nyxscans.com",
+      "allowed_hosts": [
+        "nyxscans.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "909c4b0b178fd62307e88e31adfd046094ee2742ef8eefb107fec5ace628d60c",
+        "size": 216016
+      }
+    },
+    {
+      "source_key": "orionscans",
+      "name": "Orion Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Orion Scans: an English scanlation group on the Iken platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/orionscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/orionscans.png",
+      "base_url": "https://orion-scans.com",
+      "homepage": "https://orion-scans.com",
+      "allowed_hosts": [
+        "orion-scans.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "df94741dc7760c5ade02b535d5eca62c5dfe80b47c9a12f4295dc6dbf4cad8e0",
+        "size": 216028
       }
     },
     {
       "source_key": "rackus",
       "name": "Rackus",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rackus.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rackus.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rackus.png",
       "base_url": "https://rackusreads.com",
       "homepage": "https://rackusreads.com",
       "allowed_hosts": [
@@ -593,16 +1369,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "57df26c257ccd1292b8b63f22d2f93cb0cb965a0ca3fd1fe704a37c4f5f9eb80",
-        "size": 224231
+        "sha256": "be30249069edd501167dc71de4f4bf9c0cce9fcc033ba899d6d0936b832c94ab",
+        "size": 224448
       }
     },
     {
       "source_key": "ravenscans",
       "name": "Raven Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/ravenscans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/ravenscans.svg",
@@ -614,19 +1390,156 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "b24a96ce28ef7425b4647e3d41df500f59b26aedcd99404db25d32ef9fbd378c",
-        "size": 224525
+        "sha256": "2bc5804b2f0fb9f9bf6f4dd36cafee6aaf3511976cd82e5d1d6dc19340c9921a",
+        "size": 224742
+      }
+    },
+    {
+      "source_key": "raw1001",
+      "name": "Raw1001",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Raw1001: Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/raw1001.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/raw1001.png",
+      "base_url": "https://raw1001.net",
+      "homepage": "https://raw1001.net",
+      "allowed_hosts": [
+        "raw1001.net",
+        "cdnkk.top"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "b2982acaa5f315c3e0db60d41e54dbfed2270e21b0d0c5b66e20bfa920401ab5",
+        "size": 217552
+      }
+    },
+    {
+      "source_key": "rawdevart",
+      "name": "RawDevArt",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "RawDevArt: Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rawdevart.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rawdevart.png",
+      "base_url": "https://rawdevart.art",
+      "homepage": "https://rawdevart.art",
+      "allowed_hosts": [
+        "rawdevart.art",
+        "rawuwu.net"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "acce1efa480f9df751a11c5c3d593ccdae89befba726b2e35cffb2d1186ee3ba",
+        "size": 214617
+      }
+    },
+    {
+      "source_key": "rawkuma",
+      "name": "Rawkuma",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Rawkuma: one of the largest Japanese raw manga sites.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rawkuma.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rawkuma.png",
+      "base_url": "https://rawkuma.net",
+      "homepage": "https://rawkuma.net",
+      "allowed_hosts": [
+        "rawkuma.net",
+        "rawkuma.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "4fe456731a048375b69b9c507662bdb2a04206319816b550f72ecd153d038179",
+        "size": 215605
+      }
+    },
+    {
+      "source_key": "rawotaku",
+      "name": "RawOtaku",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "RawOtaku: Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rawotaku.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rawotaku.png",
+      "base_url": "https://rawotaku.com",
+      "homepage": "https://rawotaku.com",
+      "allowed_hosts": [
+        "rawotaku.com",
+        "view47.com",
+        "freeimgmg.online"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "96f7b144886ea1c8a21c415a02510ca8e362374ad3bd598be95f4d69b9370a5f",
+        "size": 218151
+      }
+    },
+    {
+      "source_key": "rawuwu",
+      "name": "RawUwU",
+      "lang": "ja",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "RawUwU: Japanese raw manga.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rawuwu.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rawuwu.png",
+      "base_url": "https://rawuwu.net",
+      "homepage": "https://rawuwu.net",
+      "allowed_hosts": [
+        "rawuwu.net"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "2285b2e4f32fe5237036b0cd44b4b8b1b2f1ea5081c40a028c866a2b63db27b9",
+        "size": 214587
+      }
+    },
+    {
+      "source_key": "rokaricomics",
+      "name": "Rokari Comics",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Rokari Comics: a MangaThemesia-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rokaricomics.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rokaricomics.png",
+      "base_url": "https://rokaricomics.com",
+      "homepage": "https://rokaricomics.com",
+      "allowed_hosts": [
+        "rokaricomics.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "8c9cd256bf84625edc319cf8f0eb875665880daa25a2bab6161970a0d6577758",
+        "size": 225777
       }
     },
     {
       "source_key": "s2manga",
       "name": "S2Manga",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/s2manga.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/s2manga.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/s2manga.png",
       "base_url": "https://s2read.com",
       "homepage": "https://s2read.com",
       "allowed_hosts": [
@@ -636,19 +1549,41 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "898abcd7f9a540b30e5f226edabe5a3b4bb1269816b592b4a65f32503be6a64e",
-        "size": 227449
+        "sha256": "a30a9479fb88613418b091a473d3e495e87b704a4e0d4e922226499244b2540e",
+        "size": 228008
+      }
+    },
+    {
+      "source_key": "sanascans",
+      "name": "Sana Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Sana Scans: an English scanlation group on the Iken platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/sanascans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/sanascans.png",
+      "base_url": "https://sanascans.com",
+      "homepage": "https://sanascans.com",
+      "allowed_hosts": [
+        "sanascans.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "2450c9739ec05dd3289325eddc97f8bd42c95af040e25a13290967a4b759992d",
+        "size": 216054
       }
     },
     {
       "source_key": "scythescans",
       "name": "Scythe Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/scythescans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/scythescans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/scythescans.png",
       "base_url": "https://scythescans.com",
       "homepage": "https://scythescans.com",
       "allowed_hosts": [
@@ -661,19 +1596,153 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d91a43cf85f902f45c835624f370b890d4a00c126b6164d846a96be500e264b3",
-        "size": 224834
+        "sha256": "79aec9f1af27399b575f3ef491ca8ea7e5b2137bc34068d1e4384f09ec2c56b8",
+        "size": 225051
+      }
+    },
+    {
+      "source_key": "sleepytranslations",
+      "name": "Sleepy Translations",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Sleepy Translations: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/sleepytranslations.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/sleepytranslations.png",
+      "base_url": "https://sleepytranslations.com",
+      "homepage": "https://sleepytranslations.com",
+      "allowed_hosts": [
+        "sleepytranslations.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "6afc1c99482788d52c3fc1e8993b9d3897b8fc49fcc028c35e30cbf1b1ae2f25",
+        "size": 228230
+      }
+    },
+    {
+      "source_key": "tcbscans",
+      "name": "TCB Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "TCB Scans: fast English releases of One Piece, Jujutsu Kaisen and other weekly series.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/tcbscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/tcbscans.png",
+      "base_url": "https://tcbonepiecechapters.com",
+      "homepage": "https://tcbonepiecechapters.com",
+      "allowed_hosts": [
+        "tcbonepiecechapters.com",
+        "onepiecechapters.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "a4cbd096641c65d8241dec50707cbc29219ca3b9f30b9935ed1a4eaff011533f",
+        "size": 216281
+      }
+    },
+    {
+      "source_key": "thunderscans",
+      "name": "Thunder Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Thunder Scans: a MangaThemesia-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/thunderscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/thunderscans.png",
+      "base_url": "https://en-thunderscans.com",
+      "homepage": "https://en-thunderscans.com",
+      "allowed_hosts": [
+        "en-thunderscans.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "95436adca1d96e2d202815f0526f59fc649f8377f416fe48488f4a7b7a653ed2",
+        "size": 228507
+      }
+    },
+    {
+      "source_key": "timelesstoons",
+      "name": "Timeless Toons",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Timeless Toons: an English scanlation group on the Keyoapp platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/timelesstoons.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/timelesstoons.png",
+      "base_url": "https://timelesstoons.org",
+      "homepage": "https://timelesstoons.org",
+      "allowed_hosts": [
+        "timelesstoons.org",
+        "meowing.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "78fefd16926f5187bbd07924e9133aa625cafedaffb0ed821df843378718c746",
+        "size": 219997
+      }
+    },
+    {
+      "source_key": "toonily",
+      "name": "Toonily",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Toonily: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/toonily.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/toonily.png",
+      "base_url": "https://toonily.com",
+      "homepage": "https://toonily.com",
+      "allowed_hosts": [
+        "toonily.com"
+      ],
+      "content_rating": "mixed",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "a67f6c9c26ac438913b53d340e9b3c34acf1fe79212d5694a9c932e6522bce93",
+        "size": 226792
+      }
+    },
+    {
+      "source_key": "tritiniascans",
+      "name": "Tritinia Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Tritinia Scans: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/tritiniascans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/tritiniascans.png",
+      "base_url": "https://tritinia.org",
+      "homepage": "https://tritinia.org",
+      "allowed_hosts": [
+        "tritinia.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "4ffd49218b597661ca81e48677ff2c543a224ff3aeaafe95920d2d8a24483723",
+        "size": 228357
       }
     },
     {
       "source_key": "violetscans",
       "name": "Violet Scans",
       "lang": "en",
-      "version": "1.0.2",
-      "version_code": 1000002,
+      "version": "1.0.3",
+      "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/violetscans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/violetscans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/violetscans.png",
       "base_url": "https://violetmanga.com",
       "homepage": "https://violetmanga.com",
       "allowed_hosts": [
@@ -682,8 +1751,30 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "23462f6817f47548e20c050b5657585c35e588a03ef7acd7dc57a115dec7e214",
-        "size": 228128
+        "sha256": "4a0c9b0477ff9feae2e65d61c257994030bde92d3aee60f99d78c6a63b69d092",
+        "size": 228345
+      }
+    },
+    {
+      "source_key": "vortexscans",
+      "name": "Vortex Scans",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Vortex Scans: an English scanlation group on the Iken platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/vortexscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/vortexscans.png",
+      "base_url": "https://vortexscans.org",
+      "homepage": "https://vortexscans.org",
+      "allowed_hosts": [
+        "vortexscans.org"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "92c4e4ecc9e06e162de01f3027335bbcc2ddbb866a25bde3438364bd190cde21",
+        "size": 216031
       }
     },
     {
@@ -694,6 +1785,7 @@
       "version_code": 1000008,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/weebcentral.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/weebcentral.png",
       "base_url": "https://weebcentral.com",
       "homepage": "https://weebcentral.com",
       "allowed_hosts": [
@@ -710,24 +1802,48 @@
       }
     },
     {
-      "source_key": "zinmanga",
-      "name": "Zinmanga",
+      "source_key": "writerscans",
+      "name": "Writer Scans",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.0",
+      "version_code": 1000000,
       "api_version": 1,
-      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/zinmanga.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/zinmanga.svg",
-      "base_url": "https://mangazin.org",
-      "homepage": "https://mangazin.org",
+      "description": "Writer Scans: an English scanlation group on the Keyoapp platform.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/writerscans.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/writerscans.png",
+      "base_url": "https://writerscans.com",
+      "homepage": "https://writerscans.com",
       "allowed_hosts": [
-        "mangazin.org"
+        "writerscans.com",
+        "meowing.org"
       ],
-      "content_rating": "mixed",
+      "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "df9887f799f77f5ff489b7f897361932095292d42d82960bba1e33ab0195a0ce",
-        "size": 227362
+        "sha256": "8c76223982f2667838cad36da67525d359e1228963a6913456adf2bb0e5b4c9c",
+        "size": 219941
+      }
+    },
+    {
+      "source_key": "yakshacomics",
+      "name": "Yaksha Comics",
+      "lang": "en",
+      "version": "1.0.0",
+      "version_code": 1000000,
+      "api_version": 1,
+      "description": "Yaksha Comics: a Madara-theme manga site.",
+      "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/yakshacomics.js",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/yakshacomics.png",
+      "base_url": "https://yakshacomics.com",
+      "homepage": "https://yakshacomics.com",
+      "allowed_hosts": [
+        "yakshacomics.com"
+      ],
+      "content_rating": "safe",
+      "isNSFW": false,
+      "bundle": {
+        "sha256": "694a86b9a86d6a95f159e95d003b5deda764ddcb9dbb99f3e904a106f5f58d58",
+        "size": 226708
       }
     }
   ]

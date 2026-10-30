@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "orionscans",
+  "name": "Orion Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Orion Scans: an English scanlation group on the Iken platform.",
+  "base_url": "https://orion-scans.com",
+  "allowed_hosts": ["orion-scans.com"],
+  "content_rating": "safe"
+}

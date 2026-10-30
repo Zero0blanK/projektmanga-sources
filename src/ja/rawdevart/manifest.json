@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "rawdevart",
+  "name": "RawDevArt",
+  "lang": "ja",
+  "version": "1.0.0",
+  "description": "RawDevArt: Japanese raw manga.",
+  "base_url": "https://rawdevart.art",
+  "allowed_hosts": [
+    "rawdevart.art",
+    "rawuwu.net"
+  ],
+  "content_rating": "mixed"
+}

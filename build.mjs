@@ -331,7 +331,8 @@ async function pruneDist(expected) {
 const KEIYOUSHI_SOURCES = new Set(['akazascans', 'sushiscan', 'imhentai', 'komiku', 'weebcentral']);
 // The engines are ours, but parts were informed by Keiyoushi's Apache-2.0 code, so bundles
 // built on them keep a short notice. A source can opt in by naming Keiyoushi in its header.
-const KEIYOUSHI_ENGINES = /\b(?:madaraSite|themesiaSite|mangaThemesia|gigaViewer)\.js\b|Keiyoushi/;
+const KEIYOUSHI_ENGINES =
+  /\b(?:madaraSite|themesiaSite|mangaThemesia|gigaViewer|mangaBox|keyoapp|iken|liliana|spaRaw)\.js\b|Keiyoushi/;
 
 async function isKeiyoushiDerived(source) {
   if (KEIYOUSHI_SOURCES.has(source.dir)) return true;

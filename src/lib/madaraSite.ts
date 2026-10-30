@@ -21,13 +21,28 @@ import type {
   FilterValue,
 } from "./types.js";
 
+/**
+ * How a title's chapters are listed: on its own page, through one POST to its
+ * `ajax/chapters/` endpoint (`true`), or through that endpoint a page at a time
+ * (`"paginated"`, `?t=1`, `?t=2`… until a page is empty or repeats).
+ */
+export type MadaraChapterMode = boolean | "paginated";
+
 export function createMadaraSite(
   manifest: SourceManifest,
   filters: MangaFilter[],
-  ajaxChapters = false,
+  ajaxChapters: MadaraChapterMode = false,
   pageImages = ".reading-content img",
   directory = "manga",
 ) {
+  if (!/^[A-Za-z0-9_-]+$/.test(directory))
+    throw new Error(`Invalid Madara directory: ${directory}`);
+  // Titles live under one directory per site ("manga", "series", "webtoon"…); a URL under
+  // any other is not one of this site's titles.
+  const titlePath = new RegExp(`^/${directory}/[A-Za-z0-9_-]+/$`);
+  const chapterPathPattern = new RegExp(
+    `^/${directory}/[A-Za-z0-9_-]+(?:/(?!\\.{1,2}/)[A-Za-z0-9._-]+)*/$`,
+  );
   const base = new URL(manifest.base_url);
   const cache = new TTLCache<string, string>(30_000, 40);
   const fail = (message: string): never => {
@@ -50,18 +65,15 @@ export function createMadaraSite(
       url.search ||
       url.hash ||
       // Chapter segments may carry decimals ("chapter-64.20"); never "." or "..".
-      !/^\/(?:manga|series)\/[A-Za-z0-9_-]+(?:\/(?!\.{1,2}\/)[A-Za-z0-9._-]+)*\/$/.test(
-        url.pathname,
-      ) ||
-      url.pathname.split("/")[1] !== directory
+      !chapterPathPattern.test(url.pathname)
     )
       return fail("Invalid chapter URL");
     return url.pathname;
   };
-  async function postChapters(path: string): Promise<string> {
+  async function postChapters(path: string, page?: number): Promise<string> {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 15_000);
-    const url = `${base.origin}${path}ajax/chapters/`;
+    const url = `${base.origin}${path}ajax/chapters/${page ? `?t=${page}` : ""}`;
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -75,6 +87,8 @@ export function createMadaraSite(
         signal: controller.signal,
       });
       const text = await response.text();
+      // Paginated listings end with a 404 past the last page.
+      if (page && response.status === 404) return "";
       if (!response.ok)
         throw classifyHttpStatus(
           response.status,
@@ -96,18 +110,34 @@ export function createMadaraSite(
       clearTimeout(timer);
     }
   }
+  /** Every page of a paginated chapter listing, until one is empty or repeats the last. */
+  async function paginatedChapters(path: string): Promise<string> {
+    const pages: string[] = [];
+    let previousLast = "";
+    for (let page = 1; page <= 100; page++) {
+      const fragment = await postChapters(path, page);
+      const $ = load(fragment);
+      const links = $("li.wp-manga-chapter a")
+        .map((_, el) => $(el).attr("href") ?? "")
+        .get();
+      const last = links[links.length - 1] ?? "";
+      if (links.length === 0 || last === previousLast) break;
+      pages.push(fragment);
+      previousLast = last;
+    }
+    return pages.join("");
+  }
   class MadaraHttp extends HttpClient {
     override async getText(path: string) {
       return cache.getOrSet(path, async () => {
         const html = await super.getText(path);
         const url = new URL(path, base);
-        if (
-          !ajaxChapters ||
-          !/^\/(?:manga|series)\/[A-Za-z0-9_-]+\/$/.test(url.pathname) ||
-          url.search
-        )
+        if (!ajaxChapters || !titlePath.test(url.pathname) || url.search)
           return html;
-        const fragment = await postChapters(url.pathname);
+        const fragment =
+          ajaxChapters === "paginated"
+            ? await paginatedChapters(url.pathname)
+            : await postChapters(url.pathname);
         const $ = load(html);
         $("li.wp-manga-chapter").remove();
         if (!$("body").length) return html + fragment;
@@ -156,23 +186,24 @@ export function createMadaraSite(
   function parseCards(text: string): Mangas[] {
     const $ = load(text);
     const rows: Mangas[] = [];
-    for (const element of $(
-      ".page-item-detail, .c-tabs-item__content",
-    ).toArray()) {
+    const cards = $(".page-item-detail, .c-tabs-item__content").toArray();
+    let untitled = 0;
+    for (const element of cards) {
       const card = $(element),
         link = card.find(".post-title a, .item-summary h3 a, h3 a").first();
       const href = link.attr("href");
       if (!href) continue;
       const url = new URL(href, base);
-      if (
-        url.origin !== base.origin ||
-        !/^\/(?:manga|series)\/[A-Za-z0-9_-]+\/$/.test(url.pathname) ||
-        url.pathname.split("/")[1] !== directory
-      )
-        continue;
+      // Some installs link titles without WordPress's trailing slash; same title.
+      url.pathname = url.pathname.replace(/\/?$/, "/");
+      if (url.origin !== base.origin || !titlePath.test(url.pathname)) continue;
       const key = url.pathname.split("/")[2],
         title = normalizeText(link.text());
-      if (!title) return fail("Missing catalogue title");
+      // An untitled card is skipped; only a page of nothing but untitled cards fails.
+      if (!title) {
+        untitled++;
+        continue;
+      }
       const image = card.find("img").first();
       const raw =
         image.attr("data-src") ||
@@ -187,6 +218,7 @@ export function createMadaraSite(
         thumbnail_url: raw ? new URL(raw.trim(), base).href : "",
       });
     }
+    if (rows.length === 0 && untitled > 0) return fail("Missing catalogue title");
     return [...new Map(rows.map((row) => [row.id, row])).values()];
   }
   const source = createMadaraSource({
@@ -207,11 +239,16 @@ export function createMadaraSite(
     pages: source.fetchChapterPages,
   };
   const chapterPath = (value: string) => {
-    try {
-      return safePath(value);
-    } catch {
-      return undefined;
+    // Some installs link chapters without the trailing slash WordPress normally adds:
+    // the same chapter, so it is read as one rather than dropped.
+    for (const candidate of [value, value.replace(/\/?$/, "/")]) {
+      try {
+        return safePath(candidate);
+      } catch {
+        // Try the next spelling.
+      }
     }
+    return undefined;
   };
   // Volume headings ("javascript:void(0)") and locked "#" links are not chapters:
   // skip them instead of failing the whole list.
@@ -277,8 +314,7 @@ export function createMadaraSite(
       url.origin !== base.origin ||
       url.username ||
       url.password ||
-      !/^\/(?:manga|series)\/[A-Za-z0-9_-]+\/$/.test(url.pathname) ||
-      url.pathname.split("/")[1] !== directory
+      !titlePath.test(url.pathname)
     )
       return null;
     return source.fetchMangaDetails(url.pathname.split("/")[2]);
@@ -288,7 +324,7 @@ export function createMadaraSite(
     parse: parseCards,
     path: ({ category, query, filters }) =>
       catalogueUrl(query ?? "", category, filters, 1),
-    route: /^\/(?:(?:manga|series)\/(?:page\/\d+\/)?|page\/\d+\/)?$/,
+    route: new RegExp(`^/(?:${directory}/(?:page/\\d+/)?|page/\\d+/)?$`),
     capabilities: { filters: filters.length > 0, languageFilter: false },
   });
 }

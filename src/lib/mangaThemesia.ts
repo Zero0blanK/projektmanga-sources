@@ -9,7 +9,12 @@ import type {
 } from "./types.js";
 import { HttpClient, NAV_HEADERS } from "./http.js";
 import { TTLCache } from "./cache.js";
-import { normalizeText, parseDateToIso, resolvePagination } from "./parse.js";
+import {
+  chapterNumberFromName,
+  normalizeText,
+  parseDateToIso,
+  resolvePagination,
+} from "./parse.js";
 import { deriveIsNSFW } from "./manifest.js";
 import { collectSequentialPages } from "./sequentialPagination.js";
 import { SourceError } from "./sourceError.js";
@@ -136,17 +141,18 @@ export function createMangaThemesiaSource(config: MangaThemesiaConfig): Source {
           );
         if (seen.has(url)) return [];
         seen.add(url);
-        const number = name.match(
-          /(?:chapitre|chapter|chap|ch\.?)\s*(\d+(?:[.,]\d+)?)/i,
+        // A prologue or side story with no number is kept as unnumbered (0) rather
+        // than failing every chapter of the title.
+        const chapterNumber = chapterNumberFromName(
+          row.attr("data-num") || name,
+          0,
         );
-        if (!number)
-          return fail(`${manifest.name} chapter number was not found`);
         return [
           {
             id: `${manifest.source_key}:${url}`,
             url: manifest.base_url + url,
             name,
-            chapter_number: Number(number[1].replace(",", ".")),
+            chapter_number: chapterNumber,
             release_date: (config.parseDate ?? parseDateToIso)(
               row.find(".chapterdate").text(),
             ),
@@ -222,25 +228,35 @@ export function createMangaThemesiaSource(config: MangaThemesiaConfig): Source {
   }
   function parseCards(text: string): Mangas[] {
     const $ = load(text);
-    return $(selectors.cards)
-      .toArray()
-      .map((el) => {
-        const card = $(el),
-          anchor = card.find("a").first(),
-          id = path(anchor.attr("href") || ""),
-          title = normalizeText(
-            anchor.attr("title") || card.find(".tt").text() || anchor.text(),
-          );
-        if (!title)
-          return fail(`${manifest.name} catalogue title was not found`);
-        return {
+    const cards = $(selectors.cards).toArray();
+    // One odd card (an advert, a link off the site) is skipped; only a page where no
+    // card parses means the markup changed.
+    const rows = cards.flatMap((el) => {
+      const card = $(el),
+        anchor = card.find("a").first(),
+        title = normalizeText(
+          anchor.attr("title") || card.find(".tt").text() || anchor.text(),
+        );
+      let id: string;
+      try {
+        id = path(anchor.attr("href") || "");
+      } catch {
+        return [];
+      }
+      if (!title) return [];
+      return [
+        {
           id,
           slug: id,
           title,
           source: manifest.source_key,
           thumbnail_url: image(imgValue(card.find("img").first().attr() ?? {})),
-        };
-      });
+        },
+      ];
+    });
+    if (cards.length > 0 && rows.length === 0)
+      return fail(`${manifest.name} catalogue title was not found`);
+    return rows;
   }
   async function browse(
     category: string,

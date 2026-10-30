@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangakatana",
+  "name": "MangaKatana",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MangaKatana: a large manga catalogue with genre, status and sort filters.",
+  "base_url": "https://mangakatana.com",
+  "allowed_hosts": ["mangakatana.com"],
+  "content_rating": "mixed"
+}
