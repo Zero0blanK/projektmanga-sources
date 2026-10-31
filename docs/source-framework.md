@@ -58,6 +58,39 @@ six filter groups, three chapters on the sampled title, 13 reader pages and a We
 image prefix whose MIME/signature matched the declared image host. It is included in
 the local index. This sampled acceptance does not verify every title or future site changes.
 
+## Chapter identity
+
+The app keeps its own id for every chapter it stores. The `id` a source returns is stored
+beside it as the chapter's *source key*, which only has to be unique within its title
+(source key plus manga slug). Progress, history, bookmarks and downloads hang off the
+app's id, so a source key that changes does not orphan them. A key that collides with
+another title's, or that contains a domain, is harmless.
+
+When a library update returns a list in which a stored key is missing and a new key
+shares its `chapter_number` and `scanlator`, the app treats it as the same chapter under a
+new link and updates the stored key in place (modelled on Mihon's chapter sync). That
+recovery cannot help chapters with no number, or several entries with the same number and
+group, so keys should still be stable:
+
+- **Build keys from the most stable thing the site exposes.** A numeric post, chapter or
+  API id is better than a slug, and a slug is better than a path. Sites move domains, and
+  Madara/MangaThemesia themes rename slugs when a title is retitled.
+- **Keep `url` and `id` independent.** `url` may change freely, and the app updates it on
+  every check. `fetchChapterPages` receives the key (and `mangaSlug`) and should rebuild
+  the page location from them without assuming the key is a URL.
+- **Return the complete chapter list from `fetchMangaUpdates`.** The app reads a listing
+  that drops most stored chapters with few number matches as a broken scrape: it only adds
+  chapters and does not move or remove any. An empty array is ignored entirely, so return
+  `[]` only when there is nothing to report, and throw on a real failure.
+- **Report `chapter_number` and `scanlator` consistently.** They are the matching key
+  when a link changes. A number parsed differently from one check to the next, or a
+  scanlator that flips between `''` and a real name, defeats the match. Missing, empty and
+  `Unknown` all count as "no group".
+
+Changing the key format of a published source relinks every chapter it has served. It is
+recoverable, but only through the number match above, so keep each new key paired
+one-to-one with an old one by number and scanlator, and bump the source's `version`.
+
 ## Upstream references and attribution
 
 The architecture follows the current [KeiSource contributor guide](https://github.com/keiyoushi/extensions-source/blob/main/CONTRIBUTING.md#keisource).

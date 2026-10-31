@@ -251,3 +251,47 @@ for (const key of ["weebcentral", "asurascans", "leercapitulo"]) {
     }
   });
 }
+
+test("Madara sites with a Load more button page through /page/N/ until it 404s", async () => {
+  const source = await adapter("manhuaus"),
+    original = globalThis.fetch,
+    requests = [];
+  try {
+    globalThis.fetch = async (input) => {
+      const url = new URL(input);
+      requests.push(url);
+      const page = Number(url.pathname.match(/\/page\/(\d+)\/$/)?.[1]);
+      if (page > 2) return new Response("Not found", { status: 404 });
+      const cards = Array.from(
+        { length: 12 },
+        (_, i) =>
+          `<div class="page-item-detail"><div class="post-title"><a href="https://manhuaus.com/manga/title-${(page - 1) * 12 + i}/">Title ${(page - 1) * 12 + i}</a></div><img data-src="/cover.jpg"></div>`,
+      ).join("");
+      return new Response(
+        `<html><body>${cards}<nav class="navigation-ajax"><a href="javascript:void(0)" id="navigation-ajax" class="btn btn-default load-ajax">Load more</a></nav></body></html>`,
+      );
+    };
+    const first = await source.fetchMangaPage("popular", { limit: 24 });
+    assert.equal(first.items.length, 12);
+    assert.equal(first.hasMore, true);
+    const second = await source.fetchMangaPage("popular", {
+      limit: 24,
+      cursor: first.nextCursor,
+    });
+    assert.deepEqual(
+      second.items.map((item) => item.id),
+      Array.from({ length: 12 }, (_, i) => `title-${12 + i}`),
+    );
+    assert.equal(second.hasMore, true);
+    const end = await source.fetchMangaPage("popular", {
+      limit: 24,
+      cursor: second.nextCursor,
+    });
+    assert.deepEqual(end, { items: [], hasMore: false });
+    assert.ok(
+      requests.every((url) => url.searchParams.get("m_orderby") === "views"),
+    );
+  } finally {
+    globalThis.fetch = original;
+  }
+});

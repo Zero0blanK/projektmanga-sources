@@ -3,7 +3,7 @@
   "source_key": "manhwanex",
   "name": "ManhwaNex",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ManhwaNex: a Madara-theme manga site.",
   "base_url": "https://manhwanex.com",
   "allowed_hosts": [

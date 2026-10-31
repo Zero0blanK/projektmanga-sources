@@ -24,10 +24,35 @@ contract does not support. Those chapters report the limitation clearly. A live 
 Days, Tonari no Young Jump, MagComi, Kurage Bunch and Comic Action), so all ten sources
 are `draft: true` and unlisted until the source contract can carry descrambled pages. These ports
 do not claim authenticated purchase support or complete compatibility with every
-publisher chapter. Icons are original SVG monograms rather than copied publisher logos.
+publisher chapter.
 
 Deterministic tests for all ten sources cover catalogue continuation/end, search,
 query-bound cursors, collection validation, chapter availability, metadata, page
 slicing, source-prefixed chapter identities, foreign identifiers and scrambled-page
 errors. These tests establish contract behavior; they do not establish that every
 publisher is currently reachable from every region or network.
+
+## Raw manga sites (2026-10-30)
+
+Ten listed sources read Japanese raw manga from aggregator sites, whose images are plain
+files (the publisher sites above scramble theirs). References are the matching
+`src/ja/<upstream>/` extensions in Keiyoushi revision `dbf6c05d` (Apache-2.0). Each passed
+`npm run smoke` against its live site on 2026-10-30, and `tests/source-wave-3.test.mjs`
+checks each offline.
+
+| Source | Upstream | How |
+| --- | --- | --- |
+| MangaRW | `mangarw` | `htmlSite.ts`; chapters from the site's chapter API (`<option>` list) |
+| MiuRaw | `miuraw` | `htmlSite.ts`; pages through the site's own image proxy, as its reader loads them |
+| MangaKuro | `mangakuro` | `htmlSite.ts`; pages from the image-list endpoint keyed by the chapter's id |
+| Rawkuma | `rawkuma` ("natsuid") | WordPress REST API for listing, search and details; the theme's chapter list |
+| Raw1001 | `raw1001` | `liliana.ts` (new): ranking/catalogue pages and the image-list endpoint |
+| RawOtaku | `rawotaku` ("mangareader") | `htmlSite.ts`; chapter keys carry the reader id the image endpoint needs |
+| RawDevArt, RawUwU | `rawdevartart`, `rawuwu` | `spaRaw.ts` (new): the sites' shared `/spa/` JSON API |
+| Love4u | `welovemangaone` ("fmreader") | `htmlSite.ts`; the title is base64-encoded, so the breadcrumb's copy is used |
+| NihonKuni | `mangagun` ("fmreader") | `htmlSite.ts`; the chapter list repeats links, so keys are de-duplicated |
+
+Left out after checking: SoraRaw (scrambled images), KissLove/KLZ9 (its API wants a
+signature built from a key in the site's scripts), RawINU (a DDoS-check page that has to be
+answered), Kumaraw and HachiRaw (Cloudflare's browser check), NicoManga (pages are an
+obfuscated script payload) and Kmansin09 (its image host doesn't resolve).

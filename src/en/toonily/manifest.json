@@ -3,7 +3,7 @@
   "source_key": "toonily",
   "name": "Toonily",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Toonily: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
   "base_url": "https://toonily.com",
   "allowed_hosts": [

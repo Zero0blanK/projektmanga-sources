@@ -5,7 +5,7 @@ import { load } from "cheerio/slim";
 import { HttpClient, NAV_HEADERS } from "./http.js";
 import { TTLCache } from "./cache.js";
 import { createMadaraSource } from "./madara.js";
-import { attachHtmlCatalogue } from "./nativeCatalogue.js";
+import { attachHtmlCatalogue, htmlNext } from "./nativeCatalogue.js";
 import { collectSequentialPages } from "./sequentialPagination.js";
 import { normalizeText, resolvePagination } from "./parse.js";
 import {
@@ -320,8 +320,38 @@ export function createMadaraSite(
     return source.fetchMangaDetails(url.pathname.split("/")[2]);
   };
   return attachHtmlCatalogue(source, {
-    getText: (path) => http.getText(path),
+    getText: async (path) => {
+      try {
+        return await http.getText(path);
+      } catch (error) {
+        // A "Load more" listing gives no last-page evidence: a 404 past the first page is
+        // its end, as in fetchManga.
+        const page = Number(
+          new URL(path, base).pathname.match(/\/page\/(\d+)\/$/)?.[1],
+        );
+        if (
+          page > 1 &&
+          error instanceof SourceError &&
+          error.code === "NOT_FOUND"
+        )
+          return "";
+        throw error;
+      }
+    },
     parse: parseCards,
+    // Many installs page with an AJAX "Load more" button (#navigation-ajax) instead of a
+    // next link; behind it is the same /page/N/ listing.
+    next: (text, current) => {
+      const link = htmlNext(text, current);
+      if (link || !load(text)("#navigation-ajax, .navigation-ajax").length)
+        return link;
+      const next = new URL(current);
+      next.pathname = next.pathname.replace(
+        /\/page\/(\d+)\/$/,
+        (_, page: string) => `/page/${Number(page) + 1}/`,
+      );
+      return next.pathname === current.pathname ? undefined : next.href;
+    },
     path: ({ category, query, filters }) =>
       catalogueUrl(query ?? "", category, filters, 1),
     route: new RegExp(`^/(?:${directory}/(?:page/\\d+/)?|page/\\d+/)?$`),

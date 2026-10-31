@@ -3,7 +3,7 @@
   "source_key": "mangaeclipse",
   "name": "Manga Eclipse",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manga Eclipse: a Madara-theme manga site.",
   "base_url": "https://mangaeclipse.com",
   "allowed_hosts": [

@@ -3,7 +3,7 @@
   "source_key": "manhuahot",
   "name": "ManhuaHot",
   "lang": "en",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ManhuaHot: a Madara-theme manga site.",
   "base_url": "https://manhuahot.com",
   "allowed_hosts": [

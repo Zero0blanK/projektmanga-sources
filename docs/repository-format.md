@@ -152,8 +152,12 @@ Drop `icon.svg`, `icon.png` or `icon.webp` (first match wins, 512 KB cap) into t
 directory. The build copies it to `dist/icons/<source_key><ext>` and emits `icon_url`; with
 no icon file the field is simply absent and a reader should render its own fallback.
 
-The icons here are **placeholder monograms**, not the sites' logos. Replace one with the
-real thing only if you have the right to redistribute it.
+Where a site serves a favicon, the source's `icon.png` is that favicon, fetched from the
+site itself (never from another extension repository) and redrawn at 128×128 on a fresh
+canvas, so the file holds only PNG pixel data: no metadata, and resampling leaves no hidden
+payload from the original. Sources whose site couldn't be reached (a browser check, no
+favicon) keep a lettered SVG placeholder. A site's icon remains its owner's mark; it is
+shown only to identify the site a source reads from.
 
 ---
 
