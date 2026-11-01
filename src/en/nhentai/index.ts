@@ -12,6 +12,7 @@ import type {
 } from '../../lib/types.js';
 import { HttpClient, JSON_HEADERS } from '../../lib/http.js';
 import { MANGA_STATUS, resolvePagination } from '../../lib/parse.js';
+import { collectPaged } from '../../lib/paginate.js';
 import { SourceError, classifyRequestError } from '../../lib/sourceError.js';
 import { deriveIsNSFW } from '../../lib/manifest.js';
 import manifest from './manifest.json';
@@ -162,6 +163,37 @@ async function getGallery(galleryId: string): Promise<Gallery> {
   return gallery;
 }
 
+/** Results per page of /search, as the API reports in `per_page`. */
+const SEARCH_PAGE_SIZE = 25;
+
+/**
+ * The app's `{ limit, offset }` window over /search's fixed 25-result pages.
+ *
+ * Not `offset / limit`: the app asks for one more row than it shows (to learn whether
+ * there is a next page), so that turned offset 20 with limit 21 into page 1 again. Every
+ * "load more" got the first page back, found nothing new and stopped, and results 21-25 of
+ * each page were never shown.
+ */
+async function searchWindow(
+  pagination: Parameters<Source['fetchManga']>[1],
+  query: string,
+  sort: string,
+): Promise<Mangas[]> {
+  const { limit, offset } = resolvePagination(pagination, { limit: SEARCH_PAGE_SIZE });
+  return collectPaged({ limit, offset, sitePageSize: SEARCH_PAGE_SIZE }, async (page) => {
+    const json = await http.getJson<{ result?: SearchResult[] }>('/search', {
+      params: { query, sort, page },
+    });
+    return (json.result ?? []).map((item) => ({
+      source: SOURCE_ID,
+      id: String(item.id),
+      slug: String(item.id),
+      title: item.english_title || item.japanese_title || 'Unknown Title',
+      thumbnail_url: `${THUMBNAIL_SERVER}/${item.thumbnail}`,
+    }));
+  });
+}
+
 const nhentai: Source = {
   id: SOURCE_ID,
   name: SOURCE_NAME,
@@ -171,8 +203,6 @@ const nhentai: Source = {
 
   async fetchManga(category, pagination, filters): Promise<Mangas[]> {
     try {
-      const { limit, offset } = resolvePagination(pagination, { limit: 25 });
-      const page = Math.floor(offset / Math.max(1, limit)) + 1;
       const active = filters as Record<string, FilterValue> | undefined;
       const chosenSort = active?.sort;
       const sort =
@@ -185,17 +215,7 @@ const nhentai: Source = {
       // "english" is a browse-shaped stand-in for "no query", not a language preference the
       // reader asked for — /search has no way to say "everything", so browsing needs some
       // term. Any filter the reader sets replaces it.
-      const json = await http.getJson<{ result?: SearchResult[] }>('/search', {
-        params: { query: buildQuery(undefined, active, 'english'), sort, page },
-      });
-
-      return (json.result ?? []).map((item) => ({
-        source: SOURCE_ID,
-        id: String(item.id),
-        slug: String(item.id),
-        title: item.english_title || item.japanese_title || 'Unknown Title',
-        thumbnail_url: `${THUMBNAIL_SERVER}/${item.thumbnail}`,
-      }));
+      return await searchWindow(pagination, buildQuery(undefined, active, 'english'), sort);
     } catch (error) {
       throw classifyRequestError(error, SOURCE_ID, SOURCE_NAME);
     }
@@ -203,25 +223,13 @@ const nhentai: Source = {
 
   async searchManga(query, pagination, filters): Promise<Mangas[]> {
     try {
-      const { limit, offset } = resolvePagination(pagination, { limit: 25 });
-      const page = Math.floor(offset / Math.max(1, limit)) + 1;
       const active = filters as Record<string, FilterValue> | undefined;
       const chosenSort = active?.sort;
       const sort = typeof chosenSort === 'string' && chosenSort ? chosenSort : 'date';
 
       // The typed words and the filter fields go into one query string, so searching
       // "school" with Tags = "full color" narrows rather than discarding one of them.
-      const json = await http.getJson<{ result?: SearchResult[] }>('/search', {
-        params: { query: buildQuery(query, active, 'english'), sort, page },
-      });
-
-      return (json.result ?? []).map((item) => ({
-        source: SOURCE_ID,
-        id: String(item.id),
-        slug: String(item.id),
-        title: item.english_title || item.japanese_title || 'Unknown Title',
-        thumbnail_url: `${THUMBNAIL_SERVER}/${item.thumbnail}`,
-      }));
+      return await searchWindow(pagination, buildQuery(query, active, 'english'), sort);
     } catch (error) {
       throw classifyRequestError(error, SOURCE_ID, SOURCE_NAME);
     }

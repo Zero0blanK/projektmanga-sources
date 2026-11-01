@@ -1268,8 +1268,8 @@
       "source_key": "nhentai",
       "name": "Nhentai",
       "lang": "en",
-      "version": "1.1.4",
-      "version_code": 1001004,
+      "version": "1.1.5",
+      "version_code": 1001005,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nhentai.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nhentai.svg",
@@ -1281,8 +1281,8 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "19f5baf0defeec684f9020612b04926688638206530548fb0dc2d04bbe0b3b1b",
-        "size": 10765
+        "sha256": "71d4b220d2dcffbe7d8f77ddd72d0a1a1ec5a29d5ab20299a715dc4d78c76ee5",
+        "size": 10936
       }
     },
     {

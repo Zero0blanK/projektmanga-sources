@@ -295,3 +295,43 @@ test("Madara sites with a Load more button page through /page/N/ until it 404s",
     globalThis.fetch = original;
   }
 });
+
+test("nhentai pages the app's limit+1 window over 25-result search pages without repeats or gaps", async () => {
+  const source = await adapter("nhentai"),
+    original = globalThis.fetch,
+    TOTAL = 70;
+  try {
+    globalThis.fetch = async (input) => {
+      const page = Number(new URL(input).searchParams.get("page"));
+      const start = (page - 1) * 25;
+      return Response.json({
+        result: Array.from(
+          { length: Math.max(0, Math.min(25, TOTAL - start)) },
+          (_, i) => ({
+            id: start + i,
+            english_title: `Title ${start + i}`,
+            thumbnail: "t.jpg",
+          }),
+        ),
+        num_pages: Math.ceil(TOTAL / 25),
+        per_page: 25,
+      });
+    };
+    for (const method of ["fetchManga", "searchManga"]) {
+      // The sandbox asks for one more row than it shows, to learn whether more exist.
+      const shown = [];
+      for (let offset = 0; offset < TOTAL; offset += 20) {
+        const rows = await source[method]("popular", { limit: 21, offset }, {});
+        shown.push(...rows.slice(0, 20).map((row) => Number(row.id)));
+        if (rows.length <= 20) break;
+      }
+      assert.deepEqual(
+        shown,
+        Array.from({ length: TOTAL }, (_, i) => i),
+        `${method} shows every title once, in order`,
+      );
+    }
+  } finally {
+    globalThis.fetch = original;
+  }
+});
