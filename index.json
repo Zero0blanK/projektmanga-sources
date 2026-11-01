@@ -129,7 +129,7 @@
       "api_version": 1,
       "description": "Cocomic: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/cocomic.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/cocomic.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/cocomic.png",
       "base_url": "https://cocomic.co",
       "homepage": "https://cocomic.co",
       "allowed_hosts": [
@@ -1140,7 +1140,7 @@
       "api_version": 1,
       "description": "ManhuaUS: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuaus.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuaus.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuaus.png",
       "base_url": "https://manhuaus.com",
       "homepage": "https://manhuaus.com",
       "allowed_hosts": [
@@ -1206,7 +1206,7 @@
       "api_version": 1,
       "description": "Manhwatop: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhwatop.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhwatop.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhwatop.png",
       "base_url": "https://manhwatop.com",
       "homepage": "https://manhwatop.com",
       "allowed_hosts": [
@@ -1272,7 +1272,7 @@
       "version_code": 1001005,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/nhentai.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nhentai.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/nhentai.png",
       "base_url": "https://nhentai.net",
       "homepage": "https://nhentai.net",
       "allowed_hosts": [
@@ -1381,7 +1381,7 @@
       "version_code": 1000003,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/ravenscans.js",
-      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/ravenscans.svg",
+      "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/ravenscans.png",
       "base_url": "https://ravenscans.org",
       "homepage": "https://ravenscans.org",
       "allowed_hosts": [
