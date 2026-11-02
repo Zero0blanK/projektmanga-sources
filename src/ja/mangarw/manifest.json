@@ -3,7 +3,7 @@
   "source_key": "mangarw",
   "name": "MangaRW",
   "lang": "ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MangaRW: Japanese raw manga.",
   "base_url": "https://mangarw.com",
   "allowed_hosts": [

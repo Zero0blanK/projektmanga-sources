@@ -159,28 +159,32 @@ export function createMadaraSite(
     active: Record<string, FilterValue>,
     page: number,
   ) => {
+    const genres = Array.isArray(active.genre) ? active.genre : [];
+    const status = typeof active.status === "string" ? active.status : "";
+    // Madara only filters through its search form: the title directory ignores status and
+    // genre (and some installs 404 on it with them), so a filtered browse is an empty search.
+    const searchForm = Boolean(query) || genres.length > 0 || Boolean(status);
     const url = new URL(
-      query ? `/page/${page}/` : `/${directory}/page/${page}/`,
+      searchForm ? `/page/${page}/` : `/${directory}/page/${page}/`,
       base,
     );
-    if (query) {
+    if (searchForm) {
       url.searchParams.set("s", query);
       url.searchParams.set("post_type", "wp-manga");
     }
-    url.searchParams.set(
-      "m_orderby",
+    // A search keeps the site's relevance order unless the reader picked one: some
+    // installs (s2manga) drop the search term entirely when `m_orderby` comes with it.
+    const order =
       typeof active.order === "string" && active.order
         ? active.order
-        : category === "popular"
-          ? "views"
-          : "latest",
-    );
-    for (const key of ["status", "type"])
-      if (typeof active[key] === "string" && active[key])
-        url.searchParams.set(`manga_${key}`, active[key]);
-    if (Array.isArray(active.genre))
-      for (const genre of active.genre)
-        url.searchParams.append("genre[]", genre);
+        : query
+          ? ""
+          : category === "popular"
+            ? "views"
+            : "latest";
+    if (order) url.searchParams.set("m_orderby", order);
+    if (status) url.searchParams.append("status[]", status);
+    for (const genre of genres) url.searchParams.append("genre[]", genre);
     return url.href;
   };
   function parseCards(text: string): Mangas[] {
@@ -343,14 +347,22 @@ export function createMadaraSite(
     // next link; behind it is the same /page/N/ listing.
     next: (text, current) => {
       const link = htmlNext(text, current);
-      if (link || !load(text)("#navigation-ajax, .navigation-ajax").length)
-        return link;
+      if (!link && !load(text)("#navigation-ajax, .navigation-ajax").length)
+        return undefined;
+      // Only the page number is taken from the site's link. WordPress rewrites the query
+      // in it (`genre[]` becomes `genre[0]`, `s=` becomes `s`), which the pager rightly
+      // refuses as a different catalogue, so the request it continues is ours.
+      const linked = link
+        ? Number(new URL(link).pathname.match(/\/page\/(\d+)\/$/)?.[1])
+        : NaN;
       const next = new URL(current);
       next.pathname = next.pathname.replace(
         /\/page\/(\d+)\/$/,
-        (_, page: string) => `/page/${Number(page) + 1}/`,
+        (_, page: string) =>
+          `/page/${linked > Number(page) ? linked : Number(page) + 1}/`,
       );
-      return next.pathname === current.pathname ? undefined : next.href;
+      if (next.pathname !== current.pathname) return next.href;
+      return link;
     },
     path: ({ category, query, filters }) =>
       catalogueUrl(query ?? "", category, filters, 1),

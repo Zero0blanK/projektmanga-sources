@@ -16,7 +16,8 @@ export default createHtmlSite(manifest as SourceManifest, {
   searchUrl: (query, page) => {
     const url = new URL("/browse", manifest.base_url);
     url.searchParams.set("page", String(page));
-    url.searchParams.set("search", query);
+    // The site's own search form sends `q`; `search` is ignored and lists everything.
+    url.searchParams.set("q", query);
     return url.href;
   },
   parseCards: ($) =>

@@ -235,7 +235,9 @@ export function htmlNext(text: string, current: URL): string | undefined {
         anchor.attr("rel") === "next" ||
         anchor.hasClass("next") ||
         anchor.hasClass("r") ||
-        /^(?:(?:next|suivant|siguiente|berikutnya)\b|[›»→]$)/i.test(
+        // WordPress blog themes (Madara's "paging-navigation") call the next page
+        // "Older Posts".
+        /^(?:(?:next|suivant|siguiente|berikutnya|older)\b|[›»→]$)/i.test(
           anchor.text().trim(),
         )
       );

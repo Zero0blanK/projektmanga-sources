@@ -21,7 +21,8 @@ const filters: MangaFilter[] = [
     type: "select",
     options: [
       { label: "Views", value: "VIEWS DESC" },
-      { label: "Bookmarks", value: "Bookmarks DESC" },
+      // The site dropped its Bookmarks order; this is what its own form offers now.
+      { label: "Recently added", value: "ID DESC" },
       { label: "Name", value: "NAME ASC" },
     ],
   },

@@ -13,8 +13,8 @@
       "source_key": "akazascans",
       "name": "Akaza Scans",
       "lang": "en",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/akazascans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/akazascans.png",
@@ -26,16 +26,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "7fc7d32648590dd9e1cf5d5e9fbb23bdec0f5403cf45d2da9125ce870edf2ef1",
-        "size": 224513
+        "sha256": "4b80567f47737f85f422d59a65abac08c8279592accf4e977638d348f851cfb3",
+        "size": 224519
       }
     },
     {
       "source_key": "arenascans",
       "name": "Arena Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/arenascans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/arenascans.png",
@@ -48,16 +48,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "09d3d3b1db923a5618658e0f8c59fbc6e97d9724ee595d4940ff4582d6d9ae32",
-        "size": 228482
+        "sha256": "3995f90ceb04ec36ed9fc09dbb5a8a4a7e993ffc1388650dac83e32ca5a2708e",
+        "size": 228488
       }
     },
     {
       "source_key": "asterscans",
       "name": "Aster Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/asterscans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/asterscans.png",
@@ -73,16 +73,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "2148097890974fccc348f56b52dbb35e829720babbbc37d5bd95b8c2758a6b73",
-        "size": 225218
+        "sha256": "2eb09fd3a4dd681eccab37526f8fd794ab4be38b192ea2dadee85f2c44e67e6e",
+        "size": 225224
       }
     },
     {
       "source_key": "asurascans",
       "name": "Asura Scans",
       "lang": "en",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/asurascans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/asurascans.png",
@@ -95,16 +95,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "2197f4aaf0a53cbf0cef50337cb490ee789c525ef868680c206a75902387a0bd",
-        "size": 221108
+        "sha256": "7cfc3d01915b1a5deb4c9fb5afe36c2c1772003cb7b1ac786f38dc84fa9894f6",
+        "size": 221114
       }
     },
     {
       "source_key": "athreascans",
       "name": "Athrea Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/athreascans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/athreascans.png",
@@ -116,16 +116,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d2c72f131278a808561ba900dd1a8af97f9450d6fe81925e48b25d6f2ac00aad",
-        "size": 225021
+        "sha256": "eec9288306d9b4e03480a63dbdcfc2edb01d9bafc78e642eebe4971b8cc18a54",
+        "size": 225027
       }
     },
     {
       "source_key": "cocomic",
       "name": "Cocomic",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Cocomic: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/cocomic.js",
@@ -138,16 +138,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "bfbaeec273e9f5abbd6b3aa0494fe18cf77f04e2d99c3b3e9ded27b6350f705c",
-        "size": 227076
+        "sha256": "df5a89c8e8337157e19e09f6a069e80c63e719571c54541776f6a35faeb09132",
+        "size": 227179
       }
     },
     {
       "source_key": "demonicscans",
       "name": "Demonic Scans",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.0.1",
+      "version_code": 1000001,
       "api_version": 1,
       "description": "Demonic Scans: manhwa and manhua with fast releases.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/demonicscans.js",
@@ -162,8 +162,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "6145754ae5c65ce45ef04c3e7f9cd11ae48065541d97ce1f543b26e6f20c4961",
-        "size": 219086
+        "sha256": "05201a7e97d7010614342ae180703ed2dd5548870664af1cd933789d45fbbc93",
+        "size": 219084
       }
     },
     {
@@ -192,8 +192,8 @@
       "source_key": "evascans",
       "name": "Eva Scans",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.0.1",
+      "version_code": 1000001,
       "api_version": 1,
       "description": "Eva Scans: a MangaThemesia-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/evascans.js",
@@ -206,8 +206,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "d33c3a638d669df762350eaa17875c4bf1c79ab0a79e74012dc75ba434a6d126",
-        "size": 225316
+        "sha256": "ec116ea7a4719e20b5f59880518798bcc758dcdd28b21f95a5c7ed6e07efaf4a",
+        "size": 225322
       }
     },
     {
@@ -235,8 +235,8 @@
       "source_key": "galaxydegenscans",
       "name": "GalaxyDegenScans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/galaxydegenscans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/galaxydegenscans.png",
@@ -248,8 +248,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "2d901835c10da779a5acd6a7a682a3cec87f573a077e25645b25d34a2af39a3b",
-        "size": 228599
+        "sha256": "c8d42621c70db38db4287cb85b46a5f3deaf106657a073362abf3db3beec65c4",
+        "size": 228702
       }
     },
     {
@@ -279,8 +279,8 @@
       "source_key": "hentaifox",
       "name": "HentaiFox",
       "lang": "all",
-      "version": "1.0.6",
-      "version_code": 1000006,
+      "version": "1.0.7",
+      "version_code": 1000007,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/hentaifox.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/hentaifox.png",
@@ -292,8 +292,8 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "02bc2bca173a2eaffaf9e3dca545a6e91473e2313794dc9ea83ac7d3b80a0dce",
-        "size": 218335
+        "sha256": "1703088839f20551dcca63a68a7a547e77dcfd909ae04e00e56c42c8804888bc",
+        "size": 218369
       }
     },
     {
@@ -390,8 +390,8 @@
       "source_key": "kingofshojo",
       "name": "King of Shojo",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/kingofshojo.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/kingofshojo.png",
@@ -408,16 +408,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "6b21ca51456fc04d3a401381f6d597226b623afd1f1274eaf5e4b1fd6896086d",
-        "size": 228715
+        "sha256": "0f90b6693b1d239b9c7fc1a0ef33d5bc5bdd9a319a53bbd1f9917383135b96f6",
+        "size": 228721
       }
     },
     {
       "source_key": "lagoonscans",
       "name": "Lagoon Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/lagoonscans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/lagoonscans.png",
@@ -433,16 +433,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "fc0e05fa5143c8a4ef0fb2247f208f12b34866fd140161017b1340b2b4d50637",
-        "size": 224656
+        "sha256": "c174408f78cc47ae7b40698c08b546956764ec2a6958474b4dacbe9ccef84e63",
+        "size": 224662
       }
     },
     {
       "source_key": "leercapitulo",
       "name": "LeerCapitulo",
       "lang": "es",
-      "version": "1.0.5",
-      "version_code": 1000005,
+      "version": "1.0.6",
+      "version_code": 1000006,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/leercapitulo.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/leercapitulo.svg",
@@ -454,16 +454,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "99932c4ff78420ded0c136375e9da033cafd8a503c4c8fd6748cb16a70d4be03",
-        "size": 224272
+        "sha256": "3d9c6ad071ecd6ac00dbd151a02e18624619256f72a111c0f7da839570820500",
+        "size": 224278
       }
     },
     {
       "source_key": "lhtranslation",
       "name": "LHTranslation",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/lhtranslation.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/lhtranslation.png",
@@ -475,16 +475,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "f82b8198ac99689b7347048fd9b37928676096b63b7a71469524febcf3b3c9dd",
-        "size": 226994
+        "sha256": "bb5e8f530eb3cf28615022249288547728142dfaccc4d5f7702801de0de1d868",
+        "size": 227097
       }
     },
     {
       "source_key": "lilymanga",
       "name": "Lily Manga",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Lily Manga: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/lilymanga.js",
@@ -497,8 +497,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "fa7fd7f6692424e1d925b25c7fcf9f0befef88252de6da4333f9b9eefdd39305",
-        "size": 228578
+        "sha256": "4f774e0ffbdf28ead89b1b592f9047fe5fb8c0281d1c7f773635d99564158dae",
+        "size": 228681
       }
     },
     {
@@ -528,8 +528,8 @@
       "source_key": "madarascans",
       "name": "Madara Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/madarascans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/madarascans.png",
@@ -545,8 +545,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "8108fb82ce267aa07b519f1bf4c3bbf154e95867c03da0e472f1f55b73fe66e8",
-        "size": 225150
+        "sha256": "e1ce4f08c524b48eed1e803c0474a2986a94623b4adcd586cc8e199fa3484f95",
+        "size": 225156
       }
     },
     {
@@ -708,8 +708,8 @@
       "source_key": "mangadistrict",
       "name": "Manga District",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangadistrict.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangadistrict.png",
@@ -722,16 +722,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "a951ec8f07a2301e84caf11809ff970cb4c52119ef5c747833d8250b1253de6d",
-        "size": 226862
+        "sha256": "d4831f4bde87c38c8c44ba3fb8539ee8940422e8ef01dafde8dcb2c3fba08e9e",
+        "size": 226965
       }
     },
     {
       "source_key": "mangaeclipse",
       "name": "Manga Eclipse",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Manga Eclipse: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangaeclipse.js",
@@ -744,16 +744,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "79953d058c1bd77ae0b61816ee0deb6aa43a24550acc6cd0ae2d998a6de59f2c",
-        "size": 227784
+        "sha256": "cb3fa76293b60aecde1f65d4611efc8918a44c21e10d5cc217e59eeb1b797120",
+        "size": 227887
       }
     },
     {
       "source_key": "mangafree",
       "name": "Mangafree",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangafree.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangafree.png",
@@ -765,8 +765,8 @@
       "content_rating": "nsfw",
       "isNSFW": true,
       "bundle": {
-        "sha256": "a075e19cf756ec01195e777764b65db6aed151df3f4963bf7d3dfcb948cc6c3e",
-        "size": 226790
+        "sha256": "e9624e0cd1e7487739adc5faaa12e0c9e6a4c773bb21a193deda8486701eab90",
+        "size": 226893
       }
     },
     {
@@ -909,8 +909,8 @@
       "source_key": "mangaowl",
       "name": "MangaOwl.io",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "MangaOwl.io: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangaowl.js",
@@ -923,8 +923,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "af21a6dc88c7023020c8976141574102bfe2a38bc0ae08e06ddf7501440a0f7a",
-        "size": 232186
+        "sha256": "c227f99004ffb70761da2e2989f1762fb0953e463cf03ee95ac1341bff86d611",
+        "size": 232289
       }
     },
     {
@@ -954,8 +954,8 @@
       "source_key": "mangareadorg",
       "name": "MangaRead.org",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangareadorg.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangareadorg.png",
@@ -967,16 +967,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "e6b3307b7062e4fffcdd07aba71c5a217600994729edaac5144a6ed972443187",
-        "size": 226804
+        "sha256": "d8434419ac972b1b6ead3562551272bb59cc23016ba0220f9a1eacec7ef71907",
+        "size": 226907
       }
     },
     {
       "source_key": "mangarw",
       "name": "MangaRW",
       "lang": "ja",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.0.1",
+      "version_code": 1000001,
       "api_version": 1,
       "description": "MangaRW: Japanese raw manga.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangarw.js",
@@ -991,16 +991,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "6cdd374b5faa3157e5b59c3a8326edab3a24e9e84816c3ceea4da47a1f069046",
-        "size": 216468
+        "sha256": "0eebaac9cef8df0b93123c4f469c2d174f240af8417df4e9a5bb885aa8019bf7",
+        "size": 216463
       }
     },
     {
       "source_key": "mangasushi",
       "name": "Mangasushi",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Mangasushi: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangasushi.js",
@@ -1013,8 +1013,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "8a8816d6e452697aabba55bac71f19966955db79a5018ef98c99b0434fb3c3da",
-        "size": 228778
+        "sha256": "5b5da6a60b5521f31b30c6429798301a5800349136054e4fbd9e3d1ef5099341",
+        "size": 228881
       }
     },
     {
@@ -1045,8 +1045,8 @@
       "source_key": "mangatrend",
       "name": "Manga Trend",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/mangatrend.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/mangatrend.png",
@@ -1062,16 +1062,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "7b4d2c89323fe706c186be5ba87d69a2450a2845ab93779a83c0678d652a2a5f",
-        "size": 223818
+        "sha256": "9df95ebc739b415410cba45aeb342d9d4c5d1caf3bb60be9f34a09d58db12b60",
+        "size": 223824
       }
     },
     {
       "source_key": "manhuahot",
       "name": "ManhuaHot",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "ManhuaHot: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuahot.js",
@@ -1084,16 +1084,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "f0e8dc598fd33e5816dedfd88bd07c62b36b9d7d418907f0e0d8e3ea76b8698f",
-        "size": 227705
+        "sha256": "4b9d42d5b95407c7122c80450c95c968b944394c398cb46b96a91b42d7edc40e",
+        "size": 227808
       }
     },
     {
       "source_key": "manhuanext",
       "name": "ManhuaNext",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "ManhuaNext: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuanext.js",
@@ -1106,16 +1106,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "664c3d7a0180a8210cc0a91e02a3082478388a3ecb0b2809174b7759dc61c707",
-        "size": 229010
+        "sha256": "4cf0ff5f6d5b04dc891795ddcbe75c1f163fdd490c0f467a67dd81d37fefa05a",
+        "size": 229113
       }
     },
     {
       "source_key": "manhuaplus",
       "name": "Manhua Plus",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuaplus.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/manhuaplus.png",
@@ -1127,16 +1127,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "b94549be0127e155206f14e43d190286f11a3384729cf727442d7c92d58459d1",
-        "size": 228305
+        "sha256": "2476e1f74a071106f719a9b45c6cd5d524fb6b5887580798a8e03613fbff5d13",
+        "size": 228408
       }
     },
     {
       "source_key": "manhuaus",
       "name": "ManhuaUS",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "ManhuaUS: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhuaus.js",
@@ -1149,16 +1149,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "525fd43ff6c502c8c15b6abff988b10df123c3e5c2772c6dd6075eb4e6514ff7",
-        "size": 227192
+        "sha256": "6d4b60599affe055383685f1f835df51fbc4876a3ccc296f6abfc7638a6df96e",
+        "size": 227295
       }
     },
     {
       "source_key": "manhwanex",
       "name": "ManhwaNex",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "ManhwaNex: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhwanex.js",
@@ -1171,16 +1171,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "33a555a649f59e2d9a5dd7d05a4c4058bfa022cc3ba9be162f5a88ca7f739524",
-        "size": 227448
+        "sha256": "7034acc1fa0714e44becc94fecf6990c1d3f297632965fb6bb85703a2f5bb804",
+        "size": 227551
       }
     },
     {
       "source_key": "manhwareads",
       "name": "ManhwaReads",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "ManhwaReads: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhwareads.js",
@@ -1193,16 +1193,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "7e295f0f3788a28a99f3515c11620ba11b5fc3fed80fc795b4b0a490d0e9917d",
-        "size": 229230
+        "sha256": "6abe7d481fb128251242954462d0e0fe99d78456b2a05a516e3e44dd442ee1b7",
+        "size": 229333
       }
     },
     {
       "source_key": "manhwatop",
       "name": "Manhwatop",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Manhwatop: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/manhwatop.js",
@@ -1215,8 +1215,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "903824fae45bc103576a358f54ba8fdcfaa52ba65b4dfce77d29871c3e09289b",
-        "size": 227198
+        "sha256": "bd995d7ceb179a7a865caac66230250cbd0c1fed6e4074aae4b5f13e63c8247b",
+        "size": 227301
       }
     },
     {
@@ -1356,8 +1356,8 @@
       "source_key": "rackus",
       "name": "Rackus",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rackus.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/rackus.png",
@@ -1369,16 +1369,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "be30249069edd501167dc71de4f4bf9c0cce9fcc033ba899d6d0936b832c94ab",
-        "size": 224448
+        "sha256": "8d263b357e405b93daa26a54b56f2425ede008a2fd7965bd848556b6d6f1dc62",
+        "size": 224454
       }
     },
     {
       "source_key": "ravenscans",
       "name": "Raven Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/ravenscans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/ravenscans.png",
@@ -1390,8 +1390,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "2bc5804b2f0fb9f9bf6f4dd36cafee6aaf3511976cd82e5d1d6dc19340c9921a",
-        "size": 224742
+        "sha256": "c6726592475c7441441ca1130a6b64f0636e01e0e34ec88683709179165b6dd9",
+        "size": 224748
       }
     },
     {
@@ -1513,8 +1513,8 @@
       "source_key": "rokaricomics",
       "name": "Rokari Comics",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.0.1",
+      "version_code": 1000001,
       "api_version": 1,
       "description": "Rokari Comics: a MangaThemesia-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/rokaricomics.js",
@@ -1527,16 +1527,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "8c9cd256bf84625edc319cf8f0eb875665880daa25a2bab6161970a0d6577758",
-        "size": 225777
+        "sha256": "03c7f92610c0797b3f140dad25212e7e204dcf8542fad8aec255607d30f3e210",
+        "size": 225783
       }
     },
     {
       "source_key": "s2manga",
       "name": "S2Manga",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/s2manga.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/s2manga.png",
@@ -1549,8 +1549,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "fb737559b2c0d9b98ca55c69b74ca2c8d84dea5e7d363ab978a7de4b5f1b0cab",
-        "size": 228404
+        "sha256": "9dded824083a289f4c83dd531354c8047e0fad36d71cad61dd1643b387d1f778",
+        "size": 228507
       }
     },
     {
@@ -1579,8 +1579,8 @@
       "source_key": "scythescans",
       "name": "Scythe Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/scythescans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/scythescans.png",
@@ -1596,16 +1596,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "79aec9f1af27399b575f3ef491ca8ea7e5b2137bc34068d1e4384f09ec2c56b8",
-        "size": 225051
+        "sha256": "f7e96fd2471a93e72bab6f0c774aa1a5afb2275cedfd19354061a57557ac6fad",
+        "size": 225057
       }
     },
     {
       "source_key": "sleepytranslations",
       "name": "Sleepy Translations",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Sleepy Translations: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/sleepytranslations.js",
@@ -1618,8 +1618,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "1d2fed90f1492b12034245e5839c7ab1224c049d82685785c413c5af1f1ac580",
-        "size": 228626
+        "sha256": "f48311a1dbdc5ae52dd872398f82d60ba6aaec194832ff866cd26790bfc1b620",
+        "size": 228729
       }
     },
     {
@@ -1649,8 +1649,8 @@
       "source_key": "thunderscans",
       "name": "Thunder Scans",
       "lang": "en",
-      "version": "1.0.0",
-      "version_code": 1000000,
+      "version": "1.0.1",
+      "version_code": 1000001,
       "api_version": 1,
       "description": "Thunder Scans: a MangaThemesia-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/thunderscans.js",
@@ -1663,8 +1663,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "95436adca1d96e2d202815f0526f59fc649f8377f416fe48488f4a7b7a653ed2",
-        "size": 228507
+        "sha256": "9992943ed90413194e1c3eb89cbf00e987218c0bf7243be14eec76689fd30c9f",
+        "size": 228513
       }
     },
     {
@@ -1694,8 +1694,8 @@
       "source_key": "toonily",
       "name": "Toonily",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Toonily: a popular manhwa site. It sits behind Cloudflare's browser check: open the source in a browser once from the desktop app, then it works.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/toonily.js",
@@ -1708,16 +1708,16 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "7ed2faa3f144b68f092e2200495fb11db503f731d905689346b2911c3a23194d",
-        "size": 227188
+        "sha256": "4319516270c3059639483039d818f54da36abf7ed013903e81b5e8ba24bce3e6",
+        "size": 227291
       }
     },
     {
       "source_key": "tritiniascans",
       "name": "Tritinia Scans",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Tritinia Scans: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/tritiniascans.js",
@@ -1730,16 +1730,16 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "a0bc954a06a6c2cc815ec9fd920a4ae49599455d651d60235396467509c7addc",
-        "size": 228753
+        "sha256": "5fe129a27b99fc49f8d3f7d30d67da8843c4f35ac7733bb101168f3f53896baf",
+        "size": 228856
       }
     },
     {
       "source_key": "violetscans",
       "name": "Violet Scans",
       "lang": "en",
-      "version": "1.0.3",
-      "version_code": 1000003,
+      "version": "1.0.4",
+      "version_code": 1000004,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/violetscans.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/violetscans.png",
@@ -1751,8 +1751,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "4a0c9b0477ff9feae2e65d61c257994030bde92d3aee60f99d78c6a63b69d092",
-        "size": 228345
+        "sha256": "488cb3562d332dce14f60a6661bd25033aa9dc87660f6cbedffaebebd5fa7d60",
+        "size": 228351
       }
     },
     {
@@ -1781,8 +1781,8 @@
       "source_key": "weebcentral",
       "name": "Weeb Central",
       "lang": "en",
-      "version": "1.0.8",
-      "version_code": 1000008,
+      "version": "1.0.9",
+      "version_code": 1000009,
       "api_version": 1,
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/weebcentral.js",
       "icon_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/icons/weebcentral.png",
@@ -1797,8 +1797,8 @@
       "content_rating": "mixed",
       "isNSFW": false,
       "bundle": {
-        "sha256": "f7e4a6382bb0d3a17c8c1919036d87c40731f06177a751d04a6557e9252f1e90",
-        "size": 221044
+        "sha256": "5d35f67adffc50dda571ce16cae40d6b234dc8efd5070eb3f56ef070851582bb",
+        "size": 221050
       }
     },
     {
@@ -1828,8 +1828,8 @@
       "source_key": "yakshacomics",
       "name": "Yaksha Comics",
       "lang": "en",
-      "version": "1.0.1",
-      "version_code": 1000001,
+      "version": "1.0.2",
+      "version_code": 1000002,
       "api_version": 1,
       "description": "Yaksha Comics: a Madara-theme manga site.",
       "entry_url": "https://raw.githubusercontent.com/Zero0blanK/projektmanga-sources/main/dist/yakshacomics.js",
@@ -1842,8 +1842,8 @@
       "content_rating": "safe",
       "isNSFW": false,
       "bundle": {
-        "sha256": "b14d644e1c8fa4d70a79cc8c1a64ed6451fd1d4ca5fbc446f2903cc6a9e3d7b5",
-        "size": 227104
+        "sha256": "4c1798040bd0b77b91ad605526d7dcfda2cdbb6dcdc513e51e3b2dc2d76c7747",
+        "size": 227207
       }
     }
   ]

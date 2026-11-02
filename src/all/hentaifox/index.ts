@@ -118,7 +118,9 @@ async function browse(
   const paths = new Map<number, string>([
     [
       1,
-      query === null ? "/" : `/search/?q=${encodeURIComponent(query)}&page=1`,
+      query === null
+        ? "/"
+        : `/search/?q=${encodeURIComponent(query.toLowerCase())}&page=1`,
     ],
   ]);
   return collectSequentialPages(window, manifest.source_key, async (page) => {
@@ -239,6 +241,8 @@ export default attachHtmlCatalogue(source, {
   path: ({ query }) =>
     query === undefined
       ? "/"
-      : `/search/?q=${encodeURIComponent(query)}&page=1`,
+      : // Lowercased because the site lowercases it in its own "Next" link, and a next
+        // page that changes the search is refused as not this catalogue's.
+        `/search/?q=${encodeURIComponent(query.toLowerCase())}&page=1`,
   route: /^\/(?:|page\/\d+\/|pag\/\d+\/|search\/)$/,
 });

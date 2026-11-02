@@ -335,3 +335,157 @@ test("nhentai pages the app's limit+1 window over 25-result search pages without
     globalThis.fetch = original;
   }
 });
+
+test("Madara pages through a WordPress 'Older Posts' link (Yaksha Comics)", async () => {
+  const source = await adapter("yakshacomics"),
+    original = globalThis.fetch;
+  try {
+    globalThis.fetch = async (input) => {
+      const page = Number(
+        new URL(input).pathname.match(/\/page\/(\d+)\/$/)?.[1] ?? 1,
+      );
+      const cards = Array.from(
+        { length: 3 },
+        (_, i) =>
+          `<div class="page-item-detail"><div class="post-title"><a href="https://yakshacomics.com/manga/t-${page}-${i}/">T ${page} ${i}</a></div></div>`,
+      ).join("");
+      const older =
+        page < 2
+          ? `<div class="nav-previous float-left"><a href="https://yakshacomics.com/manga/page/${page + 1}/?m_orderby=views">Older Posts</a></div>`
+          : "";
+      return new Response(
+        `<html><body>${cards}<nav class="navigation paging-navigation"><div class="nav-links">${older}</div></nav></body></html>`,
+      );
+    };
+    const first = await source.fetchMangaPage("popular", { limit: 3 });
+    assert.equal(first.hasMore, true);
+    const second = await source.fetchMangaPage("popular", {
+      limit: 3,
+      cursor: first.nextCursor,
+    });
+    assert.deepEqual(
+      second.items.map((item) => item.id),
+      ["t-2-0", "t-2-1", "t-2-2"],
+    );
+    assert.equal(second.hasMore, false);
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test("Madara search keeps the site's relevance order unless an order is chosen (S2Manga)", async () => {
+  const source = await adapter("s2manga"),
+    original = globalThis.fetch,
+    requests = [];
+  try {
+    globalThis.fetch = async (input) => {
+      requests.push(new URL(input));
+      return new Response(
+        '<div class="c-tabs-item__content"><div class="post-title"><h3 class="h4"><a href="https://s2read.com/manga/under-the-oak-tree/">Under the Oak Tree</a></h3></div></div>',
+      );
+    };
+    await source.searchMangaPage("Under", { limit: 20 });
+    await source.searchMangaPage("Under", { limit: 20 }, { order: "rating" });
+    assert.equal(requests[0].searchParams.get("s"), "Under");
+    // With m_orderby the site ignored the term and listed its latest titles.
+    assert.equal(requests[0].searchParams.has("m_orderby"), false);
+    assert.equal(requests[1].searchParams.get("m_orderby"), "rating");
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test("HentaiFox search follows the site's lowercased next link", async () => {
+  const source = await adapter("hentaifox"),
+    original = globalThis.fetch;
+  try {
+    globalThis.fetch = async (input) => {
+      const url = new URL(input);
+      const page = Number(url.searchParams.get("page") ?? 1);
+      return new Response(
+        `<div class="thumb"><div class="g_title"><a href="/gallery/${page}0/">G ${page}</a></div></div>` +
+          (page < 2
+            ? `<a class='page-link' href='//hentaifox.com/search/?q=${url.searchParams.get("q").toLowerCase()}&page=2'>Next</a>`
+            : ""),
+      );
+    };
+    const first = await source.searchMangaPage("Invisible", { limit: 1 });
+    assert.equal(first.hasMore, true);
+    const second = await source.searchMangaPage("Invisible", {
+      limit: 1,
+      cursor: first.nextCursor,
+    });
+    assert.deepEqual(
+      second.items.map((item) => item.id),
+      ["20"],
+    );
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test("MangaRW searches with the q parameter its own search form uses", async () => {
+  const source = await adapter("mangarw"),
+    original = globalThis.fetch,
+    requests = [];
+  try {
+    globalThis.fetch = async (input) => {
+      requests.push(new URL(input));
+      return new Response("<html><body></body></html>");
+    };
+    await source
+      .searchManga("キングダム", { limit: 20, offset: 0 })
+      .catch(() => {});
+    assert.equal(requests[0].searchParams.get("q"), "キングダム");
+    assert.equal(requests[0].searchParams.has("search"), false);
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test("Madara filters go through the search form and page past WordPress's rewritten next link", async () => {
+  const source = await adapter("lilymanga"),
+    original = globalThis.fetch,
+    requests = [];
+  try {
+    globalThis.fetch = async (input) => {
+      const url = new URL(input);
+      requests.push(url);
+      const page = Number(url.pathname.match(/\/page\/(\d+)\/$/)?.[1] ?? 1);
+      const cards = Array.from(
+        { length: 2 },
+        (_, i) =>
+          `<div class="c-tabs-item__content"><div class="post-title"><h3 class="h4"><a href="https://lilymanga.net/gl/t-${page}-${i}/">T ${page} ${i}</a></h3></div></div>`,
+      ).join("");
+      // WordPress writes genre[] back as genre[0] and drops the "=" after an empty s.
+      const older =
+        page < 2
+          ? `<div class="nav-previous"><a href="https://lilymanga.net/page/${page + 1}/?s&#038;post_type=wp-manga&#038;genre%5B0%5D=yuri&#038;status%5B0%5D=on-hold">Older Posts</a></div>`
+          : "";
+      return new Response(
+        `<html><body>${cards}<div class="nav-links">${older}</div></body></html>`,
+      );
+    };
+    const filters = { genre: ["yuri"], status: "on-hold" };
+    const first = await source.fetchMangaPage("popular", { limit: 2 }, filters);
+    assert.equal(first.hasMore, true);
+    const second = await source.fetchMangaPage(
+      "popular",
+      { limit: 2, cursor: first.nextCursor },
+      filters,
+    );
+    assert.deepEqual(
+      second.items.map((item) => item.id),
+      ["t-2-0", "t-2-1"],
+    );
+    for (const url of requests) {
+      assert.match(url.pathname, /^\/page\/\d+\/$/);
+      assert.equal(url.searchParams.get("s"), "");
+      assert.equal(url.searchParams.get("post_type"), "wp-manga");
+      assert.deepEqual(url.searchParams.getAll("genre[]"), ["yuri"]);
+      assert.deepEqual(url.searchParams.getAll("status[]"), ["on-hold"]);
+    }
+  } finally {
+    globalThis.fetch = original;
+  }
+});
