@@ -1,0 +1,272 @@
+[
+  {
+    "key": "mangacrazy",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/all/mangacrazy",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/all/mangacrazy"
+  },
+  {
+    "key": "allporncomicio",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/allporncomicio",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/allporncomicio"
+  },
+  {
+    "key": "bunmanga",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": false,
+    "upstream": "src/en/bunmanga",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/bunmanga",
+    "draft": true
+  },
+  {
+    "key": "decadencescans",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/decadencescans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/decadencescans"
+  },
+  {
+    "key": "gakamangas",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/gakamangas",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/gakamangas"
+  },
+  {
+    "key": "hentai1io",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": false,
+    "upstream": "src/en/hentai1io",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hentai1io"
+  },
+  {
+    "key": "hentaidesi",
+    "engine": "themesia",
+    "cataloguePath": "/manga/",
+    "upstream": "src/en/hentaidesi",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hentaidesi"
+  },
+  {
+    "key": "hentaixcomic",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/hentaixcomic",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hentaixcomic"
+  },
+  {
+    "key": "hentaixyuri",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/hentaixyuri",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hentaixyuri"
+  },
+  {
+    "key": "hm2d",
+    "engine": "madara",
+    "directory": "read",
+    "ajaxChapters": true,
+    "browse": "ajax",
+    "upstream": "src/en/hm2d",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hm2d"
+  },
+  {
+    "key": "hunlightcomics",
+    "engine": "madara",
+    "directory": "m",
+    "ajaxChapters": true,
+    "browse": "ajax",
+    "upstream": "src/en/hunlightcomics",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hunlightcomics"
+  },
+  {
+    "key": "kaliscanorg",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/kaliscanorg",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/kaliscanorg",
+    "draft": true
+  },
+  {
+    "key": "ksgroupscans",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/ksgroupscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/ksgroupscans",
+    "draft": true
+  },
+  {
+    "key": "lovesjanescans",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": "paginated",
+    "upstream": "src/en/lovesjanescans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/lovesjanescans"
+  },
+  {
+    "key": "madaradex",
+    "engine": "madara",
+    "directory": "title",
+    "ajaxChapters": false,
+    "upstream": "src/en/madaradex",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/madaradex",
+    "draft": true
+  },
+  {
+    "key": "manga18free",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/manga18free",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manga18free",
+    "draft": true
+  },
+  {
+    "key": "manga18x",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/manga18x",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manga18x",
+    "draft": true
+  },
+  {
+    "key": "mangaforfreecom",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/mangaforfreecom",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/mangaforfreecom",
+    "draft": true
+  },
+  {
+    "key": "mangamaniacs",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": false,
+    "upstream": "src/en/mangamaniacs",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/mangamaniacs"
+  },
+  {
+    "key": "mangaparktv",
+    "engine": "madara",
+    "directory": "manhwa",
+    "ajaxChapters": true,
+    "browse": "ajax",
+    "upstream": "src/en/mangaparktv",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/mangaparktv"
+  },
+  {
+    "key": "manhwacomics",
+    "engine": "madara",
+    "directory": "manhwa",
+    "ajaxChapters": true,
+    "upstream": "src/en/manhwacomics",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwacomics",
+    "draft": true
+  },
+  {
+    "key": "manhwaden",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/manhwaden",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwaden"
+  },
+  {
+    "key": "manhwahubto",
+    "engine": "madara",
+    "directory": "manhwa",
+    "ajaxChapters": false,
+    "upstream": "src/en/manhwahubto",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwahubto"
+  },
+  {
+    "key": "manhwatoon",
+    "engine": "madara",
+    "directory": "manhwa",
+    "ajaxChapters": true,
+    "browse": "ajax",
+    "upstream": "src/en/manhwatoon",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwatoon",
+    "draft": true
+  },
+  {
+    "key": "orchisasia",
+    "engine": "madara",
+    "directory": "comic",
+    "ajaxChapters": false,
+    "upstream": "src/en/orchisasia",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/orchisasia"
+  },
+  {
+    "key": "paritehaber",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": false,
+    "upstream": "src/en/paritehaber",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/paritehaber"
+  },
+  {
+    "key": "petrotechsociety",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": false,
+    "upstream": "src/en/petrotechsociety",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/petrotechsociety"
+  },
+  {
+    "key": "pornhwaz",
+    "engine": "madara",
+    "directory": "webtoon",
+    "ajaxChapters": false,
+    "browse": "ajax",
+    "upstream": "src/en/pornhwaz",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/pornhwaz"
+  },
+  {
+    "key": "rosesquadscans",
+    "engine": "madara",
+    "directory": "series",
+    "ajaxChapters": true,
+    "browse": "ajax",
+    "upstream": "src/en/rosesquadscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/rosesquadscans",
+    "draft": true
+  },
+  {
+    "key": "suryascans",
+    "engine": "keyoapp",
+    "upstream": "src/en/suryascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/suryascans"
+  },
+  {
+    "key": "topmanhuanet",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/topmanhuanet",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/topmanhuanet",
+    "draft": true
+  },
+  {
+    "key": "wearehunger",
+    "engine": "madara",
+    "directory": "manga",
+    "ajaxChapters": true,
+    "upstream": "src/en/wearehunger",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/wearehunger"
+  }
+]

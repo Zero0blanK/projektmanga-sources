@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readkingdommangaonline",
+  "name": "Read Kingdom Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Kingdom Manga Online: one franchise's manga (Kingdom, Li Mu, Meng Wu & Chu Zi).",
+  "base_url": "https://ww6.readkingdom.com",
+  "allowed_hosts": [
+    "ww6.readkingdom.com"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhwa18tx",
+  "name": "Manhwa18TX",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Manhwa18TX: a Yiimanga-theme manga site.",
+  "base_url": "https://manhwa18tx.com",
+  "allowed_hosts": [
+    "manhwa18tx.com"
+  ],
+  "content_rating": "mixed"
+}

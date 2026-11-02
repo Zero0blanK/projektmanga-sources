@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hentaidesi",
+  "name": "Hentai Desi",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Hentai Desi: a MangaThemesia-theme manga site.",
+  "base_url": "https://hentaidesi.com",
+  "allowed_hosts": [
+    "hentaidesi.com"
+  ],
+  "content_rating": "nsfw"
+}

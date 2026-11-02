@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "decadencescans",
+  "name": "Decadence Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Decadence Scans: a Madara-theme manga site.",
+  "base_url": "https://reader.decadencescans.com",
+  "allowed_hosts": [
+    "reader.decadencescans.com"
+  ],
+  "content_rating": "mixed"
+}

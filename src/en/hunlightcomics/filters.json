@@ -1,0 +1,56 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  }
+]

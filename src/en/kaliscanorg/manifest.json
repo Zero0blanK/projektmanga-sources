@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "kaliscanorg",
+  "name": "KaliScan.org (unoriginal)",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "KaliScan.org (unoriginal): a Madara-theme manga site.",
+  "base_url": "https://kaliscan.org",
+  "allowed_hosts": [
+    "kaliscan.org"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "The site's image CDN (image.pawmanga.com) answers 404 for chapter pages (checked 2026-11-02); browse, search, details and chapter lists work."
+}

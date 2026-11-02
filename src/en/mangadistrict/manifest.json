@@ -3,7 +3,7 @@
   "source_key": "mangadistrict",
   "name": "Manga District",
   "lang": "en",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "base_url": "https://mangadistrict.com",
   "allowed_hosts": [
     "mangadistrict.com",

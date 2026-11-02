@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "myreadingcomic",
+  "name": "MyReadingComic",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MyReadingComic: a Yiimanga-theme manga site.",
+  "base_url": "https://myreadingcomic.com",
+  "allowed_hosts": [
+    "myreadingcomic.com"
+  ],
+  "content_rating": "nsfw"
+}

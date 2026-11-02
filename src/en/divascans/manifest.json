@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "divascans",
+  "name": "Diva Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Diva Scans: a VineTheme-theme manga site.",
+  "base_url": "https://divascans.org",
+  "allowed_hosts": [
+    "divascans.org"
+  ],
+  "content_rating": "mixed"
+}

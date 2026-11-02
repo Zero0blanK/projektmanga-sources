@@ -129,6 +129,14 @@ test("Flame Comics native/offset pagination, alternate-title search, filters, de
       ).length,
       1,
     );
+    // Latest starts with the home page's release order and then carries on through the
+    // whole catalogue, instead of ending with the home page's block.
+    const latest = await source.fetchManga("latest", { offset: 0, limit: 100 });
+    assert.deepEqual(
+      latest.slice(0, 2).map((item) => item.id),
+      ["2", "1"],
+    );
+    assert.equal(latest.length, 33);
     const manga = await source.fetchMangaDetails("1");
     schemas?.sourceMangaDetailsSchema.parse(manga);
     assert.equal(manga.description, "Fixture description");

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "lovesjanescans",
+  "name": "Lovesjane Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Lovesjane Scans: a Madara-theme manga site.",
+  "base_url": "https://lovesjane.site",
+  "allowed_hosts": [
+    "lovesjane.site"
+  ],
+  "content_rating": "safe"
+}

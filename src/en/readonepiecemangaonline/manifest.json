@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readonepiecemangaonline",
+  "name": "Read One Piece Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read One Piece Manga Online: one franchise's manga (One Piece, Colored, Soma x Sanji, OP x Toriko…).",
+  "base_url": "https://ww13.readonepiece.com",
+  "allowed_hosts": [
+    "ww13.readonepiece.com"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "bunmanga",
+  "name": "Bun Manga",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Bun Manga: a Madara-theme manga site.",
+  "base_url": "https://bunmanga.com",
+  "allowed_hosts": [
+    "bunmanga.com"
+  ],
+  "content_rating": "safe",
+  "draft": true,
+  "draft_reason": "Reading is refused by the site's anti-bot protection (checked 2026-11-02); browse works."
+}

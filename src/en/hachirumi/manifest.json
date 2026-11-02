@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hachirumi",
+  "name": "Hachirumi",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Hachirumi: a Guya-theme manga site.",
+  "base_url": "https://hachirumi.com",
+  "allowed_hosts": [
+    "hachirumi.com"
+  ],
+  "content_rating": "mixed"
+}

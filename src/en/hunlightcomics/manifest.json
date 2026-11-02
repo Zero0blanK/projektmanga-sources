@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hunlightcomics",
+  "name": "Hunlight Comics",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Hunlight Comics: a Madara-theme manga site.",
+  "base_url": "https://hunlightcomics.com",
+  "allowed_hosts": [
+    "hunlightcomics.com"
+  ],
+  "content_rating": "mixed"
+}

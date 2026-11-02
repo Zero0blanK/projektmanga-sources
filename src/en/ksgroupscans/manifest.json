@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "ksgroupscans",
+  "name": "KSGroupScans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "KSGroupScans: a Madara-theme manga site.",
+  "base_url": "https://ksgroupscans.com",
+  "allowed_hosts": [
+    "ksgroupscans.com"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "Page images time out (checked 2026-11-02); browse, search, details and chapter lists work."
+}

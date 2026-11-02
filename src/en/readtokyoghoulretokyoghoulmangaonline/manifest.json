@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readtokyoghoulretokyoghoulmangaonline",
+  "name": "Read Tokyo Ghoul Re & Tokyo Ghoul Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Tokyo Ghoul Re & Tokyo Ghoul Manga Online: one franchise's manga (Tokyo Ghoul, Tokyo Ghoul Jack, Tokyo Ghoul: re Colored, Gorilla…).",
+  "base_url": "https://ww12.tokyoghoulre.com",
+  "allowed_hosts": [
+    "ww12.tokyoghoulre.com"
+  ],
+  "content_rating": "safe"
+}

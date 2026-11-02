@@ -1,0 +1,431 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adapted to Anime",
+        "value": "adapted-to-anime"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "AI Art",
+        "value": "ai-art"
+      },
+      {
+        "label": "Animal Characteristics",
+        "value": "animal-characteristics"
+      },
+      {
+        "label": "Based on Another Work",
+        "value": "based-on-another-work"
+      },
+      {
+        "label": "BL",
+        "value": "bl"
+      },
+      {
+        "label": "Borderline H",
+        "value": "borderline-h"
+      },
+      {
+        "label": "Cartoon",
+        "value": "cartoon"
+      },
+      {
+        "label": "Cohabitation",
+        "value": "cohabitation"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Comics",
+        "value": "comics"
+      },
+      {
+        "label": "Completed",
+        "value": "completed"
+      },
+      {
+        "label": "Cooking",
+        "value": "cooking"
+      },
+      {
+        "label": "Coworkers",
+        "value": "coworkers"
+      },
+      {
+        "label": "Crime",
+        "value": "crime"
+      },
+      {
+        "label": "Crossdressing",
+        "value": "crossdressing"
+      },
+      {
+        "label": "Delinquents",
+        "value": "delinquents"
+      },
+      {
+        "label": "Demons",
+        "value": "demons"
+      },
+      {
+        "label": "Doujinshi",
+        "value": "doujinshi"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Explicit Sex",
+        "value": "explicit-sex"
+      },
+      {
+        "label": "Family",
+        "value": "family"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Fetish",
+        "value": "fetish"
+      },
+      {
+        "label": "Full Color",
+        "value": "full-color"
+      },
+      {
+        "label": "Game",
+        "value": "game"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "Ghosts",
+        "value": "ghosts"
+      },
+      {
+        "label": "GL",
+        "value": "gl"
+      },
+      {
+        "label": "Gyaru",
+        "value": "gyaru"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Hentai",
+        "value": "hentai"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Incest",
+        "value": "incest"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Japanese Webtoons",
+        "value": "japanese-webtoons"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Magic",
+        "value": "magic"
+      },
+      {
+        "label": "Magical Girl",
+        "value": "magical-girl"
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Mature Romance",
+        "value": "mature-romance"
+      },
+      {
+        "label": "Mecha",
+        "value": "mecha"
+      },
+      {
+        "label": "Medical",
+        "value": "medical"
+      },
+      {
+        "label": "Monster Girls",
+        "value": "monster-girls"
+      },
+      {
+        "label": "Monsters",
+        "value": "monsters"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "NTR",
+        "value": "ntr"
+      },
+      {
+        "label": "Nudity",
+        "value": "nudity"
+      },
+      {
+        "label": "One Shot",
+        "value": "one-shot"
+      },
+      {
+        "label": "Person in a Strange World",
+        "value": "person-in-a-strange-world"
+      },
+      {
+        "label": "Police",
+        "value": "police"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Raw",
+        "value": "raw"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "reincarnation"
+      },
+      {
+        "label": "Reverse Harem",
+        "value": "reverse-harem"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "RPG",
+        "value": "rpg"
+      },
+      {
+        "label": "Salaryman",
+        "value": "salaryman"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Seinen",
+        "value": "seinen"
+      },
+      {
+        "label": "Sexual Abuse",
+        "value": "sexual-abuse"
+      },
+      {
+        "label": "Sexual Content",
+        "value": "sexual-content"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Siblings",
+        "value": "siblings"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Sports",
+        "value": "sports"
+      },
+      {
+        "label": "Super Power",
+        "value": "super-power"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Thriller",
+        "value": "thriller"
+      },
+      {
+        "label": "Time Travel",
+        "value": "time-travel"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Transfer Students",
+        "value": "transfer-students"
+      },
+      {
+        "label": "Uncensored",
+        "value": "uncensored"
+      },
+      {
+        "label": "Vanilla",
+        "value": "vanilla"
+      },
+      {
+        "label": "Violence",
+        "value": "violence"
+      },
+      {
+        "label": "Webtoon",
+        "value": "webtoon"
+      },
+      {
+        "label": "Webtoons",
+        "value": "webtoons"
+      },
+      {
+        "label": "Work Life",
+        "value": "work-life"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      },
+      {
+        "label": "Zombie",
+        "value": "zombie"
+      }
+    ]
+  }
+]

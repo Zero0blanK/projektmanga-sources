@@ -1,0 +1,327 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "18+",
+        "value": "18"
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Arts",
+        "value": "arts"
+      },
+      {
+        "label": "BL",
+        "value": "bl"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Dark Fantasy",
+        "value": "dark-fantasy"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Fantasy creatures",
+        "value": "fantasy-creatures"
+      },
+      {
+        "label": "GL",
+        "value": "gl"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Heartfelt",
+        "value": "heartfelt"
+      },
+      {
+        "label": "Hentai",
+        "value": "hentai"
+      },
+      {
+        "label": "Hentai Manhwa",
+        "value": "hentai-manhwa"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Life",
+        "value": "life"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Married Life",
+        "value": "married-life"
+      },
+      {
+        "label": "Martial",
+        "value": "martial"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Medical",
+        "value": "medical"
+      },
+      {
+        "label": "Modern Romance",
+        "value": "modern-romance"
+      },
+      {
+        "label": "Murim",
+        "value": "murim"
+      },
+      {
+        "label": "Music",
+        "value": "music"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "NTR",
+        "value": "ntr"
+      },
+      {
+        "label": "of",
+        "value": "of"
+      },
+      {
+        "label": "Oneshot",
+        "value": "oneshot"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Psychopath",
+        "value": "psychopath"
+      },
+      {
+        "label": "Rendition",
+        "value": "rendition"
+      },
+      {
+        "label": "Revenge",
+        "value": "revenge"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "Royalty",
+        "value": "royalty"
+      },
+      {
+        "label": "School",
+        "value": "school"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Seinen",
+        "value": "seinen"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Shounen Ai",
+        "value": "shounen-ai"
+      },
+      {
+        "label": "Slice",
+        "value": "slice"
+      },
+      {
+        "label": "Slice of life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "South Korean comics",
+        "value": "south-korean-comics"
+      },
+      {
+        "label": "Sports",
+        "value": "sports"
+      },
+      {
+        "label": "Super Power",
+        "value": "super-power"
+      },
+      {
+        "label": "Superheroes",
+        "value": "superheroes"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Survival",
+        "value": "survival"
+      },
+      {
+        "label": "Suspenseful",
+        "value": "suspenseful"
+      },
+      {
+        "label": "Time Slip",
+        "value": "time-slip"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Villainess",
+        "value": "villainess"
+      },
+      {
+        "label": "Webcomic",
+        "value": "webcomic"
+      },
+      {
+        "label": "Webtoons",
+        "value": "webtoons"
+      },
+      {
+        "label": "Witches",
+        "value": "witches"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      }
+    ]
+  }
+]

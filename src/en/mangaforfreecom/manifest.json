@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangaforfreecom",
+  "name": "Mangaforfree.com",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Mangaforfree.com: a Madara-theme manga site.",
+  "base_url": "https://mangaforfree.com",
+  "allowed_hosts": [
+    "mangaforfree.com"
+  ],
+  "content_rating": "nsfw",
+  "draft": true,
+  "draft_reason": "None of the first titles list any chapters with the generated settings (checked 2026-11-02)."
+}

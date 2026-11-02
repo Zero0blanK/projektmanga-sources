@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "valirscans",
+  "name": "Valir Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Valir Scans: a VineTheme-theme manga site.",
+  "base_url": "https://valirscans.org",
+  "allowed_hosts": [
+    "valirscans.org"
+  ],
+  "content_rating": "safe"
+}

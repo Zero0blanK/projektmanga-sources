@@ -1,0 +1,163 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Murim",
+        "value": "murim"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "reincarnation"
+      },
+      {
+        "label": "Revenge",
+        "value": "revenge"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-Fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Sport",
+        "value": "sport"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Thriller",
+        "value": "thriller"
+      }
+    ]
+  }
+]

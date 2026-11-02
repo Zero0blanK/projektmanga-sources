@@ -28,12 +28,25 @@ import type {
  */
 export type MadaraChapterMode = boolean | "paginated";
 
+export interface MadaraSiteOptions {
+  /**
+   * How catalogues are listed: the title directory's `/page/N/` HTML (`"html"`, the
+   * default), or the theme's `admin-ajax.php` `madara_load_more` listing (`"ajax"`) for
+   * installs whose directory page is filled in by script and serves no cards itself.
+   */
+  browse?: "html" | "ajax";
+}
+
+/** Titles per `madara_load_more` page; a shorter page is the last. */
+const AJAX_PAGE_SIZE = 25;
+
 export function createMadaraSite(
   manifest: SourceManifest,
   filters: MangaFilter[],
   ajaxChapters: MadaraChapterMode = false,
   pageImages = ".reading-content img",
   directory = "manga",
+  { browse = "html" }: MadaraSiteOptions = {},
 ) {
   if (!/^[A-Za-z0-9_-]+$/.test(directory))
     throw new Error(`Invalid Madara directory: ${directory}`);
@@ -127,6 +140,99 @@ export function createMadaraSite(
     }
     return pages.join("");
   }
+  /**
+   * One `madara_load_more` page for a catalogue URL built by `catalogueUrl`: the same
+   * query (search term, order, status, genres) sent as the theme's archive query vars.
+   */
+  async function ajaxCatalogue(href: string): Promise<string> {
+    const url = new URL(href);
+    const page = Number(url.pathname.match(/\/page\/(\d+)\/$/)?.[1] ?? 1);
+    const form = new URLSearchParams({
+      action: "madara_load_more",
+      page: String(page - 1),
+      template: "madara-core/content/content-archive",
+      "vars[paged]": "1",
+      "vars[template]": "archive",
+      "vars[posts_per_page]": String(AJAX_PAGE_SIZE),
+      "vars[post_type]": "wp-manga",
+      "vars[post_status]": "publish",
+      "vars[manga_archives_item_layout]": "big_thumbnail",
+    });
+    const query = url.searchParams.get("s");
+    if (query) form.set("vars[s]", query);
+    const sortKey: Record<string, string> = {
+      views: "_wp_manga_views",
+      latest: "_latest_update",
+      trending: "_wp_manga_week_views_value",
+    };
+    const order = url.searchParams.get("m_orderby") ?? "";
+    if (sortKey[order]) {
+      form.set("vars[orderby]", "meta_value_num");
+      form.set("vars[meta_key]", sortKey[order]);
+      form.set("vars[order]", "DESC");
+    } else if (order === "alphabet") {
+      form.set("vars[orderby]", "post_title");
+      form.set("vars[order]", "ASC");
+    } else if (order === "new-manga") {
+      form.set("vars[orderby]", "date");
+      form.set("vars[order]", "DESC");
+    }
+    const statuses = url.searchParams.getAll("status[]");
+    if (statuses.length) {
+      form.set("vars[meta_query][0][key]", "_wp_manga_status");
+      form.set("vars[meta_query][0][compare]", "IN");
+      statuses.forEach((value, index) =>
+        form.set(`vars[meta_query][0][value][${index}]`, value),
+      );
+    }
+    const genres = url.searchParams.getAll("genre[]");
+    if (genres.length) {
+      form.set("vars[tax_query][0][taxonomy]", "wp-manga-genre");
+      form.set("vars[tax_query][0][field]", "slug");
+      genres.forEach((value, index) =>
+        form.set(`vars[tax_query][0][terms][${index}]`, value),
+      );
+    }
+    const endpoint = `${base.origin}/wp-admin/admin-ajax.php`;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 15_000);
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          ...NAV_HEADERS,
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-Requested-With": "XMLHttpRequest",
+          Referer: `${base.origin}/${directory}/`,
+        },
+        body: form.toString(),
+        signal: controller.signal,
+      });
+      const text = await response.text();
+      if (!response.ok)
+        throw classifyHttpStatus(
+          response.status,
+          text.slice(0, 4000),
+          manifest.source_key,
+          manifest.name,
+          endpoint,
+        );
+      return text;
+    } catch (error) {
+      if (error instanceof SourceError) throw error;
+      throw classifyRequestError(
+        error,
+        manifest.source_key,
+        manifest.name,
+        endpoint,
+      );
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  /** A catalogue page's HTML, from the directory or the AJAX listing. */
+  const catalogueText = (href: string) =>
+    browse === "ajax" ? ajaxCatalogue(href) : http.getText(href);
   class MadaraHttp extends HttpClient {
     override async getText(path: string) {
       return cache.getOrSet(path, async () => {
@@ -294,9 +400,7 @@ export function createMadaraSite(
       resolvePagination(pagination, { limit: 30 }),
       manifest.source_key,
       async (page) =>
-        parseCards(
-          await http.getText(catalogueUrl("", category, active, page)),
-        ),
+        parseCards(await catalogueText(catalogueUrl("", category, active, page))),
     );
   source.searchManga = async (query = "", pagination, active = {}) =>
     collectSequentialPages(
@@ -304,7 +408,7 @@ export function createMadaraSite(
       manifest.source_key,
       async (page) =>
         parseCards(
-          await http.getText(catalogueUrl(query, undefined, active, page)),
+          await catalogueText(catalogueUrl(query, undefined, active, page)),
         ),
     );
   source.resolveMangaUrl = async (value) => {
@@ -326,7 +430,7 @@ export function createMadaraSite(
   return attachHtmlCatalogue(source, {
     getText: async (path) => {
       try {
-        return await http.getText(path);
+        return await catalogueText(new URL(path, base).href);
       } catch (error) {
         // A "Load more" listing gives no last-page evidence: a 404 past the first page is
         // its end, as in fetchManga.
@@ -346,6 +450,16 @@ export function createMadaraSite(
     // Many installs page with an AJAX "Load more" button (#navigation-ajax) instead of a
     // next link; behind it is the same /page/N/ listing.
     next: (text, current) => {
+      if (browse === "ajax") {
+        // The AJAX listing has no next link: a full page means there may be another.
+        if (parseCards(text).length < AJAX_PAGE_SIZE) return undefined;
+        const next = new URL(current);
+        next.pathname = next.pathname.replace(
+          /\/page\/(\d+)\/$/,
+          (_, page: string) => `/page/${Number(page) + 1}/`,
+        );
+        return next.pathname !== current.pathname ? next.href : undefined;
+      }
       const link = htmlNext(text, current);
       if (!link && !load(text)("#navigation-ajax, .navigation-ajax").length)
         return undefined;

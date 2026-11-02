@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangamaniacs",
+  "name": "MangaManiacs",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MangaManiacs: a Madara-theme manga site.",
+  "base_url": "https://mangamaniacs.org",
+  "allowed_hosts": [
+    "mangamaniacs.org"
+  ],
+  "content_rating": "nsfw"
+}

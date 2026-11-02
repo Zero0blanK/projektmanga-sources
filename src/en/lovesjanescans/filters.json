@@ -1,0 +1,139 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "action",
+        "value": "action"
+      },
+      {
+        "label": "adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "boys",
+        "value": "boys"
+      },
+      {
+        "label": "childhood friends",
+        "value": "childhood-friends"
+      },
+      {
+        "label": "chinese",
+        "value": "chinese"
+      },
+      {
+        "label": "comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "drama",
+        "value": "drama"
+      },
+      {
+        "label": "ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "enemy",
+        "value": "enemy"
+      },
+      {
+        "label": "fighting",
+        "value": "fighting"
+      },
+      {
+        "label": "fun",
+        "value": "fun"
+      },
+      {
+        "label": "girl",
+        "value": "girl"
+      },
+      {
+        "label": "horrow",
+        "value": "horrow"
+      },
+      {
+        "label": "manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "marriage",
+        "value": "marriage"
+      },
+      {
+        "label": "romance",
+        "value": "romance"
+      },
+      {
+        "label": "school",
+        "value": "school"
+      },
+      {
+        "label": "university",
+        "value": "university"
+      },
+      {
+        "label": "workplace",
+        "value": "workplace"
+      }
+    ]
+  }
+]

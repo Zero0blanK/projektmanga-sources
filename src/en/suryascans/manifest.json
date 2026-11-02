@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "suryascans",
+  "name": "Genz Toons",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Genz Toons: a Keyoapp-theme manga site.",
+  "base_url": "https://genztoons.org",
+  "allowed_hosts": [
+    "genztoons.org"
+  ],
+  "content_rating": "safe"
+}

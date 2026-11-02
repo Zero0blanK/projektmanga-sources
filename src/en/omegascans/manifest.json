@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "omegascans",
+  "name": "Omega Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Omega Scans: a HeanCMS-theme manga site.",
+  "base_url": "https://omegascans.org",
+  "allowed_hosts": [
+    "omegascans.org"
+  ],
+  "content_rating": "nsfw"
+}

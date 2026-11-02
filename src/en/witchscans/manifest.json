@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "witchscans",
+  "name": "WitchScans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "WitchScans: a VineTheme-theme manga site.",
+  "base_url": "https://witchtoons.net",
+  "allowed_hosts": [
+    "witchtoons.net"
+  ],
+  "content_rating": "safe"
+}

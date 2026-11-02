@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "keroscans",
+  "name": "KeroScans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "KeroScans: a VineTheme-theme manga site.",
+  "base_url": "https://keroscans.net",
+  "allowed_hosts": [
+    "keroscans.net"
+  ],
+  "content_rating": "mixed"
+}

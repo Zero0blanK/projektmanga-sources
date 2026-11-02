@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "rosesquadscans",
+  "name": "Rose Squad Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Rose Squad Scans: a Madara-theme manga site.",
+  "base_url": "https://rosesquadscans.aishiteru.org",
+  "allowed_hosts": [
+    "rosesquadscans.aishiteru.org"
+  ],
+  "content_rating": "nsfw",
+  "draft": true,
+  "draft_reason": "Chapter pages come back without readable images (checked 2026-11-02); browse, search, details and chapter lists work."
+}

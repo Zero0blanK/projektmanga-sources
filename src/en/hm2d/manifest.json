@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hm2d",
+  "name": "HM2D",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "HM2D: a Madara-theme manga site.",
+  "base_url": "https://doujindistrict.com",
+  "allowed_hosts": [
+    "doujindistrict.com"
+  ],
+  "content_rating": "nsfw"
+}

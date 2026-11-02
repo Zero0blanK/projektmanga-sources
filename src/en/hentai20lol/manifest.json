@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hentai20lol",
+  "name": "Hentai20 (Unoriginal)",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Hentai20 (Unoriginal): a Yiimanga-theme manga site.",
+  "base_url": "https://hentai20.lol",
+  "allowed_hosts": [
+    "hentai20.lol"
+  ],
+  "content_rating": "nsfw"
+}

@@ -3,7 +3,7 @@ import test from "node:test";
 import { readFile } from "node:fs/promises";
 import { discoverSourceDirectories } from "../scripts/source-layout.mjs";
 
-test("all adapters have fixture coverage; the ported waves publish 59 English and 10 Japanese sources and hold 10 Japanese drafts", async () => {
+test("all adapters have fixture coverage; the ported waves publish 59 English and 10 Japanese sources and hold 10 Japanese drafts, and the generated wave is registered", async () => {
   const legacy = JSON.parse(
     await readFile(
       new URL("./fixtures/source-search-fixtures.json", import.meta.url),
@@ -33,6 +33,19 @@ test("all adapters have fixture coverage; the ported waves publish 59 English an
     await readFile(new URL("./fixtures/source-wave-3.json", import.meta.url), "utf8"),
   ).map((port) => port.key);
   assert.equal(wave3.length, 15);
+  // The first generated wave (2026-11-02); see keiyoushi-themes-1.test.mjs, which checks
+  // its own listing and drafts.
+  const generated = JSON.parse(
+    await readFile(new URL("./fixtures/keiyoushi-themes-1.json", import.meta.url), "utf8"),
+  ).map((port) => port.key);
+  assert.equal(generated.length, 32);
+  // The second generated wave, on the engines added for it; keiyoushi-themes-2.test.mjs.
+  generated.push(
+    ...JSON.parse(
+      await readFile(new URL("./fixtures/keiyoushi-themes-2.json", import.meta.url), "utf8"),
+    ).map((port) => port.key),
+  );
+  assert.equal(generated.length, 63);
   const keys = [...english.map((port) => port.key), "flamecomics", ...japanese, ...wave2, ...wave3];
   assert.equal(keys.length, 80);
   assert.equal(new Set(keys).size, 80);
@@ -42,7 +55,7 @@ test("all adapters have fixture coverage; the ported waves publish 59 English an
   const dedicated = ['akazascans', 'imhentai', 'komiku', 'sushiscan'];
   assert.deepEqual(
     sources.map((source) => source.key).sort(),
-    [...Object.keys(legacy), ...dedicated, ...keys].sort(),
+    [...Object.keys(legacy), ...dedicated, ...keys, ...generated].sort(),
   );
   const index = JSON.parse(
     await readFile(new URL("../index.json", import.meta.url), "utf8"),

@@ -1,0 +1,232 @@
+[
+  {
+    "key": "dankefurslesen",
+    "engine": "guya",
+    "upstream": "src/en/dankefurslesen",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/dankefurslesen"
+  },
+  {
+    "key": "divascans",
+    "engine": "vinetheme",
+    "upstream": "src/en/divascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/divascans"
+  },
+  {
+    "key": "drakescans",
+    "engine": "vinetheme",
+    "upstream": "src/en/drakescans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/drakescans"
+  },
+  {
+    "key": "elftoon",
+    "engine": "vinetheme",
+    "upstream": "src/en/elftoon",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/elftoon"
+  },
+  {
+    "key": "fourporncomic",
+    "engine": "yiimanga",
+    "mangaPath": "comic",
+    "upstream": "src/en/fourporncomic",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/fourporncomic"
+  },
+  {
+    "key": "guya",
+    "engine": "guya",
+    "upstream": "src/en/guya",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/guya"
+  },
+  {
+    "key": "hachirumi",
+    "engine": "guya",
+    "upstream": "src/en/hachirumi",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hachirumi"
+  },
+  {
+    "key": "hentai20lol",
+    "engine": "yiimanga",
+    "mangaPath": "manga",
+    "upstream": "src/en/hentai20lol",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/hentai20lol"
+  },
+  {
+    "key": "kaynscans",
+    "engine": "vinetheme",
+    "upstream": "src/en/kaynscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/kaynscans"
+  },
+  {
+    "key": "keroscans",
+    "engine": "vinetheme",
+    "upstream": "src/en/keroscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/keroscans"
+  },
+  {
+    "key": "luascans",
+    "engine": "heancms",
+    "upstream": "src/en/luascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/luascans",
+    "draft": true
+  },
+  {
+    "key": "manhwa18tx",
+    "engine": "yiimanga",
+    "mangaPath": "manhwa",
+    "upstream": "src/en/manhwa18tx",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwa18tx"
+  },
+  {
+    "key": "manhwaddict",
+    "engine": "yiimanga",
+    "mangaPath": "manga",
+    "upstream": "src/en/manhwaddict",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwaddict"
+  },
+  {
+    "key": "manhwagalaxy",
+    "engine": "yiimanga",
+    "mangaPath": "manhwa",
+    "upstream": "src/en/manhwagalaxy",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwagalaxy"
+  },
+  {
+    "key": "manhwaonline",
+    "engine": "yiimanga",
+    "mangaPath": "manga",
+    "upstream": "src/en/manhwaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/manhwaonline"
+  },
+  {
+    "key": "myreadingcomic",
+    "engine": "yiimanga",
+    "mangaPath": "comic",
+    "upstream": "src/en/myreadingcomic",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/myreadingcomic"
+  },
+  {
+    "key": "omegascans",
+    "engine": "heancms",
+    "upstream": "src/en/omegascans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/omegascans"
+  },
+  {
+    "key": "readattackontitanshingekinokyojinmanga",
+    "engine": "mangacatalog",
+    "titles": [
+      "shingeki-no-kyojin"
+    ],
+    "upstream": "src/en/readattackontitanshingekinokyojinmanga",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readattackontitanshingekinokyojinmanga"
+  },
+  {
+    "key": "readberserkmanga",
+    "engine": "mangacatalog",
+    "titles": [
+      "berserk"
+    ],
+    "layout": "card",
+    "upstream": "src/en/readberserkmanga",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readberserkmanga"
+  },
+  {
+    "key": "readchainsawmanmangaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "chainsaw-man"
+    ],
+    "upstream": "src/en/readchainsawmanmangaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readchainsawmanmangaonline"
+  },
+  {
+    "key": "readfairytailedenszeromangaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "edens-zero"
+    ],
+    "upstream": "src/en/readfairytailedenszeromangaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readfairytailedenszeromangaonline"
+  },
+  {
+    "key": "readjujutsukaisenmangaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "jujutsu-kaisen"
+    ],
+    "upstream": "src/en/readjujutsukaisenmangaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readjujutsukaisenmangaonline"
+  },
+  {
+    "key": "readkingdommangaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "kingdom"
+    ],
+    "upstream": "src/en/readkingdommangaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readkingdommangaonline"
+  },
+  {
+    "key": "readnanatsunotaizai7deadlysinsmangaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "four-horsemen-of-the-apocalypse"
+    ],
+    "upstream": "src/en/readnanatsunotaizai7deadlysinsmangaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readnanatsunotaizai7deadlysinsmangaonline"
+  },
+  {
+    "key": "readonepiecemangaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "one-piece"
+    ],
+    "upstream": "src/en/readonepiecemangaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readonepiecemangaonline"
+  },
+  {
+    "key": "readonepunchmanmangaonlinetwo",
+    "engine": "mangacatalog",
+    "titles": [
+      "one-punch-man"
+    ],
+    "layout": "card",
+    "upstream": "src/en/readonepunchmanmangaonlinetwo",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readonepunchmanmangaonlinetwo"
+  },
+  {
+    "key": "readsololevelingmangamanhwaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "solo-leveling"
+    ],
+    "upstream": "src/en/readsololevelingmangamanhwaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readsololevelingmangamanhwaonline"
+  },
+  {
+    "key": "readtokyoghoulretokyoghoulmangaonline",
+    "engine": "mangacatalog",
+    "titles": [
+      "tokyo-ghoul"
+    ],
+    "upstream": "src/en/readtokyoghoulretokyoghoulmangaonline",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/readtokyoghoulretokyoghoulmangaonline"
+  },
+  {
+    "key": "valirscans",
+    "engine": "vinetheme",
+    "upstream": "src/en/valirscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/valirscans"
+  },
+  {
+    "key": "witchscans",
+    "engine": "vinetheme",
+    "upstream": "src/en/witchscans",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/witchscans"
+  },
+  {
+    "key": "yaoiscanme",
+    "engine": "yiimanga",
+    "mangaPath": "read",
+    "upstream": "src/en/yaoiscanme",
+    "reference": "https://github.com/keiyoushi/extensions-source/tree/efa93f5a35/src/en/yaoiscanme"
+  }
+]

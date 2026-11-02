@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "elftoon",
+  "name": "Elf Toon",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Elf Toon: a VineTheme-theme manga site.",
+  "base_url": "https://elftoon.net",
+  "allowed_hosts": [
+    "elftoon.net"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "guya",
+  "name": "Guya",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Guya: a Guya-theme manga site.",
+  "base_url": "https://guya.cubari.moe",
+  "allowed_hosts": [
+    "guya.cubari.moe"
+  ],
+  "content_rating": "safe"
+}

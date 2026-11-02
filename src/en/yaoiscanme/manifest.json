@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "yaoiscanme",
+  "name": "YaoiScan (Unoriginal)",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "YaoiScan (Unoriginal): a Yiimanga-theme manga site.",
+  "base_url": "https://yaoiscan.me",
+  "allowed_hosts": [
+    "yaoiscan.me"
+  ],
+  "content_rating": "mixed"
+}

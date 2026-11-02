@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "topmanhuanet",
+  "name": "TopManhua.net",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "TopManhua.net: a Madara-theme manga site.",
+  "base_url": "https://topmanhua.net",
+  "allowed_hosts": [
+    "topmanhua.net"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "Chapter page images fail with Cloudflare error 526 at the site's origin (checked 2026-11-02); browse, search, details and chapter lists work."
+}

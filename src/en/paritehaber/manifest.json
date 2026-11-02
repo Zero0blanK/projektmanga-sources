@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "paritehaber",
+  "name": "Paritehaber",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Paritehaber: a Madara-theme manga site.",
+  "base_url": "https://www.paritehaber.com",
+  "allowed_hosts": [
+    "paritehaber.com"
+  ],
+  "content_rating": "nsfw"
+}

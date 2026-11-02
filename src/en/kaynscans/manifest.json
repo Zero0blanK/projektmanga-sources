@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "kaynscans",
+  "name": "Kayn Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Kayn Scans: a VineTheme-theme manga site.",
+  "base_url": "https://kaynscans.com",
+  "allowed_hosts": [
+    "kaynscans.com"
+  ],
+  "content_rating": "safe"
+}

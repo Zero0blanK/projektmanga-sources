@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "dankefurslesen",
+  "name": "Danke fürs Lesen",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Danke fürs Lesen: a Guya-theme manga site.",
+  "base_url": "https://danke.moe",
+  "allowed_hosts": [
+    "danke.moe"
+  ],
+  "content_rating": "mixed"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhwaden",
+  "name": "ManhwaDen",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "ManhwaDen: a Madara-theme manga site.",
+  "base_url": "https://www.manhwaden.com",
+  "allowed_hosts": [
+    "manhwaden.com"
+  ],
+  "content_rating": "nsfw"
+}

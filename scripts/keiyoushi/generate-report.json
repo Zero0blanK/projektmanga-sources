@@ -1,0 +1,1588 @@
+{
+  "revision": "efa93f5a3537856fe830450bbe33f69d21d28167",
+  "generated": [
+    {
+      "key": "comicsvalley",
+      "upstream": "src/all/comicsvalley",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "comics-new"
+      }
+    },
+    {
+      "key": "mangacrazy",
+      "upstream": "src/all/mangacrazy",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "allporncomicio",
+      "upstream": "src/en/allporncomicio",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "apcomics",
+      "upstream": "src/en/apcomics",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "asmotoon",
+      "upstream": "src/en/asmotoon",
+      "theme": "keyoapp",
+      "options": {}
+    },
+    {
+      "key": "bunmanga",
+      "upstream": "src/en/bunmanga",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "cucumbermanga",
+      "upstream": "src/en/cucumbermanga",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "dankefurslesen",
+      "upstream": "src/en/dankefurslesen",
+      "theme": "guya",
+      "options": {}
+    },
+    {
+      "key": "decadencescans",
+      "upstream": "src/en/decadencescans",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "divascans",
+      "upstream": "src/en/divascans",
+      "theme": "vinetheme",
+      "options": {}
+    },
+    {
+      "key": "drakescans",
+      "upstream": "src/en/drakescans",
+      "theme": "vinetheme",
+      "options": {}
+    },
+    {
+      "key": "elftoon",
+      "upstream": "src/en/elftoon",
+      "theme": "vinetheme",
+      "options": {}
+    },
+    {
+      "key": "fourporncomic",
+      "upstream": "src/en/fourporncomic",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "comic",
+        "searchParam": "q",
+        "popularPath": "porn-comics"
+      }
+    },
+    {
+      "key": "gakamangas",
+      "upstream": "src/en/gakamangas",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "gingertoon",
+      "upstream": "src/en/gingertoon",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "guya",
+      "upstream": "src/en/guya",
+      "theme": "guya",
+      "options": {}
+    },
+    {
+      "key": "hachirumi",
+      "upstream": "src/en/hachirumi",
+      "theme": "guya",
+      "options": {}
+    },
+    {
+      "key": "hadesscans",
+      "upstream": "src/en/hadesscans",
+      "theme": "mangathemesia",
+      "options": {
+        "cataloguePath": "/manga/"
+      }
+    },
+    {
+      "key": "hentai1io",
+      "upstream": "src/en/hentai1io",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "hentai20lol",
+      "upstream": "src/en/hentai20lol",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "manga",
+        "popularPath": "manga-lists"
+      }
+    },
+    {
+      "key": "hentaidesi",
+      "upstream": "src/en/hentaidesi",
+      "theme": "mangathemesia",
+      "options": {
+        "cataloguePath": "/manga/"
+      }
+    },
+    {
+      "key": "hentaixcomic",
+      "upstream": "src/en/hentaixcomic",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "hentaixyuri",
+      "upstream": "src/en/hentaixyuri",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "hm2d",
+      "upstream": "src/en/hm2d",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "read",
+        "browse": "ajax"
+      }
+    },
+    {
+      "key": "hunlightcomics",
+      "upstream": "src/en/hunlightcomics",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "m",
+        "browse": "ajax"
+      }
+    },
+    {
+      "key": "kaliscanorg",
+      "upstream": "src/en/kaliscanorg",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "kaynscans",
+      "upstream": "src/en/kaynscans",
+      "theme": "vinetheme",
+      "options": {}
+    },
+    {
+      "key": "keroscans",
+      "upstream": "src/en/keroscans",
+      "theme": "vinetheme",
+      "options": {}
+    },
+    {
+      "key": "ksgroupscans",
+      "upstream": "src/en/ksgroupscans",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "linkmanga",
+      "upstream": "src/en/linkmanga",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "lovesjanescans",
+      "upstream": "src/en/lovesjanescans",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": "paginated",
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "luascans",
+      "upstream": "src/en/luascans",
+      "theme": "heancms",
+      "options": {
+        "latestSortBy": "asc"
+      }
+    },
+    {
+      "key": "madaradex",
+      "upstream": "src/en/madaradex",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "title"
+      }
+    },
+    {
+      "key": "manga18free",
+      "upstream": "src/en/manga18free",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "manga18x",
+      "upstream": "src/en/manga18x",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "mangaforfreecom",
+      "upstream": "src/en/mangaforfreecom",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "mangamaniacs",
+      "upstream": "src/en/mangamaniacs",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "mangaparktv",
+      "upstream": "src/en/mangaparktv",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manhwa",
+        "browse": "ajax"
+      }
+    },
+    {
+      "key": "manhwa18tx",
+      "upstream": "src/en/manhwa18tx",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "manhwa",
+        "searchParam": "q"
+      }
+    },
+    {
+      "key": "manhwacomics",
+      "upstream": "src/en/manhwacomics",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manhwa"
+      }
+    },
+    {
+      "key": "manhwaddict",
+      "upstream": "src/en/manhwaddict",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "manga",
+        "searchParam": "q"
+      }
+    },
+    {
+      "key": "manhwaden",
+      "upstream": "src/en/manhwaden",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "manhwagalaxy",
+      "upstream": "src/en/manhwagalaxy",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "manhwa",
+        "searchParam": "q"
+      }
+    },
+    {
+      "key": "manhwahubto",
+      "upstream": "src/en/manhwahubto",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "manhwa"
+      }
+    },
+    {
+      "key": "manhwaonline",
+      "upstream": "src/en/manhwaonline",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "manga",
+        "popularPath": "webtoons"
+      }
+    },
+    {
+      "key": "manhwatoon",
+      "upstream": "src/en/manhwatoon",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manhwa",
+        "browse": "ajax"
+      }
+    },
+    {
+      "key": "myreadingcomic",
+      "upstream": "src/en/myreadingcomic",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "comic",
+        "searchParam": "q",
+        "popularPath": "porn-comics"
+      }
+    },
+    {
+      "key": "octopusmanga",
+      "upstream": "src/en/octopusmanga",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "omegascans",
+      "upstream": "src/en/omegascans",
+      "theme": "heancms",
+      "options": {}
+    },
+    {
+      "key": "orchisasia",
+      "upstream": "src/en/orchisasia",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "comic"
+      }
+    },
+    {
+      "key": "paritehaber",
+      "upstream": "src/en/paritehaber",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "petrotechsociety",
+      "upstream": "src/en/petrotechsociety",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "pornhwaz",
+      "upstream": "src/en/pornhwaz",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": false,
+        "directory": "webtoon",
+        "browse": "ajax"
+      }
+    },
+    {
+      "key": "readattackontitanshingekinokyojinmanga",
+      "upstream": "src/en/readattackontitanshingekinokyojinmanga",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Shingeki No Kyojin",
+            "slug": "shingeki-no-kyojin"
+          },
+          {
+            "title": "Colored",
+            "slug": "shingeki-no-kyojin-colored"
+          },
+          {
+            "title": "Before the Fall",
+            "slug": "shingeki-no-kyojin-before-the-fall"
+          },
+          {
+            "title": "Lost Girls",
+            "slug": "shingeki-no-kyojin-lost-girls"
+          },
+          {
+            "title": "No Regrets",
+            "slug": "attack-on-titan-no-regrets"
+          },
+          {
+            "title": "Junior High",
+            "slug": "attack-on-titan-junior-high"
+          },
+          {
+            "title": "Guidebook",
+            "slug": "attack-on-titan-guidebook-inside-outside"
+          },
+          {
+            "title": "Harsh Mistress",
+            "slug": "attack-on-titan-harsh-mistress-of-the-city"
+          },
+          {
+            "title": "Anthology",
+            "slug": "attack-on-titan-anthology"
+          },
+          {
+            "title": "Art Book",
+            "slug": "attack-on-titan-exclusive-art-book"
+          },
+          {
+            "title": "Spoof",
+            "slug": "spoof-on-titan"
+          },
+          {
+            "title": "No Regrets Colored",
+            "slug": "attack-on-titan-no-regrets-colored"
+          },
+          {
+            "title": "BTF Light Novel",
+            "slug": "attack-on-titan-before-the-fall-light-novel"
+          },
+          {
+            "title": "Best of SNK",
+            "slug": "the-best-of-attack-on-titan-in-color"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readberserkmanga",
+      "upstream": "src/en/readberserkmanga",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Berserk",
+            "slug": "berserk"
+          },
+          {
+            "title": "Guidebook",
+            "slug": "berserk-official-guidebook"
+          },
+          {
+            "title": "Colored",
+            "slug": "berserk-colored"
+          },
+          {
+            "title": "Duranki",
+            "slug": "duranki"
+          },
+          {
+            "title": "Gigantomakhia",
+            "slug": "gigantomakhia"
+          },
+          {
+            "title": "Futatabi",
+            "slug": "futatabi"
+          },
+          {
+            "title": "Berserk Spoilers & RAW",
+            "slug": "berserk-spoilers-raw"
+          }
+        ],
+        "layout": "card"
+      }
+    },
+    {
+      "key": "readchainsawmanmangaonline",
+      "upstream": "src/en/readchainsawmanmangaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Chainsaw Man",
+            "slug": "chainsaw-man"
+          },
+          {
+            "title": "17-21",
+            "slug": "17-21-fujimoto-tatsuki-tanpenshuu"
+          },
+          {
+            "title": "Fire Punch",
+            "slug": "fire-punch"
+          },
+          {
+            "title": "Nayuta",
+            "slug": "yogen-no-nayuta"
+          },
+          {
+            "title": "Look Back",
+            "slug": "look-back"
+          },
+          {
+            "title": "Light Novel",
+            "slug": "chainsaw-man-buddy-stories"
+          },
+          {
+            "title": "Colored",
+            "slug": "chainsaw-man-colored"
+          },
+          {
+            "title": "Listen to Song",
+            "slug": "futsuu-ni-kiite-kure"
+          },
+          {
+            "title": "Goodbye, Eri",
+            "slug": "sayonara-eri-goodbye-eri"
+          },
+          {
+            "title": "22-26",
+            "slug": "22-26-fujimoto-tatsuki-tanpenshuu"
+          },
+          {
+            "title": "Chainsaw Man Colored",
+            "slug": "chainsaw-man-colored"
+          },
+          {
+            "title": "Chainsaw Man: Buddy Stories",
+            "slug": "chainsaw-man-buddy-stories"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readfairytailedenszeromangaonline",
+      "upstream": "src/en/readfairytailedenszeromangaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Eden's Zero",
+            "slug": "edens-zero"
+          },
+          {
+            "title": "Fairy Tail",
+            "slug": "fairy-tail"
+          },
+          {
+            "title": "FT Zero",
+            "slug": "fairy-tail-zero"
+          },
+          {
+            "title": "FT City Hero",
+            "slug": "fairy-tail-city-hero"
+          },
+          {
+            "title": "Hero’s",
+            "slug": "heros"
+          },
+          {
+            "title": "FT Happy Adv",
+            "slug": "fairy-tail-happys-grand-adventure"
+          },
+          {
+            "title": "FT 100 Year",
+            "slug": "fairy-tail-100-years-quest"
+          },
+          {
+            "title": "FT Ice Trail",
+            "slug": "fairy-tail-ice-trail"
+          },
+          {
+            "title": "FT x Taizai",
+            "slug": "fairy-tail-x-nanatsu-no-taizai-christmas-special"
+          },
+          {
+            "title": "Parasyte x FT",
+            "slug": "parasyte-x-fairy-tail"
+          },
+          {
+            "title": "Gaiden 1",
+            "slug": "fairy-tail-gaiden-raigo-issen"
+          },
+          {
+            "title": "FT x Rave",
+            "slug": "fairy-tail-x-rave"
+          },
+          {
+            "title": "Monster Hunter",
+            "slug": "monster-hunter-orage"
+          },
+          {
+            "title": "Rave Master",
+            "slug": "rave-master"
+          },
+          {
+            "title": "Dead Rock",
+            "slug": "dead-rock"
+          },
+          {
+            "title": "Fairy Girls",
+            "slug": "fairy-girls"
+          },
+          {
+            "title": "Gaiden 4",
+            "slug": "fairy-tail-gaiden-raigo-issen"
+          },
+          {
+            "title": "Gaiden 2",
+            "slug": "fairy-tail-gaiden-kengami-no-souryuu"
+          },
+          {
+            "title": "Gaiden 3",
+            "slug": "fairy-tail-gaiden-road-knight"
+          },
+          {
+            "title": "FT x 7DS",
+            "slug": "fairy-tail-x-nanatsu-no-taizai-christmas-special"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readjujutsukaisenmangaonline",
+      "upstream": "src/en/readjujutsukaisenmangaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Jujutsu Kaisen",
+            "slug": "jujutsu-kaisen"
+          },
+          {
+            "title": "Jujutsu Kaisen 0",
+            "slug": "jujutsu-kaisen-0"
+          },
+          {
+            "title": "JJK Colored",
+            "slug": "jujutsu-kaisen-colored"
+          },
+          {
+            "title": "Fan Scan",
+            "slug": "jujutsu-kaisen-fan-scan"
+          },
+          {
+            "title": "JJK Light Novel",
+            "slug": "jujutsu-kaisen-first-light-novel"
+          },
+          {
+            "title": "2nd Light Novel",
+            "slug": "jujutsu-kaisen-second-light-novel"
+          },
+          {
+            "title": "No.9",
+            "slug": "no-9"
+          },
+          {
+            "title": "Fanbook",
+            "slug": "jujutsu-kaisen-official-fanbook"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readkingdommangaonline",
+      "upstream": "src/en/readkingdommangaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Kingdom",
+            "slug": "kingdom"
+          },
+          {
+            "title": "Li Mu",
+            "slug": "li-mu"
+          },
+          {
+            "title": "Meng Wu & Chu Zi",
+            "slug": "meng-wu-and-chu-zi-one-shot"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readnanatsunotaizai7deadlysinsmangaonline",
+      "upstream": "src/en/readnanatsunotaizai7deadlysinsmangaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Four Horsemen of the Apocalypse",
+            "slug": "four-horsemen-of-the-apocalypse"
+          },
+          {
+            "title": "7DS: School",
+            "slug": "mayoe-nanatsu-no-taizai-gakuen"
+          },
+          {
+            "title": "7DS:7 Days",
+            "slug": "nanatsu-no-taizai-seven-days"
+          },
+          {
+            "title": "7DS:Vampires",
+            "slug": "nanatsu-no-taizai-vampires-of-edinburgh"
+          },
+          {
+            "title": "Queen of Altar",
+            "slug": "the-queen-of-the-altar"
+          },
+          {
+            "title": "7DS: 7 Colors",
+            "slug": "nanatsu-no-taizai-nanairo-no-tsuioku"
+          },
+          {
+            "title": "7DS x FT",
+            "slug": "fairy-tail-x-nanatsu-no-taizai-christmas-special"
+          },
+          {
+            "title": "Kongou Banchou",
+            "slug": "kongou-banchou"
+          },
+          {
+            "title": "7DS:7 Scars",
+            "slug": "nanatsu-no-taizai-the-seven-scars-which-they-left-behind"
+          },
+          {
+            "title": "7 Deadly Sins",
+            "slug": "nanatsu-no-taizai"
+          },
+          {
+            "title": "Mokushiroku no Yonkishi",
+            "slug": "four-horsemen-of-the-apocalypse"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readonepiecemangaonline",
+      "upstream": "src/en/readonepiecemangaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "One Piece",
+            "slug": "one-piece"
+          },
+          {
+            "title": "Colored",
+            "slug": "one-piece-digital-colored-comics"
+          },
+          {
+            "title": "Soma x Sanji",
+            "slug": "shokugeki-no-sanji-one-shot"
+          },
+          {
+            "title": "OP x Toriko",
+            "slug": "one-piece-x-toriko"
+          },
+          {
+            "title": "Party",
+            "slug": "one-piece-party"
+          },
+          {
+            "title": "DB x OP",
+            "slug": "dragon-ball-x-one-piece"
+          },
+          {
+            "title": "Wanted!",
+            "slug": "wanted-one-piece"
+          },
+          {
+            "title": "Ace's Story",
+            "slug": "one-piece-ace-s-story"
+          },
+          {
+            "title": "Omake",
+            "slug": "one-piece-omake"
+          },
+          {
+            "title": "Vivre Card",
+            "slug": "vivre-card-databook"
+          },
+          {
+            "title": "Pirate Recipes",
+            "slug": "one-piece-pirate-recipes"
+          },
+          {
+            "title": "Databook",
+            "slug": "one-piece-databook"
+          },
+          {
+            "title": "Ace's Story Manga",
+            "slug": "one-piece-ace-story-manga"
+          },
+          {
+            "title": "OP Academy",
+            "slug": "one-piece-academy"
+          },
+          {
+            "title": "MONSTERS",
+            "slug": "monsters"
+          },
+          {
+            "title": "Zoro Novel",
+            "slug": "one-piece-novel-zoro"
+          },
+          {
+            "title": "OP in Love",
+            "slug": "one-piece-in-love"
+          },
+          {
+            "title": "Heroines",
+            "slug": "one-piece-novel-heroines"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readonepunchmanmangaonlinetwo",
+      "upstream": "src/en/readonepunchmanmangaonlinetwo",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "One Punch Man",
+            "slug": "one-punch-man"
+          },
+          {
+            "title": "Official",
+            "slug": "one-punch-man-official"
+          },
+          {
+            "title": "Onepunch-Man (ONE)",
+            "slug": "onepunch-man-one"
+          },
+          {
+            "title": "Colored",
+            "slug": "one-punch-man-colored"
+          },
+          {
+            "title": "Mob Psycho 100",
+            "slug": "mob-psycho-100"
+          },
+          {
+            "title": "Reigen",
+            "slug": "reigen"
+          },
+          {
+            "title": "Versus (ONE)",
+            "slug": "versus"
+          },
+          {
+            "title": "Bug Ego",
+            "slug": "bug-ego"
+          },
+          {
+            "title": "Eyeshield 21",
+            "slug": "eyeshield-21"
+          }
+        ],
+        "layout": "card"
+      }
+    },
+    {
+      "key": "readsololevelingmangamanhwaonline",
+      "upstream": "src/en/readsololevelingmangamanhwaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Solo Leveling Manhwa",
+            "slug": "solo-leveling"
+          },
+          {
+            "title": "Solo Leveling Light Novel",
+            "slug": "solo-leveling-light-novel"
+          },
+          {
+            "title": "Solo Leveling : Ragnarok",
+            "slug": "solo-leveling-ragnarok"
+          },
+          {
+            "title": "SL: Ragnarok Novel",
+            "slug": "solo-leveling-ragnarok-novel"
+          }
+        ]
+      }
+    },
+    {
+      "key": "readtokyoghoulretokyoghoulmangaonline",
+      "upstream": "src/en/readtokyoghoulretokyoghoulmangaonline",
+      "theme": "mangacatalog",
+      "options": {
+        "titles": [
+          {
+            "title": "Tokyo Ghoul",
+            "slug": "tokyo-ghoul"
+          },
+          {
+            "title": "Tokyo Ghoul Jack",
+            "slug": "tokyo-ghoul-jack"
+          },
+          {
+            "title": "Tokyo Ghoul: re Colored",
+            "slug": "tokyo-ghoulre-colored"
+          },
+          {
+            "title": "Gorilla",
+            "slug": "this-gorilla-will-die-in-1-day"
+          },
+          {
+            "title": "Zakki",
+            "slug": "tokyo-ghoul-zakki"
+          },
+          {
+            "title": "Light Novel",
+            "slug": "tokyo-ghoul-re-light-novels"
+          },
+          {
+            "title": "Choujin X",
+            "slug": "choujin-x"
+          },
+          {
+            "title": "Tokyo Ghoul re",
+            "slug": "tokyo-ghoulre"
+          }
+        ]
+      }
+    },
+    {
+      "key": "renascans",
+      "upstream": "src/en/renascans",
+      "theme": "iken",
+      "options": {}
+    },
+    {
+      "key": "rosesquadscans",
+      "upstream": "src/en/rosesquadscans",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "series",
+        "browse": "ajax"
+      }
+    },
+    {
+      "key": "suryascans",
+      "upstream": "src/en/suryascans",
+      "theme": "keyoapp",
+      "options": {}
+    },
+    {
+      "key": "topmanhuanet",
+      "upstream": "src/en/topmanhuanet",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "valirscans",
+      "upstream": "src/en/valirscans",
+      "theme": "vinetheme",
+      "options": {}
+    },
+    {
+      "key": "wearehunger",
+      "upstream": "src/en/wearehunger",
+      "theme": "madara",
+      "options": {
+        "ajaxChapters": true,
+        "directory": "manga"
+      }
+    },
+    {
+      "key": "witchscans",
+      "upstream": "src/en/witchscans",
+      "theme": "vinetheme",
+      "options": {}
+    },
+    {
+      "key": "yaoiscanme",
+      "upstream": "src/en/yaoiscanme",
+      "theme": "yiimanga",
+      "options": {
+        "mangaPath": "read",
+        "searchParam": "q"
+      }
+    }
+  ],
+  "hand": [
+    {
+      "upstream": "src/all/allporncomicsco",
+      "theme": "madara",
+      "why": "overrides archiveUrlSelector"
+    },
+    {
+      "upstream": "src/all/grabberzone",
+      "theme": "madara",
+      "why": "overrides chapterFromElement"
+    },
+    {
+      "upstream": "src/all/manhwadashraw",
+      "theme": "madara",
+      "why": "overrides mangaDetailsSelectorStatus, mangaDetailsSelectorDescription, pageListParseSelector"
+    },
+    {
+      "upstream": "src/all/seraphicdeviltry",
+      "theme": "madara",
+      "why": "several sources in one extension"
+    },
+    {
+      "upstream": "src/en/aquamanga",
+      "theme": "madara",
+      "why": "overrides archiveUrlSelector, searchQueryParameter, filterGenresSelector, mangaDetailsSelectorTitle, mangaDetailsSelectorThumbnail, mangaDetailsSelectorDescription, mangaDetailsSelectorStatus, mangaDetailsSelectorGenre, mangaDetailsSelectorAuthor, mangaDetailsSelectorArtist, chapterUrlSelector, chapterNameSelector, chapterDateSelector, archiveSelector, nextPageSelector, chapterListSelector"
+    },
+    {
+      "upstream": "src/en/artlapsa",
+      "theme": "keyoapp",
+      "why": "overrides altNameSelector, statusSelector, typeSelector, genreSelector, authorSelector, artistSelector, paidChapterSelector, latestUpdatesNextPageSelector, parseGenres, searchUrlBuilder, searchMangaSelector, parseSearchManga, pageListParse, Element"
+    },
+    {
+      "upstream": "src/en/battleinfivesecondsaftermeeting",
+      "theme": "madara",
+      "why": "overrides supportsLatest, mangaDetailsSelectorTitle, mangaDetailsSelectorAuthor, mangaDetailsSelectorArtist, mangaDetailsSelectorDescription, mangaDetailsSelectorThumbnail, mangaDetailsSelectorStatus, mangaDetailsSelectorTag, seriesTypeSelector, altNameSelector, parseChapterList, getChapterUrl"
+    },
+    {
+      "upstream": "src/en/brainrotcomics",
+      "theme": "madara",
+      "why": "overrides altNameSelector, parseDetails"
+    },
+    {
+      "upstream": "src/en/cartoonporn",
+      "theme": "madara",
+      "why": "overrides supportsLatest, mangaDetailsSelectorTitle, mangaDetailsSelectorThumbnail, mangaDetailsSelectorArtist, mangaDetailsSelectorGenre, archiveSelector, archiveManga, parseChapterList, parsePages"
+    },
+    {
+      "upstream": "src/en/comicasura",
+      "theme": "mangathemesia",
+      "why": "overrides seriesDetailsSelector, seriesTitleSelector, seriesThumbnailSelector, seriesDescriptionSelector, seriesGenreSelector, seriesStatusSelector, pageSelector, orderByFilterOptions, searchMangaUrl, searchMangaSelector, searchMangaFromElement, searchMangaNextPageSelector, chapterListSelector, chapterFromElement, parseGenres, popularFilter, latestFilter"
+    },
+    {
+      "upstream": "src/en/erisscans",
+      "theme": "keyoapp",
+      "why": "overrides altNameSelector, statusSelector, authorSelector, artistSelector, typeSelector"
+    },
+    {
+      "upstream": "src/en/frierenonline",
+      "theme": "madara",
+      "why": "overrides supportsLatest, supportsRelatedMangas, mangaDetailsSelectorTitle, mangaDetailsSelectorAuthor, mangaDetailsSelectorArtist, mangaDetailsSelectorStatus, mangaDetailsSelectorDescription, mangaDetailsSelectorThumbnail, mangaDetailsSelectorGenre, chapterUrlSelector, chapterListSelector, getChapterUrl"
+    },
+    {
+      "upstream": "src/en/gedecomix",
+      "theme": "madara",
+      "why": "overrides mangaDetailsSelectorThumbnail, archiveManga"
+    },
+    {
+      "upstream": "src/en/gourmetscans",
+      "theme": "madara",
+      "why": "overrides ajaxTemplate"
+    },
+    {
+      "upstream": "src/en/hentai4free",
+      "theme": "madara",
+      "why": "overrides chapterUrlSelector, chapterNameSelector, archiveSelector, Element, chapterListSelector, parsePages"
+    },
+    {
+      "upstream": "src/en/hentaixdickgirl",
+      "theme": "madara",
+      "why": "overrides parseDetails"
+    },
+    {
+      "upstream": "src/en/kitsunedawn",
+      "theme": "keyoapp",
+      "why": "overrides altNameSelector, statusSelector, typeSelector, genreSelector, authorSelector, artistSelector, paidChapterSelector, latestUpdatesNextPageSelector, parseGenres, searchUrlBuilder, searchMangaSelector, parseSearchManga, pageListParse, Element"
+    },
+    {
+      "upstream": "src/en/kunmangaonline",
+      "theme": "madara",
+      "why": "overrides archiveUrlSelector, archiveSelector, nextPageSelector, getChapterUrl, imageFromElement, getImageRequest"
+    },
+    {
+      "upstream": "src/en/lgbtics",
+      "theme": "madara",
+      "why": "overrides parseDetails"
+    },
+    {
+      "upstream": "src/en/magusmanga",
+      "theme": "iken",
+      "why": "overrides sortPagesByFilename"
+    },
+    {
+      "upstream": "src/en/mangagg",
+      "theme": "madara",
+      "why": "overrides imageFromElement"
+    },
+    {
+      "upstream": "src/en/mangahe",
+      "theme": "madara",
+      "why": "overrides parsePages"
+    },
+    {
+      "upstream": "src/en/manhwabuddy",
+      "theme": "yiimanga",
+      "why": "overrides supportsLatest"
+    },
+    {
+      "upstream": "src/en/meitoon",
+      "theme": "keyoapp",
+      "why": "overrides popularMangaSelector"
+    },
+    {
+      "upstream": "src/en/novelcrow",
+      "theme": "madara",
+      "why": "overrides mangaDetailsSelectorAuthor, archiveUrlBuilder"
+    },
+    {
+      "upstream": "src/en/nyanukafe",
+      "theme": "keyoapp",
+      "why": "overrides statusSelector, authorSelector, artistSelector, typeSelector, popularMangaSelector"
+    },
+    {
+      "upstream": "src/en/ragescans",
+      "theme": "mangathemesia",
+      "why": "overrides chapterListSelector, mangaDetailsParse"
+    },
+    {
+      "upstream": "src/en/ritharscans",
+      "theme": "keyoapp",
+      "why": "overrides altNameSelector, statusSelector, typeSelector, genreSelector, authorSelector, artistSelector, paidChapterSelector, latestUpdatesNextPageSelector, parseGenres, searchUrlBuilder, searchMangaSelector, parseSearchManga, pageListParse, Element"
+    },
+    {
+      "upstream": "src/en/rizzcomic",
+      "theme": "mangathemesia",
+      "why": "overrides formParameter, pageSelector, slugRegex, listUrl, listSelector, supportsFilterFetching, addFormParameter, Headers, setupPreferenceScreen, getFilterList"
+    },
+    {
+      "upstream": "src/en/rubycomics",
+      "theme": "madara",
+      "why": "overrides mangaDetailsSelectorDescription, processThumbnail, parseDetails, parseChapterList, setupPreferenceScreen"
+    },
+    {
+      "upstream": "src/en/setsuscans",
+      "theme": "madara",
+      "why": "overrides mangaDetailsSelectorStatus"
+    },
+    {
+      "upstream": "src/en/toongodcc",
+      "theme": "yiimanga",
+      "why": "overrides genreUrl"
+    },
+    {
+      "upstream": "src/en/toonizy",
+      "theme": "madara",
+      "why": "overrides mangaDetailsSelectorTitle"
+    },
+    {
+      "upstream": "src/en/topmanhuafan",
+      "theme": "madara",
+      "why": "overrides parseDetails, chapterListSelector, getImageRequest"
+    },
+    {
+      "upstream": "src/en/towerofgodmangaonline",
+      "theme": "mangacatalog",
+      "why": "title list not in the $baseUrl/manga/<slug>/ form"
+    },
+    {
+      "upstream": "src/en/webtoonxyz",
+      "theme": "madara",
+      "why": "overrides processThumbnail"
+    },
+    {
+      "upstream": "src/en/zazamanga",
+      "theme": "madara",
+      "why": "overrides mangaDetailsSelectorStatus, mangaDetailsSelectorGenre, cancelledStatus, addToUri, nextPageSelector, Document, parseDetails, chapterListSelector, getImageRequest, imageFromElement"
+    },
+    {
+      "upstream": "src/en/zinmanganet",
+      "theme": "madara",
+      "why": "overrides getImageRequest"
+    }
+  ],
+  "skipped": [
+    {
+      "upstream": "src/all/magicaltranslators",
+      "why": "generated or mirrored base URLs"
+    },
+    {
+      "upstream": "src/all/mangaforfree",
+      "why": "generated or mirrored base URLs"
+    },
+    {
+      "upstream": "src/all/manhwaclubnet",
+      "why": "generated or mirrored base URLs"
+    },
+    {
+      "upstream": "src/all/miauscan",
+      "why": "generated or mirrored base URLs"
+    },
+    {
+      "upstream": "src/en/akazascans",
+      "why": "already ported as akazascans"
+    },
+    {
+      "upstream": "src/en/allporncomic",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/anisascans",
+      "why": "site dead"
+    },
+    {
+      "upstream": "src/en/arenascans",
+      "why": "already ported as arenascans"
+    },
+    {
+      "upstream": "src/en/asterscans",
+      "why": "already ported as asterscans"
+    },
+    {
+      "upstream": "src/en/athreascans",
+      "why": "already ported as athreascans"
+    },
+    {
+      "upstream": "src/en/auntmanhwa",
+      "why": "site dead"
+    },
+    {
+      "upstream": "src/en/boratscans",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/cocomic",
+      "why": "already ported as cocomic"
+    },
+    {
+      "upstream": "src/en/dragontea",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/ero18x",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/erosscans",
+      "why": "already ported as scythescans"
+    },
+    {
+      "upstream": "src/en/evascans",
+      "why": "already ported as evascans"
+    },
+    {
+      "upstream": "src/en/galaxydegenscans",
+      "why": "already ported as galaxydegenscans"
+    },
+    {
+      "upstream": "src/en/grimscans",
+      "why": "already ported as grimscans"
+    },
+    {
+      "upstream": "src/en/hijalascans",
+      "why": "already ported as hijalascans"
+    },
+    {
+      "upstream": "src/en/hivescans",
+      "why": "already ported as hivetoons"
+    },
+    {
+      "upstream": "src/en/jinmangas",
+      "why": "already ported as mangafree"
+    },
+    {
+      "upstream": "src/en/kaizenscan",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/kenscans",
+      "why": "already ported as kencomics"
+    },
+    {
+      "upstream": "src/en/kewnscans",
+      "why": "already ported as kewnscans"
+    },
+    {
+      "upstream": "src/en/kingofshojo",
+      "why": "already ported as kingofshojo"
+    },
+    {
+      "upstream": "src/en/kissmangain",
+      "why": "already ported as kissmanga"
+    },
+    {
+      "upstream": "src/en/lagoonscans",
+      "why": "already ported as lagoonscans"
+    },
+    {
+      "upstream": "src/en/lhtranslation",
+      "why": "already ported as lhtranslation"
+    },
+    {
+      "upstream": "src/en/lilymanga",
+      "why": "already ported as lilymanga"
+    },
+    {
+      "upstream": "src/en/lunatoons",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/madarascans",
+      "why": "already ported as madarascans"
+    },
+    {
+      "upstream": "src/en/mangabat",
+      "why": "already ported as mangabat"
+    },
+    {
+      "upstream": "src/en/mangadistrict",
+      "why": "already ported as mangadistrict"
+    },
+    {
+      "upstream": "src/en/mangaeclipse",
+      "why": "already ported as mangaeclipse"
+    },
+    {
+      "upstream": "src/en/mangafree",
+      "why": "already ported as mangafree"
+    },
+    {
+      "upstream": "src/en/mangakakalot",
+      "why": "already ported as mangakakalot"
+    },
+    {
+      "upstream": "src/en/manganelo",
+      "why": "already ported as manganato"
+    },
+    {
+      "upstream": "src/en/mangaowlio",
+      "why": "already ported as mangaowl"
+    },
+    {
+      "upstream": "src/en/mangareadorg",
+      "why": "already ported as mangareadorg"
+    },
+    {
+      "upstream": "src/en/mangasushi",
+      "why": "already ported as mangasushi"
+    },
+    {
+      "upstream": "src/en/mangatrend",
+      "why": "already ported as mangatrend"
+    },
+    {
+      "upstream": "src/en/manhuahot",
+      "why": "already ported as manhuahot"
+    },
+    {
+      "upstream": "src/en/manhuanext",
+      "why": "already ported as manhuanext"
+    },
+    {
+      "upstream": "src/en/manhuaplus",
+      "why": "already ported as manhuaplus"
+    },
+    {
+      "upstream": "src/en/manhuaus",
+      "why": "already ported as manhuaus"
+    },
+    {
+      "upstream": "src/en/manhuazonghe",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/manhwa18today",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/manhwa68",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/manhwamanhua",
+      "why": "site dead"
+    },
+    {
+      "upstream": "src/en/manhwanex",
+      "why": "already ported as manhwanex"
+    },
+    {
+      "upstream": "src/en/manhwareads",
+      "why": "already ported as manhwareads"
+    },
+    {
+      "upstream": "src/en/manhwatop",
+      "why": "already ported as manhwatop"
+    },
+    {
+      "upstream": "src/en/mistscans",
+      "why": "already ported as mistscans"
+    },
+    {
+      "upstream": "src/en/nyxscans",
+      "why": "already ported as nyxscans"
+    },
+    {
+      "upstream": "src/en/orionscans",
+      "why": "already ported as orionscans"
+    },
+    {
+      "upstream": "src/en/rackus",
+      "why": "already ported as rackus"
+    },
+    {
+      "upstream": "src/en/ravenscans",
+      "why": "already ported as ravenscans"
+    },
+    {
+      "upstream": "src/en/readblackclovermangaonline",
+      "why": "site dead"
+    },
+    {
+      "upstream": "src/en/rokaricomics",
+      "why": "already ported as rokaricomics"
+    },
+    {
+      "upstream": "src/en/s2manga",
+      "why": "already ported as s2manga"
+    },
+    {
+      "upstream": "src/en/sanascans",
+      "why": "already ported as sanascans"
+    },
+    {
+      "upstream": "src/en/sirenscans",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/sleepytranslations",
+      "why": "already ported as sleepytranslations"
+    },
+    {
+      "upstream": "src/en/thunderscans",
+      "why": "already ported as thunderscans"
+    },
+    {
+      "upstream": "src/en/timelesstoons",
+      "why": "already ported as timelesstoons"
+    },
+    {
+      "upstream": "src/en/toongod",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/toonily",
+      "why": "already ported as toonily"
+    },
+    {
+      "upstream": "src/en/topmanhua",
+      "why": "site dead"
+    },
+    {
+      "upstream": "src/en/tritiniascans",
+      "why": "already ported as tritiniascans"
+    },
+    {
+      "upstream": "src/en/violetscans",
+      "why": "already ported as violetscans"
+    },
+    {
+      "upstream": "src/en/vortexscans",
+      "why": "already ported as vortexscans"
+    },
+    {
+      "upstream": "src/en/webtoonscan",
+      "why": "site dead"
+    },
+    {
+      "upstream": "src/en/wildtoon",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/writerscans",
+      "why": "already ported as writerscans"
+    },
+    {
+      "upstream": "src/en/wuxiaworld",
+      "why": "text novels"
+    },
+    {
+      "upstream": "src/en/yakshacomics",
+      "why": "already ported as yakshacomics"
+    },
+    {
+      "upstream": "src/en/yaoihub",
+      "why": "site dead"
+    },
+    {
+      "upstream": "src/en/yaoiscan",
+      "why": "site challenge"
+    },
+    {
+      "upstream": "src/en/zinmanga",
+      "why": "already ported as zinmanga"
+    }
+  ]
+}

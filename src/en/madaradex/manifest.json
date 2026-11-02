@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "madaradex",
+  "name": "MadaraDex",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MadaraDex: a Madara-theme manga site.",
+  "base_url": "https://madaradex.org",
+  "allowed_hosts": [
+    "madaradex.org"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "The image CDN (cdn.madaradex.org) refuses page images with 403 outside a browser session (checked 2026-11-02); browse, search, details and chapter lists work."
+}

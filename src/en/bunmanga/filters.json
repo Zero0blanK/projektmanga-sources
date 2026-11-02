@@ -1,0 +1,207 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "ABO",
+        "value": "abo"
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Anime",
+        "value": "anime"
+      },
+      {
+        "label": "BL",
+        "value": "bl"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      },
+      {
+        "label": "Cooking",
+        "value": "cooking"
+      },
+      {
+        "label": "Detective",
+        "value": "detective"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "One shot",
+        "value": "one-shot"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shoujo Ai",
+        "value": "shoujo-ai"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Shounen Ai",
+        "value": "shounen-ai"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Soft Yaoi",
+        "value": "soft-yaoi"
+      },
+      {
+        "label": "Soft Yuri",
+        "value": "soft-yuri"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Webtoon",
+        "value": "webtoon"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      }
+    ]
+  }
+]

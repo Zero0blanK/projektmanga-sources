@@ -1,0 +1,235 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Aging",
+        "value": "aging"
+      },
+      {
+        "label": "Boys",
+        "value": "boys"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Fighting",
+        "value": "fighting"
+      },
+      {
+        "label": "Future",
+        "value": "future"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "Girls",
+        "value": "girls"
+      },
+      {
+        "label": "Hardcore",
+        "value": "hardcore"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "History",
+        "value": "history"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Love",
+        "value": "love"
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Mpreg/Male Pregnancy",
+        "value": "mpreg-male-pregnancy"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "Omegaverse",
+        "value": "omegaverse"
+      },
+      {
+        "label": "One Shot",
+        "value": "one-shot"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Shounen Ai",
+        "value": "shounen-ai"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Sports",
+        "value": "sports"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Threesome",
+        "value": "threesome"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Uncensored",
+        "value": "uncensored"
+      },
+      {
+        "label": "Webtoons",
+        "value": "webtoons"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      }
+    ]
+  }
+]

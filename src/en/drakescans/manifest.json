@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "drakescans",
+  "name": "Drake Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Drake Scans: a VineTheme-theme manga site.",
+  "base_url": "https://drakecomic.net",
+  "allowed_hosts": [
+    "drakecomic.net"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "label": "Genre (ignored with a text search)",
+    "value": "genre",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-Fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      }
+    ]
+  }
+]

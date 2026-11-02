@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "orchisasia",
+  "name": "Orchisasia",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Orchisasia: a Madara-theme manga site.",
+  "base_url": "https://www.orchisasia.org",
+  "allowed_hosts": [
+    "orchisasia.org"
+  ],
+  "content_rating": "nsfw"
+}

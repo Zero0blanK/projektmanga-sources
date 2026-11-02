@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readsololevelingmangamanhwaonline",
+  "name": "Read Solo Leveling Manga Manhwa Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Solo Leveling Manga Manhwa Online: one franchise's manga (Solo Leveling Manhwa, Solo Leveling Light Novel, Solo Leveling : Ragnarok, SL: Ragnarok Novel).",
+  "base_url": "https://ww4.readsololeveling.org",
+  "allowed_hosts": [
+    "ww4.readsololeveling.org"
+  ],
+  "content_rating": "safe"
+}

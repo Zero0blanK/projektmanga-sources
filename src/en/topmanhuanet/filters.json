@@ -1,0 +1,1211 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Action,Adaptation,Fantasy,Martial Arts,Wuxia",
+        "value": "actionadaptationfantasymartial-artswuxia"
+      },
+      {
+        "label": "Action,Adaptation,Martial Arts,Shounen,Wuxia",
+        "value": "actionadaptationmartial-artsshounenwuxia"
+      },
+      {
+        "label": "Action,Adult,Adventure,Comedy,Fantasy",
+        "value": "actionadultadventurecomedyfantasy"
+      },
+      {
+        "label": "Action,Adventure",
+        "value": "actionadventure"
+      },
+      {
+        "label": "Action,Adventure,Apocalypse,Shounen,Time Travel",
+        "value": "actionadventureapocalypseshounentime-travel"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Demon,Martial Arts,Returner",
+        "value": "actionadventurecomedydemonmartial-artsreturner"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Drama,Fantasy,Psychological,Tragedy",
+        "value": "actionadventurecomedydramafantasypsychologicaltragedy"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Drama,Fantasy,School Life,Supernatural",
+        "value": "actionadventurecomedydramafantasyschool-lifesupernatural"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Dungeons,Fantasy",
+        "value": "actionadventurecomedydungeonsfantasy"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy",
+        "value": "actionadventurecomedyfantasy"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Game",
+        "value": "actionadventurecomedyfantasygame"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Game,System",
+        "value": "actionadventurecomedyfantasygamesystem"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Game,Tower",
+        "value": "actionadventurecomedyfantasygametower"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Magic,Regression",
+        "value": "actionadventurecomedyfantasymagicregression"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Magic,School Life",
+        "value": "actionadventurecomedyfantasymagicschool-life"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Martial Arts,Murim",
+        "value": "actionadventurecomedyfantasymartial-artsmurim"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Martial Arts,Mystery,Shounen,Supernatural",
+        "value": "actionadventurecomedyfantasymartial-artsmysteryshounensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Martial Arts,Rebirth,Shounen",
+        "value": "actionadventurecomedyfantasymartial-artsrebirthshounen"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Martial Arts,Seinen",
+        "value": "actionadventurecomedyfantasymartial-artsseinen"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Mystery",
+        "value": "actionadventurecomedyfantasymystery"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Mystery,Rebirth",
+        "value": "actionadventurecomedyfantasymysteryrebirth"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Mystery,Supernatural",
+        "value": "actionadventurecomedyfantasymysterysupernatural"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Necromancer",
+        "value": "actionadventurecomedyfantasynecromancer"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Psychological",
+        "value": "actionadventurecomedyfantasypsychological"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Psychological,Tragedy",
+        "value": "actionadventurecomedyfantasypsychologicaltragedy"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Regression,Shounen",
+        "value": "actionadventurecomedyfantasyregressionshounen"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Seinen,Supernatural",
+        "value": "actionadventurecomedyfantasyseinensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Shounen,Supernatural",
+        "value": "actionadventurecomedyfantasyshounensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Supernatural",
+        "value": "actionadventurecomedyfantasysupernatural"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,Survival",
+        "value": "actionadventurecomedyfantasysurvival"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Fantasy,System",
+        "value": "actionadventurecomedyfantasysystem"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Martial Arts,Murim",
+        "value": "actionadventurecomedymartial-artsmurim"
+      },
+      {
+        "label": "Action,Adventure,Comedy,Overpowered,Regression",
+        "value": "actionadventurecomedyoverpoweredregression"
+      },
+      {
+        "label": "Action,Adventure,Crazy MC,Fantasy",
+        "value": "actionadventurecrazy-mcfantasy"
+      },
+      {
+        "label": "Action,Adventure,Crazy MC,Fantasy,Martial Arts,Murim",
+        "value": "actionadventurecrazy-mcfantasymartial-artsmurim"
+      },
+      {
+        "label": "Action,Adventure,Crazy MC,Fantasy,Shounen",
+        "value": "actionadventurecrazy-mcfantasyshounen"
+      },
+      {
+        "label": "Action,Adventure,Crazy MC,Revenge,Violence",
+        "value": "actionadventurecrazy-mcrevengeviolence"
+      },
+      {
+        "label": "Action,Adventure,Demon,Fantasy,Genius MC,Magic",
+        "value": "actionadventuredemonfantasygenius-mcmagic"
+      },
+      {
+        "label": "Action,Adventure,Demon,Fantasy,Magic,Reincarnation",
+        "value": "actionadventuredemonfantasymagicreincarnation"
+      },
+      {
+        "label": "Action,Adventure,Demon,Fantasy,Martial Arts",
+        "value": "actionadventuredemonfantasymartial-arts"
+      },
+      {
+        "label": "Action,Adventure,Demon,Fantasy,Reincarnation",
+        "value": "actionadventuredemonfantasyreincarnation"
+      },
+      {
+        "label": "Action,Adventure,Demon,Murim",
+        "value": "actionadventuredemonmurim"
+      },
+      {
+        "label": "Action,Adventure,Drama,Fantasy,Genius MC,Shounen,Supernatural",
+        "value": "actionadventuredramafantasygenius-mcshounensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Drama,Fantasy,Harem,Mature,Seinen,Supernatural",
+        "value": "actionadventuredramafantasyharemmatureseinensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Drama,Fantasy,School Life",
+        "value": "actionadventuredramafantasyschool-life"
+      },
+      {
+        "label": "Action,Adventure,Drama,Revenge",
+        "value": "actionadventuredramarevenge"
+      },
+      {
+        "label": "Action,Adventure,Drama,Revenge,Violence",
+        "value": "actionadventuredramarevengeviolence"
+      },
+      {
+        "label": "Action,Adventure,Dungeons,Fantasy,Martial Arts,Monsters,Murim,Shounen,System",
+        "value": "actionadventuredungeonsfantasymartial-artsmonstersmurimshounensystem"
+      },
+      {
+        "label": "Action,Adventure,Dungeons,Fantasy,Monsters,Overpowered",
+        "value": "actionadventuredungeonsfantasymonstersoverpowered"
+      },
+      {
+        "label": "Action,Adventure,Dungeons,Fantasy,Overpowered,System",
+        "value": "actionadventuredungeonsfantasyoverpoweredsystem"
+      },
+      {
+        "label": "Action,Adventure,Dungeons,Fantasy,Regression",
+        "value": "actionadventuredungeonsfantasyregression"
+      },
+      {
+        "label": "Action,Adventure,Dungeons,Fantasy,System",
+        "value": "actionadventuredungeonsfantasysystem"
+      },
+      {
+        "label": "Action,Adventure,Fantasy",
+        "value": "actionadventurefantasy"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Game,Psychological",
+        "value": "actionadventurefantasygamepsychological"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Game,Video Game,Virtual World",
+        "value": "actionadventurefantasygamevideo-gamevirtual-world"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC",
+        "value": "actionadventurefantasygenius-mc"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Magic,Shounen",
+        "value": "actionadventurefantasygenius-mcmagicshounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Regression",
+        "value": "actionadventurefantasygenius-mcregression"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Reincarnation,Tragedy",
+        "value": "actionadventurefantasygenius-mcreincarnationtragedy"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Returner",
+        "value": "actionadventurefantasygenius-mcreturner"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Revenge",
+        "value": "actionadventurefantasygenius-mcrevenge"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,School Life,Supernatural",
+        "value": "actionadventurefantasygenius-mcschool-lifesupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,System",
+        "value": "actionadventurefantasygenius-mcsystem"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Tragedy",
+        "value": "actionadventurefantasygenius-mctragedy"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Villain",
+        "value": "actionadventurefantasygenius-mcvillain"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Genius MC,Virtual Game",
+        "value": "actionadventurefantasygenius-mcvirtual-game"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Harem,Psychological",
+        "value": "actionadventurefantasyharempsychological"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Hero,Returner,Shounen,Supernatural",
+        "value": "actionadventurefantasyheroreturnershounensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Isekai,Martial Arts",
+        "value": "actionadventurefantasyisekaimartial-arts"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Isekai,Mature,Monsters,Psychological,Shounen",
+        "value": "actionadventurefantasyisekaimaturemonsterspsychologicalshounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Isekai,Sci-fi,Video Game",
+        "value": "actionadventurefantasyisekaisci-fivideo-game"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Isekai,Shounen",
+        "value": "actionadventurefantasyisekaishounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Magic",
+        "value": "actionadventurefantasymagic"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Magic,Overpowered,Returner,Shounen",
+        "value": "actionadventurefantasymagicoverpoweredreturnershounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Magic,Returner",
+        "value": "actionadventurefantasymagicreturner"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Magic,Returner,Shounen",
+        "value": "actionadventurefantasymagicreturnershounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts",
+        "value": "actionadventurefantasymartial-arts"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Murim",
+        "value": "actionadventurefantasymartial-artsmurim"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Murim,Regression",
+        "value": "actionadventurefantasymartial-artsmurimregression"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Murim,Regression,Revenge",
+        "value": "actionadventurefantasymartial-artsmurimregressionrevenge"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Murim,System",
+        "value": "actionadventurefantasymartial-artsmurimsystem"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Mystery,Sci-fi",
+        "value": "actionadventurefantasymartial-artsmysterysci-fi"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Rebirth",
+        "value": "actionadventurefantasymartial-artsrebirth"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Regression",
+        "value": "actionadventurefantasymartial-artsregression"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Regression,Reincarnation",
+        "value": "actionadventurefantasymartial-artsregressionreincarnation"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Reincarnation",
+        "value": "actionadventurefantasymartial-artsreincarnation"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Returner",
+        "value": "actionadventurefantasymartial-artsreturner"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Returner,Revenge,Supernatural",
+        "value": "actionadventurefantasymartial-artsreturnerrevengesupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Returner,Time Travel,Tragedy",
+        "value": "actionadventurefantasymartial-artsreturnertime-traveltragedy"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Revenge",
+        "value": "actionadventurefantasymartial-artsrevenge"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Shounen",
+        "value": "actionadventurefantasymartial-artsshounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Martial Arts,Shounen,Supernatural",
+        "value": "actionadventurefantasymartial-artsshounensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Mature,Psychological,Tragedy",
+        "value": "actionadventurefantasymaturepsychologicaltragedy"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Mature,Romance",
+        "value": "actionadventurefantasymatureromance"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Mature,Seinen,Supernatural",
+        "value": "actionadventurefantasymatureseinensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Monsters",
+        "value": "actionadventurefantasymonsters"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Mystery",
+        "value": "actionadventurefantasymystery"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Mystery,Psychological,Reincarnation,Seinen,Supernatural",
+        "value": "actionadventurefantasymysterypsychologicalreincarnationseinensupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Mystery,Supernatural",
+        "value": "actionadventurefantasymysterysupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Necromancer",
+        "value": "actionadventurefantasynecromancer"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Necromancer,Overpowered",
+        "value": "actionadventurefantasynecromanceroverpowered"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Necromancer,Returner",
+        "value": "actionadventurefantasynecromancerreturner"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Overpowered",
+        "value": "actionadventurefantasyoverpowered"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Overpowered,Returner",
+        "value": "actionadventurefantasyoverpoweredreturner"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Overpowered,Seinen",
+        "value": "actionadventurefantasyoverpoweredseinen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Psychological",
+        "value": "actionadventurefantasypsychological"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Rebirth,Shounen",
+        "value": "actionadventurefantasyrebirthshounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Regression",
+        "value": "actionadventurefantasyregression"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Regression,Returner,System",
+        "value": "actionadventurefantasyregressionreturnersystem"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Regression,Revenge",
+        "value": "actionadventurefantasyregressionrevenge"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Reincarnation",
+        "value": "actionadventurefantasyreincarnation"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Reincarnation,Shounen",
+        "value": "actionadventurefantasyreincarnationshounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Returner",
+        "value": "actionadventurefantasyreturner"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Returner,Revenge",
+        "value": "actionadventurefantasyreturnerrevenge"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Returner,System",
+        "value": "actionadventurefantasyreturnersystem"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Revenge",
+        "value": "actionadventurefantasyrevenge"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Revenge,Shounen",
+        "value": "actionadventurefantasyrevengeshounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Revenge,Supernatural",
+        "value": "actionadventurefantasyrevengesupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Sci-fi",
+        "value": "actionadventurefantasysci-fi"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Shounen",
+        "value": "actionadventurefantasyshounen"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Shounen,System",
+        "value": "actionadventurefantasyshounensystem"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Shounen,Tower",
+        "value": "actionadventurefantasyshounentower"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Supernatural",
+        "value": "actionadventurefantasysupernatural"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Supernatural,Transmigrating",
+        "value": "actionadventurefantasysupernaturaltransmigrating"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,System",
+        "value": "actionadventurefantasysystem"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Time Travel",
+        "value": "actionadventurefantasytime-travel"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Tower",
+        "value": "actionadventurefantasytower"
+      },
+      {
+        "label": "Action,Adventure,Fantasy,Virtual Game",
+        "value": "actionadventurefantasyvirtual-game"
+      },
+      {
+        "label": "Action,Adventure,Genius MC,Martial Arts,Murim",
+        "value": "actionadventuregenius-mcmartial-artsmurim"
+      },
+      {
+        "label": "Action,Adventure,Martial Arts",
+        "value": "actionadventuremartial-arts"
+      },
+      {
+        "label": "Action,Adventure,Martial Arts,Murim",
+        "value": "actionadventuremartial-artsmurim"
+      },
+      {
+        "label": "Action,Adventure,Martial Arts,Murim,Reincarnation",
+        "value": "actionadventuremartial-artsmurimreincarnation"
+      },
+      {
+        "label": "Action,Adventure,Martial Arts,Murim,Reincarnation,Revenge",
+        "value": "actionadventuremartial-artsmurimreincarnationrevenge"
+      },
+      {
+        "label": "Action,Adventure,Martial Arts,Murim,Returner",
+        "value": "actionadventuremartial-artsmurimreturner"
+      },
+      {
+        "label": "Action,Adventure,Martial Arts,Murim,Revenge",
+        "value": "actionadventuremartial-artsmurimrevenge"
+      },
+      {
+        "label": "Action,Adventure,Revenge",
+        "value": "actionadventurerevenge"
+      },
+      {
+        "label": "Action,Another chance,Fantasy,Overpowered,Returned,Shounen",
+        "value": "actionanother-chancefantasyoverpoweredreturnedshounen"
+      },
+      {
+        "label": "Action,Apocalypse,Fantasy,Monsters,System",
+        "value": "actionapocalypsefantasymonsterssystem"
+      },
+      {
+        "label": "Action,Comedy,Dungeons,Fantasy,Martial Arts,Seinen,Supernatural,Tragedy",
+        "value": "actioncomedydungeonsfantasymartial-artsseinensupernaturaltragedy"
+      },
+      {
+        "label": "Action,Comedy,Fantasy,Romance,Video Game",
+        "value": "actioncomedyfantasyromancevideo-game"
+      },
+      {
+        "label": "Action,Comedy,Fantasy,Video Games,Virtual Reality",
+        "value": "actioncomedyfantasyvideo-gamesvirtual-reality"
+      },
+      {
+        "label": "Action,Cultivation,Fantasy,Isekai,Martial Arts,Mature,System,Villain",
+        "value": "actioncultivationfantasyisekaimartial-artsmaturesystemvillain"
+      },
+      {
+        "label": "Action,Demon,Martial Arts,Supernatural",
+        "value": "actiondemonmartial-artssupernatural"
+      },
+      {
+        "label": "Action,Dungeons,Shounen",
+        "value": "actiondungeonsshounen"
+      },
+      {
+        "label": "Action,Fantasy",
+        "value": "actionfantasy"
+      },
+      {
+        "label": "Action,Fantasy,Game",
+        "value": "actionfantasygame"
+      },
+      {
+        "label": "Action,Fantasy,Game,Monsters,System",
+        "value": "actionfantasygamemonsterssystem"
+      },
+      {
+        "label": "Action,Fantasy,Game,Rebirth,Virtual Reality",
+        "value": "actionfantasygamerebirthvirtual-reality"
+      },
+      {
+        "label": "Action,Fantasy,Game,Shounen",
+        "value": "actionfantasygameshounen"
+      },
+      {
+        "label": "Action,Fantasy,Game,Shounen,System",
+        "value": "actionfantasygameshounensystem"
+      },
+      {
+        "label": "Action,Fantasy,Genius MC,Martial Arts,Murim",
+        "value": "actionfantasygenius-mcmartial-artsmurim"
+      },
+      {
+        "label": "Action,Fantasy,Hero,Rebirth",
+        "value": "actionfantasyherorebirth"
+      },
+      {
+        "label": "Action,Fantasy,Isekai,Mature,Return,Shounen,Tragedy",
+        "value": "actionfantasyisekaimaturereturnshounentragedy"
+      },
+      {
+        "label": "Action,Fantasy,Magic,Martial Arts,Noble,Shounen",
+        "value": "actionfantasymagicmartial-artsnobleshounen"
+      },
+      {
+        "label": "Action,Fantasy,Martial Arts",
+        "value": "actionfantasymartial-arts"
+      },
+      {
+        "label": "Action,Fantasy,Martial Arts,Murim,Reincarnation",
+        "value": "actionfantasymartial-artsmurimreincarnation"
+      },
+      {
+        "label": "Action,Fantasy,Martial Arts,Overpowered,Regression,Reincarnation",
+        "value": "actionfantasymartial-artsoverpoweredregressionreincarnation"
+      },
+      {
+        "label": "Action,Fantasy,Martial Arts,Reincarnation",
+        "value": "actionfantasymartial-artsreincarnation"
+      },
+      {
+        "label": "Action,Fantasy,Martial Arts,Shounen,Wuxia",
+        "value": "actionfantasymartial-artsshounenwuxia"
+      },
+      {
+        "label": "Action,Fantasy,Martial Arts,Wuxia",
+        "value": "actionfantasymartial-artswuxia"
+      },
+      {
+        "label": "Action,Fantasy,Monsters,Reincarnation,System,Time Travel (Future)",
+        "value": "actionfantasymonstersreincarnationsystemtime-travel-future"
+      },
+      {
+        "label": "Action,Fantasy,Monsters,Superhero,System",
+        "value": "actionfantasymonsterssuperherosystem"
+      },
+      {
+        "label": "Action,Fantasy,Murim,Overpowered,Return",
+        "value": "actionfantasymurimoverpoweredreturn"
+      },
+      {
+        "label": "Action,Fantasy,Murim,Overpowered,Returner,System",
+        "value": "actionfantasymurimoverpoweredreturnersystem"
+      },
+      {
+        "label": "Action,Fantasy,Overpowered,Reincarnation,Supernatural,System",
+        "value": "actionfantasyoverpoweredreincarnationsupernaturalsystem"
+      },
+      {
+        "label": "Action,Fantasy,Reincarnation,Shounen",
+        "value": "actionfantasyreincarnationshounen"
+      },
+      {
+        "label": "Action,Fantasy,Returner,Shounen",
+        "value": "actionfantasyreturnershounen"
+      },
+      {
+        "label": "Action,Fantasy,Romance,Seinen",
+        "value": "actionfantasyromanceseinen"
+      },
+      {
+        "label": "Action,Fantasy,Shounen",
+        "value": "actionfantasyshounen"
+      },
+      {
+        "label": "Action,Fantasy,Shounen,Supernatural",
+        "value": "actionfantasyshounensupernatural"
+      },
+      {
+        "label": "Action,Fight,School,Violence",
+        "value": "actionfightschoolviolence"
+      },
+      {
+        "label": "Action,Game,Mature,Mystery,Suspense,Thriller",
+        "value": "actiongamematuremysterysuspensethriller"
+      },
+      {
+        "label": "Action,Martial Arts",
+        "value": "actionmartial-arts"
+      },
+      {
+        "label": "Action,Martial Arts,Rebirth",
+        "value": "actionmartial-artsrebirth"
+      },
+      {
+        "label": "Action,Martial Arts,Reincarnation",
+        "value": "actionmartial-artsreincarnation"
+      },
+      {
+        "label": "Action,Monsters,Supernatural",
+        "value": "actionmonsterssupernatural"
+      },
+      {
+        "label": "Action,Murim,Shounen",
+        "value": "actionmurimshounen"
+      },
+      {
+        "label": "Adaptation",
+        "value": "adaptation"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Adventure,Drama,Fantasy,Shounen",
+        "value": "adventuredramafantasyshounen"
+      },
+      {
+        "label": "Adventure,Fantasy,Isekai,Reincarnation,Shounen",
+        "value": "adventurefantasyisekaireincarnationshounen"
+      },
+      {
+        "label": "Adventure,Fantasy,Magic,Overpowered,Rebirth,Shounen,Webtoon",
+        "value": "adventurefantasymagicoverpoweredrebirthshounenwebtoon"
+      },
+      {
+        "label": "Adventure,Fantasy,Magic,Reincarnation,Shounen",
+        "value": "adventurefantasymagicreincarnationshounen"
+      },
+      {
+        "label": "Adventure,Fantasy,Mature,Romance,Shoujo",
+        "value": "adventurefantasymatureromanceshoujo"
+      },
+      {
+        "label": "Adventure,Fantasy,Overpowered,Returner,Shounen",
+        "value": "adventurefantasyoverpoweredreturnershounen"
+      },
+      {
+        "label": "Adventure,Fantasy,Shounen,Video Games,Virtual Reality",
+        "value": "adventurefantasyshounenvideo-gamesvirtual-reality"
+      },
+      {
+        "label": "Adventure,Fantasy,Virtual Reality",
+        "value": "adventurefantasyvirtual-reality"
+      },
+      {
+        "label": "Another chance",
+        "value": "another-chance"
+      },
+      {
+        "label": "apocalypse",
+        "value": "apocalypse"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Coming Soon",
+        "value": "coming-soon"
+      },
+      {
+        "label": "Cooking",
+        "value": "cooking"
+      },
+      {
+        "label": "Crazy MC",
+        "value": "crazy-mc"
+      },
+      {
+        "label": "Cultivation",
+        "value": "cultivation"
+      },
+      {
+        "label": "Demon",
+        "value": "demon"
+      },
+      {
+        "label": "Discord",
+        "value": "discord"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Drama,Fantasy,Historical,Josei,Romance",
+        "value": "dramafantasyhistoricaljoseiromance"
+      },
+      {
+        "label": "Drama,Fantasy,Historical,Psychological,Romance,Shoujo",
+        "value": "dramafantasyhistoricalpsychologicalromanceshoujo"
+      },
+      {
+        "label": "Drama,Fantasy,Returner,Romance",
+        "value": "dramafantasyreturnerromance"
+      },
+      {
+        "label": "Dungeons",
+        "value": "dungeons"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Fantasy,Genius,Reincarnation,Revenge,Shounen",
+        "value": "fantasygeniusreincarnationrevengeshounen"
+      },
+      {
+        "label": "Fantasy,Historical,Isekai",
+        "value": "fantasyhistoricalisekai"
+      },
+      {
+        "label": "Fantasy,Historical,Romance,Tragedy",
+        "value": "fantasyhistoricalromancetragedy"
+      },
+      {
+        "label": "Fantasy,Martial Arts,Shounen,Virtual Game",
+        "value": "fantasymartial-artsshounenvirtual-game"
+      },
+      {
+        "label": "Fantasy,Overpowered,Reincarnation,Shounen",
+        "value": "fantasyoverpoweredreincarnationshounen"
+      },
+      {
+        "label": "Fantasy,Romance,Shoujo",
+        "value": "fantasyromanceshoujo"
+      },
+      {
+        "label": "Fantasy,Shounen,Slice of Life,Sports,Supernatural",
+        "value": "fantasyshounenslice-of-lifesportssupernatural"
+      },
+      {
+        "label": "Fight",
+        "value": "fight"
+      },
+      {
+        "label": "Game",
+        "value": "game"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "Genius",
+        "value": "genius"
+      },
+      {
+        "label": "Genius MC",
+        "value": "genius-mc"
+      },
+      {
+        "label": "GL",
+        "value": "gl"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Hero",
+        "value": "hero"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Kool Kids",
+        "value": "kool-kids"
+      },
+      {
+        "label": "Loli",
+        "value": "loli"
+      },
+      {
+        "label": "Magic",
+        "value": "magic"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Mecha",
+        "value": "mecha"
+      },
+      {
+        "label": "Modern Setting",
+        "value": "modern-setting"
+      },
+      {
+        "label": "Monsters",
+        "value": "monsters"
+      },
+      {
+        "label": "Murim",
+        "value": "murim"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "Necromancer",
+        "value": "necromancer"
+      },
+      {
+        "label": "Noble",
+        "value": "noble"
+      },
+      {
+        "label": "Overpowered",
+        "value": "overpowered"
+      },
+      {
+        "label": "Pets",
+        "value": "pets"
+      },
+      {
+        "label": "Post-Apocalyptic",
+        "value": "post-apocalyptic"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Rebirth",
+        "value": "rebirth"
+      },
+      {
+        "label": "Regression",
+        "value": "regression"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "reincarnation"
+      },
+      {
+        "label": "Return",
+        "value": "return"
+      },
+      {
+        "label": "Returned",
+        "value": "returned"
+      },
+      {
+        "label": "Returner",
+        "value": "returner"
+      },
+      {
+        "label": "Revenge",
+        "value": "revenge"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "RPG",
+        "value": "rpg"
+      },
+      {
+        "label": "School",
+        "value": "school"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Seinen",
+        "value": "seinen"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Sports",
+        "value": "sports"
+      },
+      {
+        "label": "Super Hero",
+        "value": "super-hero"
+      },
+      {
+        "label": "Super Power",
+        "value": "super-power"
+      },
+      {
+        "label": "Superhero",
+        "value": "superhero"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Survival",
+        "value": "survival"
+      },
+      {
+        "label": "Suspense",
+        "value": "suspense"
+      },
+      {
+        "label": "System",
+        "value": "system"
+      },
+      {
+        "label": "Thriller",
+        "value": "thriller"
+      },
+      {
+        "label": "Time Travel",
+        "value": "time-travel"
+      },
+      {
+        "label": "Time Travel (Future)",
+        "value": "time-travel-future"
+      },
+      {
+        "label": "tower",
+        "value": "tower"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Transmigrating",
+        "value": "transmigrating"
+      },
+      {
+        "label": "Vanilla",
+        "value": "vanilla"
+      },
+      {
+        "label": "Video Game",
+        "value": "video-game"
+      },
+      {
+        "label": "Video Games",
+        "value": "video-games"
+      },
+      {
+        "label": "Villain",
+        "value": "villain"
+      },
+      {
+        "label": "Violence",
+        "value": "violence"
+      },
+      {
+        "label": "Virtual Game",
+        "value": "virtual-game"
+      },
+      {
+        "label": "Virtual Reality",
+        "value": "virtual-reality"
+      },
+      {
+        "label": "Virtual World",
+        "value": "virtual-world"
+      },
+      {
+        "label": "Webtoon",
+        "value": "webtoon"
+      },
+      {
+        "label": "Webtoons",
+        "value": "webtoons"
+      },
+      {
+        "label": "Wuxia",
+        "value": "wuxia"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      },
+      {
+        "label": "Zombie",
+        "value": "zombie"
+      }
+    ]
+  }
+]

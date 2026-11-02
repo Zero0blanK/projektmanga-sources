@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readattackontitanshingekinokyojinmanga",
+  "name": "Read Attack on Titan Shingeki no Kyojin Manga",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Attack on Titan Shingeki no Kyojin Manga: one franchise's manga (Shingeki No Kyojin, Colored, Before the Fall, Lost Girls…).",
+  "base_url": "https://ww12.readsnk.com",
+  "allowed_hosts": [
+    "ww12.readsnk.com"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "pornhwaz",
+  "name": "Pornhwaz",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Pornhwaz: a Madara-theme manga site.",
+  "base_url": "https://www.pornhwaz.com",
+  "allowed_hosts": [
+    "pornhwaz.com"
+  ],
+  "content_rating": "nsfw"
+}

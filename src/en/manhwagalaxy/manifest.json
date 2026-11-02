@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhwagalaxy",
+  "name": "ManhwaGalaxy",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "ManhwaGalaxy: a Yiimanga-theme manga site.",
+  "base_url": "https://manhwagalaxy.com",
+  "allowed_hosts": [
+    "manhwagalaxy.com"
+  ],
+  "content_rating": "mixed"
+}

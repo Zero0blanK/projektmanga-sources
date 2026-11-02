@@ -1,0 +1,307 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "3d",
+        "value": "3d"
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "ahegao",
+        "value": "ahegao"
+      },
+      {
+        "label": "anal",
+        "value": "anal"
+      },
+      {
+        "label": "animated",
+        "value": "animated"
+      },
+      {
+        "label": "bbc",
+        "value": "bbc"
+      },
+      {
+        "label": "beauty mark",
+        "value": "beauty-mark"
+      },
+      {
+        "label": "big Ass",
+        "value": "big-ass"
+      },
+      {
+        "label": "Big Boobs",
+        "value": "big-boobs"
+      },
+      {
+        "label": "big breast",
+        "value": "big-breast"
+      },
+      {
+        "label": "big penis",
+        "value": "big-penis"
+      },
+      {
+        "label": "blowjob",
+        "value": "blowjob"
+      },
+      {
+        "label": "catfight",
+        "value": "catfight"
+      },
+      {
+        "label": "cheating",
+        "value": "cheating"
+      },
+      {
+        "label": "colored",
+        "value": "colored"
+      },
+      {
+        "label": "comic",
+        "value": "comic"
+      },
+      {
+        "label": "condom",
+        "value": "condom"
+      },
+      {
+        "label": "demon slayer",
+        "value": "demon-slayer"
+      },
+      {
+        "label": "doujinshi",
+        "value": "doujinshi"
+      },
+      {
+        "label": "drama",
+        "value": "drama"
+      },
+      {
+        "label": "elf",
+        "value": "elf"
+      },
+      {
+        "label": "fox girl",
+        "value": "fox-girl"
+      },
+      {
+        "label": "furry",
+        "value": "furry"
+      },
+      {
+        "label": "gangbang",
+        "value": "gangbang"
+      },
+      {
+        "label": "gyaru",
+        "value": "gyaru"
+      },
+      {
+        "label": "hairy",
+        "value": "hairy"
+      },
+      {
+        "label": "harem",
+        "value": "harem"
+      },
+      {
+        "label": "hentai",
+        "value": "hentai"
+      },
+      {
+        "label": "hentai video",
+        "value": "hentai-video"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "impregnation",
+        "value": "impregnation"
+      },
+      {
+        "label": "incest",
+        "value": "incest"
+      },
+      {
+        "label": "kissing",
+        "value": "kissing"
+      },
+      {
+        "label": "lactation",
+        "value": "lactation"
+      },
+      {
+        "label": "lamia",
+        "value": "lamia"
+      },
+      {
+        "label": "lingerie",
+        "value": "lingerie"
+      },
+      {
+        "label": "manga",
+        "value": "manga"
+      },
+      {
+        "label": "manhwa",
+        "value": "manhwas"
+      },
+      {
+        "label": "married",
+        "value": "married"
+      },
+      {
+        "label": "Milf",
+        "value": "milf"
+      },
+      {
+        "label": "monster girl",
+        "value": "monster-girl"
+      },
+      {
+        "label": "mother",
+        "value": "mothers"
+      },
+      {
+        "label": "nakadashi",
+        "value": "nakadashi"
+      },
+      {
+        "label": "netorare",
+        "value": "netorare"
+      },
+      {
+        "label": "NTR",
+        "value": "ntr"
+      },
+      {
+        "label": "pantyhose",
+        "value": "pantyhose"
+      },
+      {
+        "label": "parodies",
+        "value": "parodies"
+      },
+      {
+        "label": "pregnant",
+        "value": "pregnant"
+      },
+      {
+        "label": "romance",
+        "value": "romance"
+      },
+      {
+        "label": "schoolgirl uniform",
+        "value": "schoolgirl-uniform"
+      },
+      {
+        "label": "sinful lust",
+        "value": "sinful-lust"
+      },
+      {
+        "label": "sister",
+        "value": "sister"
+      },
+      {
+        "label": "Slime girl",
+        "value": "slime-girl"
+      },
+      {
+        "label": "sole female",
+        "value": "sole-female"
+      },
+      {
+        "label": "sole male",
+        "value": "sole-male"
+      },
+      {
+        "label": "stockings",
+        "value": "stockings"
+      },
+      {
+        "label": "TAGS:",
+        "value": "tags"
+      },
+      {
+        "label": "Teacher",
+        "value": "teacher"
+      },
+      {
+        "label": "western",
+        "value": "western"
+      },
+      {
+        "label": "wholesome",
+        "value": "wholesome"
+      },
+      {
+        "label": "wrestling",
+        "value": "wrestling"
+      }
+    ]
+  }
+]

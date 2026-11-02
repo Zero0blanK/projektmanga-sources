@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readchainsawmanmangaonline",
+  "name": "Read Chainsaw Man Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Chainsaw Man Manga Online: one franchise's manga (Chainsaw Man, 17-21, Fire Punch, Nayuta…).",
+  "base_url": "https://ww6.readchainsawman.com",
+  "allowed_hosts": [
+    "ww6.readchainsawman.com"
+  ],
+  "content_rating": "nsfw"
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "label": "Genre (ignored with a text search)",
+    "value": "genre",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      }
+    ]
+  }
+]

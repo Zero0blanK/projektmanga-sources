@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readonepunchmanmangaonlinetwo",
+  "name": "Read One-Punch Man Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read One-Punch Man Manga Online: one franchise's manga (One Punch Man, Official, Onepunch-Man (ONE), Colored…).",
+  "base_url": "https://ww7.readopm.com",
+  "allowed_hosts": [
+    "ww7.readopm.com"
+  ],
+  "content_rating": "safe"
+}

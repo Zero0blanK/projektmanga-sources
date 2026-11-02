@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "fourporncomic",
+  "name": "4PornComic",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "4PornComic: a Yiimanga-theme manga site.",
+  "base_url": "https://4porncomic.com",
+  "allowed_hosts": [
+    "4porncomic.com"
+  ],
+  "content_rating": "nsfw"
+}

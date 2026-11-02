@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manga18x",
+  "name": "Manga 18x",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Manga 18x: a Madara-theme manga site.",
+  "base_url": "https://manga18x.net",
+  "allowed_hosts": [
+    "manga18x.net"
+  ],
+  "content_rating": "nsfw",
+  "draft": true,
+  "draft_reason": "Chapter page images are linked to manhwaclub.net, which no longer serves them (checked 2026-11-02); browse, search, details and chapter lists work."
+}

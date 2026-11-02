@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readfairytailedenszeromangaonline",
+  "name": "Read Fairy Tail & Edens Zero Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Fairy Tail & Edens Zero Manga Online: one franchise's manga (Eden's Zero, Fairy Tail, FT Zero, FT City Hero…).",
+  "base_url": "https://ww9.readfairytail.com",
+  "allowed_hosts": [
+    "ww9.readfairytail.com"
+  ],
+  "content_rating": "safe"
+}

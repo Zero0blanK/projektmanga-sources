@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readberserkmanga",
+  "name": "Read Berserk Manga",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Berserk Manga: one franchise's manga (Berserk, Guidebook, Colored, Duranki…).",
+  "base_url": "https://readberserk.com",
+  "allowed_hosts": [
+    "readberserk.com"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,794 @@
+{
+  "src/all/allporncomicsco|https://allporncomics.co": {
+    "status": "dead",
+    "http": 403,
+    "at": "2026-11-02T12:47:09.547Z"
+  },
+  "src/all/comicsvalley|https://comicsvalley.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:09.576Z"
+  },
+  "src/all/mangacrazy|https://mangacrazy.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:09.806Z"
+  },
+  "src/all/manhwadashraw|https://manhwa-raw.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:10.665Z"
+  },
+  "src/all/grabberzone|https://grabber.zone": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:10.945Z"
+  },
+  "src/all/seraphicdeviltry|https://seraphic-deviltry.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:11.707Z"
+  },
+  "src/en/allporncomic|https://allporncomic.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:11.778Z"
+  },
+  "src/en/anisascans|https://anisascans.in": {
+    "status": "dead",
+    "why": "ENOTFOUND",
+    "at": "2026-11-02T12:47:12.741Z"
+  },
+  "src/all/seraphicdeviltry|https://spanish.seraphic-deviltry.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:13.060Z"
+  },
+  "src/en/allporncomicio|https://allporncomic.io": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:13.452Z"
+  },
+  "src/en/apcomics|https://apcomics.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:14.472Z"
+  },
+  "src/en/aquamanga|https://aquareader.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:15.016Z"
+  },
+  "src/en/asmotoon|https://asmotoon.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:15.265Z"
+  },
+  "src/en/artlapsa|https://artlapsa.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:15.593Z"
+  },
+  "src/en/auntmanhwa|https://auntmanhwa.com": {
+    "status": "dead",
+    "why": "ERR_TLS_CERT_ALTNAME_INVALID",
+    "at": "2026-11-02T12:47:16.326Z"
+  },
+  "src/en/boratscans|https://boratscans.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:16.594Z"
+  },
+  "src/en/brainrotcomics|https://brainrotcomics.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:16.880Z"
+  },
+  "src/en/cartoonporn|https://cartoonporn.to": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:17.750Z"
+  },
+  "src/en/battleinfivesecondsaftermeeting|https://www.deatte5.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:18.292Z"
+  },
+  "src/en/comicasura|https://comicasura.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:18.808Z"
+  },
+  "src/en/cucumbermanga|https://cucumbermanga.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:19.907Z"
+  },
+  "src/en/dragontea|https://dragontea.ink": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:19.923Z"
+  },
+  "src/en/bunmanga|https://bunmanga.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:20.120Z"
+  },
+  "src/en/ero18x|https://ero18x.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:21.058Z"
+  },
+  "src/en/decadencescans|https://reader.decadencescans.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:21.106Z"
+  },
+  "src/en/erisscans|https://erisscans.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:21.526Z"
+  },
+  "src/en/gedecomix|https://gedecomix.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:22.667Z"
+  },
+  "src/en/frierenonline|https://www.frieren.online": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:22.711Z"
+  },
+  "src/en/gingertoon|https://gingertoon.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:23.934Z"
+  },
+  "src/en/gakamangas|https://gakamangas.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:24.704Z"
+  },
+  "src/en/hadesscans|https://hadesscans.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:24.815Z"
+  },
+  "src/en/gourmetscans|https://gourmetsupremacy.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:25.004Z"
+  },
+  "src/en/hentai1io|https://hentai1.io": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:26.289Z"
+  },
+  "src/en/hentai4free|https://hentai4free.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:26.367Z"
+  },
+  "src/en/hentaixcomic|https://hentaixcomic.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:27.072Z"
+  },
+  "src/en/hentaixyuri|https://hentaixyuri.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:27.630Z"
+  },
+  "src/en/hentaidesi|https://hentaidesi.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:27.806Z"
+  },
+  "src/en/kaizenscan|https://kaizenscan.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:28.936Z"
+  },
+  "src/en/hentaixdickgirl|https://hentaixdickgirl.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:29.251Z"
+  },
+  "src/en/hm2d|https://doujindistrict.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:30.060Z"
+  },
+  "src/en/hunlightcomics|https://hunlightcomics.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:30.543Z"
+  },
+  "src/en/kaliscanorg|https://kaliscan.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:30.972Z"
+  },
+  "src/en/ksgroupscans|https://ksgroupscans.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:31.571Z"
+  },
+  "src/en/kitsunedawn|https://kitsunedawn.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:31.788Z"
+  },
+  "src/en/lgbtics|https://lgbtics.com": {
+    "status": "dead",
+    "http": 403,
+    "at": "2026-11-02T12:47:32.083Z"
+  },
+  "src/en/kunmangaonline|https://www.kunmanga.online": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:33.004Z"
+  },
+  "src/en/lunatoons|https://lunatoons.net": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:33.345Z"
+  },
+  "src/en/magusmanga|https://magustoon.org": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:34.460Z"
+  },
+  "src/en/madaradex|https://madaradex.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:35.438Z"
+  },
+  "src/en/lovesjanescans|https://lovesjane.site": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:35.959Z"
+  },
+  "src/en/manga18x|https://manga18x.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:36.685Z"
+  },
+  "src/en/manga18free|https://manga18free.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:36.884Z"
+  },
+  "src/en/mangagg|https://mangagg.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:37.791Z"
+  },
+  "src/en/mangahe|https://mangahe.com": {
+    "status": "dead",
+    "http": 404,
+    "at": "2026-11-02T12:47:38.282Z"
+  },
+  "src/en/mangaforfreecom|https://mangaforfree.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:39.260Z"
+  },
+  "src/en/manhuazonghe|https://www.manhuazonghe.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:40.561Z"
+  },
+  "src/en/mangaparktv|https://mangapark.tv": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:40.681Z"
+  },
+  "src/en/mangamaniacs|https://mangamaniacs.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:40.944Z"
+  },
+  "src/en/manhwa18today|https://www.manhwa18.today": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:41.795Z"
+  },
+  "src/en/manhwa68|https://manhwa68.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:41.998Z"
+  },
+  "src/en/linkmanga|https://linkmanga.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:42.602Z"
+  },
+  "src/en/manhwamanhua|https://manhwamanhua.com": {
+    "status": "dead",
+    "why": "ECONNRESET",
+    "at": "2026-11-02T12:47:43.698Z"
+  },
+  "src/en/manhwaden|https://www.manhwaden.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:43.934Z"
+  },
+  "src/en/manhwahubto|https://manhwahub.to": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:44.138Z"
+  },
+  "src/en/manhwacomics|https://manhwacomics.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:45.065Z"
+  },
+  "src/en/novelcrow|https://novelcrow.com": {
+    "status": "dead",
+    "http": 403,
+    "at": "2026-11-02T12:47:45.255Z"
+  },
+  "src/en/meitoon|https://meitoon.org": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:45.276Z"
+  },
+  "src/en/octopusmanga|https://octopusmanga.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:46.926Z"
+  },
+  "src/en/nyanukafe|https://nyanukafe.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:47.126Z"
+  },
+  "src/en/orchisasia|https://www.orchisasia.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:47.848Z"
+  },
+  "src/en/paritehaber|https://www.paritehaber.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:48.752Z"
+  },
+  "src/en/pornhwaz|https://www.pornhwaz.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:49.196Z"
+  },
+  "src/en/ragescans|https://ragescans.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:49.932Z"
+  },
+  "src/en/petrotechsociety|https://www.petrotechsociety.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:50.528Z"
+  },
+  "src/en/renascans|https://renascans.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:51.814Z"
+  },
+  "src/en/ritharscans|https://ritharscans.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:52.251Z"
+  },
+  "src/en/rizzcomic|https://rizzfables.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:52.664Z"
+  },
+  "src/en/rubycomics|https://rubycomics.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:53.833Z"
+  },
+  "src/en/setsuscans|https://setsuscans.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:53.916Z"
+  },
+  "src/en/rosesquadscans|https://rosesquadscans.aishiteru.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:54.963Z"
+  },
+  "src/en/sirenscans|https://sirenscans.org": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:55.088Z"
+  },
+  "src/en/suryascans|https://genztoons.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:55.743Z"
+  },
+  "src/en/toongod|https://www.toongod.org": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:47:56.072Z"
+  },
+  "src/en/manhwatoon|https://www.manhwatoon.me": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:56.211Z"
+  },
+  "src/en/topmanhuanet|https://topmanhua.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:57.445Z"
+  },
+  "src/en/topmanhuafan|https://www.topmanhua.fan": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:58.055Z"
+  },
+  "src/en/wearehunger|https://kokomangas.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:47:59.934Z"
+  },
+  "src/en/webtoonxyz|https://www.webtoon.xyz": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:48:01.042Z"
+  },
+  "src/en/toonizy|https://toonizy.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:48:01.337Z"
+  },
+  "src/en/wildtoon|https://wildtoon.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:48:02.287Z"
+  },
+  "src/en/wuxiaworld|https://wuxiaworld.site": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:48:03.997Z"
+  },
+  "src/en/yaoihub|https://yaoihub.org": {
+    "status": "dead",
+    "http": 502,
+    "at": "2026-11-02T12:48:04.429Z"
+  },
+  "src/en/yaoiscan|https://yaoiscan.com": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T12:48:05.287Z"
+  },
+  "src/en/zazamanga|https://www.zazamanga.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:48:06.398Z"
+  },
+  "src/en/webtoonscan|https://webtoonscan.com": {
+    "status": "dead",
+    "why": "UND_ERR_CONNECT_TIMEOUT",
+    "at": "2026-11-02T12:48:09.689Z"
+  },
+  "src/en/zinmanganet|https://www.zinmanga.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T12:48:09.915Z"
+  },
+  "src/en/topmanhua|https://mangatop.org": {
+    "status": "dead",
+    "why": "timeout",
+    "at": "2026-11-02T12:48:16.765Z"
+  },
+  "src/all/elitebabes|https://www.elitebabes.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:25.748Z"
+  },
+  "src/all/joymiihub|https://www.joymiihub.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:25.799Z"
+  },
+  "src/all/ftvhunter|https://www.ftvhunter.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:25.799Z"
+  },
+  "src/all/femjoyhunter|https://www.femjoyhunter.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:26.066Z"
+  },
+  "src/all/metarthunter|https://www.metarthunter.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:27.054Z"
+  },
+  "src/all/playmatehunter|https://pmatehunter.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:27.063Z"
+  },
+  "src/all/xarthunter|https://www.xarthunter.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:27.140Z"
+  },
+  "src/en/dankefurslesen|https://danke.moe": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:27.485Z"
+  },
+  "src/en/deathtollscans|https://reader.deathtollscans.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:29.426Z"
+  },
+  "src/en/divascans|https://divascans.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:31.001Z"
+  },
+  "src/en/drakescans|https://drakecomic.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:31.307Z"
+  },
+  "src/en/eighteenporncomic|https://18porncomic.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:31.766Z"
+  },
+  "src/en/elftoon|https://elftoon.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:31.966Z"
+  },
+  "src/en/fourporncomic|https://4porncomic.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:32.625Z"
+  },
+  "src/en/guya|https://guya.cubari.moe": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:32.851Z"
+  },
+  "src/en/hachirumi|https://hachirumi.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:34.986Z"
+  },
+  "src/en/hentai20lol|https://hentai20.lol": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:35.323Z"
+  },
+  "src/en/hentai3zcc|https://hentai3z.cc": {
+    "status": "moved",
+    "http": 200,
+    "url": "https://18porncomic.com",
+    "at": "2026-11-02T13:19:37.641Z"
+  },
+  "src/en/luascans|https://luacomic.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:37.672Z"
+  },
+  "src/en/keroscans|https://keroscans.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:37.801Z"
+  },
+  "src/en/manga18club|https://manga18.club": {
+    "status": "dead",
+    "http": 403,
+    "at": "2026-11-02T13:19:38.781Z"
+  },
+  "src/en/mangadass|https://mangadass.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:39.852Z"
+  },
+  "src/en/kaynscans|https://kaynscans.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:40.373Z"
+  },
+  "src/en/mangahubio|https://mangahub.io": {
+    "status": "challenge",
+    "http": 403,
+    "at": "2026-11-02T13:19:40.972Z"
+  },
+  "src/en/mangafoxfun|https://mangafox.fun": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:41.257Z"
+  },
+  "src/en/mangakakalotfun|https://mangakakalot.fun": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:44.261Z"
+  },
+  "src/en/mangahereonl|https://mangahere.onl": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:44.485Z"
+  },
+  "src/en/manganel|https://manganel.me": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:46.708Z"
+  },
+  "src/en/mangareadersite|https://mangareader.site": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:47.408Z"
+  },
+  "src/en/mangapandaonl|https://mangapanda.onl": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:47.453Z"
+  },
+  "src/en/mangaonlinefun|https://mangaonline.fun": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:48.208Z"
+  },
+  "src/en/manhwa18tx|https://manhwa18tx.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:49.345Z"
+  },
+  "src/en/manhwabuddy|https://manhwabuddy.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:49.945Z"
+  },
+  "src/en/mangatellers|https://reader.mangatellers.gr": {
+    "status": "dead",
+    "http": 500,
+    "at": "2026-11-02T13:19:49.975Z"
+  },
+  "src/en/manhwaddict|https://manhwaddict.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:51.570Z"
+  },
+  "src/en/manhwagalaxy|https://manhwagalaxy.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:52.056Z"
+  },
+  "src/en/manhwaonline|https://manhwaonline.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:52.060Z"
+  },
+  "src/en/mangatoday|https://mangatoday.fun": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:52.861Z"
+  },
+  "src/en/manhwaus|https://manhwaus.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:53.996Z"
+  },
+  "src/en/myreadingcomic|https://myreadingcomic.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:54.127Z"
+  },
+  "src/en/onemangaco|https://1manga.co": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:54.789Z"
+  },
+  "src/en/omegascans|https://omegascans.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:54.826Z"
+  },
+  "src/en/readblackclovermangaonline|https://ww10.readblackclover.com": {
+    "status": "dead",
+    "why": "ENOTFOUND",
+    "at": "2026-11-02T13:19:55.915Z"
+  },
+  "src/en/readattackontitanshingekinokyojinmanga|https://ww12.readsnk.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:56.438Z"
+  },
+  "src/en/readberserkmanga|https://readberserk.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:57.230Z"
+  },
+  "src/en/onemangainfo|https://onemanga.info": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:57.519Z"
+  },
+  "src/en/readchainsawmanmangaonline|https://ww6.readchainsawman.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:57.998Z"
+  },
+  "src/en/readfairytailedenszeromangaonline|https://ww9.readfairytail.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:58.595Z"
+  },
+  "src/en/readjujutsukaisenmangaonline|https://ww6.readjujutsukaisen.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:59.114Z"
+  },
+  "src/en/readkingdommangaonline|https://ww6.readkingdom.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:19:59.611Z"
+  },
+  "src/en/readmanga18|https://readmanga18.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:00.431Z"
+  },
+  "src/en/readnanatsunotaizai7deadlysinsmangaonline|https://ww8.read7deadlysins.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:00.619Z"
+  },
+  "src/en/readonepiecemangaonline|https://ww13.readonepiece.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:01.240Z"
+  },
+  "src/en/readonepunchmanmangaonlinetwo|https://ww7.readopm.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:01.898Z"
+  },
+  "src/en/readsololevelingmangamanhwaonline|https://ww4.readsololeveling.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:02.526Z"
+  },
+  "src/en/readtokyoghoulretokyoghoulmangaonline|https://ww12.tokyoghoulre.com": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:02.747Z"
+  },
+  "src/en/toongodcc|https://toongod.cc": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:03.357Z"
+  },
+  "src/en/yaoiscanme|https://yaoiscan.me": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:05.211Z"
+  },
+  "src/en/towerofgodmangaonline|https://w82.thetowerofgod.com": {
+    "status": "moved",
+    "http": 200,
+    "url": "https://w85.thetowerofgod.com",
+    "at": "2026-11-02T13:20:07.258Z"
+  },
+  "src/en/witchscans|https://witchtoons.net": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:08.083Z"
+  },
+  "src/en/valirscans|https://valirscans.org": {
+    "status": "alive",
+    "http": 200,
+    "at": "2026-11-02T13:20:11.869Z"
+  }
+}

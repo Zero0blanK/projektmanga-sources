@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "allporncomicio",
+  "name": "AllPornComic.io",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "AllPornComic.io: a Madara-theme manga site.",
+  "base_url": "https://allporncomic.io",
+  "allowed_hosts": [
+    "allporncomic.io"
+  ],
+  "content_rating": "nsfw"
+}

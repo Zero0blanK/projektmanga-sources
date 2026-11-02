@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhwatoon",
+  "name": "Manhwa Toon",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Manhwa Toon: a Madara-theme manga site.",
+  "base_url": "https://www.manhwatoon.me",
+  "allowed_hosts": [
+    "manhwatoon.me"
+  ],
+  "content_rating": "mixed",
+  "draft": true,
+  "draft_reason": "Chapter page images answer 400 and sorting by title returns untitled cards (checked 2026-11-02); browse, details and chapter lists work."
+}

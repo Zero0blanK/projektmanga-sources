@@ -1,0 +1,25 @@
+[
+  {
+    "label": "Genre (ignored with a text search)",
+    "value": "genre",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "3D Comics",
+        "value": "3d"
+      },
+      {
+        "label": "Big Breasts",
+        "value": "big-breasts"
+      },
+      {
+        "label": "MILF",
+        "value": "milf"
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manga18free",
+  "name": "Manga18Free",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Manga18Free: a Madara-theme manga site.",
+  "base_url": "https://manga18free.com",
+  "allowed_hosts": [
+    "manga18free.com"
+  ],
+  "content_rating": "nsfw",
+  "draft": true,
+  "draft_reason": "None of the first titles list any chapters with the generated settings (checked 2026-11-02)."
+}

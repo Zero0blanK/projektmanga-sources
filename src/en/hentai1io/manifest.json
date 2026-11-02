@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "hentai1io",
+  "name": "Hentai1.io",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Hentai1.io: a Madara-theme manga site.",
+  "base_url": "https://hentai1.io",
+  "allowed_hosts": [
+    "hentai1.io"
+  ],
+  "content_rating": "nsfw"
+}

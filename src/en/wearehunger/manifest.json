@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "wearehunger",
+  "name": "KokoMangas",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "KokoMangas: a Madara-theme manga site.",
+  "base_url": "https://kokomangas.com",
+  "allowed_hosts": [
+    "kokomangas.com"
+  ],
+  "content_rating": "mixed"
+}

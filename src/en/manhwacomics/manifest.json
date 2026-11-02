@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhwacomics",
+  "name": "Manhwa Comics",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Manhwa Comics: a Madara-theme manga site.",
+  "base_url": "https://manhwacomics.com",
+  "allowed_hosts": [
+    "manhwacomics.com"
+  ],
+  "content_rating": "nsfw",
+  "draft": true,
+  "draft_reason": "The site answers 404 for its own chapter page images (checked 2026-11-02); browse, search, details and chapter lists work."
+}

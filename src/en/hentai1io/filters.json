@@ -1,0 +1,891 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Comics",
+        "value": "comics"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "GL",
+        "value": "gl"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Hentai",
+        "value": "hentai"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "Josei",
+        "value": "josei"
+      },
+      {
+        "label": "Magic",
+        "value": "magic"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Mecha",
+        "value": "mecha"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "NTR",
+        "value": "ntr"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "School life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-Fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Seinen",
+        "value": "seinen"
+      },
+      {
+        "label": "Shoujo",
+        "value": "shoujo"
+      },
+      {
+        "label": "Shounen",
+        "value": "shounen"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Sports",
+        "value": "sports"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Thriller",
+        "value": "thriller"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Uncensored",
+        "value": "uncensored"
+      },
+      {
+        "label": "Webtoon",
+        "value": "webtoon"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Yuri",
+        "value": "yuri"
+      },
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Ahegao",
+        "value": "ahegao"
+      },
+      {
+        "label": "Anal",
+        "value": "anal"
+      },
+      {
+        "label": "Anal Intercourse",
+        "value": "anal-intercourse"
+      },
+      {
+        "label": "Anilingus",
+        "value": "anilingus"
+      },
+      {
+        "label": "Apron",
+        "value": "apron"
+      },
+      {
+        "label": "Aunt",
+        "value": "aunt"
+      },
+      {
+        "label": "Bald",
+        "value": "bald"
+      },
+      {
+        "label": "BBM",
+        "value": "bbm"
+      },
+      {
+        "label": "Beauty Mark",
+        "value": "beauty-mark"
+      },
+      {
+        "label": "Big Areolae",
+        "value": "big-areolae"
+      },
+      {
+        "label": "Big Ass",
+        "value": "big-ass"
+      },
+      {
+        "label": "Big Breasts",
+        "value": "big-breasts"
+      },
+      {
+        "label": "Big Penis",
+        "value": "big-penis"
+      },
+      {
+        "label": "Bikini",
+        "value": "bikini"
+      },
+      {
+        "label": "Bisexual",
+        "value": "bisexual"
+      },
+      {
+        "label": "BL",
+        "value": "bl"
+      },
+      {
+        "label": "Blowjob",
+        "value": "blowjob"
+      },
+      {
+        "label": "Blowjob Face",
+        "value": "blowjob-face"
+      },
+      {
+        "label": "Bondage",
+        "value": "bondage"
+      },
+      {
+        "label": "Breast Feeding",
+        "value": "breast-feeding"
+      },
+      {
+        "label": "Bukkake",
+        "value": "bukkake"
+      },
+      {
+        "label": "Bunny Girl",
+        "value": "bunny-girl"
+      },
+      {
+        "label": "Cervix Prolapse",
+        "value": "cervix-prolapse"
+      },
+      {
+        "label": "Cheating",
+        "value": "cheating"
+      },
+      {
+        "label": "Clone",
+        "value": "clone"
+      },
+      {
+        "label": "Clothed Paizuri",
+        "value": "clothed-paizuri"
+      },
+      {
+        "label": "Collar",
+        "value": "collar"
+      },
+      {
+        "label": "Condom",
+        "value": "condom"
+      },
+      {
+        "label": "Crossdressing",
+        "value": "crossdressing"
+      },
+      {
+        "label": "Crotch Tattoo",
+        "value": "crotch-tattoo"
+      },
+      {
+        "label": "Cunnilingus",
+        "value": "cunnilingus"
+      },
+      {
+        "label": "Dark Skin",
+        "value": "dark-skin"
+      },
+      {
+        "label": "Defloration",
+        "value": "defloration"
+      },
+      {
+        "label": "Demon",
+        "value": "demon"
+      },
+      {
+        "label": "Demon Girl",
+        "value": "demon-girl"
+      },
+      {
+        "label": "DILF",
+        "value": "dilf"
+      },
+      {
+        "label": "Dog Girl",
+        "value": "dog-girl"
+      },
+      {
+        "label": "Double Blowjob",
+        "value": "double-blowjob"
+      },
+      {
+        "label": "Double Penetration",
+        "value": "double-penetration"
+      },
+      {
+        "label": "Doujinshi",
+        "value": "doujinshi"
+      },
+      {
+        "label": "Drugs",
+        "value": "drugs"
+      },
+      {
+        "label": "Electric Shocks",
+        "value": "electric-shocks"
+      },
+      {
+        "label": "Elf",
+        "value": "elf"
+      },
+      {
+        "label": "Emotionless Sex",
+        "value": "emotionless-sex"
+      },
+      {
+        "label": "Exhibitionism",
+        "value": "exhibitionism"
+      },
+      {
+        "label": "Eye-covering Bang",
+        "value": "eye-covering-bang"
+      },
+      {
+        "label": "Facesitting",
+        "value": "facesitting"
+      },
+      {
+        "label": "Femdom",
+        "value": "femdom"
+      },
+      {
+        "label": "FFM Threesome",
+        "value": "ffm-threesome"
+      },
+      {
+        "label": "Filming",
+        "value": "filming"
+      },
+      {
+        "label": "Fingering",
+        "value": "fingering"
+      },
+      {
+        "label": "Focus Anal",
+        "value": "focus-anal"
+      },
+      {
+        "label": "Focus Paizuri",
+        "value": "focus-paizuri"
+      },
+      {
+        "label": "Forced Exposure",
+        "value": "forced-exposure"
+      },
+      {
+        "label": "Full Censorship",
+        "value": "full-censorship"
+      },
+      {
+        "label": "Full Color",
+        "value": "full-color"
+      },
+      {
+        "label": "Gaping",
+        "value": "gaping"
+      },
+      {
+        "label": "Garter Belt",
+        "value": "garter-belt"
+      },
+      {
+        "label": "Gender Change",
+        "value": "gender-change"
+      },
+      {
+        "label": "Giantess",
+        "value": "giantess"
+      },
+      {
+        "label": "Glasses",
+        "value": "glasses"
+      },
+      {
+        "label": "Gloves",
+        "value": "gloves"
+      },
+      {
+        "label": "Group",
+        "value": "group"
+      },
+      {
+        "label": "Gyaru",
+        "value": "gyaru"
+      },
+      {
+        "label": "Hairy",
+        "value": "hairy"
+      },
+      {
+        "label": "Handjob",
+        "value": "handjob"
+      },
+      {
+        "label": "Hidden Sex",
+        "value": "hidden-sex"
+      },
+      {
+        "label": "Horns",
+        "value": "horns"
+      },
+      {
+        "label": "Huge Breasts",
+        "value": "huge-breasts"
+      },
+      {
+        "label": "Humiliation",
+        "value": "humiliation"
+      },
+      {
+        "label": "Impregnation",
+        "value": "impregnation"
+      },
+      {
+        "label": "Incest",
+        "value": "incest"
+      },
+      {
+        "label": "Incomplete",
+        "value": "incomplete"
+      },
+      {
+        "label": "Inverted Nipples",
+        "value": "inverted-nipples"
+      },
+      {
+        "label": "Josou Seme",
+        "value": "josou-seme"
+      },
+      {
+        "label": "Kemonomimi",
+        "value": "kemonomimi"
+      },
+      {
+        "label": "Kimono",
+        "value": "kimono"
+      },
+      {
+        "label": "Kissing",
+        "value": "kissing"
+      },
+      {
+        "label": "Lactation",
+        "value": "lactation"
+      },
+      {
+        "label": "Leg Lock",
+        "value": "leg-lock"
+      },
+      {
+        "label": "Leotard",
+        "value": "leotard"
+      },
+      {
+        "label": "Lingerie",
+        "value": "lingerie"
+      },
+      {
+        "label": "Lizard Girl",
+        "value": "lizard-girl"
+      },
+      {
+        "label": "Lolicon",
+        "value": "lolicon"
+      },
+      {
+        "label": "Manga Hentai",
+        "value": "manga-hentai-901"
+      },
+      {
+        "label": "Manhwa Hentai",
+        "value": "manhwa-hentai-23"
+      },
+      {
+        "label": "Masturbation",
+        "value": "masturbation"
+      },
+      {
+        "label": "MILF",
+        "value": "milf"
+      },
+      {
+        "label": "Mind Break",
+        "value": "mind-break"
+      },
+      {
+        "label": "Mind Control",
+        "value": "mind-control"
+      },
+      {
+        "label": "MMF Threesome",
+        "value": "mmf-threesome"
+      },
+      {
+        "label": "Monster",
+        "value": "monster"
+      },
+      {
+        "label": "Monster Girl",
+        "value": "monster-girl"
+      },
+      {
+        "label": "Mosaic Censorship",
+        "value": "mosaic-censorship"
+      },
+      {
+        "label": "Mother",
+        "value": "mother"
+      },
+      {
+        "label": "Multi-Work Series",
+        "value": "multi-work-series"
+      },
+      {
+        "label": "Multiple Handjob",
+        "value": "multiple-handjob"
+      },
+      {
+        "label": "Multiple Paizuri",
+        "value": "multiple-paizuri"
+      },
+      {
+        "label": "Multiple Straddling",
+        "value": "multiple-straddling"
+      },
+      {
+        "label": "Muscle",
+        "value": "muscle"
+      },
+      {
+        "label": "Nakadashi",
+        "value": "nakadashi"
+      },
+      {
+        "label": "Netorare",
+        "value": "netorare"
+      },
+      {
+        "label": "Nipple Piercing",
+        "value": "nipple-piercing"
+      },
+      {
+        "label": "No Penetration",
+        "value": "no-penetration"
+      },
+      {
+        "label": "Nun",
+        "value": "nun"
+      },
+      {
+        "label": "Oil",
+        "value": "oil"
+      },
+      {
+        "label": "Old Man",
+        "value": "old-man"
+      },
+      {
+        "label": "one shot",
+        "value": "one-shot"
+      },
+      {
+        "label": "Oni",
+        "value": "oni"
+      },
+      {
+        "label": "Orc",
+        "value": "orc"
+      },
+      {
+        "label": "Oyakodon",
+        "value": "oyakodon"
+      },
+      {
+        "label": "Paizuri",
+        "value": "paizuri"
+      },
+      {
+        "label": "Pantyhose",
+        "value": "pantyhose"
+      },
+      {
+        "label": "Pasties",
+        "value": "pasties"
+      },
+      {
+        "label": "Petplay",
+        "value": "petplay"
+      },
+      {
+        "label": "Piercing",
+        "value": "piercing"
+      },
+      {
+        "label": "Pirate",
+        "value": "pirate"
+      },
+      {
+        "label": "Piss Drinking",
+        "value": "piss-drinking"
+      },
+      {
+        "label": "Policewoman",
+        "value": "policewoman"
+      },
+      {
+        "label": "Ponytail",
+        "value": "ponytail"
+      },
+      {
+        "label": "Pregnant",
+        "value": "pregnant"
+      },
+      {
+        "label": "Prolapse",
+        "value": "prolapse"
+      },
+      {
+        "label": "Prostate Massage",
+        "value": "prostate-massage"
+      },
+      {
+        "label": "Rape",
+        "value": "rape"
+      },
+      {
+        "label": "Raw",
+        "value": "raw"
+      },
+      {
+        "label": "Rimjob",
+        "value": "rimjob"
+      },
+      {
+        "label": "Saliva",
+        "value": "saliva"
+      },
+      {
+        "label": "Scar",
+        "value": "scar"
+      },
+      {
+        "label": "School Gym Uniform",
+        "value": "school-gym-uniform"
+      },
+      {
+        "label": "Schoolgirl Uniform",
+        "value": "schoolgirl-uniform"
+      },
+      {
+        "label": "Sex Toys",
+        "value": "sex-toys"
+      },
+      {
+        "label": "Shared Senses",
+        "value": "shared-senses"
+      },
+      {
+        "label": "Shibari",
+        "value": "shibari"
+      },
+      {
+        "label": "Shimaidon",
+        "value": "shimaidon"
+      },
+      {
+        "label": "Shotacon",
+        "value": "shotacon"
+      },
+      {
+        "label": "Sister",
+        "value": "sister"
+      },
+      {
+        "label": "Sleeping",
+        "value": "sleeping"
+      },
+      {
+        "label": "Small Breasts",
+        "value": "small-breasts"
+      },
+      {
+        "label": "Smalldom",
+        "value": "smalldom"
+      },
+      {
+        "label": "Smell",
+        "value": "smell"
+      },
+      {
+        "label": "Sole Female",
+        "value": "sole-female"
+      },
+      {
+        "label": "Sole Male",
+        "value": "sole-male"
+      },
+      {
+        "label": "Squirting",
+        "value": "squirting"
+      },
+      {
+        "label": "Stockings",
+        "value": "stockings"
+      },
+      {
+        "label": "Stomach Deformation",
+        "value": "stomach-deformation"
+      },
+      {
+        "label": "Story Arc",
+        "value": "story-arc"
+      },
+      {
+        "label": "Succubus",
+        "value": "succubus"
+      },
+      {
+        "label": "Sumata",
+        "value": "sumata"
+      },
+      {
+        "label": "Sweating",
+        "value": "sweating"
+      },
+      {
+        "label": "Tail",
+        "value": "tail"
+      },
+      {
+        "label": "Tail Plug",
+        "value": "tail-plug"
+      },
+      {
+        "label": "Tall Girl",
+        "value": "tall-girl"
+      },
+      {
+        "label": "Tanlines",
+        "value": "tanlines"
+      },
+      {
+        "label": "Tentacles",
+        "value": "tentacles"
+      },
+      {
+        "label": "Tiara",
+        "value": "tiara"
+      },
+      {
+        "label": "Tomgirl",
+        "value": "tomgirl"
+      },
+      {
+        "label": "Twins",
+        "value": "twins"
+      },
+      {
+        "label": "Twintails",
+        "value": "twintails"
+      },
+      {
+        "label": "Unusual Pupils",
+        "value": "unusual-pupils"
+      },
+      {
+        "label": "Unusual Teeth",
+        "value": "unusual-teeth"
+      },
+      {
+        "label": "Urination",
+        "value": "urination"
+      },
+      {
+        "label": "Vaginal Birth",
+        "value": "vaginal-birth"
+      },
+      {
+        "label": "Vaginal Sticker",
+        "value": "vaginal-sticker"
+      },
+      {
+        "label": "Very Long Hair",
+        "value": "very-long-hair"
+      },
+      {
+        "label": "Voyeurism",
+        "value": "voyeurism"
+      },
+      {
+        "label": "vtuber",
+        "value": "vtuber"
+      },
+      {
+        "label": "X-Ray",
+        "value": "x-ray"
+      }
+    ]
+  }
+]

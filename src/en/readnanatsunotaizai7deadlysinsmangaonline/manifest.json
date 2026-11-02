@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readnanatsunotaizai7deadlysinsmangaonline",
+  "name": "Read Nanatsu no Taizai 7 Deadly Sins Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Nanatsu no Taizai 7 Deadly Sins Manga Online: one franchise's manga (Four Horsemen of the Apocalypse, 7DS: School, 7DS:7 Days, 7DS:Vampires…).",
+  "base_url": "https://ww8.read7deadlysins.com",
+  "allowed_hosts": [
+    "ww8.read7deadlysins.com"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,8 @@
+{
+  "hm2d": { "browse": "ajax", "directory": "read" },
+  "hunlightcomics": { "browse": "ajax", "directory": "m" },
+  "manhwatoon": { "browse": "ajax", "directory": "manhwa" },
+  "mangaparktv": { "browse": "ajax", "directory": "manhwa" },
+  "pornhwaz": { "browse": "ajax", "directory": "webtoon" },
+  "rosesquadscans": { "browse": "ajax", "directory": "series" }
+}

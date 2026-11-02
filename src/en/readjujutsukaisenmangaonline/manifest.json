@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "readjujutsukaisenmangaonline",
+  "name": "Read Jujutsu Kaisen Manga Online",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Read Jujutsu Kaisen Manga Online: one franchise's manga (Jujutsu Kaisen, Jujutsu Kaisen 0, JJK Colored, Fan Scan…).",
+  "base_url": "https://ww6.readjujutsukaisen.com",
+  "allowed_hosts": [
+    "ww6.readjujutsukaisen.com"
+  ],
+  "content_rating": "safe"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "mangaparktv",
+  "name": "MangaPark.tv (unoriginal)",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "MangaPark.tv (unoriginal): a Madara-theme manga site.",
+  "base_url": "https://mangapark.tv",
+  "allowed_hosts": [
+    "mangapark.tv"
+  ],
+  "content_rating": "nsfw"
+}

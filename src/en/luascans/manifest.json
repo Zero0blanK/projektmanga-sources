@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "luascans",
+  "name": "Lua Scans",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "Lua Scans: a HeanCMS-theme manga site.",
+  "base_url": "https://luacomic.org",
+  "allowed_hosts": [
+    "luacomic.org"
+  ],
+  "content_rating": "safe",
+  "draft": true,
+  "draft_reason": "The site's API (api.luacomic.org) answers with a Cloudflare challenge after a few requests (checked 2026-11-02); browse and search worked before it."
+}

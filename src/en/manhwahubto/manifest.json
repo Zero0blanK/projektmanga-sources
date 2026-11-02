@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../schema/manifest.schema.json",
+  "source_key": "manhwahubto",
+  "name": "ManhwaHub.to",
+  "lang": "en",
+  "version": "1.0.0",
+  "description": "ManhwaHub.to: a Madara-theme manga site.",
+  "base_url": "https://manhwahub.to",
+  "allowed_hosts": [
+    "manhwahub.to"
+  ],
+  "content_rating": "nsfw"
+}

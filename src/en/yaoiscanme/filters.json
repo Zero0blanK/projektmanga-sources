@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Genre (ignored with a text search)",
+    "value": "genre",
+    "type": "select",
+    "options": [
+      {
+        "label": "All",
+        "value": ""
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      }
+    ]
+  }
+]

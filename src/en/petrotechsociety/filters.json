@@ -1,0 +1,459 @@
+[
+  {
+    "label": "Order",
+    "value": "order",
+    "type": "select",
+    "options": [
+      {
+        "label": "Latest updates",
+        "value": "latest"
+      },
+      {
+        "label": "Popularity",
+        "value": "views"
+      },
+      {
+        "label": "New titles",
+        "value": "new-manga"
+      },
+      {
+        "label": "Rating",
+        "value": "rating"
+      },
+      {
+        "label": "Title",
+        "value": "alphabet"
+      }
+    ]
+  },
+  {
+    "label": "Status",
+    "value": "status",
+    "type": "select",
+    "options": [
+      {
+        "label": "Any",
+        "value": ""
+      },
+      {
+        "label": "Ongoing",
+        "value": "on-going"
+      },
+      {
+        "label": "Completed",
+        "value": "end"
+      },
+      {
+        "label": "Canceled",
+        "value": "canceled"
+      },
+      {
+        "label": "On hold",
+        "value": "on-hold"
+      }
+    ]
+  },
+  {
+    "label": "Genres",
+    "value": "genre",
+    "type": "multi",
+    "options": [
+      {
+        "label": "Action",
+        "value": "action"
+      },
+      {
+        "label": "Adaptation",
+        "value": "adaptation"
+      },
+      {
+        "label": "Adult",
+        "value": "adult"
+      },
+      {
+        "label": "Adventure",
+        "value": "adventure"
+      },
+      {
+        "label": "Age Gap",
+        "value": "age-gap"
+      },
+      {
+        "label": "Animals",
+        "value": "animals"
+      },
+      {
+        "label": "Anthology",
+        "value": "anthology"
+      },
+      {
+        "label": "Bara(ML)",
+        "value": "baraml"
+      },
+      {
+        "label": "Beasts",
+        "value": "beasts"
+      },
+      {
+        "label": "BL",
+        "value": "bl"
+      },
+      {
+        "label": "Bloody",
+        "value": "bloody"
+      },
+      {
+        "label": "Bodyswap",
+        "value": "bodyswap"
+      },
+      {
+        "label": "Boys",
+        "value": "boys"
+      },
+      {
+        "label": "but the moment Mori sees him",
+        "value": "but-the-moment-mori-sees-him"
+      },
+      {
+        "label": "Cheating/Infidelity",
+        "value": "cheating-infidelity"
+      },
+      {
+        "label": "Childhood Friends",
+        "value": "childhood-friends"
+      },
+      {
+        "label": "College life",
+        "value": "college-life"
+      },
+      {
+        "label": "Comedy",
+        "value": "comedy"
+      },
+      {
+        "label": "Comic",
+        "value": "comic"
+      },
+      {
+        "label": "Crime",
+        "value": "crime"
+      },
+      {
+        "label": "Crossdressing",
+        "value": "crossdressing"
+      },
+      {
+        "label": "Delinquents",
+        "value": "delinquents"
+      },
+      {
+        "label": "Dementia",
+        "value": "dementia"
+      },
+      {
+        "label": "Demons",
+        "value": "demons"
+      },
+      {
+        "label": "Doujinshi",
+        "value": "doujinshi"
+      },
+      {
+        "label": "Drama",
+        "value": "drama"
+      },
+      {
+        "label": "Ecchi",
+        "value": "ecchi"
+      },
+      {
+        "label": "Fantasy",
+        "value": "fantasy"
+      },
+      {
+        "label": "Fetish",
+        "value": "fetish"
+      },
+      {
+        "label": "Full Color",
+        "value": "full-color"
+      },
+      {
+        "label": "Game",
+        "value": "game"
+      },
+      {
+        "label": "Gender Bender",
+        "value": "gender-bender"
+      },
+      {
+        "label": "Genderswap",
+        "value": "genderswap"
+      },
+      {
+        "label": "Ghost Story (Howoo) / Monstrous Yan / Monstruoso / 怪緣 / 괴연",
+        "value": "ghost-story-howoo-monstrous-yan-monstruoso-%e6%80%aa%e7%b7%a3-%ea%b4%b4%ec%97%b0"
+      },
+      {
+        "label": "Ghosts",
+        "value": "ghosts"
+      },
+      {
+        "label": "Gore",
+        "value": "gore"
+      },
+      {
+        "label": "Hardcore",
+        "value": "hardcore"
+      },
+      {
+        "label": "Harem",
+        "value": "harem"
+      },
+      {
+        "label": "Hentai",
+        "value": "hentai"
+      },
+      {
+        "label": "Historical",
+        "value": "historical"
+      },
+      {
+        "label": "Horror",
+        "value": "horror"
+      },
+      {
+        "label": "Incest",
+        "value": "incest"
+      },
+      {
+        "label": "Isekai",
+        "value": "isekai"
+      },
+      {
+        "label": "it's love at first sight....",
+        "value": "its-love-at-first-sight"
+      },
+      {
+        "label": "Josei(W)",
+        "value": "joseiw"
+      },
+      {
+        "label": "learns of his classmate",
+        "value": "learns-of-his-classmate"
+      },
+      {
+        "label": "Magic",
+        "value": "magic"
+      },
+      {
+        "label": "Manga",
+        "value": "manga"
+      },
+      {
+        "label": "Manhua",
+        "value": "manhua"
+      },
+      {
+        "label": "Manhwa",
+        "value": "manhwa"
+      },
+      {
+        "label": "Martial Arts",
+        "value": "martial-arts"
+      },
+      {
+        "label": "Mature",
+        "value": "mature"
+      },
+      {
+        "label": "Medical",
+        "value": "medical"
+      },
+      {
+        "label": "Michioto",
+        "value": "michioto"
+      },
+      {
+        "label": "Military",
+        "value": "military"
+      },
+      {
+        "label": "Monsters",
+        "value": "monsters"
+      },
+      {
+        "label": "Music",
+        "value": "music"
+      },
+      {
+        "label": "Mystery",
+        "value": "mystery"
+      },
+      {
+        "label": "Non-human",
+        "value": "non-human"
+      },
+      {
+        "label": "Office Workers",
+        "value": "office-workers"
+      },
+      {
+        "label": "Omegaverse",
+        "value": "omegaverse"
+      },
+      {
+        "label": "One Shot",
+        "value": "one-shot"
+      },
+      {
+        "label": "Oneshot",
+        "value": "oneshot"
+      },
+      {
+        "label": "Post-Apocalyptic",
+        "value": "post-apocalyptic"
+      },
+      {
+        "label": "Psychological",
+        "value": "psychological"
+      },
+      {
+        "label": "Regression",
+        "value": "regression"
+      },
+      {
+        "label": "Reincarnation",
+        "value": "reincarnation"
+      },
+      {
+        "label": "Revenge",
+        "value": "revenge"
+      },
+      {
+        "label": "Romance",
+        "value": "romance"
+      },
+      {
+        "label": "Royal family",
+        "value": "royal-family"
+      },
+      {
+        "label": "Royalty",
+        "value": "royalty"
+      },
+      {
+        "label": "School Life",
+        "value": "school-life"
+      },
+      {
+        "label": "Sci-fi",
+        "value": "sci-fi"
+      },
+      {
+        "label": "Shounen Ai",
+        "value": "shounen-ai"
+      },
+      {
+        "label": "Showbiz",
+        "value": "showbiz"
+      },
+      {
+        "label": "Slice of Life",
+        "value": "slice-of-life"
+      },
+      {
+        "label": "SM/BDSM/SUB-DOM",
+        "value": "sm-bdsm-sub-dom"
+      },
+      {
+        "label": "Smut",
+        "value": "smut"
+      },
+      {
+        "label": "Sports",
+        "value": "sports"
+      },
+      {
+        "label": "Super Power",
+        "value": "super-power"
+      },
+      {
+        "label": "Supernatural",
+        "value": "supernatural"
+      },
+      {
+        "label": "Survival",
+        "value": "survival"
+      },
+      {
+        "label": "The first year of high school: Spring Mori",
+        "value": "the-first-year-of-high-school-spring-mori"
+      },
+      {
+        "label": "Thriller",
+        "value": "thriller"
+      },
+      {
+        "label": "Tragedy",
+        "value": "tragedy"
+      },
+      {
+        "label": "Transmigration",
+        "value": "transmigration"
+      },
+      {
+        "label": "Uncensored",
+        "value": "uncensored"
+      },
+      {
+        "label": "Vampires",
+        "value": "vampires"
+      },
+      {
+        "label": "Video Games",
+        "value": "video-games"
+      },
+      {
+        "label": "Violence",
+        "value": "violence"
+      },
+      {
+        "label": "Virtual Reality",
+        "value": "virtual-reality"
+      },
+      {
+        "label": "Webtoon",
+        "value": "webtoon"
+      },
+      {
+        "label": "Webtoons",
+        "value": "webtoons"
+      },
+      {
+        "label": "Western",
+        "value": "western"
+      },
+      {
+        "label": "who has just entered school",
+        "value": "who-has-just-entered-school"
+      },
+      {
+        "label": "Yakuzas",
+        "value": "yakuzas"
+      },
+      {
+        "label": "Yaoi",
+        "value": "yaoi"
+      },
+      {
+        "label": "Yaoi(BL)",
+        "value": "yaoibl"
+      },
+      {
+        "label": "Zombies",
+        "value": "zombies"
+      }
+    ]
+  }
+]

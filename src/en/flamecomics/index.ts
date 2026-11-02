@@ -156,15 +156,23 @@ async function browse(
 ): Promise<Mangas[]> {
   let rows: Series[];
   if (category === "latest" && query === undefined) {
-    const latest = await data(
-      "index.json",
-      z.object({
-        latestEntries: z.object({
-          blocks: z.array(z.object({ series: lenientArray(seriesSchema) })),
+    const [latest, all] = await Promise.all([
+      data(
+        "index.json",
+        z.object({
+          latestEntries: z.object({
+            blocks: z.array(z.object({ series: lenientArray(seriesSchema) })),
+          }),
         }),
-      }),
-    );
-    rows = latest.latestEntries.blocks[0]?.series ?? [];
+      ),
+      data("browse.json", z.object({ series: lenientArray(seriesSchema) })),
+    ]);
+    // The home page's block is the site's own release order, but only its newest 24; the
+    // rest of the catalogue follows by last edit, so Latest doesn't end after 24 titles.
+    rows = [
+      ...(latest.latestEntries.blocks[0]?.series ?? []),
+      ...[...all.series].sort((a, b) => b.last_edit - a.last_edit),
+    ];
   } else {
     rows = (
       await data("browse.json", z.object({ series: lenientArray(seriesSchema) }))
